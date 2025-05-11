@@ -31,7 +31,7 @@ const NavBar = () => {
       <div className="container flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
           <div className="bg-gradient-to-r from-brand-blue to-brand-purple w-8 h-8 rounded-md"></div>
-          <span className="text-xl font-bold">DropSuccess</span>
+          <span className="text-xl font-bold">Whatsdropshipping</span>
         </a>
         
         <div className="hidden md:flex items-center space-x-8">

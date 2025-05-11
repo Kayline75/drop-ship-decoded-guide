@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <div className="bg-gradient-to-r from-brand-blue to-brand-purple w-8 h-8 rounded-md"></div>
-              <span className="text-xl font-bold">DropSuccess</span>
+              <span className="text-xl font-bold">Whatsdropshipping</span>
             </div>
             <p className="text-gray-300 mb-6">
               Votre partenaire pour réussir dans le monde du dropshipping avec des ressources éducatives complètes et professionnelles.
@@ -40,7 +40,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Contact</h3>
             <ul className="space-y-3">
-              <li className="text-gray-300">contact@dropsuccess.com</li>
+              <li className="text-gray-300">contact@whatsdropshipping.com</li>
               <li className="text-gray-300">+33 1 23 45 67 89</li>
               <li className="text-gray-300">Paris, France</li>
             </ul>
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} DropSuccess. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} Whatsdropshipping. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
