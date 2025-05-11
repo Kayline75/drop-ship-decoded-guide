@@ -59,30 +59,93 @@
   }
 }
 
+/* Hero section styles */
+.hero-section {
+  background-color: hsl(var(--background));
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0%, transparent 80%);
+  z-index: 0;
+}
+
+/* Text gradient animations */
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FF6B95] to-[#7BE0FF];
+  background-size: 300% 100%;
+  animation: gradient-animation 8s ease infinite;
 }
 
-.section-padding {
-  @apply px-4 md:px-8 py-16 md:py-24;
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.card-hover {
-  @apply transition-all duration-300 hover:shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:-translate-y-2;
+/* Animated gradient background */
+@keyframes gradient-x {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
-.content-container {
-  @apply max-w-3xl mx-auto;
+.animate-gradient-x {
+  animation: gradient-x 15s linear infinite;
 }
 
-.glow-effect {
-  box-shadow: 0 0 25px rgba(123, 224, 255, 0.2);
+.bg-size-200 {
+  background-size: 200% 100%;
 }
 
+.hero-text {
+  opacity: 0;
+  animation: fade-in-up 1s ease forwards 0.3s;
+}
+
+.hero-text-delay {
+  opacity: 0;
+  animation: fade-in-up 1s ease forwards 0.6s;
+}
+
+/* Glass card effects */
 .glass-card {
   @apply backdrop-blur-lg bg-white/5 border border-white/10;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
+.glass-card:hover {
+  @apply bg-white/8 border-white/15;
+  transform: translateY(-5px);
+}
+
+.glass-card-premium {
+  @apply backdrop-blur-lg bg-white/8 border border-white/20;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.glass-card-premium:hover {
+  @apply bg-white/10 border-white/30;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Animated border effect */
 .animated-border-card {
   position: relative;
   isolation: isolate;
@@ -95,20 +158,9 @@
   inset: -1px;
   background: linear-gradient(45deg, #FF6B95, #7BE0FF, #FF6B95);
   background-size: 400% 400%;
-  animation: gradient-border 6s ease infinite;
+  animation: gradient-border 8s ease infinite;
   border-radius: calc(var(--radius) + 1px);
   z-index: -1;
-}
-
-.card-backdrop {
-  @apply bg-background/60 backdrop-blur-lg border border-white/5;
-}
-
-.pattern-grid {
-  background-color: rgba(0, 0, 0, 0.15);
-  background-image: linear-gradient(rgba(123, 224, 255, 0.05) 1px, transparent 1px), 
-                    linear-gradient(90deg, rgba(123, 224, 255, 0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
 }
 
 @keyframes gradient-border {
@@ -123,31 +175,164 @@
   }
 }
 
-.highlight-number {
-  @apply relative inline-flex items-center justify-center;
+/* Fade in animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.highlight-number::before {
-  content: '';
-  @apply absolute -z-10 w-10 h-10 rounded-full opacity-30 bg-primary;
-  animation: pulse 2s infinite;
+.fade-in-up {
+  opacity: 0;
+  animation: fade-in-up 1s ease forwards 0.9s;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(0.95);
-    opacity: 0.5;
+.fade-in-up-delay {
+  opacity: 0;
+  animation: fade-in-up 1s ease forwards 1.2s;
+}
+
+.fade-in-up-delay-2 {
+  opacity: 0;
+  animation: fade-in-up 1s ease forwards 1.5s;
+}
+
+/* Custom float animation */
+@keyframes float-custom {
+  0%, 100% {
+    transform: translateY(0);
   }
   50% {
-    transform: scale(1.05);
-    opacity: 0.3;
-  }
-  100% {
-    transform: scale(0.95);
-    opacity: 0.5;
+    transform: translateY(-15px);
   }
 }
 
+.animate-float-custom {
+  animation: float-custom 6s ease-in-out infinite;
+}
+
+/* Button glow effect */
+.button-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-glow:hover {
+  box-shadow: 0 0 15px rgba(255, 107, 149, 0.6);
+}
+
+.button-glow::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.button-glow:hover::after {
+  opacity: 0.6;
+  transform: scale(1);
+}
+
+/* Additional animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.animate-twinkle-delayed {
+  animation: twinkle 2s ease-in-out 1s infinite;
+}
+
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s ease-in-out infinite;
+}
+
+.animate-gradient-text {
+  background-image: linear-gradient(
+    135deg,
+    hsl(var(--secondary)) 0%,
+    hsl(var(--primary)) 25%,
+    hsl(var(--secondary)) 50%,
+    hsl(var(--primary)) 75%,
+    hsl(var(--secondary)) 100%
+  );
+  background-size: 200% 100%;
+  animation: gradient-text 8s linear infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient-text {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Other utility styles */
+.section-padding {
+  @apply px-4 md:px-8 py-16 md:py-24;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:-translate-y-2;
+}
+
+.content-container {
+  @apply max-w-3xl mx-auto;
+}
+
+.pattern-grid {
+  background-color: rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(rgba(123, 224, 255, 0.05) 1px, transparent 1px), 
+                    linear-gradient(90deg, rgba(123, 224, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Navigation styles */
 .nav-link {
   position: relative;
 }
@@ -165,8 +350,4 @@
 
 .nav-link:hover::after {
   width: 100%;
-}
-
-.button-glow:hover {
-  box-shadow: 0 0 15px rgba(255, 107, 149, 0.5);
 }

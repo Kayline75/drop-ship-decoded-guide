@@ -143,61 +143,61 @@ const Index = () => {
               number={1} 
               title="Comprendre le modèle" 
               description="Les bases du dropshipping, la chaine logistique et le choix des fournisseurs." 
-              color="orange"
+              color="custom1" // Remplace "orange"
             />
             <PartCard 
               number={2} 
               title="Trouver sa niche" 
               description="Comment identifier une niche rentable et analyser la concurrence." 
-              color="dark"
+              color="custom2" // Remplace "dark"
             />
             <PartCard 
               number={3} 
               title="Construire sa boutique" 
               description="Choisir sa plateforme e-commerce et structurer son site pour convertir." 
-              color="gray"
+              color="custom3" // Remplace "gray"
             />
             <PartCard 
               number={4} 
               title="Travailler avec des fournisseurs" 
               description="Trouver des fournisseurs fiables et communiquer efficacement avec eux." 
-              color="orange"
+              color="custom1" // Remplace "orange"
             />
             <PartCard 
               number={5} 
               title="Créer des offres irrésistibles" 
               description="Rédiger des fiches produit qui convertissent et définir une stratégie de prix." 
-              color="dark"
+              color="custom2" // Remplace "dark"
             />
             <PartCard 
               number={6} 
               title="Marketing et acquisition" 
               description="Lancer des publicités efficaces, utiliser l'IA et le marketing d'influence." 
-              color="gray"
+              color="custom3" // Remplace "gray"
             />
             <PartCard 
               number={7} 
               title="Gestion et suivi" 
               description="Automatiser les commandes et gérer efficacement le suivi des livraisons." 
-              color="orange"
+              color="custom1" // Remplace "orange"
             />
             <PartCard 
               number={8} 
               title="Optimiser et faire grandir" 
               description="Améliorer le taux de conversion et augmenter le panier moyen avec des upsells." 
-              color="dark"
+              color="custom2" // Remplace "dark"
             />
             <PartCard 
               number={9} 
               title="Légal et sécurité" 
               description="Comprendre vos obligations légales et choisir où ouvrir votre société." 
-              color="gray"
+              color="custom3" // Remplace "gray"
             />
             <PartCard 
               number={10} 
               title="Aller plus loin" 
               description="Lancer une seconde boutique et externaliser certaines missions pour scaler." 
-              color="orange"
+              color="custom1" // Remplace "orange"
               className="md:col-span-2 lg:col-span-1"
             />
           </div>
