@@ -15,13 +15,13 @@ const Footer = () => {
               Votre partenaire pour réussir dans le monde du dropshipping avec des ressources éducatives complètes et professionnelles.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
                 <Twitter size={18} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
                 <Instagram size={18} />
               </a>
             </div>
@@ -30,10 +30,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Liens rapides</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-white">Accueil</a></li>
-              <li><a href="#cours" className="text-gray-300 hover:text-white">Le cours</a></li>
-              <li><a href="#parties" className="text-gray-300 hover:text-white">Les 10 parties</a></li>
-              <li><a href="#avantages" className="text-gray-300 hover:text-white">Avantages</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Accueil</a></li>
+              <li><a href="#cours" className="text-gray-300 hover:text-white transition-colors">Le cours</a></li>
+              <li><a href="#parties" className="text-gray-300 hover:text-white transition-colors">Les 10 parties</a></li>
+              <li><a href="#avantages" className="text-gray-300 hover:text-white transition-colors">Avantages</a></li>
             </ul>
           </div>
           

@@ -25,10 +25,10 @@ const PartCard = ({
   };
 
   const bgColorClasses = {
-    orange: "bg-brand-orange/10",
-    gray: "bg-brand-gray/20",
-    dark: "bg-brand-dark/10",
-    light: "bg-gray-50",
+    orange: "bg-white border-brand-orange/20",
+    gray: "bg-white border-brand-gray/20",
+    dark: "bg-white border-brand-dark/20",
+    light: "bg-white border-gray-50",
   };
 
   const textColorClass = {
@@ -39,7 +39,7 @@ const PartCard = ({
   };
 
   return (
-    <Card className={cn("card-hover overflow-hidden border-none", bgColorClasses[color], className)}>
+    <Card className={cn("card-hover overflow-hidden", bgColorClasses[color], className, "animated-border-card")}>
       <CardHeader className="pb-2">
         <div className="flex items-center gap-3">
           <div className={cn("w-8 h-8 rounded-full flex items-center justify-center text-white bg-gradient-to-r", colorClasses[color])}>

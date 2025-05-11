@@ -23,7 +23,7 @@ const ContentSection = ({
   return (
     <section 
       id={id} 
-      className={`section-padding ${className}`}
+      className={`section-padding navy-accent ${className}`}
     >
       <div className="container">
         <div className={`flex flex-col ${reversed ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-8 lg:gap-12`}>
@@ -41,7 +41,7 @@ const ContentSection = ({
                 className="w-full h-auto rounded-lg shadow-lg"
               />
             ) : (
-              <div className="aspect-video w-full bg-gradient-to-br from-brand-orange/20 to-brand-dark/20 rounded-lg flex items-center justify-center">
+              <div className="aspect-video w-full bg-gradient-to-br from-brand-orange/10 to-brand-dark/10 rounded-lg flex items-center justify-center border border-brand-dark/5 shadow-lg">
                 <span className="text-3xl font-bold gradient-text">{title}</span>
               </div>
             )}

@@ -36,17 +36,17 @@ const NavBar = () => {
         
         <div className="hidden md:flex items-center space-x-8">
           <nav className="flex items-center space-x-6">
-            <a href="#cours" className="text-sm font-medium hover:text-brand-orange transition-colors">
+            <a href="#cours" className="text-sm font-medium border-b-2 border-transparent hover:border-brand-orange hover:text-brand-dark transition-all">
               Le cours
             </a>
-            <a href="#parties" className="text-sm font-medium hover:text-brand-orange transition-colors">
+            <a href="#parties" className="text-sm font-medium border-b-2 border-transparent hover:border-brand-orange hover:text-brand-dark transition-all">
               Les 10 parties
             </a>
-            <a href="#avantages" className="text-sm font-medium hover:text-brand-orange transition-colors">
+            <a href="#avantages" className="text-sm font-medium border-b-2 border-transparent hover:border-brand-orange hover:text-brand-dark transition-all">
               Avantages
             </a>
           </nav>
-          <Button className="bg-gradient-to-r from-brand-orange to-brand-dark">
+          <Button className="bg-gradient-to-r from-brand-orange to-brand-dark hover:opacity-90 transition-opacity">
             Démarrer maintenant
           </Button>
         </div>
