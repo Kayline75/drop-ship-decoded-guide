@@ -24,35 +24,35 @@ const NavBar = () => {
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm py-3"
+          ? "card-backdrop shadow-lg py-3"
           : "bg-transparent py-5"
       }`}
     >
       <div className="container flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <div className="bg-gradient-to-r from-brand-orange to-brand-dark w-8 h-8 rounded-md"></div>
+          <div className="bg-gradient-to-r from-[#FF6B95] to-[#7BE0FF] w-8 h-8 rounded-md"></div>
           <span className="text-xl font-bold">Whatsdropshipping</span>
         </a>
         
         <div className="hidden md:flex items-center space-x-8">
-          <nav className="flex items-center space-x-6">
-            <a href="#cours" className="text-sm font-medium border-b-2 border-transparent hover:border-brand-orange hover:text-brand-dark transition-all">
+          <nav className="flex items-center space-x-8">
+            <a href="#cours" className="nav-link text-sm font-medium text-foreground hover:text-secondary transition-colors">
               Le cours
             </a>
-            <a href="#parties" className="text-sm font-medium border-b-2 border-transparent hover:border-brand-orange hover:text-brand-dark transition-all">
+            <a href="#parties" className="nav-link text-sm font-medium text-foreground hover:text-secondary transition-colors">
               Les 10 parties
             </a>
-            <a href="#avantages" className="text-sm font-medium border-b-2 border-transparent hover:border-brand-orange hover:text-brand-dark transition-all">
+            <a href="#avantages" className="nav-link text-sm font-medium text-foreground hover:text-secondary transition-colors">
               Avantages
             </a>
           </nav>
-          <Button className="bg-gradient-to-r from-brand-orange to-brand-dark hover:opacity-90 transition-opacity">
+          <Button className="bg-gradient-to-r from-[#FF6B95] to-[#FF8D6B] hover:opacity-90 transition-all button-glow">
             Démarrer maintenant
           </Button>
         </div>
 
         <button 
-          className="md:hidden"
+          className="md:hidden text-foreground"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
@@ -65,32 +65,32 @@ const NavBar = () => {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4 px-4">
-          <nav className="flex flex-col space-y-3">
+        <div className="md:hidden absolute top-full left-0 right-0 card-backdrop py-5 px-4">
+          <nav className="flex flex-col space-y-4">
             <a 
               href="#cours" 
-              className="text-sm font-medium hover:text-brand-orange transition-colors"
+              className="text-sm font-medium text-foreground hover:text-secondary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Le cours
             </a>
             <a 
               href="#parties" 
-              className="text-sm font-medium hover:text-brand-orange transition-colors"
+              className="text-sm font-medium text-foreground hover:text-secondary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Les 10 parties
             </a>
             <a 
               href="#avantages" 
-              className="text-sm font-medium hover:text-brand-orange transition-colors"
+              className="text-sm font-medium text-foreground hover:text-secondary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Avantages
             </a>
           </nav>
-          <div className="mt-4">
-            <Button className="w-full bg-gradient-to-r from-brand-orange to-brand-dark">
+          <div className="mt-5">
+            <Button className="w-full bg-gradient-to-r from-[#FF6B95] to-[#FF8D6B]">
               Démarrer maintenant
             </Button>
           </div>
