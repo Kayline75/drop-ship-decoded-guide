@@ -30,23 +30,23 @@ const NavBar = () => {
     >
       <div className="container flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <div className="bg-gradient-to-r from-brand-blue to-brand-purple w-8 h-8 rounded-md"></div>
+          <div className="bg-gradient-to-r from-brand-orange to-brand-dark w-8 h-8 rounded-md"></div>
           <span className="text-xl font-bold">Whatsdropshipping</span>
         </a>
         
         <div className="hidden md:flex items-center space-x-8">
           <nav className="flex items-center space-x-6">
-            <a href="#cours" className="text-sm font-medium hover:text-brand-blue transition-colors">
+            <a href="#cours" className="text-sm font-medium hover:text-brand-orange transition-colors">
               Le cours
             </a>
-            <a href="#parties" className="text-sm font-medium hover:text-brand-blue transition-colors">
+            <a href="#parties" className="text-sm font-medium hover:text-brand-orange transition-colors">
               Les 10 parties
             </a>
-            <a href="#avantages" className="text-sm font-medium hover:text-brand-blue transition-colors">
+            <a href="#avantages" className="text-sm font-medium hover:text-brand-orange transition-colors">
               Avantages
             </a>
           </nav>
-          <Button className="bg-gradient-to-r from-brand-blue to-brand-purple">
+          <Button className="bg-gradient-to-r from-brand-orange to-brand-dark">
             Démarrer maintenant
           </Button>
         </div>
@@ -69,28 +69,28 @@ const NavBar = () => {
           <nav className="flex flex-col space-y-3">
             <a 
               href="#cours" 
-              className="text-sm font-medium hover:text-brand-blue transition-colors"
+              className="text-sm font-medium hover:text-brand-orange transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Le cours
             </a>
             <a 
               href="#parties" 
-              className="text-sm font-medium hover:text-brand-blue transition-colors"
+              className="text-sm font-medium hover:text-brand-orange transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Les 10 parties
             </a>
             <a 
               href="#avantages" 
-              className="text-sm font-medium hover:text-brand-blue transition-colors"
+              className="text-sm font-medium hover:text-brand-orange transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Avantages
             </a>
           </nav>
           <div className="mt-4">
-            <Button className="w-full bg-gradient-to-r from-brand-blue to-brand-purple">
+            <Button className="w-full bg-gradient-to-r from-brand-orange to-brand-dark">
               Démarrer maintenant
             </Button>
           </div>

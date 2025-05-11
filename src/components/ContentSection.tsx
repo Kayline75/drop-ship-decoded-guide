@@ -41,7 +41,7 @@ const ContentSection = ({
                 className="w-full h-auto rounded-lg shadow-lg"
               />
             ) : (
-              <div className="aspect-video w-full bg-gradient-to-br from-brand-blue/20 to-brand-purple/20 rounded-lg flex items-center justify-center">
+              <div className="aspect-video w-full bg-gradient-to-br from-brand-orange/20 to-brand-dark/20 rounded-lg flex items-center justify-center">
                 <span className="text-3xl font-bold gradient-text">{title}</span>
               </div>
             )}
@@ -54,7 +54,7 @@ const ContentSection = ({
 
 export const FeatureItem = ({ text }: { text: string }) => (
   <div className="flex items-start gap-2">
-    <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-brand-green flex items-center justify-center">
+    <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-brand-orange flex items-center justify-center">
       <Check className="w-3 h-3 text-white" />
     </div>
     <p>{text}</p>

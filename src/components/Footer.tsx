@@ -3,12 +3,12 @@ import { Facebook, Instagram, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-brand-dark text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="bg-gradient-to-r from-brand-blue to-brand-purple w-8 h-8 rounded-md"></div>
+              <div className="bg-gradient-to-r from-brand-orange to-brand-gray w-8 h-8 rounded-md"></div>
               <span className="text-xl font-bold">Whatsdropshipping</span>
             </div>
             <p className="text-gray-300 mb-6">

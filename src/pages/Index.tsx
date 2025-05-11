@@ -81,7 +81,7 @@ const Index = () => {
               subtitle="Deux approches avec leurs avantages et inconvénients."
               content={
                 <>
-                  <div className="bg-brand-light p-5 rounded-lg mb-6">
+                  <div className="bg-brand-gray/10 p-5 rounded-lg mb-6">
                     <h3 className="font-bold text-lg mb-3">Local (ex: fournisseurs français ou européens)</h3>
                     <div className="space-y-2">
                       <FeatureItem text="Livraison rapide" />
@@ -95,7 +95,7 @@ const Index = () => {
                     </div>
                   </div>
 
-                  <div className="bg-brand-light p-5 rounded-lg mb-6">
+                  <div className="bg-brand-gray/10 p-5 rounded-lg mb-6">
                     <h3 className="font-bold text-lg mb-3">International (souvent Chine via 1688, AliExpress, etc.)</h3>
                     <div className="space-y-2">
                       <FeatureItem text="Prix bas" />
@@ -126,7 +126,7 @@ const Index = () => {
         </div>
       </div>
 
-      <div id="parties" className="bg-gray-50 py-16 md:py-24">
+      <div id="parties" className="bg-brand-gray/10 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -143,19 +143,19 @@ const Index = () => {
               number={1} 
               title="Comprendre le modèle" 
               description="Les bases du dropshipping, la chaine logistique et le choix des fournisseurs." 
-              color="blue"
+              color="orange"
             />
             <PartCard 
               number={2} 
               title="Trouver sa niche" 
               description="Comment identifier une niche rentable et analyser la concurrence." 
-              color="purple"
+              color="dark"
             />
             <PartCard 
               number={3} 
               title="Construire sa boutique" 
               description="Choisir sa plateforme e-commerce et structurer son site pour convertir." 
-              color="green"
+              color="gray"
             />
             <PartCard 
               number={4} 
@@ -167,43 +167,43 @@ const Index = () => {
               number={5} 
               title="Créer des offres irrésistibles" 
               description="Rédiger des fiches produit qui convertissent et définir une stratégie de prix." 
-              color="blue"
+              color="dark"
             />
             <PartCard 
               number={6} 
               title="Marketing et acquisition" 
               description="Lancer des publicités efficaces, utiliser l'IA et le marketing d'influence." 
-              color="purple"
+              color="gray"
             />
             <PartCard 
               number={7} 
               title="Gestion et suivi" 
               description="Automatiser les commandes et gérer efficacement le suivi des livraisons." 
-              color="green"
+              color="orange"
             />
             <PartCard 
               number={8} 
               title="Optimiser et faire grandir" 
               description="Améliorer le taux de conversion et augmenter le panier moyen avec des upsells." 
-              color="orange"
+              color="dark"
             />
             <PartCard 
               number={9} 
               title="Légal et sécurité" 
               description="Comprendre vos obligations légales et choisir où ouvrir votre société." 
-              color="blue"
+              color="gray"
             />
             <PartCard 
               number={10} 
               title="Aller plus loin" 
               description="Lancer une seconde boutique et externaliser certaines missions pour scaler." 
-              color="purple"
+              color="orange"
               className="md:col-span-2 lg:col-span-1"
             />
           </div>
 
           <div className="text-center mt-12">
-            <Button className="bg-gradient-to-r from-brand-blue to-brand-purple text-md px-8 py-6">
+            <Button className="bg-gradient-to-r from-brand-orange to-brand-dark text-md px-8 py-6">
               Commencer la formation gratuite
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -225,8 +225,8 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-blue/10 flex items-center justify-center">
-                <ShoppingCart className="h-8 w-8 text-brand-blue" />
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-orange/10 flex items-center justify-center">
+                <ShoppingCart className="h-8 w-8 text-brand-orange" />
               </div>
               <h3 className="text-xl font-bold mb-3">
                 Information pratique
@@ -237,8 +237,8 @@ const Index = () => {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-purple/10 flex items-center justify-center">
-                <Globe className="h-8 w-8 text-brand-purple" />
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-dark/10 flex items-center justify-center">
+                <Globe className="h-8 w-8 text-brand-dark" />
               </div>
               <h3 className="text-xl font-bold mb-3">
                 Vision internationale
@@ -249,8 +249,8 @@ const Index = () => {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-green/10 flex items-center justify-center">
-                <Store className="h-8 w-8 text-brand-green" />
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-gray/15 flex items-center justify-center">
+                <Store className="h-8 w-8 text-brand-gray" />
               </div>
               <h3 className="text-xl font-bold mb-3">
                 Focus Shopify
@@ -263,7 +263,7 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-brand-blue to-brand-purple text-white py-16">
+      <div className="bg-gradient-to-r from-brand-orange to-brand-dark text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Prêt à lancer votre business en dropshipping?
@@ -271,7 +271,7 @@ const Index = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Rejoignez notre formation complète et commencez votre aventure entrepreneuriale dès aujourd'hui.
           </p>
-          <Button className="bg-white text-brand-blue hover:bg-gray-100 text-md px-8 py-6">
+          <Button className="bg-white text-brand-dark hover:bg-gray-100 text-md px-8 py-6">
             Démarrer gratuitement
           </Button>
         </div>

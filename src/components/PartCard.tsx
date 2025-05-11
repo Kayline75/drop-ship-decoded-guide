@@ -6,7 +6,7 @@ interface PartCardProps {
   number: number;
   title: string;
   description: string;
-  color?: "blue" | "purple" | "green" | "orange";
+  color?: "orange" | "gray" | "dark" | "light";
   className?: string;
 }
 
@@ -14,28 +14,28 @@ const PartCard = ({
   number, 
   title, 
   description, 
-  color = "blue",
+  color = "orange",
   className 
 }: PartCardProps) => {
   const colorClasses = {
-    blue: "from-blue-500 to-blue-600",
-    purple: "from-purple-500 to-purple-600",
-    green: "from-emerald-500 to-emerald-600",
-    orange: "from-amber-500 to-amber-600",
+    orange: "from-brand-orange to-amber-600",
+    gray: "from-brand-gray to-slate-400",
+    dark: "from-brand-dark to-slate-800",
+    light: "from-white to-brand-gray/30",
   };
 
   const bgColorClasses = {
-    blue: "bg-blue-50",
-    purple: "bg-purple-50",
-    green: "bg-emerald-50",
-    orange: "bg-amber-50",
+    orange: "bg-brand-orange/10",
+    gray: "bg-brand-gray/20",
+    dark: "bg-brand-dark/10",
+    light: "bg-gray-50",
   };
 
   const textColorClass = {
-    blue: "text-blue-500",
-    purple: "text-purple-500",
-    green: "text-emerald-500",
-    orange: "text-amber-500",
+    orange: "text-brand-orange",
+    gray: "text-brand-gray",
+    dark: "text-brand-dark",
+    light: "text-gray-500",
   };
 
   return (
