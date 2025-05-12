@@ -5,6 +5,7 @@ import ContentSection, { FeatureItem } from "@/components/ContentSection";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingCart, Globe, Store, BarChart } from "lucide-react";
+import GradientBackground from "@/components/GradientBackground";
 
 const Index = () => {
   return <div className="min-h-screen">
@@ -146,13 +147,15 @@ const Index = () => {
         </div>
       </div>
 
-      <div id="avantages" className="bg-white py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <div id="avantages" className="relative py-16 md:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-gray/10 via-blue-900/70 to-background z-0"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Pourquoi choisir notre <span className="gradient-text">formation</span>?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">
               Notre objectif est de vous fournir des connaissances concrètes et applicables 
               pour réussir dans le domaine du dropshipping.
             </p>
@@ -160,42 +163,46 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-orange/10 flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-orange/20 flex items-center justify-center">
                 <ShoppingCart className="h-8 w-8 text-brand-orange" />
               </div>
-              <h3 className="text-xl font-bold mb-3">
+              <h3 className="text-xl font-bold mb-3 text-white">
                 Information pratique
               </h3>
-              <p className="text-gray-600">
+              <p className="text-white/80">
                 Des conseils concrets, applicables immédiatement, sans jargon inutile.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-dark/10 flex items-center justify-center">
-                <Globe className="h-8 w-8 text-brand-dark" />
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-dark/20 flex items-center justify-center">
+                <Globe className="h-8 w-8 text-brand-medium" />
               </div>
-              <h3 className="text-xl font-bold mb-3">
+              <h3 className="text-xl font-bold mb-3 text-white">
                 Vision internationale
               </h3>
-              <p className="text-gray-600">
+              <p className="text-white/80">
                 Comparaison des stratégies en France, en Suisse et aux Émirats arabes unis.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-gray/15 flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-gray/25 flex items-center justify-center">
                 <Store className="h-8 w-8 text-brand-gray" />
               </div>
-              <h3 className="text-xl font-bold mb-3">
+              <h3 className="text-xl font-bold mb-3 text-white">
                 Focus Shopify
               </h3>
-              <p className="text-gray-600">
+              <p className="text-white/80">
                 Maîtrisez la plateforme la plus adaptée au dropshipping et ses applications.
               </p>
             </div>
           </div>
         </div>
+        
+        {/* Add subtle animated gradient blobs for depth */}
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-brand-orange/5 rounded-full filter blur-[80px] animate-float"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-brand-medium/5 rounded-full filter blur-[100px] animate-float" style={{animationDelay: '2s'}}></div>
       </div>
 
       <div className="bg-gradient-to-r from-brand-orange to-brand-dark text-white py-16">
