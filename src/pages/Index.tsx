@@ -205,18 +205,25 @@ const Index = () => {
         <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-brand-medium/5 rounded-full filter blur-[100px] animate-float" style={{animationDelay: '2s'}}></div>
       </div>
 
-      <div className="bg-gradient-to-r from-brand-orange to-brand-dark text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Prêt à lancer votre business en dropshipping?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Rejoignez notre formation complète et commencez votre aventure entrepreneuriale dès aujourd'hui.
-          </p>
-          <Button className="bg-white text-brand-dark hover:bg-gray-100 text-md px-8 py-6">
-            Démarrer gratuitement
-          </Button>
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/70 to-background z-0"></div>
+        <div className="relative z-10 py-16">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Prêt à lancer votre business en dropshipping?
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
+              Rejoignez notre formation complète et commencez votre aventure entrepreneuriale dès aujourd'hui.
+            </p>
+            <Button className="bg-white text-brand-dark hover:bg-gray-100 text-md px-8 py-6">
+              Démarrer gratuitement
+            </Button>
+          </div>
         </div>
+        
+        {/* Add subtle gradient blobs for depth */}
+        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-brand-orange/10 rounded-full filter blur-[80px] animate-float"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-72 h-72 bg-brand-medium/10 rounded-full filter blur-[100px] animate-float" style={{animationDelay: '1.5s'}}></div>
       </div>
 
       <Footer />
