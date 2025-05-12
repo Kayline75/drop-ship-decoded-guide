@@ -5,6 +5,7 @@ import ContentSection, { FeatureItem } from "@/components/ContentSection";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingCart, Globe, Store, BarChart } from "lucide-react";
+
 const Index = () => {
   return <div className="min-h-screen">
       <NavBar />
@@ -93,7 +94,7 @@ const Index = () => {
                     </div>
                   </div>
 
-                  <p className="text-gray-700 font-medium">
+                  <p className="text-gray-700 font-medium text-center">
                     👉 Le mieux ? Tester les deux selon ta niche, et comparer.
                   </p>
                 </>} imageUrl="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" gradient={true} />
