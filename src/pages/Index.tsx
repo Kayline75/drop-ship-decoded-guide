@@ -5,14 +5,12 @@ import ContentSection, { FeatureItem } from "@/components/ContentSection";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingCart, Globe, Store, BarChart } from "lucide-react";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <NavBar />
       <Hero />
 
-      <div id="cours" className="py-16 md:py-24">
+      <div id="cours" className="bg-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -25,37 +23,25 @@ const Index = () => {
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <ContentSection
-              title="Qu'est-ce que la chaîne logistique en dropshipping?"
-              subtitle="Un modèle commercial où vous ne gérez aucun stock."
-              content={
-                <>
+            <ContentSection title="Qu'est-ce que la chaîne logistique en dropshipping?" subtitle="Un modèle commercial où vous ne gérez aucun stock." content={<>
                   <p className="text-gray-700 mb-6">
                     Le dropshipping, c'est un modèle où tu ne stockes pas les produits chez toi. 
                     En gros, tu ouvres une boutique en ligne, un client passe commande chez toi, et c'est ton 
                     fournisseur qui envoie directement le produit au client.
                   </p>
                   <p className="text-gray-700 mb-6">
-                    <strong>Voici le schéma :</strong><br/>
+                    <strong>Voici le schéma :</strong><br />
                     Client → Ta boutique → Fournisseur → Livraison directe au client.
                   </p>
                   <p className="text-gray-700">
                     Tu gagnes de l'argent sur la différence entre le prix d'achat (chez le fournisseur) 
                     et le prix de vente (sur ta boutique). Pas de stock, pas d'emballage à gérer toi-même.
                   </p>
-                </>
-              }
-              imageUrl="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-              gradient={true}
-            />
+                </>} imageUrl="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" />
 
             <div className="h-24"></div>
 
-            <ContentSection
-              title="Pourquoi le choix du fournisseur est crucial?"
-              subtitle="Votre fournisseur représente la qualité de votre service."
-              content={
-                <>
+            <ContentSection title="Pourquoi le choix du fournisseur est crucial?" subtitle="Votre fournisseur représente la qualité de votre service." content={<>
                   <p className="text-gray-700 mb-6">
                     Ton fournisseur, c'est la base. S'il envoie en retard, mal emballe, ou propose des produits 
                     de mauvaise qualité, c'est toi que le client va accuser.
@@ -68,20 +54,11 @@ const Index = () => {
                   <p className="text-gray-700 font-medium">
                     Un mauvais fournisseur = des litiges, des remboursements, et une mauvaise réputation.
                   </p>
-                </>
-              }
-              reversed={true}
-              imageUrl="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-              gradient={true}
-            />
+                </>} reversed={true} imageUrl="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" />
 
             <div className="h-24"></div>
 
-            <ContentSection
-              title="Dropshipping local ou international: que choisir?"
-              subtitle="Deux approches avec leurs avantages et inconvénients."
-              content={
-                <>
+            <ContentSection title="Dropshipping local ou international: que choisir?" subtitle="Deux approches avec leurs avantages et inconvénients." content={<>
                   <div className="bg-brand-gray/10 p-5 rounded-lg mb-6">
                     <h3 className="font-bold text-lg mb-3">Local (ex: fournisseurs français ou européens)</h3>
                     <div className="space-y-2">
@@ -119,11 +96,7 @@ const Index = () => {
                   <p className="text-gray-700 font-medium">
                     👉 Le mieux ? Tester les deux selon ta niche, et comparer.
                   </p>
-                </>
-              }
-              imageUrl="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-              gradient={true}
-            />
+                </>} imageUrl="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" />
           </div>
         </div>
       </div>
@@ -141,67 +114,26 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <PartCard 
-              number={1} 
-              title="Comprendre le modèle" 
-              description="Les bases du dropshipping, la chaine logistique et le choix des fournisseurs." 
-              color="custom1" // Remplace "orange"
-            />
-            <PartCard 
-              number={2} 
-              title="Trouver sa niche" 
-              description="Comment identifier une niche rentable et analyser la concurrence." 
-              color="custom2" // Remplace "dark"
-            />
-            <PartCard 
-              number={3} 
-              title="Construire sa boutique" 
-              description="Choisir sa plateforme e-commerce et structurer son site pour convertir." 
-              color="custom3" // Remplace "gray"
-            />
-            <PartCard 
-              number={4} 
-              title="Travailler avec des fournisseurs" 
-              description="Trouver des fournisseurs fiables et communiquer efficacement avec eux." 
-              color="custom1" // Remplace "orange"
-            />
-            <PartCard 
-              number={5} 
-              title="Créer des offres irrésistibles" 
-              description="Rédiger des fiches produit qui convertissent et définir une stratégie de prix." 
-              color="custom2" // Remplace "dark"
-            />
-            <PartCard 
-              number={6} 
-              title="Marketing et acquisition" 
-              description="Lancer des publicités efficaces, utiliser l'IA et le marketing d'influence." 
-              color="custom3" // Remplace "gray"
-            />
-            <PartCard 
-              number={7} 
-              title="Gestion et suivi" 
-              description="Automatiser les commandes et gérer efficacement le suivi des livraisons." 
-              color="custom1" // Remplace "orange"
-            />
-            <PartCard 
-              number={8} 
-              title="Optimiser et faire grandir" 
-              description="Améliorer le taux de conversion et augmenter le panier moyen avec des upsells." 
-              color="custom2" // Remplace "dark"
-            />
-            <PartCard 
-              number={9} 
-              title="Légal et sécurité" 
-              description="Comprendre vos obligations légales et choisir où ouvrir votre société." 
-              color="custom3" // Remplace "gray"
-            />
-            <PartCard 
-              number={10} 
-              title="Aller plus loin" 
-              description="Lancer une seconde boutique et externaliser certaines missions pour scaler." 
-              color="custom1" // Remplace "orange"
-              className="md:col-span-2 lg:col-span-1"
-            />
+            <PartCard number={1} title="Comprendre le modèle" description="Les bases du dropshipping, la chaine logistique et le choix des fournisseurs." color="custom1" // Remplace "orange"
+          />
+            <PartCard number={2} title="Trouver sa niche" description="Comment identifier une niche rentable et analyser la concurrence." color="custom2" // Remplace "dark"
+          />
+            <PartCard number={3} title="Construire sa boutique" description="Choisir sa plateforme e-commerce et structurer son site pour convertir." color="custom3" // Remplace "gray"
+          />
+            <PartCard number={4} title="Travailler avec des fournisseurs" description="Trouver des fournisseurs fiables et communiquer efficacement avec eux." color="custom1" // Remplace "orange"
+          />
+            <PartCard number={5} title="Créer des offres irrésistibles" description="Rédiger des fiches produit qui convertissent et définir une stratégie de prix." color="custom2" // Remplace "dark"
+          />
+            <PartCard number={6} title="Marketing et acquisition" description="Lancer des publicités efficaces, utiliser l'IA et le marketing d'influence." color="custom3" // Remplace "gray"
+          />
+            <PartCard number={7} title="Gestion et suivi" description="Automatiser les commandes et gérer efficacement le suivi des livraisons." color="custom1" // Remplace "orange"
+          />
+            <PartCard number={8} title="Optimiser et faire grandir" description="Améliorer le taux de conversion et augmenter le panier moyen avec des upsells." color="custom2" // Remplace "dark"
+          />
+            <PartCard number={9} title="Légal et sécurité" description="Comprendre vos obligations légales et choisir où ouvrir votre société." color="custom3" // Remplace "gray"
+          />
+            <PartCard number={10} title="Aller plus loin" description="Lancer une seconde boutique et externaliser certaines missions pour scaler." color="custom1" // Remplace "orange"
+          className="md:col-span-2 lg:col-span-1" />
           </div>
 
           <div className="text-center mt-12">
@@ -213,13 +145,13 @@ const Index = () => {
         </div>
       </div>
 
-      <div id="avantages" className="bg-blue-900/90 py-16 md:py-24 text-white">
+      <div id="avantages" className="bg-white py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 bg-slate-900">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Pourquoi choisir notre <span className="gradient-text">formation</span>?
             </h2>
-            <p className="text-lg max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Notre objectif est de vous fournir des connaissances concrètes et applicables 
               pour réussir dans le domaine du dropshipping.
             </p>
@@ -233,7 +165,7 @@ const Index = () => {
               <h3 className="text-xl font-bold mb-3">
                 Information pratique
               </h3>
-              <p className="text-gray-300">
+              <p className="text-gray-600">
                 Des conseils concrets, applicables immédiatement, sans jargon inutile.
               </p>
             </div>
@@ -245,7 +177,7 @@ const Index = () => {
               <h3 className="text-xl font-bold mb-3">
                 Vision internationale
               </h3>
-              <p className="text-gray-300">
+              <p className="text-gray-600">
                 Comparaison des stratégies en France, en Suisse et aux Émirats arabes unis.
               </p>
             </div>
@@ -257,7 +189,7 @@ const Index = () => {
               <h3 className="text-xl font-bold mb-3">
                 Focus Shopify
               </h3>
-              <p className="text-gray-300">
+              <p className="text-gray-600">
                 Maîtrisez la plateforme la plus adaptée au dropshipping et ses applications.
               </p>
             </div>
@@ -267,7 +199,7 @@ const Index = () => {
 
       <div className="bg-gradient-to-r from-brand-orange to-brand-dark text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="Je veux que le rectangle soit fluide et se fond entre les couleurs de la section basse et de la section haute">
             Prêt à lancer votre business en dropshipping?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -280,8 +212,6 @@ const Index = () => {
       </div>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
