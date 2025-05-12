@@ -94,7 +94,7 @@ const Index = () => {
                     </div>
                   </div>
 
-                  <p className="text-gray-700 font-medium text-center">
+                  <p className="text-orange-300 font-medium text-center">
                     👉 Le mieux ? Tester les deux selon ta niche, et comparer.
                   </p>
                 </>} imageUrl="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" gradient={true} />
