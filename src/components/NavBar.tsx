@@ -30,29 +30,29 @@ const NavBar = () => {
     >
       <div className="container flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <div className="bg-gradient-to-r from-[#F97316] to-[#33C3F0] w-8 h-8 rounded-md"></div> {/* Changed to orange and sky blue */}
-          <span className="text-xl font-bold text-white">Whatsdropshipping</span> {/* Text in white */}
+          <div className="bg-gradient-to-r from-[#F97316] to-[#33C3F0] w-8 h-8 rounded-md"></div>
+          <span className="text-xl font-bold text-white">Whatsdropshipping</span>
         </a>
         
         <div className="hidden md:flex items-center space-x-8">
           <nav className="flex items-center space-x-8">
-            <a href="#cours" className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"> {/* Changed to white and sky blue hover */}
-              Le cours
+            <a href="#cours" className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors">
+              Les bases
             </a>
-            <a href="#parties" className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"> {/* Changed to white and sky blue hover */}
+            <a href="#parties" className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors">
               Les 10 parties
             </a>
-            <a href="#avantages" className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"> {/* Changed to white and sky blue hover */}
+            <a href="#avantages" className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors">
               Avantages
             </a>
           </nav>
-          <Button className="bg-gradient-to-r from-[#F97316] to-[#FF8D6B] hover:opacity-90 transition-all button-glow"> {/* Changed to orange gradient */}
+          <Button className="bg-gradient-to-r from-[#F97316] to-[#FF8D6B] hover:opacity-90 transition-all button-glow">
             Démarrer maintenant
           </Button>
         </div>
 
         <button 
-          className="md:hidden text-white" /* Changed to white */
+          className="md:hidden text-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
@@ -69,28 +69,28 @@ const NavBar = () => {
           <nav className="flex flex-col space-y-4">
             <a 
               href="#cours" 
-              className="text-sm font-medium text-white hover:text-[#33C3F0] transition-colors" /* Changed to white and sky blue hover */
+              className="text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Le cours
+              Les bases
             </a>
             <a 
               href="#parties" 
-              className="text-sm font-medium text-white hover:text-[#33C3F0] transition-colors" /* Changed to white and sky blue hover */
+              className="text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Les 10 parties
             </a>
             <a 
               href="#avantages" 
-              className="text-sm font-medium text-white hover:text-[#33C3F0] transition-colors" /* Changed to white and sky blue hover */
+              className="text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Avantages
             </a>
           </nav>
           <div className="mt-5">
-            <Button className="w-full bg-gradient-to-r from-[#F97316] to-[#FF8D6B]"> {/* Changed to orange gradient */}
+            <Button className="w-full bg-gradient-to-r from-[#F97316] to-[#FF8D6B]">
               Démarrer maintenant
             </Button>
           </div>
