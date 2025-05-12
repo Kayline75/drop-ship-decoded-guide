@@ -13,7 +13,7 @@ const Index = () => {
       <NavBar />
       <Hero />
 
-      <div id="cours" className="bg-white py-16 md:py-24">
+      <div id="cours" className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -47,6 +47,7 @@ const Index = () => {
                 </>
               }
               imageUrl="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              gradient={true}
             />
 
             <div className="h-24"></div>
@@ -72,6 +73,7 @@ const Index = () => {
               }
               reversed={true}
               imageUrl="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              gradient={true}
             />
 
             <div className="h-24"></div>
@@ -121,6 +123,7 @@ const Index = () => {
                 </>
               }
               imageUrl="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              gradient={true}
             />
           </div>
         </div>

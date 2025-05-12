@@ -9,6 +9,7 @@ interface ContentSectionProps {
   id?: string;
   className?: string;
   imageUrl?: string;
+  gradient?: boolean;
 }
 
 const ContentSection = ({
@@ -19,11 +20,12 @@ const ContentSection = ({
   id,
   className = "",
   imageUrl,
+  gradient = false,
 }: ContentSectionProps) => {
   return (
     <section 
       id={id} 
-      className={`section-padding ${className}`}
+      className={`section-padding ${gradient ? 'bg-gradient-to-br from-[#2F1A94] via-[#1F125E] to-[#F97316]/90' : ''} ${className}`}
     >
       <div className="container">
         <div className={`flex flex-col ${reversed ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-8 lg:gap-16`}>
