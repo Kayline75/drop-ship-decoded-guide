@@ -13,11 +13,13 @@ const MouseFollower = () => {
       mouseFollowerRef.current = follower;
     }
     
-    // Add global mouse move listener
+    // Use CSS variables for position to avoid layout thrashing
     const handleMouseMove = (e: MouseEvent) => {
       if (mouseFollowerRef.current) {
-        mouseFollowerRef.current.style.left = `${e.clientX}px`;
-        mouseFollowerRef.current.style.top = `${e.clientY}px`;
+        // Use transform instead of left/top to leverage GPU acceleration
+        // This avoids repaints and layout recalculations
+        mouseFollowerRef.current.style.setProperty('--mouse-x', `${e.clientX}px`);
+        mouseFollowerRef.current.style.setProperty('--mouse-y', `${e.clientY}px`);
       }
     };
     

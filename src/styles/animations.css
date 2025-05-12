@@ -1,5 +1,20 @@
 
-/* Mouse follower effect */
+/* CSS Variables for animations */
+:root {
+  --gradient-primary: #FF6B95;
+  --gradient-secondary: #7BE0FF;
+  --gradient-text-speed: 8s;
+  --gradient-border-speed: 8s;
+  --float-amplitude: 15px;
+  --float-duration: 6s;
+  --pulse-opacity-min: 0.7;
+  --pulse-duration: 3s;
+  --twinkle-scale-min: 0.8;
+  --twinkle-scale-max: 1.1;
+  --twinkle-duration: 2s;
+}
+
+/* Mouse follower effect - Optimized for GPU acceleration */
 .mouse-follower {
   position: fixed;
   width: 100px;
@@ -9,15 +24,17 @@
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: screen;
-  transition: transform 0.1s ease;
-  transform: translate(-50%, -50%);
+  /* Use transform instead of top/left for better performance */
+  transform: translate(calc(var(--mouse-x, 0px) - 50%), calc(var(--mouse-y, 0px) - 50%));
+  will-change: transform; /* Hint to the browser to optimize for animation */
 }
 
-/* Text gradient animations */
+/* Text gradient animations - using CSS variables */
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FF6B95] to-[#7BE0FF];
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--gradient-primary)] to-[var(--gradient-secondary)];
   background-size: 300% 100%;
-  animation: gradient-animation 8s ease infinite;
+  animation: gradient-animation var(--gradient-text-speed) ease infinite;
+  will-change: background-position; /* Optimize animation */
 }
 
 @keyframes gradient-animation {
@@ -32,7 +49,7 @@
   }
 }
 
-/* Animated gradient background */
+/* Animated gradient background - optimized */
 @keyframes gradient-x {
   0% {
     background-position: 0% 50%;
@@ -44,6 +61,7 @@
 
 .animate-gradient-x {
   animation: gradient-x 15s linear infinite;
+  will-change: background-position;
 }
 
 .bg-size-200 {
@@ -53,11 +71,13 @@
 .hero-text {
   opacity: 0;
   animation: fade-in-up 1s ease forwards 0.3s;
+  will-change: opacity, transform; /* Optimize animation */
 }
 
 .hero-text-delay {
   opacity: 0;
   animation: fade-in-up 1s ease forwards 0.6s;
+  will-change: opacity, transform; /* Optimize animation */
 }
 
 /* Animated border effect */
@@ -88,63 +108,70 @@
 .fade-in-up {
   opacity: 0;
   animation: fade-in-up 1s ease forwards 0.9s;
+  will-change: opacity, transform; /* Optimize animation */
 }
 
 .fade-in-up-delay {
   opacity: 0;
   animation: fade-in-up 1s ease forwards 1.2s;
+  will-change: opacity, transform; /* Optimize animation */
 }
 
 .fade-in-up-delay-2 {
   opacity: 0;
   animation: fade-in-up 1s ease forwards 1.5s;
+  will-change: opacity, transform; /* Optimize animation */
 }
 
-/* Custom float animation */
+/* Custom float animation - using CSS variables */
 @keyframes float-custom {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-15px);
+    transform: translateY(calc(-1 * var(--float-amplitude)));
   }
 }
 
 .animate-float-custom {
-  animation: float-custom 6s ease-in-out infinite;
+  animation: float-custom var(--float-duration) ease-in-out infinite;
+  will-change: transform; /* Optimize animation */
 }
 
-/* Additional animations */
+/* Additional animations - using CSS variables */
 @keyframes pulse-slow {
   0%, 100% {
     opacity: 1;
   }
   50% {
-    opacity: 0.7;
+    opacity: var(--pulse-opacity-min);
   }
 }
 
 .animate-pulse-slow {
-  animation: pulse-slow 3s ease-in-out infinite;
+  animation: pulse-slow var(--pulse-duration) ease-in-out infinite;
+  will-change: opacity; /* Optimize animation */
 }
 
 @keyframes twinkle {
   0%, 100% {
     opacity: 0.3;
-    transform: scale(0.8);
+    transform: scale(var(--twinkle-scale-min));
   }
   50% {
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(var(--twinkle-scale-max));
   }
 }
 
 .animate-twinkle {
-  animation: twinkle 2s ease-in-out infinite;
+  animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+  will-change: opacity, transform; /* Optimize animation */
 }
 
 .animate-twinkle-delayed {
-  animation: twinkle 2s ease-in-out 1s infinite;
+  animation: twinkle var(--twinkle-duration) ease-in-out 1s infinite;
+  will-change: opacity, transform; /* Optimize animation */
 }
 
 @keyframes bounce-subtle {
@@ -158,6 +185,7 @@
 
 .animate-bounce-subtle {
   animation: bounce-subtle 2s ease-in-out infinite;
+  will-change: transform; /* Optimize animation */
 }
 
 @keyframes gradient-text {
