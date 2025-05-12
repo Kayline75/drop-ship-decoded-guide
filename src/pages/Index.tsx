@@ -5,6 +5,7 @@ import ContentSection, { FeatureItem } from "@/components/ContentSection";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingCart, Globe, Store, BarChart } from "lucide-react";
+
 const Index = () => {
   return <div className="min-h-screen">
       <NavBar />
@@ -30,7 +31,7 @@ const Index = () => {
                     fournisseur qui envoie directement le produit au client.
                   </p>
                   <p className="text-gray-700 mb-6">
-                    <strong>Voici le schéma :</strong><br />
+                    <strong className="">Voici le schéma :</strong><br />
                     Client → Ta boutique → Fournisseur → Livraison directe au client.
                   </p>
                   <p className="text-gray-700">
@@ -93,7 +94,7 @@ const Index = () => {
                     </div>
                   </div>
 
-                  <p className="text-gray-700 font-medium">
+                  <p className="text-orange-300 font-medium text-center">
                     👉 Le mieux ? Tester les deux selon ta niche, et comparer.
                   </p>
                 </>} imageUrl="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" gradient={true} />
@@ -117,7 +118,7 @@ const Index = () => {
             <PartCard number={1} title="Comprendre le modèle" description="Les bases du dropshipping, la chaine logistique et le choix des fournisseurs." color="custom1" // Remplace "orange"
           />
             <PartCard number={2} title="Trouver sa niche" description="Comment identifier une niche rentable et analyser la concurrence." color="custom2" // Remplace "dark"
-          className="put the color state-900" />
+          />
             <PartCard number={3} title="Construire sa boutique" description="Choisir sa plateforme e-commerce et structurer son site pour convertir." color="custom3" // Remplace "gray"
           />
             <PartCard number={4} title="Travailler avec des fournisseurs" description="Trouver des fournisseurs fiables et communiquer efficacement avec eux." color="custom1" // Remplace "orange"
