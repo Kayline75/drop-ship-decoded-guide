@@ -1,8 +1,7 @@
-
 /* CSS Variables for animations */
 :root {
-  --gradient-primary: #FF6B95;
-  --gradient-secondary: #7BE0FF;
+  --gradient-primary: #F97316; /* Changed to orange */
+  --gradient-secondary: #33C3F0; /* Changed to sky blue */
   --gradient-text-speed: 8s;
   --gradient-border-speed: 8s;
   --float-amplitude: 15px;
@@ -20,7 +19,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 107, 149, 0.2) 0%, rgba(123, 224, 255, 0.1) 70%, transparent 100%);
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.2) 0%, rgba(51, 195, 240, 0.1) 70%, transparent 100%); /* Changed to orange and sky blue */
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: screen;

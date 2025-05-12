@@ -51,7 +51,7 @@ const Hero = () => {
       const x = mousePosition.x / width * 100;
       const y = mousePosition.y / height * 100;
       return {
-        background: `radial-gradient(circle at ${x}% ${y}%, rgba(255, 107, 149, 0.15) 0%, transparent 50%)`,
+        background: `radial-gradient(circle at ${x}% ${y}%, rgba(249, 115, 22, 0.15) 0%, transparent 50%)`, /* Changed to orange */
       };
     }
     return {};
@@ -92,7 +92,7 @@ const Hero = () => {
         >
           <Package 
             size={item.size} 
-            className="text-accent" 
+            className="text-[#33C3F0]" /* Changed to sky blue */
           />
         </div>
       ))}
@@ -108,30 +108,30 @@ const Hero = () => {
             {/* Animated badge */}
             <AnimatedBadge className="mb-6">
               <div className="flex items-center gap-2 relative">
-                <Package className="h-4 w-4 text-secondary animate-twinkle" />
-                <span className="text-sm font-medium text-secondary animate-gradient-text">
+                <Package className="h-4 w-4 text-[#33C3F0] animate-twinkle" /> {/* Changed to sky blue */}
+                <span className="text-sm font-medium text-white animate-gradient-text">
                   Formation Dropshipping Premium
                 </span>
-                <Package className="h-4 w-4 text-secondary animate-twinkle-delayed" />
+                <Package className="h-4 w-4 text-[#33C3F0] animate-twinkle-delayed" /> {/* Changed to sky blue */}
               </div>
             </AnimatedBadge>
             
             {/* Main title with animated gradient */}
             <h1 className="text-4xl md:text-6xl font-bold mb-6 relative">
-              <span className="hero-text bg-clip-text text-transparent bg-gradient-to-r from-[#FF6B95] via-[#FFFFFF] to-[#7BE0FF] bg-size-200 animate-gradient-x">
+              <span className="hero-text bg-clip-text text-transparent bg-gradient-to-r from-[#F97316] via-[#FFFFFF] to-[#33C3F0] bg-size-200 animate-gradient-x">
                 Découvrez l'art du Dropshipping
               </span>
               <br className="hidden md:block" />
-              <span className="hero-text-delay bg-clip-text text-transparent bg-gradient-to-r from-[#7BE0FF] via-[#FFFFFF] to-[#FF6B95] bg-size-200 animate-gradient-x">
+              <span className="hero-text-delay bg-clip-text text-transparent bg-gradient-to-r from-[#33C3F0] via-[#FFFFFF] to-[#F97316] bg-size-200 animate-gradient-x">
                 pour créer un revenu en ligne
               </span>
               
               {/* Floating package icons near title */}
-              <Package className="absolute -right-4 -top-4 h-6 w-6 text-secondary/40 animate-float opacity-75" />
-              <Package className="absolute -left-8 bottom-0 h-4 w-4 text-primary/40 animate-float-delayed opacity-75" />
+              <Package className="absolute -right-4 -top-4 h-6 w-6 text-[#33C3F0]/40 animate-float opacity-75" /> {/* Changed to sky blue */}
+              <Package className="absolute -left-8 bottom-0 h-4 w-4 text-[#F97316]/40 animate-float-delayed opacity-75" /> {/* Changed to orange */}
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto fade-in-up">
+            <p className="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto fade-in-up">
               Notre approche structurée en 10 modules transformera votre ambition en 
               business rentable et autonome.
             </p>
@@ -140,7 +140,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-5 justify-center fade-in-up-delay">
               <GlowButton>
                 <Button 
-                  className="text-md px-8 py-6 bg-gradient-to-r from-[#FF6B95] to-[#FF8D6B] hover:opacity-90 transition-all relative z-10"
+                  className="text-md px-8 py-6 bg-gradient-to-r from-[#F97316] to-[#FF8D6B] hover:opacity-90 transition-all relative z-10" /* Changed to orange */
                   onClick={() => console.log("Formation démarrée")}
                 >
                   <span className="relative z-10">Débuter la formation</span>
@@ -149,10 +149,10 @@ const Hero = () => {
               
               <Button 
                 variant="outline" 
-                className="text-md px-8 py-6 border-secondary text-secondary hover:bg-secondary/10 transition-all relative overflow-hidden group"
+                className="text-md px-8 py-6 border-[#33C3F0] text-[#33C3F0] hover:bg-[#33C3F0]/10 transition-all relative overflow-hidden group" /* Changed to sky blue */
               >
                 <span className="relative z-10">En savoir plus</span>
-                <div className="absolute h-full w-0 bg-secondary/10 top-0 left-0 group-hover:w-full transition-all duration-300 ease-in-out"></div>
+                <div className="absolute h-full w-0 bg-[#33C3F0]/10 top-0 left-0 group-hover:w-full transition-all duration-300 ease-in-out"></div> {/* Changed to sky blue */}
               </Button>
             </div>
 
@@ -161,12 +161,12 @@ const Hero = () => {
               <button
                 onClick={scrollToNext}
                 aria-label="Scroll down"
-                className="text-secondary hover:text-secondary/80 transition-colors relative p-4 group"
+                className="text-[#33C3F0] hover:text-[#33C3F0]/80 transition-colors relative p-4 group" /* Changed to sky blue */
               >
-                <div className="absolute inset-0 rounded-full bg-secondary/10 scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                <div className="absolute inset-0 rounded-full bg-[#33C3F0]/10 scale-0 group-hover:scale-100 transition-transform duration-300"></div> {/* Changed to sky blue */}
                 <ArrowDown size={24} className="relative animate-bounce-subtle" />
               </button>
-              <span className="text-sm text-muted-foreground mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Explorer</span>
+              <span className="text-sm text-white mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Explorer</span>
             </div>
           </div>
         </div>

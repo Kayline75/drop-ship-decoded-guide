@@ -1,3 +1,4 @@
+
 /* Hero section styles */
 .hero-section {
   background-color: hsl(var(--background));
@@ -55,7 +56,7 @@
   content: '';
   position: absolute;
   inset: -1px;
-  background: linear-gradient(45deg, #FF6B95, #7BE0FF, #FF6B95);
+  background: linear-gradient(45deg, #F97316, #33C3F0, #FFFFFF); /* Changed to orange, sky blue, white */
   background-size: 400% 400%;
   animation: gradient-border 8s ease infinite;
   border-radius: calc(var(--radius) + 1px);
@@ -69,7 +70,7 @@
 }
 
 .button-glow:hover {
-  box-shadow: 0 0 15px rgba(255, 107, 149, 0.6);
+  box-shadow: 0 0 15px rgba(249, 115, 22, 0.6); /* Changed to orange */
 }
 
 .button-glow::after {
@@ -102,7 +103,7 @@
   height: 2px;
   bottom: -4px;
   left: 0;
-  background: linear-gradient(to right, #FF6B95, #7BE0FF);
+  background: linear-gradient(to right, #F97316, #33C3F0); /* Changed to orange and sky blue */
   transition: width 0.3s ease;
 }
 

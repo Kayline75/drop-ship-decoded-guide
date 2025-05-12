@@ -18,35 +18,35 @@ const PartCard = ({
   color = "primary",
   className 
 }: PartCardProps) => {
-  // Use colors from the uploaded image
+  // Use updated color scheme
   const colorClasses = {
-    primary: "from-[#2F1A94] to-[#5E6BD6]", // Dark blue to medium blue
-    secondary: "from-[#7D95F4] to-[#B3C4FF]", // Medium blue to light blue
-    accent: "from-[#9B6BFF] to-[#7341E0]", // Original purple
+    primary: "from-[#F97316] to-[#FF8D6B]", // Orange gradient
+    secondary: "from-[#33C3F0] to-[#1EAEDB]", // Sky blue gradient
+    accent: "from-[#F97316] to-[#33C3F0]", // Orange to sky blue
     muted: "from-gray-400 to-gray-500", // Original gray
-    custom1: "from-[#2F1A94] to-[#5E6BD6]", // Dark blue to medium blue
-    custom2: "from-[#7D95F4] to-[#B3C4FF]", // Medium blue to light blue 
-    custom3: "from-[#FF9F3F] to-[#FFBB7A]", // Orange
+    custom1: "from-[#F97316] to-[#FF8D6B]", // Orange gradient
+    custom2: "from-[#33C3F0] to-[#1EAEDB]", // Sky blue gradient
+    custom3: "from-white to-[#F5F5F5]", // White gradient
   };
 
   const bgColorClasses = {
-    primary: "border-[#2F1A94]/20",
-    secondary: "border-[#7D95F4]/20",
-    accent: "border-[#9B6BFF]/20",
+    primary: "border-[#F97316]/20",
+    secondary: "border-[#33C3F0]/20",
+    accent: "border-[#F97316]/20",
     muted: "border-gray-500/20",
-    custom1: "border-[#2F1A94]/20", // Dark blue
-    custom2: "border-[#7D95F4]/20", // Medium blue
-    custom3: "border-[#FF9F3F]/20", // Orange
+    custom1: "border-[#F97316]/20", // Orange
+    custom2: "border-[#33C3F0]/20", // Sky blue
+    custom3: "border-white/20", // White
   };
 
   const textColorClass = {
-    primary: "text-[#2F1A94]",
-    secondary: "text-[#7D95F4]",
-    accent: "text-[#9B6BFF]",
+    primary: "text-[#F97316]",
+    secondary: "text-[#33C3F0]",
+    accent: "text-[#F97316]",
     muted: "text-gray-400",
-    custom1: "text-[#5E6BD6]", // Medium blue for better readability
-    custom2: "text-[#7D95F4]", // Medium blue
-    custom3: "text-[#FF9F3F]", // Orange
+    custom1: "text-[#F97316]", // Orange
+    custom2: "text-[#33C3F0]", // Sky blue
+    custom3: "text-white", // White
   };
 
   return (
@@ -64,7 +64,7 @@ const PartCard = ({
           </div>
         </CardHeader>
         <CardContent>
-          <p className="text-muted-foreground">{description}</p>
+          <p className="text-white">{description}</p> {/* Changed to white */}
         </CardContent>
       </Card>
     </GlassCard>

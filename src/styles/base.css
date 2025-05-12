@@ -16,16 +16,16 @@
     --popover: 223 64% 15%; /* Adjusted to maintain contrast with darker background */
     --popover-foreground: 210 40% 92%;
 
-    --primary: 346 77% 64%;
-    --primary-foreground: 210 40% 92%;
+    --primary: 25 95% 53%; /* Changed to orange */
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 196 80% 70%;
+    --secondary: 196 80% 70%; /* Light blue */
     --secondary-foreground: 223 64% 12%; /* Changed to match background */
 
     --muted: 223 64% 20%; /* Adjusted for visibility on darker background */
-    --muted-foreground: 210 40% 75%;
+    --muted-foreground: 210 40% 98%; /* Changed to white for better contrast */
 
-    --accent: 196 80% 70%;
+    --accent: 196 80% 70%; /* Light blue */
     --accent-foreground: 223 64% 12%; /* Changed to match background */
 
     --destructive: 0 62.8% 30.6%;
@@ -33,18 +33,23 @@
 
     --border: 223 64% 20%; /* Adjusted for visibility on darker background */
     --input: 223 64% 20%; /* Adjusted for visibility on darker background */
-    --ring: 346 77% 64%;
+    --ring: 25 95% 53%; /* Changed to orange */
 
     --radius: 0.75rem;
 
     --sidebar-background: 223 64% 10%; /* Darkened for contrast with main background */
     --sidebar-foreground: 210 40% 92%;
-    --sidebar-primary: 346 77% 64%;
+    --sidebar-primary: 25 95% 53%; /* Changed to orange */
     --sidebar-primary-foreground: 210 40% 92%;
-    --sidebar-accent: 196 80% 70%;
+    --sidebar-accent: 196 80% 70%; /* Light blue */
     --sidebar-accent-foreground: 223 64% 10%; /* Matched to sidebar background */
     --sidebar-border: 223 64% 20%; /* Adjusted for visibility */
-    --sidebar-ring: 346 77% 64%;
+    --sidebar-ring: 25 95% 53%; /* Changed to orange */
+    
+    /* New color scheme */
+    --text-orange: 25 95% 53%; /* Orange */
+    --text-white: 0 0% 100%; /* Pure white */
+    --text-sky-blue: 196 80% 70%; /* Sky blue */
   }
 }
 
