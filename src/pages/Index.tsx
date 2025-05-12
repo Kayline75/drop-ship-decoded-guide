@@ -148,7 +148,7 @@ const Index = () => {
       </div>
 
       <div id="avantages" className="relative py-16 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-gray/10 via-blue-900/70 to-background z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-gray/5 via-brand-orange/90 to-brand-dark z-0"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
@@ -206,7 +206,13 @@ const Index = () => {
       </div>
 
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-orange to-brand-dark z-0"></div>
+        {/* Gradient seamless transition like a rainbow instead of hard edges */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-gray/5 via-brand-orange/90 to-brand-dark z-0"></div>
+        
+        {/* Add subtle gradient overlays for smoother transitions */}
+        <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-background to-transparent z-0"></div>
+        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-background to-transparent z-0"></div>
+        
         <div className="relative z-10 py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -221,9 +227,10 @@ const Index = () => {
           </div>
         </div>
         
-        {/* Add subtle gradient blobs for depth */}
-        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-brand-orange/10 rounded-full filter blur-[80px] animate-float"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-72 h-72 bg-brand-medium/10 rounded-full filter blur-[100px] animate-float" style={{animationDelay: '1.5s'}}></div>
+        {/* Rainbow-inspired gradient blobs with increased size and opacity for better blending */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-orange/20 rounded-full filter blur-[120px] animate-float"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-medium/20 rounded-full filter blur-[120px] animate-float" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute top-1/3 right-1/3 w-72 h-72 bg-brand-gray/15 rounded-full filter blur-[100px] animate-float" style={{animationDelay: '2s'}}></div>
       </div>
 
       <Footer />
