@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { GlassCard } from "./CardStyles";
 
 interface PartCardProps {
   number: number;
@@ -49,19 +50,24 @@ const PartCard = ({
   };
 
   return (
-    <Card className={cn("card-hover glass-card animated-border-card", bgColorClasses[color], className)}>
-      <CardHeader className="pb-2">
-        <div className="flex items-center gap-3">
-          <div className={cn("w-10 h-10 rounded-full flex items-center justify-center text-white bg-gradient-to-r", colorClasses[color])}>
-            <span className="text-sm font-bold">{number}</span>
+    <GlassCard 
+      className={cn("animated-border-card", bgColorClasses[color], className)}
+      hover={true}
+    >
+      <Card className="bg-transparent border-none shadow-none">
+        <CardHeader className="pb-2">
+          <div className="flex items-center gap-3">
+            <div className={cn("w-10 h-10 rounded-full flex items-center justify-center text-white bg-gradient-to-r", colorClasses[color])}>
+              <span className="text-sm font-bold">{number}</span>
+            </div>
+            <CardTitle className={cn("text-lg", textColorClass[color])}>{title}</CardTitle>
           </div>
-          <CardTitle className={cn("text-lg", textColorClass[color])}>{title}</CardTitle>
-        </div>
-      </CardHeader>
-      <CardContent>
-        <p className="text-muted-foreground">{description}</p>
-      </CardContent>
-    </Card>
+        </CardHeader>
+        <CardContent>
+          <p className="text-muted-foreground">{description}</p>
+        </CardContent>
+      </Card>
+    </GlassCard>
   );
 };
 
