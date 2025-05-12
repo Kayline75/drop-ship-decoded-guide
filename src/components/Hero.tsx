@@ -86,15 +86,6 @@ const Hero = () => {
     return {};
   };
 
-  // Generate revenue numbers and their positions
-  const revenueNumbers = [
-    { amount: "3438 €", x: "15%", y: "20%", delay: "0s", size: "1.1rem" },
-    { amount: "12830 €", x: "75%", y: "15%", delay: "0.3s", size: "1.4rem" },
-    { amount: "1497 €", x: "25%", y: "70%", delay: "0.6s", size: "1rem" },
-    { amount: "7650 €", x: "80%", y: "65%", delay: "0.9s", size: "1.2rem" },
-    { amount: "934 €", x: "55%", y: "85%", delay: "1.2s", size: "0.9rem" }
-  ];
-
   // Generate package icons and their positions
   const packageIcons = [
     { x: "10%", y: "30%", delay: "1.5s", size: 18, rotation: "5deg" },
@@ -115,22 +106,6 @@ const Hero = () => {
         className="absolute inset-0 z-0 transition-opacity duration-300 ease-out" 
         style={getGlowStyle()}
       ></div>
-
-      {/* Floating revenue numbers instead of stars */}
-      {revenueNumbers.map((item, i) => (
-        <div
-          key={`revenue-${i}`}
-          className={`floating-revenue fade-in-up`}
-          style={{
-            left: item.x,
-            top: item.y,
-            fontSize: item.size,
-            animationDelay: item.delay
-          }}
-        >
-          {item.amount}
-        </div>
-      ))}
 
       {/* Package icons */}
       {packageIcons.map((item, i) => (

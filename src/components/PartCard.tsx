@@ -17,34 +17,34 @@ const PartCard = ({
   color = "primary",
   className 
 }: PartCardProps) => {
-  // Utiliser les couleurs de l'image fournie
+  // Use colors from the uploaded image
   const colorClasses = {
-    primary: "from-[#FF6B95] to-[#FF8D6B]",
-    secondary: "from-[#7BE0FF] to-[#5CC9FF]",
-    accent: "from-[#9B6BFF] to-[#7341E0]",
-    muted: "from-gray-400 to-gray-500",
-    custom1: "from-[#2F1A94] to-[#5E6BD6]", // Bleu foncé à bleu moyen
-    custom2: "from-[#7D95F4] to-[#B3C4FF]", // Bleu moyen à bleu clair
+    primary: "from-[#2F1A94] to-[#5E6BD6]", // Dark blue to medium blue
+    secondary: "from-[#7D95F4] to-[#B3C4FF]", // Medium blue to light blue
+    accent: "from-[#9B6BFF] to-[#7341E0]", // Original purple
+    muted: "from-gray-400 to-gray-500", // Original gray
+    custom1: "from-[#2F1A94] to-[#5E6BD6]", // Dark blue to medium blue
+    custom2: "from-[#7D95F4] to-[#B3C4FF]", // Medium blue to light blue 
     custom3: "from-[#FF9F3F] to-[#FFBB7A]", // Orange
   };
 
   const bgColorClasses = {
-    primary: "border-[#FF6B95]/20",
-    secondary: "border-[#7BE0FF]/20",
+    primary: "border-[#2F1A94]/20",
+    secondary: "border-[#7D95F4]/20",
     accent: "border-[#9B6BFF]/20",
     muted: "border-gray-500/20",
-    custom1: "border-[#2F1A94]/20", // Bleu foncé
-    custom2: "border-[#7D95F4]/20", // Bleu moyen
+    custom1: "border-[#2F1A94]/20", // Dark blue
+    custom2: "border-[#7D95F4]/20", // Medium blue
     custom3: "border-[#FF9F3F]/20", // Orange
   };
 
   const textColorClass = {
-    primary: "text-[#FF6B95]",
-    secondary: "text-[#7BE0FF]",
+    primary: "text-[#2F1A94]",
+    secondary: "text-[#7D95F4]",
     accent: "text-[#9B6BFF]",
     muted: "text-gray-400",
-    custom1: "text-[#5E6BD6]", // Bleu moyen pour meilleure lisibilité
-    custom2: "text-[#7D95F4]", // Bleu moyen
+    custom1: "text-[#5E6BD6]", // Medium blue for better readability
+    custom2: "text-[#7D95F4]", // Medium blue
     custom3: "text-[#FF9F3F]", // Orange
   };
 
