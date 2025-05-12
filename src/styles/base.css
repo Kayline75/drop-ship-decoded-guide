@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 223 64% 24%; /* Changed to #0a2472 (bleu marine) */
+    --foreground: 210 40% 92%;  /* Changed from 98% to 92% - darker text */
+
+    --card: 223 64% 27%; /* Made slightly lighter than background */
+    --card-foreground: 210 40% 92%;  /* Changed from 98% to 92% - darker text */
+
+    --popover: 223 64% 27%; /* Made slightly lighter than background */
+    --popover-foreground: 210 40% 92%;  /* Changed from 98% to 92% - darker text */
+
+    --primary: 346 77% 64%;
+    --primary-foreground: 210 40% 92%;  /* Changed from 98% to 92% - darker text */
+
+    --secondary: 196 80% 70%;
+    --secondary-foreground: 223 64% 24%; /* Changed to match background */
+
+    --muted: 223 64% 34%; /* Made lighter than background for contrast */
+    --muted-foreground: 210 40% 75%;  /* Changed from 80% to 75% - darker muted text */
+
+    --accent: 196 80% 70%;
+    --accent-foreground: 223 64% 24%; /* Changed to match background */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 92%;  /* Changed from 98% to 92% - darker text */
+
+    --border: 223 64% 34%; /* Made slightly lighter than background */
+    --input: 223 64% 34%; /* Made slightly lighter than background */
+    --ring: 346 77% 64%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 223 64% 20%; /* Darker than main background */
+    --sidebar-foreground: 210 40% 92%;  /* Changed from 98% to 92% - darker text */
+    --sidebar-primary: 346 77% 64%;
+    --sidebar-primary-foreground: 210 40% 92%;  /* Changed from 98% to 92% - darker text */
+    --sidebar-accent: 196 80% 70%;
+    --sidebar-accent-foreground: 223 64% 20%; /* Made to match sidebar background */
+    --sidebar-border: 223 64% 34%; /* Made slightly lighter than background */
+    --sidebar-ring: 346 77% 64%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+}
