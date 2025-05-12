@@ -5,8 +5,6 @@ import ContentSection, { FeatureItem } from "@/components/ContentSection";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingCart, Globe, Store, BarChart } from "lucide-react";
-import GradientBackground from "@/components/GradientBackground";
-
 const Index = () => {
   return <div className="min-h-screen">
       <NavBar />
@@ -32,7 +30,7 @@ const Index = () => {
                     fournisseur qui envoie directement le produit au client.
                   </p>
                   <p className="text-gray-700 mb-6">
-                    <strong className="">Voici le schéma :</strong><br />
+                    <strong>Voici le schéma :</strong><br />
                     Client → Ta boutique → Fournisseur → Livraison directe au client.
                   </p>
                   <p className="text-gray-700">
@@ -95,7 +93,7 @@ const Index = () => {
                     </div>
                   </div>
 
-                  <p className="text-orange-300 font-medium text-center">
+                  <p className="text-gray-700 font-medium">
                     👉 Le mieux ? Tester les deux selon ta niche, et comparer.
                   </p>
                 </>} imageUrl="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" gradient={true} />
@@ -119,7 +117,7 @@ const Index = () => {
             <PartCard number={1} title="Comprendre le modèle" description="Les bases du dropshipping, la chaine logistique et le choix des fournisseurs." color="custom1" // Remplace "orange"
           />
             <PartCard number={2} title="Trouver sa niche" description="Comment identifier une niche rentable et analyser la concurrence." color="custom2" // Remplace "dark"
-          />
+          className="put the color state-900" />
             <PartCard number={3} title="Construire sa boutique" description="Choisir sa plateforme e-commerce et structurer son site pour convertir." color="custom3" // Remplace "gray"
           />
             <PartCard number={4} title="Travailler avec des fournisseurs" description="Trouver des fournisseurs fiables et communiquer efficacement avec eux." color="custom1" // Remplace "orange"
@@ -147,15 +145,13 @@ const Index = () => {
         </div>
       </div>
 
-      <div id="avantages" className="relative py-16 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-gray/5 via-brand-orange/90 to-brand-dark z-0"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
+      <div id="avantages" className="bg-white py-16 md:py-24">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Pourquoi choisir notre <span className="gradient-text">formation</span>?
             </h2>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Notre objectif est de vous fournir des connaissances concrètes et applicables 
               pour réussir dans le domaine du dropshipping.
             </p>
@@ -163,74 +159,56 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-orange/20 flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-orange/10 flex items-center justify-center">
                 <ShoppingCart className="h-8 w-8 text-brand-orange" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-white">
+              <h3 className="text-xl font-bold mb-3">
                 Information pratique
               </h3>
-              <p className="text-white/80">
+              <p className="text-gray-600">
                 Des conseils concrets, applicables immédiatement, sans jargon inutile.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-dark/20 flex items-center justify-center">
-                <Globe className="h-8 w-8 text-brand-medium" />
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-dark/10 flex items-center justify-center">
+                <Globe className="h-8 w-8 text-brand-dark" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-white">
+              <h3 className="text-xl font-bold mb-3">
                 Vision internationale
               </h3>
-              <p className="text-white/80">
+              <p className="text-gray-600">
                 Comparaison des stratégies en France, en Suisse et aux Émirats arabes unis.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-gray/25 flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-gray/15 flex items-center justify-center">
                 <Store className="h-8 w-8 text-brand-gray" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-white">
+              <h3 className="text-xl font-bold mb-3">
                 Focus Shopify
               </h3>
-              <p className="text-white/80">
+              <p className="text-gray-600">
                 Maîtrisez la plateforme la plus adaptée au dropshipping et ses applications.
               </p>
             </div>
           </div>
         </div>
-        
-        {/* Add subtle animated gradient blobs for depth */}
-        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-brand-orange/5 rounded-full filter blur-[80px] animate-float"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-brand-medium/5 rounded-full filter blur-[100px] animate-float" style={{animationDelay: '2s'}}></div>
       </div>
 
-      <div className="relative overflow-hidden">
-        {/* Gradient seamless transition like a rainbow instead of hard edges */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-gray/5 via-brand-orange/90 to-brand-dark z-0"></div>
-        
-        {/* Add subtle gradient overlays for smoother transitions */}
-        <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-background to-transparent z-0"></div>
-        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-background to-transparent z-0"></div>
-        
-        <div className="relative z-10 py-16">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Prêt à lancer votre business en dropshipping?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
-              Rejoignez notre formation complète et commencez votre aventure entrepreneuriale dès aujourd'hui.
-            </p>
-            <Button className="bg-white text-brand-dark hover:bg-gray-100 text-md px-8 py-6">
-              Démarrer gratuitement
-            </Button>
-          </div>
+      <div className="bg-gradient-to-r from-brand-orange to-brand-dark text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Prêt à lancer votre business en dropshipping?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Rejoignez notre formation complète et commencez votre aventure entrepreneuriale dès aujourd'hui.
+          </p>
+          <Button className="bg-white text-brand-dark hover:bg-gray-100 text-md px-8 py-6">
+            Démarrer gratuitement
+          </Button>
         </div>
-        
-        {/* Rainbow-inspired gradient blobs with increased size and opacity for better blending */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-orange/20 rounded-full filter blur-[120px] animate-float"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-medium/20 rounded-full filter blur-[120px] animate-float" style={{animationDelay: '1.5s'}}></div>
-        <div className="absolute top-1/3 right-1/3 w-72 h-72 bg-brand-gray/15 rounded-full filter blur-[100px] animate-float" style={{animationDelay: '2s'}}></div>
       </div>
 
       <Footer />
