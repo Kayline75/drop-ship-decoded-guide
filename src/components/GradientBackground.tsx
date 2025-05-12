@@ -14,7 +14,7 @@ const GradientBackground = ({ children, scrollY = 0, className = "" }: GradientB
   const tertiaryTransform = `translateY(${scrollY * 0.03}px)`;
   
   return (
-    <div className={`relative overflow-hidden ${className}`}>
+    <div className={`relative overflow-hidden bg-background ${className}`}>
       {/* Primary gradient blob with will-change property */}
       <div 
         className="absolute top-20 -left-20 w-80 h-80 bg-primary/20 rounded-full filter blur-[100px]"

@@ -7,43 +7,43 @@
 
 @layer base {
   :root {
-    --background: 223 64% 24%; /* Changed to #0a2472 (bleu marine) */
-    --foreground: 210 40% 92%;  /* Changed from 98% to 92% - darker text */
+    --background: 223 64% 12%; /* Darkened to bleu marine sombre */
+    --foreground: 210 40% 92%;
 
-    --card: 223 64% 27%; /* Made slightly lighter than background */
-    --card-foreground: 210 40% 92%;  /* Changed from 98% to 92% - darker text */
+    --card: 223 64% 15%; /* Adjusted to maintain contrast with darker background */
+    --card-foreground: 210 40% 92%;
 
-    --popover: 223 64% 27%; /* Made slightly lighter than background */
-    --popover-foreground: 210 40% 92%;  /* Changed from 98% to 92% - darker text */
+    --popover: 223 64% 15%; /* Adjusted to maintain contrast with darker background */
+    --popover-foreground: 210 40% 92%;
 
     --primary: 346 77% 64%;
-    --primary-foreground: 210 40% 92%;  /* Changed from 98% to 92% - darker text */
+    --primary-foreground: 210 40% 92%;
 
     --secondary: 196 80% 70%;
-    --secondary-foreground: 223 64% 24%; /* Changed to match background */
+    --secondary-foreground: 223 64% 12%; /* Changed to match background */
 
-    --muted: 223 64% 34%; /* Made lighter than background for contrast */
-    --muted-foreground: 210 40% 75%;  /* Changed from 80% to 75% - darker muted text */
+    --muted: 223 64% 20%; /* Adjusted for visibility on darker background */
+    --muted-foreground: 210 40% 75%;
 
     --accent: 196 80% 70%;
-    --accent-foreground: 223 64% 24%; /* Changed to match background */
+    --accent-foreground: 223 64% 12%; /* Changed to match background */
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 92%;  /* Changed from 98% to 92% - darker text */
+    --destructive-foreground: 210 40% 92%;
 
-    --border: 223 64% 34%; /* Made slightly lighter than background */
-    --input: 223 64% 34%; /* Made slightly lighter than background */
+    --border: 223 64% 20%; /* Adjusted for visibility on darker background */
+    --input: 223 64% 20%; /* Adjusted for visibility on darker background */
     --ring: 346 77% 64%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 223 64% 20%; /* Darker than main background */
-    --sidebar-foreground: 210 40% 92%;  /* Changed from 98% to 92% - darker text */
+    --sidebar-background: 223 64% 10%; /* Darkened for contrast with main background */
+    --sidebar-foreground: 210 40% 92%;
     --sidebar-primary: 346 77% 64%;
-    --sidebar-primary-foreground: 210 40% 92%;  /* Changed from 98% to 92% - darker text */
+    --sidebar-primary-foreground: 210 40% 92%;
     --sidebar-accent: 196 80% 70%;
-    --sidebar-accent-foreground: 223 64% 20%; /* Made to match sidebar background */
-    --sidebar-border: 223 64% 34%; /* Made slightly lighter than background */
+    --sidebar-accent-foreground: 223 64% 10%; /* Matched to sidebar background */
+    --sidebar-border: 223 64% 20%; /* Adjusted for visibility */
     --sidebar-ring: 346 77% 64%;
   }
 }
@@ -56,5 +56,10 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Poppins', sans-serif;
+  }
+
+  /* Ensure no white backgrounds appear in any elements */
+  html, body, #root, .glass-card, .glass-card-premium {
+    background-color: hsl(var(--background));
   }
 }
