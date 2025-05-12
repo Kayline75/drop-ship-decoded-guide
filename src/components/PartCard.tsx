@@ -17,14 +17,15 @@ const PartCard = ({
   color = "primary",
   className 
 }: PartCardProps) => {
+  // Utiliser les couleurs de l'image fournie
   const colorClasses = {
     primary: "from-[#FF6B95] to-[#FF8D6B]",
     secondary: "from-[#7BE0FF] to-[#5CC9FF]",
     accent: "from-[#9B6BFF] to-[#7341E0]",
     muted: "from-gray-400 to-gray-500",
-    custom1: "from-[#FF6B95] to-[#FF8D6B]", // Orange-like
-    custom2: "from-[#9B6BFF] to-[#7341E0]", // Dark purple
-    custom3: "from-[#7BE0FF] to-[#5CC9FF]", // Blue-gray
+    custom1: "from-[#2F1A94] to-[#5E6BD6]", // Bleu foncé à bleu moyen
+    custom2: "from-[#7D95F4] to-[#B3C4FF]", // Bleu moyen à bleu clair
+    custom3: "from-[#FF9F3F] to-[#FFBB7A]", // Orange
   };
 
   const bgColorClasses = {
@@ -32,9 +33,9 @@ const PartCard = ({
     secondary: "border-[#7BE0FF]/20",
     accent: "border-[#9B6BFF]/20",
     muted: "border-gray-500/20",
-    custom1: "border-[#FF6B95]/20", // Orange-like
-    custom2: "border-[#9B6BFF]/20", // Dark purple
-    custom3: "border-[#7BE0FF]/20", // Blue-gray
+    custom1: "border-[#2F1A94]/20", // Bleu foncé
+    custom2: "border-[#7D95F4]/20", // Bleu moyen
+    custom3: "border-[#FF9F3F]/20", // Orange
   };
 
   const textColorClass = {
@@ -42,9 +43,9 @@ const PartCard = ({
     secondary: "text-[#7BE0FF]",
     accent: "text-[#9B6BFF]",
     muted: "text-gray-400",
-    custom1: "text-[#FF6B95]", // Orange-like
-    custom2: "text-[#9B6BFF]", // Dark purple
-    custom3: "text-[#7BE0FF]", // Blue-gray
+    custom1: "text-[#5E6BD6]", // Bleu moyen pour meilleure lisibilité
+    custom2: "text-[#7D95F4]", // Bleu moyen
+    custom3: "text-[#FF9F3F]", // Orange
   };
 
   return (

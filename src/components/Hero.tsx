@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Sparkles, Star } from "lucide-react";
+import { ArrowDown, Package } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const Hero = () => {
@@ -8,15 +8,22 @@ const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
   const bannerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const mouseFollowerRef = useRef<HTMLDivElement>(null);
 
   // Handle mouse movement for interactive effects
-  const handleMouseMove = (e: React.MouseEvent) => {
+  const handleMouseMove = (e: React.MouseEvent | MouseEvent) => {
     if (bannerRef.current) {
       const rect = bannerRef.current.getBoundingClientRect();
       setMousePosition({
         x: e.clientX - rect.left,
         y: e.clientY - rect.top
       });
+    }
+    
+    // Update mouse follower position
+    if (mouseFollowerRef.current) {
+      mouseFollowerRef.current.style.left = `${e.clientX}px`;
+      mouseFollowerRef.current.style.top = `${e.clientY}px`;
     }
   };
 
@@ -28,6 +35,30 @@ const Hero = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
+  // Setup global mouse tracking
+  useEffect(() => {
+    // Create mouse follower element if it doesn't exist
+    if (!document.querySelector('.mouse-follower')) {
+      const follower = document.createElement('div');
+      follower.className = 'mouse-follower';
+      document.body.appendChild(follower);
+      mouseFollowerRef.current = follower;
+    }
+    
+    // Add global mouse move listener
+    const handleGlobalMouseMove = (e: MouseEvent) => {
+      handleMouseMove(e);
+    };
+    
+    document.addEventListener('mousemove', handleGlobalMouseMove);
+    
+    return () => {
+      document.removeEventListener('mousemove', handleGlobalMouseMove);
+      // Clean up follower on unmount if needed
+      // document.querySelector('.mouse-follower')?.remove();
+    };
   }, []);
 
   // Animation on mount
@@ -55,6 +86,24 @@ const Hero = () => {
     return {};
   };
 
+  // Generate revenue numbers and their positions
+  const revenueNumbers = [
+    { amount: "3438 €", x: "15%", y: "20%", delay: "0s", size: "1.1rem" },
+    { amount: "12830 €", x: "75%", y: "15%", delay: "0.3s", size: "1.4rem" },
+    { amount: "1497 €", x: "25%", y: "70%", delay: "0.6s", size: "1rem" },
+    { amount: "7650 €", x: "80%", y: "65%", delay: "0.9s", size: "1.2rem" },
+    { amount: "934 €", x: "55%", y: "85%", delay: "1.2s", size: "0.9rem" }
+  ];
+
+  // Generate package icons and their positions
+  const packageIcons = [
+    { x: "10%", y: "30%", delay: "1.5s", size: 18, rotation: "5deg" },
+    { x: "85%", y: "25%", delay: "2s", size: 22, rotation: "-8deg" },
+    { x: "30%", y: "85%", delay: "2.5s", size: 16, rotation: "12deg" },
+    { x: "70%", y: "70%", delay: "3s", size: 20, rotation: "-15deg" },
+    { x: "45%", y: "15%", delay: "3.5s", size: 24, rotation: "0deg" }
+  ];
+
   return (
     <section 
       ref={bannerRef}
@@ -67,24 +116,40 @@ const Hero = () => {
         style={getGlowStyle()}
       ></div>
 
-      {/* Floating elements for depth */}
-      <div className="absolute inset-0 z-0">
-        {[...Array(12)].map((_, i) => (
-          <div
-            key={i}
-            className={`absolute bg-white/5 rounded-full blur-sm animate-float-custom`}
-            style={{
-              width: `${Math.random() * 10 + 5}px`,
-              height: `${Math.random() * 10 + 5}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              opacity: Math.random() * 0.5 + 0.2,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${Math.random() * 10 + 10}s`,
-            }}
+      {/* Floating revenue numbers instead of stars */}
+      {revenueNumbers.map((item, i) => (
+        <div
+          key={`revenue-${i}`}
+          className={`floating-revenue fade-in-up`}
+          style={{
+            left: item.x,
+            top: item.y,
+            fontSize: item.size,
+            animationDelay: item.delay
+          }}
+        >
+          {item.amount}
+        </div>
+      ))}
+
+      {/* Package icons */}
+      {packageIcons.map((item, i) => (
+        <div
+          key={`package-${i}`}
+          className={`package-icon fade-in-up`}
+          style={{
+            left: item.x,
+            top: item.y,
+            animationDelay: item.delay,
+            transform: `rotate(${item.rotation})`
+          }}
+        >
+          <Package 
+            size={item.size} 
+            className="text-accent" 
           />
-        ))}
-      </div>
+        </div>
+      ))}
 
       {/* Gradient background elements */}
       <div 
@@ -111,11 +176,11 @@ const Hero = () => {
           <div className="inline-block mb-6 px-5 py-2 rounded-full glass-card-premium animate-pulse-slow relative group">
             <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B95]/20 to-[#7BE0FF]/20 rounded-full blur-sm group-hover:blur-md transition-all duration-500"></div>
             <div className="flex items-center gap-2 relative">
-              <Sparkles className="h-4 w-4 text-secondary animate-twinkle" />
+              <Package className="h-4 w-4 text-secondary animate-twinkle" />
               <span className="text-sm font-medium text-secondary animate-gradient-text">
                 Formation Dropshipping Premium
               </span>
-              <Sparkles className="h-4 w-4 text-secondary animate-twinkle-delayed" />
+              <Package className="h-4 w-4 text-secondary animate-twinkle-delayed" />
             </div>
           </div>
           
@@ -129,9 +194,9 @@ const Hero = () => {
               pour créer un revenu en ligne
             </span>
             
-            {/* Floating stars */}
-            <Star className="absolute -right-4 -top-4 h-6 w-6 text-secondary/40 animate-float opacity-75" />
-            <Star className="absolute -left-8 bottom-0 h-4 w-4 text-primary/40 animate-float-delayed opacity-75" />
+            {/* Floating package icons near title */}
+            <Package className="absolute -right-4 -top-4 h-6 w-6 text-secondary/40 animate-float opacity-75" />
+            <Package className="absolute -left-8 bottom-0 h-4 w-4 text-primary/40 animate-float-delayed opacity-75" />
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto fade-in-up">
