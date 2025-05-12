@@ -31,11 +31,11 @@ const ContentSection = ({
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               {title.split(' ').map((word, index) => 
                 index % 3 === 0 ? <span key={index} className="text-[#F97316]">{word} </span> : 
-                index % 3 === 1 ? <span key={index} className="text-white">{word} </span> :
+                index % 3 === 1 ? <span key={index} className="animate-gradient-text">{word} </span> :
                 <span key={index} className="text-[#33C3F0]">{word} </span>
               )}
             </h2>
-            <p className="text-lg text-white mb-8">{subtitle}</p>
+            <p className="text-lg animate-gradient-text mb-8">{subtitle}</p>
             <div className="space-y-6">{content}</div>
           </div>
           
@@ -66,7 +66,7 @@ export const FeatureItem = ({ text }: { text: string }) => (
     <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-r from-[#F97316] to-[#FF8D6B] flex items-center justify-center">
       <Check className="w-3 h-3 text-white" />
     </div>
-    <p className="text-white">{text}</p>
+    <p className="animate-gradient-text">{text}</p>
   </div>
 );
 
