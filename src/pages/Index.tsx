@@ -206,7 +206,7 @@ const Index = () => {
       </div>
 
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/70 to-background z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-orange to-brand-dark z-0"></div>
         <div className="relative z-10 py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
