@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import PartCard from "@/components/PartCard";
@@ -214,13 +213,13 @@ const Index = () => {
         </div>
       </div>
 
-      <div id="avantages" className="bg-white py-16 md:py-24">
+      <div id="avantages" className="bg-blue-900/90 py-16 md:py-24 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Pourquoi choisir notre <span className="gradient-text">formation</span>?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg max-w-2xl mx-auto">
               Notre objectif est de vous fournir des connaissances concrètes et applicables 
               pour réussir dans le domaine du dropshipping.
             </p>
@@ -234,7 +233,7 @@ const Index = () => {
               <h3 className="text-xl font-bold mb-3">
                 Information pratique
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 Des conseils concrets, applicables immédiatement, sans jargon inutile.
               </p>
             </div>
@@ -246,7 +245,7 @@ const Index = () => {
               <h3 className="text-xl font-bold mb-3">
                 Vision internationale
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 Comparaison des stratégies en France, en Suisse et aux Émirats arabes unis.
               </p>
             </div>
@@ -258,7 +257,7 @@ const Index = () => {
               <h3 className="text-xl font-bold mb-3">
                 Focus Shopify
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 Maîtrisez la plateforme la plus adaptée au dropshipping et ses applications.
               </p>
             </div>
