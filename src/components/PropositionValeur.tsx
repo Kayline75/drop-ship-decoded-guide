@@ -10,10 +10,7 @@ const PropositionValeur = () => {
             <span className="block">par mois en dropshipping</span>
           </h2>
           
-          <p className="text-xl mb-10">
-            Sans stock, sans investissement massif, et sans expérience préalable en e-commerce. 
-            Notre méthode en 10 modules transforme votre ambition en business rentable.
-          </p>
+          <p className="text-xl mb-10">Avec ou sans stock, sans investissement massif, et sans expérience préalable en e-commerce. Notre méthode en 10 modules segmentés transforme votre ambition en business rentable.</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white p-6 rounded-lg shadow-lg transform hover:-translate-y-2 transition-all duration-300">
@@ -21,7 +18,7 @@ const PropositionValeur = () => {
                 <span className="text-white text-xl font-bold">1</span>
               </div>
               <h3 className="text-lg font-bold mb-2">Stratégie Validée</h3>
-              <p className="text-gray-600">Testée par plusieurs de nos membres 
+              <p className="text-gray-600">Testée et approuvée par plusieurs membres  
 [voir témoignages plus bas]</p>
             </div>
             
