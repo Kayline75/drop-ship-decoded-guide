@@ -1,10 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
-
 const PropositionValeur = () => {
-  return (
-    <div className="bg-gradient-to-r from-brand-orange/10 to-brand-dark/10 py-16 md:py-24">
+  return <div className="bg-gradient-to-r from-brand-orange/10 to-brand-dark/10 py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -24,7 +21,8 @@ const PropositionValeur = () => {
                 <span className="text-white text-xl font-bold">1</span>
               </div>
               <h3 className="text-lg font-bold mb-2">Stratégie Validée</h3>
-              <p className="text-gray-600">Testée par plus de 347 entrepreneurs en France et à l'international</p>
+              <p className="text-gray-600">Testée par plusieurs de nos membres 
+[voir témoignages plus bas]</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-lg transform hover:-translate-y-2 transition-all duration-300">
@@ -32,7 +30,7 @@ const PropositionValeur = () => {
                 <span className="text-white text-xl font-bold">2</span>
               </div>
               <h3 className="text-lg font-bold mb-2">Résultats Rapides</h3>
-              <p className="text-gray-600">Première vente possible en moins de 15 jours avec notre méthode accélérée</p>
+              <p className="text-gray-600">Première vente possible en moins de 15 jours avec notre méthode .</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-lg transform hover:-translate-y-2 transition-all duration-300">
@@ -40,7 +38,9 @@ const PropositionValeur = () => {
                 <span className="text-white text-xl font-bold">3</span>
               </div>
               <h3 className="text-lg font-bold mb-2">Support Complet</h3>
-              <p className="text-gray-600">Accompagnement personnalisé, outils premium et une communauté d'entraide</p>
+              <p className="text-gray-600"> Communauté d'entraide
+toujours la pour répondre 
+à toute vos questions</p>
             </div>
           </div>
           
@@ -50,8 +50,6 @@ const PropositionValeur = () => {
           </Button>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default PropositionValeur;
