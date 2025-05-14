@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
+import { Check, ArrowDown, MessageSquareX, Tool, Flag, Euro, UserX } from "lucide-react";
 
 const PricingSection = () => {
   const plans = [
@@ -36,21 +37,22 @@ const PricingSection = () => {
       buttonText: "Obtenir la formation complète"
     },
     {
-      name: "VIP",
-      price: "997",
+      name: "Concurrent",
+      price: "1497",
       priceUnit: "une seule fois",
-      description: "Pour ceux qui veulent des résultats accélérés",
+      strikethrough: true,
+      description: "Ce que les autres proposent pour le même prix",
       features: [
-        "Tout ce qui est inclus dans Premium",
-        "Mentorat personnel hebdomadaire pendant 3 mois",
-        "Audit complet de votre boutique",
-        "Aide au lancement de vos premières campagnes",
-        "Accès à notre réseau de fournisseurs premium",
-        "Analyse de vos concurrents par nos experts",
-        "Stratégie marketing personnalisée"
+        "Contenu rarement mis à jour",
+        "Support limité ou inexistant",
+        "Pas d'accès aux outils premium",
+        "Stratégies génériques",
+        "Prix excessif pour la valeur",
+        "Aucune personnalisation",
+        "Aucun accompagnement"
       ],
       recommended: false,
-      buttonText: "Devenir VIP"
+      buttonText: "Ne pas choisir"
     }
   ];
 
@@ -85,7 +87,11 @@ const PricingSection = () => {
               <div className="p-6 bg-white">
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                 <div className="mb-6">
-                  <span className="text-5xl font-bold">{plan.price}€</span>
+                  {plan.strikethrough ? (
+                    <span className="text-5xl font-bold line-through text-gray-500">{plan.price}€</span>
+                  ) : (
+                    <span className="text-5xl font-bold">{plan.price}€</span>
+                  )}
                   <span className="text-black"> / {plan.priceUnit}</span>
                 </div>
                 <p className="text-black mb-6">{plan.description}</p>
@@ -117,6 +123,80 @@ const PricingSection = () => {
         
         <div className="text-center mt-12">
           <p className="text-gray-500">Des questions? Contactez-nous à <a href="mailto:contact@dropshipping-formation.com" className="text-brand-orange hover:underline">contact@dropshipping-formation.com</a></p>
+        </div>
+      </div>
+
+      {/* Section: Ce que les autres ne te diront pas */}
+      <div className="mt-24 py-16 bg-gradient-to-r from-[#1A1F2C] to-[#222222]">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">
+            ❌ Ce que les autres ne te diront pas
+          </h2>
+          <p className="text-lg text-white opacity-90 max-w-2xl mx-auto text-center mb-12">
+            Voici pourquoi la plupart des formations échouent à vraiment t'aider :
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg space-y-4">
+              <div className="flex items-start gap-3">
+                <ArrowDown className="w-6 h-6 text-brand-orange flex-shrink-0" />
+                <p className="text-white font-semibold">
+                  <strong>Mises à jour lentes</strong> : des formations inchangées depuis des mois, voire des années.
+                </p>
+              </div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg space-y-4">
+              <div className="flex items-start gap-3">
+                <MessageSquareX className="w-6 h-6 text-brand-orange flex-shrink-0" />
+                <p className="text-white font-semibold">
+                  <strong>Aucun vrai accompagnement</strong> : tu poses une question, personne ne répond.
+                </p>
+              </div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg space-y-4">
+              <div className="flex items-start gap-3">
+                <Tool className="w-6 h-6 text-brand-orange flex-shrink-0" />
+                <p className="text-white font-semibold">
+                  <strong>Outils payants non inclus</strong> : tu te retrouves avec plus de 300€/mois de frais supplémentaires.
+                </p>
+              </div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg space-y-4">
+              <div className="flex items-start gap-3">
+                <Flag className="w-6 h-6 text-brand-orange flex-shrink-0" />
+                <p className="text-white font-semibold">
+                  <strong>Pas de vraie stratégie de lancement</strong> : juste des généralités recyclées.
+                </p>
+              </div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg space-y-4">
+              <div className="flex items-start gap-3">
+                <Euro className="w-6 h-6 text-brand-orange flex-shrink-0" />
+                <p className="text-white font-semibold">
+                  <strong>Tarifs excessifs</strong> : tu paies 500€, parfois 1000€, pour finir seul et bloqué.
+                </p>
+              </div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg space-y-4">
+              <div className="flex items-start gap-3">
+                <UserX className="w-6 h-6 text-brand-orange flex-shrink-0" />
+                <p className="text-white font-semibold">
+                  <strong>Tu es livré à toi-même</strong> : aucune analyse personnalisée, aucun plan d'action sur mesure.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white text-lg px-8 py-6">
+              Découvrir notre différence
+            </Button>
+          </div>
         </div>
       </div>
     </div>
