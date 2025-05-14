@@ -4,21 +4,6 @@ import { Check, ArrowDown, MessageSquareX, Wrench, Flag, Euro, UserX } from "luc
 const PricingSection = () => {
   const plans = [
     {
-      name: "Essentiels",
-      price: "197",
-      priceUnit: "une seule fois",
-      description: "Pour démarrer rapidement avec les bases du dropshipping",
-      features: [
-        "Accès aux 5 premiers modules",
-        "Support par email",
-        "Mises à jour gratuites pendant 6 mois",
-        "1 thème Shopify basique",
-        "Accès à la communauté privée"
-      ],
-      recommended: false,
-      buttonText: "Commencer maintenant"
-    },
-    {
       name: "Premium",
       price: "97",
       priceUnit: "mois",
@@ -67,7 +52,7 @@ const PricingSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {plans.map((plan, index) => (
             <div 
               key={index} 
