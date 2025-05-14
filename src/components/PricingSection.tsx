@@ -7,6 +7,7 @@ const PricingSection = () => {
     {
       name: "Essentiels",
       price: "197",
+      priceUnit: "une seule fois",
       description: "Pour démarrer rapidement avec les bases du dropshipping",
       features: [
         "Accès aux 5 premiers modules",
@@ -20,7 +21,8 @@ const PricingSection = () => {
     },
     {
       name: "Premium",
-      price: "497",
+      price: "97",
+      priceUnit: "mois",
       description: "La formation complète pour maximiser vos chances de succès",
       features: [
         "Formation complète avec mises à jour mensuelles. On t'apprend tout de A à Z !",
@@ -37,6 +39,7 @@ const PricingSection = () => {
     {
       name: "VIP",
       price: "997",
+      priceUnit: "une seule fois",
       description: "Pour ceux qui veulent des résultats accélérés",
       features: [
         "Tout ce qui est inclus dans Premium",
@@ -84,7 +87,7 @@ const PricingSection = () => {
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                 <div className="mb-6">
                   <span className="text-5xl font-bold">{plan.price}€</span>
-                  <span className="text-gray-500">/ une seule fois</span>
+                  <span className="text-black"> / {plan.priceUnit}</span>
                 </div>
                 <p className="text-gray-600 mb-6">{plan.description}</p>
                 
