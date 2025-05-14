@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import PartCard from "@/components/PartCard";
@@ -13,7 +12,6 @@ import Benefits from "@/components/Benefits";
 import SocialProof from "@/components/SocialProof";
 import PricingSection from "@/components/PricingSection";
 import FAQ from "@/components/FAQ";
-
 const Index = () => {
   return <div className="min-h-screen">
       <NavBar />
