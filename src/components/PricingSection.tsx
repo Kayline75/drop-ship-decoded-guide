@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 
@@ -89,7 +88,7 @@ const PricingSection = () => {
                   <span className="text-5xl font-bold">{plan.price}€</span>
                   <span className="text-black"> / {plan.priceUnit}</span>
                 </div>
-                <p className="text-gray-600 mb-6">{plan.description}</p>
+                <p className="text-black mb-6">{plan.description}</p>
                 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, i) => (
@@ -97,7 +96,7 @@ const PricingSection = () => {
                       <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-brand-orange flex items-center justify-center">
                         <Check className="w-3 h-3 text-white" />
                       </span>
-                      <span>{feature}</span>
+                      <span className="text-black">{feature}</span>
                     </li>
                   ))}
                 </ul>
