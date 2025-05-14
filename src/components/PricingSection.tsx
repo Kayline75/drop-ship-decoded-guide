@@ -1,6 +1,5 @@
-
 import { Button } from "@/components/ui/button";
-import { Check, ArrowDown, MessageSquareX, Tool, Flag, Euro, UserX } from "lucide-react";
+import { Check, ArrowDown, MessageSquareX, Wrench, Flag, Euro, UserX } from "lucide-react";
 
 const PricingSection = () => {
   const plans = [
@@ -157,7 +156,7 @@ const PricingSection = () => {
             
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg space-y-4">
               <div className="flex items-start gap-3">
-                <Tool className="w-6 h-6 text-brand-orange flex-shrink-0" />
+                <Wrench className="w-6 h-6 text-brand-orange flex-shrink-0" />
                 <p className="text-white font-semibold">
                   <strong>Outils payants non inclus</strong> : tu te retrouves avec plus de 300€/mois de frais supplémentaires.
                 </p>
