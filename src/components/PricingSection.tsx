@@ -23,14 +23,13 @@ const PricingSection = () => {
       price: "497",
       description: "La formation complète pour maximiser vos chances de succès",
       features: [
-        "Accès à TOUS les modules (10)",
-        "Support prioritaire par email et chat",
-        "Thème Shopify Premium (valeur 300€)",
-        "3 sessions de coaching individuel",
-        "Accès à vie aux mises à jour",
-        "Tous les outils inclus (Minea, Dropship, Copify)",
-        "Masterclass mensuelle exclusive",
-        "Garantie satisfait ou remboursé 30 jours"
+        "Formation complète avec mises à jour mensuelles. On t'apprend tout de A à Z !",
+        "Suivi quotidien 7j/7 par notre équipe.",
+        "Études de cas détaillées et audit de tes boutiques et campagnes.",
+        "Accès aux outils premium : Minea, et bien d'autres (+3000 € de valeur).",
+        "Promotion spéciale sur la création de ta propre boutique par nos experts.",
+        "Thème sur mesure offert à l'inscription.",
+        "Sans engagement !"
       ],
       recommended: true,
       buttonText: "Obtenir la formation complète"
