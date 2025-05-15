@@ -75,7 +75,7 @@ const TransparentGuide = () => {
 
         <div className="text-center">
           <Button asChild className="bg-gradient-to-r from-brand-orange to-brand-dark text-md px-8 py-6">
-            <a href="https://dropshipping-guide.com/telecharger">
+            <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c">
               Télécharger mon guide gratuit
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>

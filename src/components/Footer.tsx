@@ -1,3 +1,4 @@
+
 import { Facebook, Instagram, Twitter } from "lucide-react";
 const Footer = () => {
   return <footer className="bg-background/60 backdrop-blur-lg border-t border-[#33C3F0]/10">
@@ -10,13 +11,13 @@ const Footer = () => {
             </div>
             <p className="text-white mb-6">Votre partenaire pour réussir dans le monde du dropshipping avec des ressources éducatives complètes et professionnelles.</p>
             <div className="flex space-x-5">
-              <a href="#" className="text-white hover:text-[#33C3F0] transition-colors">
+              <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="text-white hover:text-[#33C3F0] transition-colors">
                 
               </a>
-              <a href="#" className="text-white hover:text-[#33C3F0] transition-colors">
+              <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="text-white hover:text-[#33C3F0] transition-colors">
                 
               </a>
-              <a href="#" className="text-white hover:text-[#33C3F0] transition-colors">
+              <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="text-white hover:text-[#33C3F0] transition-colors">
                 
               </a>
             </div>
@@ -26,16 +27,16 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6 bg-gradient-to-r from-[#F97316] to-[#33C3F0] bg-clip-text text-transparent">Liens rapides</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-white hover:text-[#33C3F0] transition-colors block">Accueil</a>
+                <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="text-white hover:text-[#33C3F0] transition-colors block">Accueil</a>
               </li>
               <li>
-                <a href="#cours" className="text-white hover:text-[#33C3F0] transition-colors block">Les bases</a>
+                <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="text-white hover:text-[#33C3F0] transition-colors block">Les bases</a>
               </li>
               <li>
-                <a href="#parties" className="text-white hover:text-[#33C3F0] transition-colors block">Les 10 parties</a>
+                <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="text-white hover:text-[#33C3F0] transition-colors block">Les 10 parties</a>
               </li>
               <li>
-                <a href="#avantages" className="text-white hover:text-[#33C3F0] transition-colors block">Avantages</a>
+                <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="text-white hover:text-[#33C3F0] transition-colors block">Avantages</a>
               </li>
             </ul>
           </div>
@@ -46,7 +47,8 @@ const Footer = () => {
               <li className="text-white">contact@whatsdropshipping.com</li>
               <li className="text-white">Paris</li>
               <li className="text-white">
-            </li>
+                <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="text-white hover:text-[#33C3F0] transition-colors">Rejoindre la communauté Skool</a>
+              </li>
             </ul>
           </div>
         </div>

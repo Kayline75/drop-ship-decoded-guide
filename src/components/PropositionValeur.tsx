@@ -44,7 +44,7 @@ toujours la pour répondre
           </div>
           
           <Button asChild className="bg-gradient-to-r from-brand-orange to-brand-dark text-md px-8 py-6 shadow-lg">
-            <a href="#tarifs">
+            <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c">
               Je veux démarrer maintenant
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>

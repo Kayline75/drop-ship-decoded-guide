@@ -234,14 +234,14 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-5 justify-center fade-in-up-delay mx-[30px]">
             <GlowButton>
               <Button asChild className="text-md px-8 py-6 bg-gradient-to-r from-[#F97316] to-[#FF8D6B] hover:opacity-90 transition-all relative z-10">
-                <a href="#tarifs">
+                <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c">
                   <span className="relative z-10">Débuter la formation</span>
                 </a>
               </Button>
             </GlowButton>
             
             <Button asChild variant="outline" className="text-md px-8 py-6 border-[#33C3F0] text-[#33C3F0] hover:bg-[#33C3F0]/10 transition-all relative overflow-hidden group">
-              <a href="#cours">
+              <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c">
                 <span className="relative z-10">En savoir plus</span>
                 <div className="absolute h-full w-0 bg-[#33C3F0]/10 top-0 left-0 group-hover:w-full transition-all duration-300 ease-in-out"></div>
               </a>

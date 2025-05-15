@@ -46,8 +46,10 @@ const NavBar = () => {
               Avantages
             </a>
           </nav>
-          <Button className="bg-gradient-to-r from-[#F97316] to-[#FF8D6B] hover:opacity-90 transition-all button-glow">
-            Démarrer maintenant
+          <Button asChild className="bg-gradient-to-r from-[#F97316] to-[#FF8D6B] hover:opacity-90 transition-all button-glow">
+            <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c">
+              Démarrer maintenant
+            </a>
           </Button>
         </div>
 
@@ -90,8 +92,10 @@ const NavBar = () => {
             </a>
           </nav>
           <div className="mt-5">
-            <Button className="w-full bg-gradient-to-r from-[#F97316] to-[#FF8D6B]">
-              Démarrer maintenant
+            <Button asChild className="w-full bg-gradient-to-r from-[#F97316] to-[#FF8D6B]">
+              <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c">
+                Démarrer maintenant
+              </a>
             </Button>
           </div>
         </div>

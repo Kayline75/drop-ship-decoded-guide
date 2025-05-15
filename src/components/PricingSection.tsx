@@ -11,7 +11,7 @@ const PricingSection = () => {
     features: ["Formation complète avec mises à jour mensuelles. On t'apprend tout de A à Z !", "Suivi quotidien 7j/7 par notre équipe.", "Études de cas détaillées et audit de tes boutiques et campagnes.", "Accès aux outils premium : Minea, et bien d'autres (+3000 € de valeur).", "Promotion spéciale sur la création de ta propre boutique par nos experts.", "Thème sur mesure offert à l'inscription.", "Sans engagement !"],
     recommended: true,
     buttonText: "Obtenir la formation complète",
-    buttonLink: "https://formation-dropshipping.com/inscription"
+    buttonLink: "https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
   }, {
     name: "Concurrent",
     price: "1497",
