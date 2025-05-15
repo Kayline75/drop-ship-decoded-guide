@@ -32,29 +32,41 @@ const FAQ = () => {
 
   return (
     <div id="faq" className="section-uniform bg-gray-900">
-      <div className="container-uniform">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
+      <div className="container-uniform px-4 md:px-6 lg:px-8">
+        <div className="text-center mb-12 md:mb-16 space-y-4">
+          <h2 className="text-3xl md:text-4xl font-bold py-6 md:py-8">
             Questions <span className="gradient-text-harmonized">Fréquentes</span>
           </h2>
-          <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto mb-10">
+          <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto">
             Tout ce que vous devez savoir avant de vous lancer dans l'aventure du dropshipping.
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
+        <div className="max-w-3xl mx-auto space-y-8">
+          <Accordion type="single" collapsible className="w-full space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-white/10">
-                <AccordionTrigger className="text-left font-medium text-lg py-5 text-white">
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`} 
+                className="border border-white/10 rounded-lg overflow-hidden bg-white/5 backdrop-blur-sm"
+              >
+                <AccordionTrigger className="px-6 text-left font-medium text-lg py-4 text-white hover:text-[#7BE0FF]">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-[#7BE0FF] pb-5 text-center">
-                  {faq.answer}
+                <AccordionContent className="text-[#7BE0FF] px-6 pb-6 text-center">
+                  <div className="py-2 px-4">
+                    {faq.answer}
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
+          
+          <div className="text-center pt-8">
+            <p className="text-white/70 italic mb-4">
+              Vous avez d'autres questions? N'hésitez pas à nous contacter.
+            </p>
+          </div>
         </div>
       </div>
     </div>
