@@ -18,7 +18,7 @@ const Index = () => {
       <NavBar />
       <Hero />
       
-      <PropositionValeur />
+      
 
       <div id="cours" className="py-16 md:py-24">
         <div className="container mx-auto px-4">
@@ -158,8 +158,9 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Prêt à lancer votre business en dropshipping?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">Rejoignez notre formation complète et commencez votre aventure entrepreneuriale dès aujourd'hui avec 
- l' Académie la plus transparente du marché francophone </p>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Rejoignez notre formation complète et commencez votre aventure entrepreneuriale dès aujourd'hui.
+          </p>
           <Button className="bg-white text-brand-dark hover:bg-gray-100 text-md px-8 py-6">
             Démarrer gratuitement
           </Button>
