@@ -19,8 +19,8 @@ const PricingSection = () => {
     recommended: false,
     buttonText: "Ne pas choisir"
   }];
-  return <div id="tarifs" className="py-16 md:py-24 bg-gray-900">
-      <div className="container mx-auto px-4">
+  return <div id="tarifs" className="py-16 bg-gray-900 md:py-[2px]">
+      <div className="container my-0 mx-0 px-0 py-[90px]">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Un <span className="gradient-text">investissement</span> dans votre avenir
@@ -39,10 +39,10 @@ const PricingSection = () => {
               <div className="p-6 bg-white">
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                 <div className="LE 97 NE DOIT PAS ETRE barr\xE9">
-                  {plan.strikethrough ? <span className="text-5xl line-through font-bold text-yellow-400">{plan.price}€</span> : <span className="text-5xl font-bold">{plan.price}€</span>}
+                  {plan.strikethrough ? <span className="text-5xl line-through font-thin text-lime-600">{plan.price}€</span> : <span className="text-5xl font-bold">{plan.price}€</span>}
                   <span className="text-black"> / {plan.priceUnit}</span>
                 </div>
-                <p className="text-black mb-6">{plan.description}</p>
+                <p className="text-black mb-6 py-[20px]">{plan.description}</p>
                 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, i) => <li key={i} className="flex items-start gap-2">
@@ -66,16 +66,16 @@ const PricingSection = () => {
       </div>
 
       {/* Section: Ce que les autres ne te diront pas */}
-      <div className="mt-24 py-16 bg-gradient-to-r from-[#1A1F2C] to-[#222222] bg-slate-900">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">
+      <div className="mt-24 bg-gradient-to-r from-[#1A1F2C] to-[#222222] bg-slate-900 rounded-md py-0 my-0">
+        <div className="container mx-auto px-4 my-[90px] bg-indigo-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6 my-[60px] py-[50px]">
             ❌ Ce que les autres ne te diront pas
           </h2>
           <p className="text-lg text-white opacity-90 max-w-2xl mx-auto text-center mb-12">
             Voici pourquoi la plupart des formations échouent à vraiment t'aider :
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto my-0">
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg space-y-4">
               <div className="flex items-start gap-3">
                 <ArrowDown className="w-6 h-6 text-brand-orange flex-shrink-0" />
@@ -103,7 +103,7 @@ const PricingSection = () => {
               </div>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg space-y-4">
+            <div className="bg-white/10 backdrop-blur-sm p-6 space-y-4 rounded-lg">
               <div className="flex items-start gap-3">
                 <Flag className="w-6 h-6 text-brand-orange flex-shrink-0" />
                 <p className="text-white font-semibold">

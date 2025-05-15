@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
@@ -28,10 +27,10 @@ const FAQ = () => {
     question: "Quelle est la garantie que ça marchera pour moi?",
     answer: "Nous offrons une garantie satisfait ou remboursé de 30 jours, ce qui vous permet de tester la formation sans risque. Cependant, la réussite dépend de votre mise en application des connaissances acquises. Nous fournissons tous les outils et connaissances, mais c'est à vous de les mettre en œuvre."
   }];
-  return <div id="faq" className="py-16 md:py-24 bg-white">
+  return <div id="faq" className="py-16 md:py-24 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[2px]">
             Questions <span className="gradient-text">Fréquentes</span>
           </h2>
           <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto">
@@ -52,13 +51,7 @@ const FAQ = () => {
           </Accordion>
         </div>
 
-        <div className="text-center mt-12 p-8 bg-brand-orange/10 rounded-lg max-w-3xl mx-auto">
-          <h3 className="text-xl font-bold mb-4">Vous avez d'autres questions?</h3>
-          <p className="mb-6">Notre équipe se fera un plaisir d'y répondre personnellement</p>
-          <Button className="bg-brand-orange hover:bg-brand-orange/90">
-            Nous contacter
-          </Button>
-        </div>
+        
       </div>
     </div>;
 };

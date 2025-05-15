@@ -1,4 +1,3 @@
-
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import PartCard from "@/components/PartCard";
@@ -14,7 +13,6 @@ import SocialProof from "@/components/SocialProof";
 import PricingSection from "@/components/PricingSection";
 import FAQ from "@/components/FAQ";
 import TransparentGuide from "@/components/TransparentGuide";
-
 const Index = () => {
   return <div className="min-h-screen">
       <NavBar />
@@ -160,9 +158,8 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Prêt à lancer votre business en dropshipping?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Rejoignez notre formation complète et commencez votre aventure entrepreneuriale dès aujourd'hui.
-          </p>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">Rejoignez notre formation complète et commencez votre aventure entrepreneuriale dès aujourd'hui avec 
+ l' Académie la plus transparente du marché francophone </p>
           <Button className="bg-white text-brand-dark hover:bg-gray-100 text-md px-8 py-6">
             Démarrer gratuitement
           </Button>
