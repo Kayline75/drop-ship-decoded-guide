@@ -1,13 +1,17 @@
+
 import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+
 const SocialProof = () => {
   const [isVisible, setIsVisible] = useState(false);
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 500);
     return () => clearTimeout(timer);
   }, []);
+  
   const clients = [{
     name: "Amazon",
     logo: "https://images.unsplash.com/photo-1602345344684-37e44faf9444?crop=entropy&fit=crop&w=120&h=60"
@@ -27,6 +31,7 @@ const SocialProof = () => {
     name: "Wix",
     logo: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?crop=entropy&fit=crop&w=120&h=60"
   }];
+  
   const testimonials = [{
     name: "Thomas D.",
     position: "Débutant en e-commerce",
@@ -44,7 +49,46 @@ const SocialProof = () => {
     content: "Le module sur la recherche de produits m'a permis de trouver une niche rentable dès le premier mois. Les outils fournis valent à eux seuls le prix de la formation."
   }];
 
-  // Return a simple placeholder component for now
-  return;
+  // Implémentation du composant
+  return (
+    <section className="py-16 bg-[#1A1F2C]">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ils nous font <span className="gradient-text">confiance</span>
+          </h2>
+          <p className="text-lg text-brand-gray max-w-2xl mx-auto">
+            Découvrez les témoignages de nos clients et les résultats qu'ils ont obtenus.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+          {testimonials.map((testimonial, index) => (
+            <Card key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 hover:shadow-lg transition duration-300">
+              <CardContent className="p-6">
+                <div className="flex items-start mb-4">
+                  <img src={testimonial.image} alt={testimonial.name} className="w-12 h-12 rounded-full mr-4" />
+                  <div>
+                    <h3 className="font-bold text-white">{testimonial.name}</h3>
+                    <p className="text-brand-gray text-sm">{testimonial.position}</p>
+                  </div>
+                </div>
+                <p className="text-white">{testimonial.content}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+        
+        <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+          {clients.map((client, index) => (
+            <div key={index} className="grayscale hover:grayscale-0 transition-all duration-300">
+              <img src={client.logo} alt={client.name} className="h-12 object-contain" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
+
 export default SocialProof;

@@ -1,5 +1,7 @@
+
 import { Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 const TransparentGuide = () => {
   return <div className="py-16 md:py-24 bg-slate-900">
       <div className="container mx-auto px-4">
@@ -72,12 +74,15 @@ const TransparentGuide = () => {
         </div>
 
         <div className="text-center">
-          <Button className="bg-gradient-to-r from-brand-orange to-brand-dark text-md px-8 py-6">
-            Télécharger mon guide gratuit
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button asChild className="bg-gradient-to-r from-brand-orange to-brand-dark text-md px-8 py-6">
+            <a href="https://dropshipping-guide.com/telecharger">
+              Télécharger mon guide gratuit
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
           </Button>
         </div>
       </div>
     </div>;
 };
+
 export default TransparentGuide;

@@ -3,6 +3,7 @@ import { ArrowDown, Package, Plane } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import GradientBackground from "./GradientBackground";
 import { AnimatedBadge, GlowButton } from "./CardStyles";
+
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
@@ -232,14 +233,18 @@ const Hero = () => {
           {/* Interactive buttons with hover effects */}
           <div className="flex flex-col sm:flex-row gap-5 justify-center fade-in-up-delay mx-[30px]">
             <GlowButton>
-              <Button className="text-md px-8 py-6 bg-gradient-to-r from-[#F97316] to-[#FF8D6B] hover:opacity-90 transition-all relative z-10" onClick={() => console.log("Formation démarrée")}>
-                <span className="relative z-10">Débuter la formation</span>
+              <Button asChild className="text-md px-8 py-6 bg-gradient-to-r from-[#F97316] to-[#FF8D6B] hover:opacity-90 transition-all relative z-10">
+                <a href="#tarifs">
+                  <span className="relative z-10">Débuter la formation</span>
+                </a>
               </Button>
             </GlowButton>
             
-            <Button variant="outline" className="text-md px-8 py-6 border-[#33C3F0] text-[#33C3F0] hover:bg-[#33C3F0]/10 transition-all relative overflow-hidden group">
-              <span className="relative z-10">En savoir plus</span>
-              <div className="absolute h-full w-0 bg-[#33C3F0]/10 top-0 left-0 group-hover:w-full transition-all duration-300 ease-in-out"></div>
+            <Button asChild variant="outline" className="text-md px-8 py-6 border-[#33C3F0] text-[#33C3F0] hover:bg-[#33C3F0]/10 transition-all relative overflow-hidden group">
+              <a href="#cours">
+                <span className="relative z-10">En savoir plus</span>
+                <div className="absolute h-full w-0 bg-[#33C3F0]/10 top-0 left-0 group-hover:w-full transition-all duration-300 ease-in-out"></div>
+              </a>
             </Button>
           </div>
 

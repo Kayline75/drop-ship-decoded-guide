@@ -10,7 +10,8 @@ const PricingSection = () => {
     description: "La formation complète pour maximiser vos chances de succès",
     features: ["Formation complète avec mises à jour mensuelles. On t'apprend tout de A à Z !", "Suivi quotidien 7j/7 par notre équipe.", "Études de cas détaillées et audit de tes boutiques et campagnes.", "Accès aux outils premium : Minea, et bien d'autres (+3000 € de valeur).", "Promotion spéciale sur la création de ta propre boutique par nos experts.", "Thème sur mesure offert à l'inscription.", "Sans engagement !"],
     recommended: true,
-    buttonText: "Obtenir la formation complète"
+    buttonText: "Obtenir la formation complète",
+    buttonLink: "https://formation-dropshipping.com/inscription"
   }, {
     name: "Concurrent",
     price: "1497",
@@ -19,7 +20,8 @@ const PricingSection = () => {
     description: "Ce que les autres proposent pour le même prix",
     features: ["Contenu rarement mis à jour", "Support limité ou inexistant", "Pas d'accès aux outils premium", "Stratégies génériques", "Prix excessif pour la valeur", "Aucune personnalisation", "Aucun accompagnement"],
     recommended: false,
-    buttonText: "Ne pas choisir"
+    buttonText: "Ne pas choisir",
+    buttonLink: "#"
   }];
 
   return <div id="tarifs" className="py-16 bg-gradient-to-b from-[#1A1F2C]/90 to-background md:py-0">
@@ -58,8 +60,10 @@ const PricingSection = () => {
                     </li>)}
                 </ul>
                 
-                <Button className={`w-full py-6 ${plan.recommended ? 'bg-gradient-to-r from-brand-orange to-brand-dark text-white' : 'bg-white text-brand-dark border border-brand-dark hover:bg-gray-50'}`}>
-                  {plan.buttonText}
+                <Button asChild className={`w-full py-6 ${plan.recommended ? 'bg-gradient-to-r from-brand-orange to-brand-dark text-white' : 'bg-white text-brand-dark border border-brand-dark hover:bg-gray-50'}`}>
+                  <a href={plan.buttonLink}>
+                    {plan.buttonText}
+                  </a>
                 </Button>
               </div>
             </div>)}

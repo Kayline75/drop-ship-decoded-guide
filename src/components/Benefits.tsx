@@ -1,30 +1,64 @@
-import { Badge } from "@/components/ui/badge";
+
+import { Check } from "lucide-react";
+
 const Benefits = () => {
-  const benefits = [{
-    title: "Liberté Financière",
-    description: "Générez des revenus automatisés qui vous permettent de vivre selon vos termes.",
-    color: "orange"
-  }, {
-    title: "Indépendance Géographique",
-    description: "Travaillez de n'importe où dans le monde, avec seulement un ordinateur et une connexion internet.",
-    color: "dark"
-  }, {
-    title: "Risque Minimal",
-    description: "Démarrez sans stock ni investissement initial important. Testez des produits sans risque financier majeur.",
-    color: "gray"
-  }, {
-    title: "Évolutivité Rapide",
-    description: "Passez de 0 à 1000€, puis à 5000€ et plus par mois en suivant notre méthode éprouvée.",
-    color: "orange"
-  }, {
-    title: "Business Automatisé",
-    description: "Mettez en place des systèmes qui fonctionnent pendant que vous dormez. Ventes 24h/24, 7j/7.",
-    color: "dark"
-  }, {
-    title: "Compétences Transférables",
-    description: "Apprenez le marketing digital, la publicité payante et l'e-commerce - des compétences valorisées dans tous les secteurs.",
-    color: "gray"
-  }];
-  return;
+  const benefits = [
+    {
+      title: "Simplicité d'apprentissage",
+      description: "Une formation structurée en modules progressifs, accessibles même pour les débutants sans expérience"
+    },
+    {
+      title: "Soutien personnalisé",
+      description: "Accès à notre communauté privée et support quotidien pour répondre à toutes vos questions"
+    },
+    {
+      title: "Outils professionnels",
+      description: "Accès aux outils premium pour l'analyse de marché, l'automatisation et la gestion de stock virtuel"
+    },
+    {
+      title: "Méthode prouvée",
+      description: "Une approche testée et validée par des centaines d'entrepreneurs qui génèrent des revenus stables"
+    },
+    {
+      title: "Mises à jour régulières",
+      description: "Formation constamment mise à jour pour s'adapter aux dernières tendances et algorithmes"
+    },
+    {
+      title: "Autonomie financière",
+      description: "Développez une source de revenus complémentaire ou principale selon vos objectifs"
+    }
+  ];
+
+  return (
+    <section className="py-16 bg-[#1A1F2C]">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Les <span className="gradient-text">avantages</span> de notre formation
+          </h2>
+          <p className="text-lg text-brand-gray max-w-2xl mx-auto">
+            Voici pourquoi notre approche du dropshipping est différente et efficace.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:shadow-lg transition duration-300">
+              <div className="flex items-start gap-3">
+                <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-brand-orange flex items-center justify-center">
+                  <Check className="w-3 h-3 text-white" />
+                </span>
+                <div>
+                  <h3 className="font-bold text-white mb-2">{benefit.title}</h3>
+                  <p className="text-brand-gray">{benefit.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
+
 export default Benefits;

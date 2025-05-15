@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
+
 const PropositionValeur = () => {
   return <div className="bg-gradient-to-r from-brand-orange/10 to-brand-dark/10 py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -42,12 +43,15 @@ toujours la pour répondre
             </div>
           </div>
           
-          <Button className="bg-gradient-to-r from-brand-orange to-brand-dark text-md px-8 py-6 shadow-lg">
-            Je veux démarrer maintenant
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button asChild className="bg-gradient-to-r from-brand-orange to-brand-dark text-md px-8 py-6 shadow-lg">
+            <a href="#tarifs">
+              Je veux démarrer maintenant
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
           </Button>
         </div>
       </div>
     </div>;
 };
+
 export default PropositionValeur;
