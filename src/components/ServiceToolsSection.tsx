@@ -19,7 +19,7 @@ const ServiceToolsSection = () => {
     benefits: ["Design professionnel", "Optimisé pour les conversions", "Mises à jour incluses"]
   }];
   return <div id="outils" className="py-16 bg-white md:py-0">
-      <div className="container mx-auto px-4 bg-slate-900">
+      <div className="container mx-auto px-4 bg-slate-900 py-[30px]">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="gradient-text">Tous les outils</span> dont vous avez besoin

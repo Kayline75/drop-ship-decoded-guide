@@ -19,7 +19,7 @@ const PricingSection = () => {
     recommended: false,
     buttonText: "Ne pas choisir"
   }];
-  return <div id="tarifs" className="py-16 bg-gray-900 md:py-[2px]">
+  return <div id="tarifs" className="py-16 bg-indigo-900 md:py-0">
       <div className="container my-0 mx-0 px-0 py-[90px]">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
