@@ -1,5 +1,7 @@
+
 import { Button } from "@/components/ui/button";
-import { Check, ArrowDown, MessageSquareX, Wrench, Flag, Euro, UserX } from "lucide-react";
+import { Check, ArrowDown, MessageSquareX, Wrench, Flag, Euro, UserX, X } from "lucide-react";
+
 const PricingSection = () => {
   const plans = [{
     name: "Premium",
@@ -19,13 +21,14 @@ const PricingSection = () => {
     recommended: false,
     buttonText: "Ne pas choisir"
   }];
-  return <div id="tarifs" className="py-16 bg-indigo-900 md:py-0">
+  
+  return <div id="tarifs" className="py-16 bg-gradient-to-b from-brand-dark/90 to-background md:py-0">
       <div className="container my-0 mx-0 px-0 py-[90px]">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Un <span className="gradient-text">investissement</span> dans votre avenir
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-brand-gray max-w-2xl mx-auto">
             Choisissez la formule qui correspond à vos ambitions et à votre budget.
           </p>
         </div>
@@ -36,20 +39,29 @@ const PricingSection = () => {
                   RECOMMANDÉ
                 </div>}
               
-              <div className="p-6 bg-white">
+              <div className="p-6 bg-background/80 backdrop-blur-sm">
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                <div className="LE 97 NE DOIT PAS ETRE barr\xE9">
-                  {plan.strikethrough ? <span className="text-5xl line-through font-thin text-lime-600">{plan.price}€</span> : <span className="text-5xl font-bold">{plan.price}€</span>}
-                  <span className="text-black"> / {plan.priceUnit}</span>
+                <div>
+                  {plan.strikethrough ? 
+                    <span className="text-5xl line-through font-thin text-red-500">{plan.price}€</span> : 
+                    <span className="text-5xl font-bold text-emerald-500">{plan.price}€</span>
+                  }
+                  <span className="text-white"> / {plan.priceUnit}</span>
                 </div>
-                <p className="text-black mb-6 py-[20px]">{plan.description}</p>
+                <p className="text-white mb-6 py-[20px]">{plan.description}</p>
                 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, i) => <li key={i} className="flex items-start gap-2">
-                      <span className="CROIX ROUGE">
-                        <Check className="w-3 h-3 text-white" />
-                      </span>
-                      <span className="text-black">{feature}</span>
+                      {plan.recommended ? (
+                        <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center">
+                          <Check className="w-3 h-3 text-white" />
+                        </span>
+                      ) : (
+                        <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-500 flex items-center justify-center">
+                          <X className="w-3 h-3 text-white" />
+                        </span>
+                      )}
+                      <span className="text-white">{feature}</span>
                     </li>)}
                 </ul>
                 
@@ -66,12 +78,12 @@ const PricingSection = () => {
       </div>
 
       {/* Section: Ce que les autres ne te diront pas */}
-      <div className="mt-24 bg-gradient-to-r from-[#1A1F2C] to-[#222222] bg-slate-900 rounded-md py-0 my-0">
-        <div className="container mx-auto px-4 my-[90px] bg-indigo-900">
+      <div className="mt-24 bg-gradient-to-r from-[#1A1F2C] to-[#222222] rounded-md py-0 my-0">
+        <div className="container mx-auto px-4 my-[90px] bg-transparent">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6 my-[60px] py-[50px]">
             ❌ Ce que les autres ne te diront pas
           </h2>
-          <p className="text-lg text-white opacity-90 max-w-2xl mx-auto text-center mb-12">
+          <p className="text-lg text-brand-gray max-w-2xl mx-auto text-center mb-12">
             Voici pourquoi la plupart des formations échouent à vraiment t'aider :
           </p>
           
@@ -138,4 +150,5 @@ const PricingSection = () => {
       </div>
     </div>;
 };
+
 export default PricingSection;
