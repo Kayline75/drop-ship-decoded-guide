@@ -1,6 +1,8 @@
+
 import { useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+
 const FAQ = () => {
   const faqs = [{
     question: "Est-ce que le dropshipping fonctionne encore en 2025?",
@@ -27,32 +29,36 @@ const FAQ = () => {
     question: "Quelle est la garantie que ça marchera pour moi?",
     answer: "Nous offrons une garantie satisfait ou remboursé de 30 jours, ce qui vous permet de tester la formation sans risque. Cependant, la réussite dépend de votre mise en application des connaissances acquises. Nous fournissons tous les outils et connaissances, mais c'est à vous de les mettre en œuvre."
   }];
-  return <div id="faq" className="py-16 md:py-24 bg-gray-900">
-      <div className="container mx-auto px-4">
+
+  return (
+    <div id="faq" className="section-uniform bg-gray-900">
+      <div className="container-uniform">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[2px]">
-            Questions <span className="gradient-text">Fréquentes</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
+            Questions <span className="gradient-text-harmonized">Fréquentes</span>
           </h2>
-          <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto">
+          <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto mb-10">
             Tout ce que vous devez savoir avant de vous lancer dans l'aventure du dropshipping.
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left font-medium text-lg py-5">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`} className="border-white/10">
+                <AccordionTrigger className="text-left font-medium text-lg py-5 text-white">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-[#7BE0FF] pb-5">
+                <AccordionContent className="text-[#7BE0FF] pb-5 text-center">
                   {faq.answer}
                 </AccordionContent>
-              </AccordionItem>)}
+              </AccordionItem>
+            ))}
           </Accordion>
         </div>
-
-        
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default FAQ;

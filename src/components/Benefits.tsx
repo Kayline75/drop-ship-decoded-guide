@@ -32,26 +32,26 @@ const Benefits = () => {
   return (
     <section className="section-uniform bg-[#1A1F2C]">
       <div className="container-uniform">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
             Les <span className="gradient-text-harmonized">avantages</span> de notre formation
           </h2>
-          <p className="text-lg text-brand-gray max-w-2xl mx-auto mb-10">
+          <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto mb-10">
             Voici pourquoi notre approche du dropshipping est différente et efficace.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:shadow-lg transition duration-300 text-center h-full flex flex-col">
+            <div key={index} className="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:shadow-lg transition duration-300 h-full flex flex-col items-center">
               <div className="flex items-center justify-center mb-4">
                 <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-orange flex items-center justify-center">
                   <Check className="w-4 h-4 text-white" />
                 </span>
               </div>
-              <div>
+              <div className="text-center flex-grow flex flex-col justify-center">
                 <h3 className="font-bold text-white mb-3 text-xl">{benefit.title}</h3>
-                <p className="text-brand-gray">{benefit.description}</p>
+                <p className="text-[#7BE0FF]">{benefit.description}</p>
               </div>
             </div>
           ))}

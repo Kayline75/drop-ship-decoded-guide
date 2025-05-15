@@ -16,26 +16,25 @@
 
 /* Glass card effects */
 .glass-card {
-  @apply backdrop-blur-lg bg-background/30 border border-white/10;
+  @apply backdrop-blur-lg bg-white/5 border border-white/10 rounded-lg shadow-md;
   position: relative;
   transition: all 0.3s ease;
 }
 
 .glass-card:hover {
-  @apply bg-background/40 border-white/15;
+  @apply bg-white/10 border-white/15 shadow-lg;
   transform: translateY(-5px);
 }
 
 .glass-card-premium {
-  @apply backdrop-blur-lg bg-background/40 border border-white/20;
+  @apply backdrop-blur-lg bg-white/10 border border-white/20 rounded-lg shadow-lg;
   position: relative;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .glass-card-premium:hover {
-  @apply bg-background/50 border-white/30;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  @apply bg-white/15 border-white/30 shadow-xl;
+  transform: translateY(-5px);
 }
 
 /* Card backdrop - ensure consistent dark background */
@@ -56,11 +55,17 @@
   content: '';
   position: absolute;
   inset: -1px;
-  background: linear-gradient(45deg, #F97316, #33C3F0, #FFFFFF); /* Changed to orange, sky blue, white */
+  background: linear-gradient(45deg, #F97316, #33C3F0, #FFFFFF);
   background-size: 400% 400%;
   animation: gradient-border 8s ease infinite;
   border-radius: calc(var(--radius) + 1px);
   z-index: -1;
+}
+
+@keyframes gradient-border {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Button glow effect */
@@ -70,7 +75,7 @@
 }
 
 .button-glow:hover {
-  box-shadow: 0 0 15px rgba(249, 115, 22, 0.6); /* Changed to orange */
+  box-shadow: 0 0 15px rgba(249, 115, 22, 0.6);
 }
 
 .button-glow::after {
@@ -103,7 +108,7 @@
   height: 2px;
   bottom: -4px;
   left: 0;
-  background: linear-gradient(to right, #F97316, #33C3F0); /* Changed to orange and sky blue */
+  background: linear-gradient(to right, #F97316, #33C3F0);
   transition: width 0.3s ease;
 }
 
@@ -139,4 +144,82 @@
 .package-icon:hover {
   opacity: 0.8;
   transform: scale(1.2) rotate(5deg);
+}
+
+/* Enhanced card styles */
+.feature-card {
+  @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 transition-all duration-300 flex flex-col items-center justify-center h-full;
+}
+
+.feature-card:hover {
+  @apply bg-white/10 border-white/20 shadow-lg;
+  transform: translateY(-3px);
+}
+
+/* Improved heading styles */
+.gradient-heading {
+  @apply font-bold relative;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gradient-heading::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #F97316, #33C3F0);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Consistent button styles */
+.btn-gradient {
+  @apply bg-gradient-to-r from-brand-orange to-brand-dark text-white rounded-md font-medium transition-all duration-300 inline-flex items-center justify-center;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.7s ease;
+}
+
+.btn-gradient:hover::before {
+  left: 100%;
+}
+
+/* Accordion custom styling */
+.custom-accordion-item {
+  @apply border-white/10 mb-2;
+  transition: all 0.3s ease;
+}
+
+.custom-accordion-item:hover {
+  @apply bg-white/5;
+}
+
+.custom-accordion-trigger {
+  @apply py-4 px-5 w-full text-left font-medium flex justify-between items-center text-white;
+}
+
+.custom-accordion-content {
+  @apply px-5 pb-4 pt-0 text-[#7BE0FF] text-center;
+}
+
+/* Enhanced image hover effects */
+.hover-scale-image {
+  @apply transition-transform duration-300;
+  transform-origin: center;
+}
+
+.hover-scale-image:hover {
+  transform: scale(1.05);
 }

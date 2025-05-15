@@ -37,13 +37,13 @@ const PainPoints = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-5">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
           {painPoints.map((point, index) => (
             <div 
               key={index} 
-              className="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-[1.01]"
+              className="p-6 bg-white/10 backdrop-blur-sm rounded-lg shadow-md border border-white/10 hover:shadow-xl transition-all duration-300 transform hover:scale-[1.01] h-full flex flex-col items-center justify-center"
             >
-              <h3 className="text-xl font-bold text-brand-dark mb-3 text-center">{point.title}</h3>
+              <h3 className="text-xl font-bold text-brand-orange mb-3 text-center">{point.title}</h3>
               <p className="text-[#7D95F4] text-center">{point.description}</p>
             </div>
           ))}

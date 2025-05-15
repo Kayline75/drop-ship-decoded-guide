@@ -47,10 +47,10 @@ const PricingSection = () => {
     <section id="tarifs" className="section-uniform bg-[#1A1F2C]">
       <div className="container-uniform">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
             Un <span className="gradient-text-harmonized">investissement</span> dans votre avenir
           </h2>
-          <p className="text-lg text-brand-gray max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto mb-10">
             Choisissez la formule qui correspond à vos ambitions et à votre budget.
           </p>
         </div>
@@ -62,7 +62,7 @@ const PricingSection = () => {
               className={`rounded-lg overflow-hidden transition-all duration-300 h-full flex flex-col ${
                 plan.recommended 
                   ? 'border-4 border-brand-orange transform md:-translate-y-4 shadow-xl' 
-                  : 'border border-gray-200 hover:shadow-lg'
+                  : 'border border-white/10 hover:shadow-lg'
               }`}
             >
               {plan.recommended && (
@@ -71,8 +71,8 @@ const PricingSection = () => {
                 </div>
               )}
               
-              <div className="p-6 bg-background/80 backdrop-blur-sm flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold mb-2 text-center">{plan.name}</h3>
+              <div className="p-6 bg-white/5 backdrop-blur-sm flex flex-col flex-grow">
+                <h3 className="text-2xl font-bold mb-2 text-center text-white">{plan.name}</h3>
                 <div className="text-center mb-4">
                   {plan.strikethrough 
                     ? <span className="text-5xl line-through font-thin text-red-500">{plan.price}€</span> 
@@ -80,7 +80,7 @@ const PricingSection = () => {
                   }
                   <span className="text-white"> / {plan.priceUnit}</span>
                 </div>
-                <p className="text-white mb-6 py-[20px] text-center">{plan.description}</p>
+                <p className="text-[#7BE0FF] mb-6 py-[20px] text-center">{plan.description}</p>
                 
                 <ul className="space-y-3 mb-8 flex-grow">
                   {plan.features.map((feature, i) => (
@@ -121,12 +121,12 @@ const PricingSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6 py-6">
           ❌ Ce que les autres ne te diront pas
         </h2>
-        <p className="text-lg text-brand-gray max-w-2xl mx-auto text-center mb-12">
+        <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto text-center mb-12">
           Voici pourquoi la plupart des formations échouent à vraiment t'aider :
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg space-y-4 text-center">
+          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/10 space-y-4 text-center">
             <div className="flex items-center justify-center mb-4">
               <ArrowDown className="w-10 h-10 text-brand-orange" />
             </div>
@@ -135,7 +135,7 @@ const PricingSection = () => {
             </p>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg space-y-4 text-center">
+          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/10 space-y-4 text-center">
             <div className="flex items-center justify-center mb-4">
               <MessageSquareX className="w-10 h-10 text-brand-orange" />
             </div>
@@ -144,7 +144,7 @@ const PricingSection = () => {
             </p>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg space-y-4 text-center">
+          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/10 space-y-4 text-center">
             <div className="flex items-center justify-center mb-4">
               <Wrench className="w-10 h-10 text-brand-orange" />
             </div>
@@ -153,7 +153,7 @@ const PricingSection = () => {
             </p>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm p-6 space-y-4 rounded-lg text-center">
+          <div className="bg-white/10 backdrop-blur-sm p-6 space-y-4 rounded-lg border border-white/10 text-center">
             <div className="flex items-center justify-center mb-4">
               <Flag className="w-10 h-10 text-brand-orange" />
             </div>
@@ -162,7 +162,7 @@ const PricingSection = () => {
             </p>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg space-y-4 text-center">
+          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/10 space-y-4 text-center">
             <div className="flex items-center justify-center mb-4">
               <Euro className="w-10 h-10 text-brand-orange" />
             </div>
@@ -171,7 +171,7 @@ const PricingSection = () => {
             </p>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg space-y-4 text-center">
+          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/10 space-y-4 text-center">
             <div className="flex items-center justify-center mb-4">
               <UserX className="w-10 h-10 text-brand-orange" />
             </div>

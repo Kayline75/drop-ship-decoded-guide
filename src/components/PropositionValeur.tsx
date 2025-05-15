@@ -18,33 +18,33 @@ const PropositionValeur = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="card-uniform bg-white">
-              <div className="w-16 h-16 bg-brand-orange rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:shadow-xl transition-all duration-300 h-full flex flex-col items-center justify-center">
+              <div className="w-16 h-16 bg-brand-orange rounded-full flex items-center justify-center mb-4">
                 <span className="text-white text-2xl font-bold">1</span>
               </div>
-              <h3 className="text-lg font-bold mb-3">Stratégie Validée</h3>
-              <p className="text-[#FF9F3F]">
+              <h3 className="text-lg font-bold mb-3 text-white">Stratégie Validée</h3>
+              <p className="text-[#FF9F3F] text-center">
                 Testée et approuvée par plusieurs membres<br />
                 [voir témoignages plus bas]
               </p>
             </div>
             
-            <div className="card-uniform bg-white">
-              <div className="w-16 h-16 bg-brand-orange rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:shadow-xl transition-all duration-300 h-full flex flex-col items-center justify-center">
+              <div className="w-16 h-16 bg-brand-orange rounded-full flex items-center justify-center mb-4">
                 <span className="text-white text-2xl font-bold">2</span>
               </div>
-              <h3 className="text-lg font-bold mb-3">Résultats Rapides</h3>
-              <p className="text-[#FF9F3F]">
+              <h3 className="text-lg font-bold mb-3 text-white">Résultats Rapides</h3>
+              <p className="text-[#FF9F3F] text-center">
                 Première vente possible en moins de 15 jours avec notre méthode.
               </p>
             </div>
             
-            <div className="card-uniform bg-white">
-              <div className="w-16 h-16 bg-brand-orange rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:shadow-xl transition-all duration-300 h-full flex flex-col items-center justify-center">
+              <div className="w-16 h-16 bg-brand-orange rounded-full flex items-center justify-center mb-4">
                 <span className="text-white text-2xl font-bold">3</span>
               </div>
-              <h3 className="text-lg font-bold mb-3">Support Complet</h3>
-              <p className="text-[#FF9F3F]">
+              <h3 className="text-lg font-bold mb-3 text-white">Support Complet</h3>
+              <p className="text-[#FF9F3F] text-center">
                 Communauté d'entraide toujours là pour répondre à toutes vos questions.
               </p>
             </div>
@@ -52,7 +52,7 @@ const PropositionValeur = () => {
           
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium text-md px-8 py-6 bg-gradient-to-r from-brand-orange to-brand-dark text-white shadow-lg hover:shadow-xl transition-all z-50"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-gradient-to-r from-brand-orange to-brand-dark text-white px-8 py-6 shadow-lg hover:shadow-xl transition-all"
             target="_blank"
             rel="noopener noreferrer"
           >

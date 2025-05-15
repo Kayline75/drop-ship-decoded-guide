@@ -30,29 +30,29 @@ const ServiceToolsSection = () => {
     <section id="outils" className="section-uniform bg-slate-900">
       <div className="container-uniform">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
             <span className="gradient-text-harmonized">Tous les outils</span> dont vous avez besoin
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto mb-10">
             Notre formation inclut un accès exclusif aux meilleurs outils du marché pour assurer votre succès.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {tools.map((tool, index) => (
-            <Card key={index} className="hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+            <Card key={index} className="bg-white/10 backdrop-blur-sm border border-white/10 hover:shadow-xl transition-all duration-300 h-full flex flex-col">
               <CardHeader className="pb-2 text-center">
-                <CardTitle className="text-xl font-bold text-brand-dark">{tool.name}</CardTitle>
-                <CardDescription className="text-center">{tool.description}</CardDescription>
+                <CardTitle className="text-xl font-bold text-brand-orange">{tool.name}</CardTitle>
+                <CardDescription className="text-center text-[#7BE0FF]">{tool.description}</CardDescription>
               </CardHeader>
-              <CardContent className="flex-grow">
+              <CardContent className="flex-grow flex flex-col justify-center">
                 <ul className="space-y-3 flex-grow">
                   {tool.benefits.map((benefit, i) => (
-                    <li key={i} className="flex items-start gap-2 justify-center">
+                    <li key={i} className="flex items-start gap-2">
                       <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-brand-orange flex items-center justify-center">
                         <Check className="w-3 h-3 text-white" />
                       </span>
-                      <span className="text-center">{benefit}</span>
+                      <span className="text-white">{benefit}</span>
                     </li>
                   ))}
                 </ul>
