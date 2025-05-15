@@ -21,7 +21,7 @@ const PricingSection = () => {
     features: ["Contenu rarement mis à jour", "Support limité ou inexistant", "Pas d'accès aux outils premium", "Stratégies génériques", "Prix excessif pour la valeur", "Aucune personnalisation", "Aucun accompagnement"],
     recommended: false,
     buttonText: "Ne pas choisir",
-    buttonLink: "#"
+    buttonLink: "https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
   }];
 
   return <div id="tarifs" className="py-16 bg-gradient-to-b from-[#1A1F2C]/90 to-background md:py-0">

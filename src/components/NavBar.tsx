@@ -29,7 +29,7 @@ const NavBar = () => {
       }`}
     >
       <div className="container flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
+        <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="flex items-center gap-2">
           <div className="bg-gradient-to-r from-[#F97316] to-[#33C3F0] w-8 h-8 rounded-md"></div>
           <span className="text-xl font-bold text-white">Whatsdropshipping</span>
         </a>
