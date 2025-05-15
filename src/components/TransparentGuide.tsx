@@ -1,4 +1,3 @@
-
 import { Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -74,12 +73,13 @@ const TransparentGuide = () => {
         </div>
 
         <div className="text-center">
-          <Button asChild className="bg-gradient-to-r from-brand-orange to-brand-dark text-md px-8 py-6">
-            <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c">
-              Télécharger mon guide gratuit
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
+          <a 
+            href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium text-md px-8 py-6 bg-gradient-to-r from-brand-orange to-brand-dark text-white"
+          >
+            Télécharger mon guide gratuit
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </a>
         </div>
       </div>
     </div>;

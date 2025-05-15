@@ -37,11 +37,12 @@ const Index = () => {
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">Rejoignez notre formation complète et commencez 
 VOTRE aventure entrepreneuriale dès aujourd'hui.</p>
-          <Button asChild className="bg-white text-brand-dark hover:bg-gray-100 text-md px-8 py-6">
-            <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c">
-              Oui .. Je le veux !
-            </a>
-          </Button>
+          <a 
+            href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-white text-brand-dark hover:bg-gray-100 text-md px-8 py-6"
+          >
+            Oui .. Je le veux !
+          </a>
         </div>
       </div>
 

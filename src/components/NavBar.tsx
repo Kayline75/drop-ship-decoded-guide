@@ -1,5 +1,4 @@
 
-import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -46,11 +45,12 @@ const NavBar = () => {
               Avantages
             </a>
           </nav>
-          <Button asChild className="bg-gradient-to-r from-[#F97316] to-[#FF8D6B] hover:opacity-90 transition-all button-glow">
-            <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c">
-              Démarrer maintenant
-            </a>
-          </Button>
+          <a 
+            href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-gradient-to-r from-[#F97316] to-[#FF8D6B] hover:opacity-90 transition-all button-glow text-white px-4 py-2"
+          >
+            Démarrer maintenant
+          </a>
         </div>
 
         <button 
@@ -92,11 +92,12 @@ const NavBar = () => {
             </a>
           </nav>
           <div className="mt-5">
-            <Button asChild className="w-full bg-gradient-to-r from-[#F97316] to-[#FF8D6B]">
-              <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c">
-                Démarrer maintenant
-              </a>
-            </Button>
+            <a 
+              href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium w-full bg-gradient-to-r from-[#F97316] to-[#FF8D6B] text-white py-2"
+            >
+              Démarrer maintenant
+            </a>
           </div>
         </div>
       )}

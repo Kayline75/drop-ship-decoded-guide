@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Check, ArrowDown, MessageSquareX, Wrench, Flag, Euro, UserX, X } from "lucide-react";
 
@@ -60,11 +59,12 @@ const PricingSection = () => {
                     </li>)}
                 </ul>
                 
-                <Button asChild className={`w-full py-6 ${plan.recommended ? 'bg-gradient-to-r from-brand-orange to-brand-dark text-white' : 'bg-white text-brand-dark border border-brand-dark hover:bg-gray-50'}`}>
-                  <a href={plan.buttonLink}>
-                    {plan.buttonText}
-                  </a>
-                </Button>
+                <a
+                  href={plan.buttonLink}
+                  className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium w-full py-6 ${plan.recommended ? 'bg-gradient-to-r from-brand-orange to-brand-dark text-white' : 'bg-white text-brand-dark border border-brand-dark hover:bg-gray-50'}`}
+                >
+                  {plan.buttonText}
+                </a>
               </div>
             </div>)}
         </div>
