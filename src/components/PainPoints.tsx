@@ -32,7 +32,7 @@ const PainPoints = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Les <span className="gradient-text">obstacles</span> que vous rencontrez
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-[#7D95F4] max-w-2xl mx-auto">
             Nous comprenons parfaitement les défis auxquels vous êtes confrontés dans votre parcours de dropshipping.
           </p>
         </div>
@@ -44,7 +44,7 @@ const PainPoints = () => {
               className="mb-6 p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
             >
               <h3 className="text-xl font-bold text-brand-dark mb-2">{point.title}</h3>
-              <p className="text-gray-600">{point.description}</p>
+              <p className="text-[#7D95F4]">{point.description}</p>
             </div>
           ))}
         </div>

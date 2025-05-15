@@ -42,7 +42,7 @@ const Benefits = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Des <span className="gradient-text">bénéfices concrets</span> pour votre vie
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto">
             Le dropshipping bien maîtrisé peut transformer radicalement votre quotidien et votre avenir financier.
           </p>
         </div>
@@ -54,7 +54,7 @@ const Benefits = () => {
                 Bénéfice #{index + 1}
               </Badge>
               <h3 className="text-xl font-bold mb-3 text-brand-dark">{benefit.title}</h3>
-              <p className="text-gray-600">{benefit.description}</p>
+              <p className="text-[#7BE0FF]">{benefit.description}</p>
             </div>
           ))}
         </div>

@@ -15,6 +15,19 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* Vibrant text colors */
+.text-vibrant-orange {
+  color: #FF9F3F;
+}
+
+.text-vibrant-blue {
+  color: #7BE0FF;
+}
+
+.text-vibrant-medium {
+  color: #7D95F4;
+}
+
 /* Other utility styles */
 .section-padding {
   @apply px-4 md:px-8 py-16 md:py-24;

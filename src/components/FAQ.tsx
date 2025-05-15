@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
@@ -33,7 +34,7 @@ const FAQ = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Questions <span className="gradient-text">Fréquentes</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto">
             Tout ce que vous devez savoir avant de vous lancer dans l'aventure du dropshipping.
           </p>
         </div>
@@ -44,7 +45,7 @@ const FAQ = () => {
                 <AccordionTrigger className="text-left font-medium text-lg py-5">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-600 pb-5">
+                <AccordionContent className="text-[#7BE0FF] pb-5">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>)}
