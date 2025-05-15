@@ -38,8 +38,8 @@ const PricingSection = () => {
               
               <div className="p-6 bg-white">
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                <div className="mb-6">
-                  {plan.strikethrough ? <span className="text-5xl font-bold line-through text-gray-500">{plan.price}€</span> : <span className="text-5xl font-bold">{plan.price}€</span>}
+                <div className="LE 97 NE DOIT PAS ETRE barr\xE9">
+                  {plan.strikethrough ? <span className="text-5xl line-through font-bold text-yellow-400">{plan.price}€</span> : <span className="text-5xl font-bold">{plan.price}€</span>}
                   <span className="text-black"> / {plan.priceUnit}</span>
                 </div>
                 <p className="text-black mb-6">{plan.description}</p>
