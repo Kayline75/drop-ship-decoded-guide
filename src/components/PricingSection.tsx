@@ -1,7 +1,5 @@
-
 import { Button } from "@/components/ui/button";
 import { Check, ArrowDown, MessageSquareX, Wrench, Flag, Euro, UserX, X } from "lucide-react";
-
 const PricingSection = () => {
   const plans = [{
     name: "Premium",
@@ -21,9 +19,8 @@ const PricingSection = () => {
     recommended: false,
     buttonText: "Ne pas choisir"
   }];
-  
   return <div id="tarifs" className="py-16 bg-gradient-to-b from-brand-dark/90 to-background md:py-0">
-      <div className="container my-0 mx-0 px-0 py-[90px]">
+      <div className="container my-0 mx-0 px-0 py-[90px] bg-slate-900">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Un <span className="gradient-text">investissement</span> dans votre avenir
@@ -42,25 +39,18 @@ const PricingSection = () => {
               <div className="p-6 bg-background/80 backdrop-blur-sm">
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                 <div>
-                  {plan.strikethrough ? 
-                    <span className="text-5xl line-through font-thin text-red-500">{plan.price}€</span> : 
-                    <span className="text-5xl font-bold text-emerald-500">{plan.price}€</span>
-                  }
+                  {plan.strikethrough ? <span className="text-5xl line-through font-thin text-red-500">{plan.price}€</span> : <span className="text-5xl font-bold text-emerald-500">{plan.price}€</span>}
                   <span className="text-white"> / {plan.priceUnit}</span>
                 </div>
                 <p className="text-white mb-6 py-[20px]">{plan.description}</p>
                 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, i) => <li key={i} className="flex items-start gap-2">
-                      {plan.recommended ? (
-                        <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center">
+                      {plan.recommended ? <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center">
                           <Check className="w-3 h-3 text-white" />
-                        </span>
-                      ) : (
-                        <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-500 flex items-center justify-center">
+                        </span> : <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-500 flex items-center justify-center">
                           <X className="w-3 h-3 text-white" />
-                        </span>
-                      )}
+                        </span>}
                       <span className="text-white">{feature}</span>
                     </li>)}
                 </ul>
@@ -79,7 +69,7 @@ const PricingSection = () => {
 
       {/* Section: Ce que les autres ne te diront pas */}
       <div className="mt-24 bg-gradient-to-r from-[#1A1F2C] to-[#222222] rounded-md py-0 my-0">
-        <div className="container mx-auto px-4 my-[90px] bg-transparent">
+        <div className="container px-4 my-0 mx-0 bg-slate-900">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6 my-[60px] py-[50px]">
             ❌ Ce que les autres ne te diront pas
           </h2>
@@ -150,5 +140,4 @@ const PricingSection = () => {
       </div>
     </div>;
 };
-
 export default PricingSection;

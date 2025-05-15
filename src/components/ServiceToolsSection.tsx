@@ -49,7 +49,7 @@ const ServiceToolsSection = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="font-medium mb-6 text-brand-dark px-0 text-xl">Et de nombreux autres outils et ressources inclus !</p>
+          <p className="font-medium mb-6 px-0 text-xl text-orange-300">Et de nombreux autres outils et ressources inclus !</p>
         </div>
       </div>
     </div>;
