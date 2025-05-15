@@ -16,10 +16,10 @@ const PainPoints = () => {
     title: "Vous doutez de la fiabilité des fournisseurs",
     description: "Les délais de livraison trop longs et la qualité des produits vous inquiètent."
   }];
-  return <div id="problemes" className="py-16 md:py-24 bg-gradient-to-b from-gray-100 to blue dark bg-slate-900">
-      <div className="container mx-auto px-4">
+  return <div id="problemes" className="py-16 bg-gradient-to-b from-gray-100 to blue dark bg-slate-900 md:py-0">
+      <div className="container mx-auto bg-slate-900 px-0 py-[20px]">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
             Les <span className="gradient-text">obstacles</span> que vous rencontrez
           </h2>
           <p className="text-lg text-[#7D95F4] max-w-2xl mx-auto">
