@@ -68,3 +68,52 @@ a.inline-flex, a.inline-block {
   align-items: center;
   justify-content: center;
 }
+
+/* Classes d'harmonisation */
+.text-center-all * {
+  text-align: center;
+}
+
+.card-uniform {
+  @apply rounded-lg overflow-hidden shadow-md p-6 h-full flex flex-col justify-between;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+.section-uniform {
+  @apply py-16 md:py-20;
+  margin: 0;
+  width: 100%;
+}
+
+.container-uniform {
+  @apply mx-auto px-4 md:px-8;
+  max-width: 1280px;
+}
+
+/* Harmonisation des éléments de formulaire */
+input, select, textarea {
+  @apply rounded-md border border-gray-300 px-4 py-2 w-full;
+}
+
+/* Style uniforme pour les listes à puces */
+.feature-list {
+  @apply space-y-3;
+}
+
+.feature-list li {
+  @apply flex items-start gap-3;
+}
+
+/* Palette de couleurs harmonisée */
+.gradient-text-harmonized {
+  @apply bg-gradient-to-r from-[#F97316] to-[#33C3F0] bg-clip-text text-transparent;
+}
+
+.bg-harmonized-primary {
+  @apply bg-gradient-to-r from-[#1A1F2C] to-[#222933];
+}
+
+.bg-harmonized-secondary {
+  @apply bg-white/5 backdrop-blur-sm border border-white/10;
+}

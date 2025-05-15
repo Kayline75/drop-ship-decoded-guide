@@ -30,28 +30,28 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-16 bg-[#1A1F2C]">
-      <div className="container mx-auto px-4">
+    <section className="section-uniform bg-[#1A1F2C]">
+      <div className="container-uniform">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Les <span className="gradient-text">avantages</span> de notre formation
+            Les <span className="gradient-text-harmonized">avantages</span> de notre formation
           </h2>
-          <p className="text-lg text-brand-gray max-w-2xl mx-auto">
+          <p className="text-lg text-brand-gray max-w-2xl mx-auto mb-10">
             Voici pourquoi notre approche du dropshipping est différente et efficace.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:shadow-lg transition duration-300">
-              <div className="flex items-start gap-3">
-                <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-brand-orange flex items-center justify-center">
-                  <Check className="w-3 h-3 text-white" />
+            <div key={index} className="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:shadow-lg transition duration-300 text-center h-full flex flex-col">
+              <div className="flex items-center justify-center mb-4">
+                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-orange flex items-center justify-center">
+                  <Check className="w-4 h-4 text-white" />
                 </span>
-                <div>
-                  <h3 className="font-bold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-brand-gray">{benefit.description}</p>
-                </div>
+              </div>
+              <div>
+                <h3 className="font-bold text-white mb-3 text-xl">{benefit.title}</h3>
+                <p className="text-brand-gray">{benefit.description}</p>
               </div>
             </div>
           ))}
