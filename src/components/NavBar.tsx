@@ -28,26 +28,43 @@ const NavBar = () => {
       }`}
     >
       <div className="container flex items-center justify-between">
-        <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="flex items-center gap-2">
+        <a 
+          href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
+          className="flex items-center gap-2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="bg-gradient-to-r from-[#F97316] to-[#33C3F0] w-8 h-8 rounded-md"></div>
           <span className="text-xl font-bold text-white">Whatsdropshipping</span>
         </a>
         
         <div className="hidden md:flex items-center space-x-8">
           <nav className="flex items-center space-x-8">
-            <a href="#cours" className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors">
+            <a 
+              href="#cours" 
+              className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
+            >
               Les bases
             </a>
-            <a href="#parties" className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors">
+            <a 
+              href="#parties" 
+              className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
+            >
               Les 10 parties
             </a>
-            <a href="#avantages" className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors">
+            <a 
+              href="#avantages" 
+              className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
+            >
               Avantages
             </a>
           </nav>
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-gradient-to-r from-[#F97316] to-[#FF8D6B] hover:opacity-90 transition-all button-glow text-white px-4 py-2"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-gradient-to-r from-[#F97316] to-[#FF8D6B] hover:opacity-90 transition-all text-white px-4 py-2"
+            style={{ zIndex: 100 }}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Démarrer maintenant
           </a>
@@ -94,7 +111,9 @@ const NavBar = () => {
           <div className="mt-5">
             <a 
               href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium w-full bg-gradient-to-r from-[#F97316] to-[#FF8D6B] text-white py-2"
+              className="inline-block w-full text-center py-2 px-4 rounded-md text-white bg-gradient-to-r from-[#F97316] to-[#FF8D6B]"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Démarrer maintenant
             </a>

@@ -47,3 +47,24 @@
                     linear-gradient(90deg, rgba(51, 195, 240, 0.05) 1px, transparent 1px);
   background-size: 20px 20px;
 }
+
+/* Amélioration des liens */
+a {
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+}
+
+a[target="_blank"] {
+  position: relative;
+  z-index: 20;
+}
+
+/* Style spécifique pour les boutons de type lien */
+a.inline-flex, a.inline-block {
+  position: relative;
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
