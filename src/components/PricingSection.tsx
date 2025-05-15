@@ -1,5 +1,7 @@
+
 import { Button } from "@/components/ui/button";
 import { Check, ArrowDown, MessageSquareX, Wrench, Flag, Euro, UserX, X } from "lucide-react";
+
 const PricingSection = () => {
   const plans = [{
     name: "Premium",
@@ -19,8 +21,9 @@ const PricingSection = () => {
     recommended: false,
     buttonText: "Ne pas choisir"
   }];
-  return <div id="tarifs" className="py-16 bg-gradient-to-b from-brand-dark/90 to-background md:py-0">
-      <div className="container my-0 mx-0 px-0 py-[90px] bg-slate-900">
+
+  return <div id="tarifs" className="py-16 bg-gradient-to-b from-[#1A1F2C]/90 to-background md:py-0">
+      <div className="container my-0 mx-0 px-0 py-[90px] bg-[#1A1F2C]">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Un <span className="gradient-text">investissement</span> dans votre avenir
@@ -69,7 +72,7 @@ const PricingSection = () => {
 
       {/* Section: Ce que les autres ne te diront pas */}
       <div className="mt-24 bg-gradient-to-r from-[#1A1F2C] to-[#222222] rounded-md py-0 my-0">
-        <div className="container px-4 my-0 mx-0 bg-slate-900">
+        <div className="container px-4 my-0 mx-0 bg-[#1A1F2C]">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6 my-[60px] py-[50px]">
             ❌ Ce que les autres ne te diront pas
           </h2>
@@ -140,4 +143,5 @@ const PricingSection = () => {
       </div>
     </div>;
 };
+
 export default PricingSection;

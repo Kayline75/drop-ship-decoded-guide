@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,10 +7,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import MouseFollower from "./components/MouseFollower";
+
 const queryClient = new QueryClient();
+
 const App = () => <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <div className="min-h-screen bg-indigo-900">
+      <div className="min-h-screen bg-[#1A1F2C]">
         <MouseFollower />
         <Toaster />
         <Sonner />
@@ -23,4 +26,5 @@ const App = () => <QueryClientProvider client={queryClient}>
       </div>
     </TooltipProvider>
   </QueryClientProvider>;
+
 export default App;
