@@ -1,8 +1,6 @@
-
 import { useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-
 const FAQ = () => {
   const faqs = [{
     question: "Le Dropshipping Est-Il Toujours Rentable en 2025?",
@@ -29,9 +27,7 @@ const FAQ = () => {
     question: "Quelles Garanties de Réussite Offrez-Vous?",
     answer: "Nous proposons une garantie satisfait ou remboursé de 30 jours, vous permettant d'évaluer la formation sans risque. La réussite dépend ensuite de votre application des méthodes enseignées. Notre taux de satisfaction de 97% démontre l'efficacité de notre système quand il est correctement suivi."
   }];
-
-  return (
-    <div id="faq" className="section-uniform bg-gray-900">
+  return <div id="faq" className="section-uniform bg-gray-900">
       <div className="container-uniform px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16 space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold py-6 md:py-8">
@@ -44,12 +40,7 @@ const FAQ = () => {
 
         <div className="max-w-3xl mx-auto space-y-8">
           <Accordion type="single" collapsible className="w-full space-y-4">
-            {faqs.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`} 
-                className="border border-white/10 rounded-lg overflow-hidden bg-white/5 backdrop-blur-sm"
-              >
+            {faqs.map((faq, index) => <AccordionItem key={index} value={`item-${index}`} className="border border-white/10 rounded-lg overflow-hidden bg-white/5 backdrop-blur-sm">
                 <AccordionTrigger className="px-6 text-left font-medium text-lg py-4 text-white hover:text-[#7BE0FF]">
                   {faq.question}
                 </AccordionTrigger>
@@ -58,19 +49,14 @@ const FAQ = () => {
                     {faq.answer}
                   </div>
                 </AccordionContent>
-              </AccordionItem>
-            ))}
+              </AccordionItem>)}
           </Accordion>
           
           <div className="text-center pt-8">
-            <p className="text-white/70 italic mb-4">
-              D'autres questions? Notre équipe d'experts est disponible pour vous accompagner personnellement.
-            </p>
+            
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default FAQ;
