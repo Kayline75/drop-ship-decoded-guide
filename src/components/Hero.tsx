@@ -56,8 +56,8 @@ const Hero = () => {
       onMouseMove={handleMouseMove}
       className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
     >
-      {/* Gradient background with transition from top to bottom */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#E9F6FF] via-[#D4EDFF] to-[#B3E0FF] z-0"></div>
+      {/* Warm gradient background with soft transition */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#FEF7CD] via-[#FDE1D3] to-[#FEC6A1] z-0"></div>
       
       {/* Subtle pattern overlay */}
       <div className="absolute inset-0 opacity-10 pattern-grid z-0"></div>

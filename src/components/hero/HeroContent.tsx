@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Package } from "lucide-react";
 import { AnimatedBadge, GlowButton } from "../CardStyles";
@@ -24,18 +25,18 @@ export const HeroContent = ({
 
         {/* Main title with animated gradient - SEO optimized */}
         <h1 className="text-4xl md:text-6xl font-bold mb-6 relative">
-          <span className="hero-text bg-clip-text text-transparent bg-gradient-to-r from-[#F97316] via-[#FFFFFF] to-[#33C3F0] bg-size-200 animate-gradient-x">
+          <span className="hero-text bg-clip-text text-transparent bg-gradient-to-r from-[#333333] via-[#555555] to-[#333333] bg-size-200 animate-gradient-x">
             Maîtrisez le Dropshipping Rentable en 2025
           </span>
           <br className="hidden md:block" />
-          <span className="hero-text-delay bg-clip-text text-transparent bg-gradient-to-r from-[#33C3F0] via-[#FFFFFF] to-[#F97316] bg-size-200 animate-gradient-x">et Générez votre 1er revenu !</span>
+          <span className="hero-text-delay bg-clip-text text-transparent bg-gradient-to-r from-[#333333] via-[#555555] to-[#333333] bg-size-200 animate-gradient-x">et Générez votre 1er revenu !</span>
 
           {/* Floating package icons near title */}
           <Package className="absolute -right-4 -top-4 h-6 w-6 text-[#33C3F0]/40 animate-float opacity-75" />
           <Package className="absolute -left-8 bottom-0 h-4 w-4 text-[#F97316]/40 animate-float-delayed opacity-75" />
         </h1>
 
-        <p className="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto fade-in-up">Notre méthode prouvée en plusieurs  modules sectionnés transformera votre ambition en business e-commerce profitable avec ou sans stock et à faible investissement.</p>
+        <p className="text-lg md:text-xl text-gray-800 mb-10 max-w-2xl mx-auto fade-in-up">Notre méthode prouvée en plusieurs modules sectionnés transformera votre ambition en business e-commerce profitable avec ou sans stock et à faible investissement.</p>
 
         {/* Interactive buttons with hover effects */}
         <div className="flex flex-col sm:flex-row gap-5 justify-center fade-in-up-delay">
@@ -57,7 +58,7 @@ export const HeroContent = ({
             <div className="absolute inset-0 rounded-full bg-[#33C3F0]/10 scale-0 group-hover:scale-100 transition-transform duration-300"></div>
             <ArrowDown size={24} className="relative animate-bounce-subtle" />
           </button>
-          <span className="text-sm text-white mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <span className="text-sm text-gray-700 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             Explorer
           </span>
         </div>
