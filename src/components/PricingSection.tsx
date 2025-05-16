@@ -1,50 +1,27 @@
-
 import { Button } from "@/components/ui/button";
 import { Check, ArrowDown, MessageSquareX, Wrench, Flag, Euro, UserX, X } from "lucide-react";
-
 const PricingSection = () => {
-  const plans = [
-    {
-      name: "Premium",
-      price: "97",
-      priceUnit: "mois",
-      description: "La formation complète pour maximiser vos chances de succès",
-      features: [
-        "Formation complète avec mises à jour mensuelles. On t'apprend tout de A à Z !",
-        "Suivi quotidien 7j/7 par notre équipe.",
-        "Études de cas détaillées et audit de tes boutiques et campagnes.",
-        "Accès aux outils premium : Minea, et bien d'autres (+3000 € de valeur).",
-        "Promotion spéciale sur la création de ta propre boutique par nos experts.",
-        "Thème sur mesure offert à l'inscription.",
-        "Sans engagement !"
-      ],
-      recommended: true,
-      buttonText: "Obtenir la formation complète",
-      buttonLink: "https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-    }, 
-    {
-      name: "Concurrent",
-      price: "1497",
-      priceUnit: "une seule fois",
-      strikethrough: true,
-      description: "Ce que les autres proposent pour le même prix",
-      features: [
-        "Contenu rarement mis à jour",
-        "Support limité ou inexistant",
-        "Pas d'accès aux outils premium",
-        "Stratégies génériques",
-        "Prix excessif pour la valeur",
-        "Aucune personnalisation",
-        "Aucun accompagnement"
-      ],
-      recommended: false,
-      buttonText: "Ne pas choisir",
-      buttonLink: "https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-    }
-  ];
-
-  return (
-    <section id="tarifs" className="section-uniform bg-[#1A1F2C]">
+  const plans = [{
+    name: "Premium",
+    price: "97",
+    priceUnit: "mois",
+    description: "La formation complète pour maximiser vos chances de succès",
+    features: ["Formation complète avec mises à jour mensuelles. On t'apprend tout de A à Z !", "Suivi quotidien 7j/7 par notre équipe.", "Études de cas détaillées et audit de tes boutiques et campagnes.", "Accès aux outils premium : Minea, et bien d'autres (+3000 € de valeur).", "Promotion spéciale sur la création de ta propre boutique par nos experts.", "Thème sur mesure offert à l'inscription.", "Sans engagement !"],
+    recommended: true,
+    buttonText: "Obtenir la formation complète",
+    buttonLink: "https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
+  }, {
+    name: "Concurrent",
+    price: "1497",
+    priceUnit: "une seule fois",
+    strikethrough: true,
+    description: "Ce que les autres proposent pour le même prix",
+    features: ["Contenu rarement mis à jour", "Support limité ou inexistant", "Pas d'accès aux outils premium", "Stratégies génériques", "Prix excessif pour la valeur", "Aucune personnalisation", "Aucun accompagnement"],
+    recommended: false,
+    buttonText: "Ne pas choisir",
+    buttonLink: "https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
+  }];
+  return <section id="tarifs" className="section-uniform bg-slate-950">
       <div className="container-uniform">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
@@ -56,63 +33,35 @@ const PricingSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {plans.map((plan, index) => (
-            <div 
-              key={index} 
-              className={`rounded-lg overflow-hidden transition-all duration-300 h-full flex flex-col ${
-                plan.recommended 
-                  ? 'border-4 border-brand-orange transform md:-translate-y-4 shadow-xl' 
-                  : 'border border-white/10 hover:shadow-lg'
-              }`}
-            >
-              {plan.recommended && (
-                <div className="bg-brand-orange text-white text-center py-2 font-bold">
+          {plans.map((plan, index) => <div key={index} className={`rounded-lg overflow-hidden transition-all duration-300 h-full flex flex-col ${plan.recommended ? 'border-4 border-brand-orange transform md:-translate-y-4 shadow-xl' : 'border border-white/10 hover:shadow-lg'}`}>
+              {plan.recommended && <div className="bg-brand-orange text-white text-center py-2 font-bold">
                   RECOMMANDÉ
-                </div>
-              )}
+                </div>}
               
               <div className="p-6 bg-white/5 backdrop-blur-sm flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold mb-2 text-center text-white">{plan.name}</h3>
                 <div className="text-center mb-4">
-                  {plan.strikethrough 
-                    ? <span className="text-5xl line-through font-thin text-red-500">{plan.price}€</span> 
-                    : <span className="text-5xl font-bold text-emerald-500">{plan.price}€</span>
-                  }
+                  {plan.strikethrough ? <span className="text-5xl line-through font-thin text-red-500">{plan.price}€</span> : <span className="text-5xl font-bold text-emerald-500">{plan.price}€</span>}
                   <span className="text-white"> / {plan.priceUnit}</span>
                 </div>
                 <p className="text-[#7BE0FF] mb-6 py-[20px] text-center">{plan.description}</p>
                 
                 <ul className="space-y-3 mb-8 flex-grow">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      {plan.recommended 
-                        ? <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center">
+                  {plan.features.map((feature, i) => <li key={i} className="flex items-start gap-2">
+                      {plan.recommended ? <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center">
                             <Check className="w-3 h-3 text-white" />
-                          </span> 
-                        : <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-500 flex items-center justify-center">
+                          </span> : <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-500 flex items-center justify-center">
                             <X className="w-3 h-3 text-white" />
-                          </span>
-                      }
+                          </span>}
                       <span className="text-white">{feature}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
                 
-                <a
-                  href={plan.buttonLink}
-                  className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium w-full py-6 mt-auto ${
-                    plan.recommended 
-                      ? 'bg-gradient-to-r from-brand-orange to-brand-dark text-white' 
-                      : 'bg-white text-brand-dark border border-brand-dark hover:bg-gray-50'
-                  }`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={plan.buttonLink} className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium w-full py-6 mt-auto ${plan.recommended ? 'bg-gradient-to-r from-brand-orange to-brand-dark text-white' : 'bg-white text-brand-dark border border-brand-dark hover:bg-gray-50'}`} target="_blank" rel="noopener noreferrer">
                   {plan.buttonText}
                 </a>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
 
@@ -181,8 +130,6 @@ const PricingSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default PricingSection;
