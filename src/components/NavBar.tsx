@@ -41,22 +41,22 @@ const NavBar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <nav className="flex items-center space-x-8">
             <a 
-              href="#cours" 
+              href="#tarifs" 
               className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
             >
-              Les bases
+              LE PRIX
             </a>
             <a 
-              href="#parties" 
+              href="#guide-expert" 
               className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
             >
-              Les 10 parties
+              Le Guide ultime
             </a>
             <a 
-              href="#avantages" 
+              href="#faq" 
               className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
             >
-              Avantages
+              FAQ
             </a>
           </nav>
           <a 
@@ -87,25 +87,25 @@ const NavBar = () => {
         <div className="md:hidden absolute top-full left-0 right-0 card-backdrop py-5 px-4">
           <nav className="flex flex-col space-y-4">
             <a 
-              href="#cours" 
+              href="#tarifs" 
               className="text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Les bases
+              LE PRIX
             </a>
             <a 
-              href="#parties" 
+              href="#guide-expert" 
               className="text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Les 10 parties
+              Le Guide ultime
             </a>
             <a 
-              href="#avantages" 
+              href="#faq" 
               className="text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Avantages
+              FAQ
             </a>
           </nav>
           <div className="mt-5">

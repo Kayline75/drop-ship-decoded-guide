@@ -1,11 +1,12 @@
+
 import { Check, ArrowRight } from "lucide-react";
 const TransparentGuide = () => {
-  return <section className="section-uniform bg-slate-900">
+  return <section id="guide-expert" className="section-uniform bg-slate-900">
       <div className="container-uniform">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
             Guide Expert du Dropshipping Rentable 2025 : <span className="gradient-text-harmonized">
- Évitez les Arnaques et Maximisez vos Profits</span>
+ Évitez les Arnaques et Maximisez vos Profits</span>
           </h2>
           <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto mb-10">
             Les stratégies éprouvées pour transformer votre passion e-commerce en business florissant sans tomber dans les pièges courants.
