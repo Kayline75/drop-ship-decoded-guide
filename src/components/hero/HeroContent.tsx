@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Package } from "lucide-react";
 import { AnimatedBadge, GlowButton } from "../CardStyles";
@@ -10,7 +11,7 @@ export const HeroContent = ({
   scrollToNext
 }: HeroContentProps) => {
   return <div className={`container mx-auto px-4 py-16 relative z-10 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-      <div className="max-w-4xl text-center mx-[30px]">
+      <div className="max-w-4xl mx-auto text-center">
         {/* Animated badge */}
         <AnimatedBadge className="mb-6">
           <div className="flex items-center gap-2 relative">
@@ -35,10 +36,10 @@ export const HeroContent = ({
           <Package className="absolute -left-8 bottom-0 h-4 w-4 text-[#F97316]/40 animate-float-delayed opacity-75" />
         </h1>
 
-        <p className="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto fade-in-up">Notre méthode prouvée en plusieurs  modules sectionnés transformera votre ambition en business e-commerce profitable avec ou sans stock et à faible investissement.</p>
+        <p className="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto fade-in-up">Notre méthode prouvée en plusieurs  modules sectionnés transformera votre ambition en business e-commerce profitable avec ou sans stock et à faible investissement.</p>
 
         {/* Interactive buttons with hover effects */}
-        <div className="flex flex-col sm:flex-row gap-5 justify-center fade-in-up-delay mx-[30px]">
+        <div className="flex flex-col sm:flex-row gap-5 justify-center fade-in-up-delay">
           <GlowButton>
             <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium text-md px-8 py-6 bg-gradient-to-r from-[#F97316] to-[#FF8D6B] hover:opacity-90 transition-all relative z-10 text-white">
               <span className="relative z-10">Lancer Votre Business Dropshipping</span>
