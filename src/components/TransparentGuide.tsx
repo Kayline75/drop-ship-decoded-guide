@@ -1,13 +1,11 @@
-
 import { Check, ArrowRight } from "lucide-react";
-
 const TransparentGuide = () => {
-  return (
-    <section className="section-uniform bg-slate-900">
+  return <section className="section-uniform bg-slate-900">
       <div className="container-uniform">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
-            Guide Expert du Dropshipping Rentable 2025 : <span className="gradient-text-harmonized">Évitez les Arnaques et Maximisez vos Profits</span>
+            Guide Expert du Dropshipping Rentable 2025 : <span className="gradient-text-harmonized">
+Évitez les Arnaques et Maximisez vos Profits</span>
           </h2>
           <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto mb-10">
             Les stratégies éprouvées pour transformer votre passion e-commerce en business florissant sans tomber dans les pièges courants.
@@ -98,19 +96,12 @@ const TransparentGuide = () => {
         </div>
 
         <div className="text-center">
-          <a 
-            href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-gradient-to-r from-brand-orange to-brand-dark text-white px-8 py-6 hover:shadow-lg transition-all"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-gradient-to-r from-brand-orange to-brand-dark text-white px-8 py-6 hover:shadow-lg transition-all" target="_blank" rel="noopener noreferrer">
             Télécharger le Guide Expert Dropshipping 2025 Gratuit
             <ArrowRight className="ml-2 h-5 w-5" />
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TransparentGuide;
