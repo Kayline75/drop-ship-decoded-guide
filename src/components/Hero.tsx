@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Package, Plane } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import GradientBackground from "./GradientBackground";
 import { AnimatedBadge, GlowButton } from "./CardStyles";
 import { FloatingIcons } from "./hero/FloatingIcons";
 import { HeroContent } from "./hero/HeroContent";
@@ -57,8 +56,11 @@ const Hero = () => {
       onMouseMove={handleMouseMove}
       className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
     >
-      {/* Solid blue background */}
-      <div className="absolute inset-0 bg-blue-900/90 z-0"></div>
+      {/* Gradient background with transition from top to bottom */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#E9F6FF] via-[#D4EDFF] to-[#B3E0FF] z-0"></div>
+      
+      {/* Subtle pattern overlay */}
+      <div className="absolute inset-0 opacity-10 pattern-grid z-0"></div>
 
       {/* Interactive glow effect that follows mouse */}
       <GlowEffect mousePosition={mousePosition} containerRef={bannerRef} />
@@ -69,8 +71,8 @@ const Hero = () => {
       {/* Main hero content */}
       <HeroContent isVisible={isVisible} scrollToNext={scrollToNext} />
 
-      {/* Decorative elements */}
-      <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-background to-transparent z-10"></div>
+      {/* Decorative transition to the next section */}
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-background to-transparent z-10"></div>
     </section>
   );
 };
