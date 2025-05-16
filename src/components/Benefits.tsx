@@ -4,28 +4,28 @@ import { Check } from "lucide-react";
 const Benefits = () => {
   const benefits = [
     {
-      title: "Simplicité d'apprentissage",
-      description: "Une formation structurée en modules progressifs, accessibles même pour les débutants sans expérience"
+      title: "Méthode d'apprentissage étape par étape",
+      description: "Formation structurée en 10 modules progressifs, accessibles même pour les débutants sans expérience en e-commerce"
     },
     {
-      title: "Soutien personnalisé",
-      description: "Accès à notre communauté privée et support quotidien pour répondre à toutes vos questions"
+      title: "Accompagnement individuel garanti",
+      description: "Accès privilégié à notre communauté d'experts et support quotidien pour résoudre vos défis spécifiques"
     },
     {
-      title: "Outils professionnels",
-      description: "Accès aux outils premium pour l'analyse de marché, l'automatisation et la gestion de stock virtuel"
+      title: "Suite d'outils professionnels incluse",
+      description: "Accès aux solutions premium d'analyse de marché, d'automatisation et de gestion logistique sans frais supplémentaires"
     },
     {
-      title: "Méthode prouvée",
-      description: "Une approche testée et validée par des centaines d'entrepreneurs qui génèrent des revenus stables"
+      title: "Stratégie éprouvée par des centaines d'entrepreneurs",
+      description: "Approche testée et validée par notre communauté qui génère collectivement des revenus mensuels récurrents"
     },
     {
-      title: "Mises à jour régulières",
-      description: "Formation constamment mise à jour pour s'adapter aux dernières tendances et algorithmes"
+      title: "Contenu actualisé aux tendances 2025",
+      description: "Formation constamment mise à jour pour intégrer les dernières stratégies marketing et algorithmes des plateformes"
     },
     {
-      title: "Autonomie financière",
-      description: "Développez une source de revenus complémentaire ou principale selon vos objectifs"
+      title: "Système de revenu e-commerce automatisé",
+      description: "Développez une source de revenus complémentaire ou principale avec des processus d'automatisation avancés"
     }
   ];
 
@@ -34,10 +34,10 @@ const Benefits = () => {
       <div className="container-uniform">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
-            Les <span className="gradient-text-harmonized">avantages</span> de notre formation
+            6 Avantages Exclusifs de Notre <span className="gradient-text-harmonized">Méthode Dropshipping 2025</span>
           </h2>
           <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto mb-10">
-            Voici pourquoi notre approche du dropshipping est différente et efficace.
+            Découvrez pourquoi notre approche transforme des débutants en entrepreneurs e-commerce prospères.
           </p>
         </div>
         

@@ -21,20 +21,20 @@ export const HeroContent = ({ isVisible, scrollToNext }: HeroContentProps) => {
           <div className="flex items-center gap-2 relative">
             <Package className="h-4 w-4 text-[#33C3F0] animate-twinkle" />
             <span className="text-sm font-medium text-white animate-gradient-text">
-              Formation Dropshipping Premium
+              Formation Expert Dropshipping 2025
             </span>
             <Package className="h-4 w-4 text-[#33C3F0] animate-twinkle-delayed" />
           </div>
         </AnimatedBadge>
 
-        {/* Main title with animated gradient */}
+        {/* Main title with animated gradient - SEO optimized */}
         <h1 className="text-4xl md:text-6xl font-bold mb-6 relative">
           <span className="hero-text bg-clip-text text-transparent bg-gradient-to-r from-[#F97316] via-[#FFFFFF] to-[#33C3F0] bg-size-200 animate-gradient-x">
-            Découvrez l'art du Dropshipping
+            Maîtrisez le Dropshipping Rentable en 2025
           </span>
           <br className="hidden md:block" />
           <span className="hero-text-delay bg-clip-text text-transparent bg-gradient-to-r from-[#33C3F0] via-[#FFFFFF] to-[#F97316] bg-size-200 animate-gradient-x">
-            pour créer un revenu en ligne
+            et Générez un Revenu Passif Automatisé
           </span>
 
           {/* Floating package icons near title */}
@@ -43,8 +43,8 @@ export const HeroContent = ({ isVisible, scrollToNext }: HeroContentProps) => {
         </h1>
 
         <p className="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto fade-in-up">
-          Notre approche structurée en 10 modules transformera votre ambition en
-          business rentable et autonome.
+          Notre méthode prouvée en 10 modules transformera votre ambition en
+          business e-commerce profitable sans stock et à faible investissement.
         </p>
 
         {/* Interactive buttons with hover effects */}
@@ -54,7 +54,7 @@ export const HeroContent = ({ isVisible, scrollToNext }: HeroContentProps) => {
               href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium text-md px-8 py-6 bg-gradient-to-r from-[#F97316] to-[#FF8D6B] hover:opacity-90 transition-all relative z-10 text-white"
             >
-              <span className="relative z-10">Débuter la formation</span>
+              <span className="relative z-10">Lancer Votre Business Dropshipping</span>
             </a>
           </GlowButton>
 
@@ -62,7 +62,7 @@ export const HeroContent = ({ isVisible, scrollToNext }: HeroContentProps) => {
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
             className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium text-md px-8 py-6 border border-[#33C3F0] text-[#33C3F0] hover:bg-[#33C3F0]/10 transition-all relative overflow-hidden group"
           >
-            <span className="relative z-10">En savoir plus</span>
+            <span className="relative z-10">Découvrir Notre Méthode Éprouvée</span>
             <div className="absolute h-full w-0 bg-[#33C3F0]/10 top-0 left-0 group-hover:w-full transition-all duration-300 ease-in-out"></div>
           </a>
         </div>

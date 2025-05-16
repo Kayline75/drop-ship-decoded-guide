@@ -4,24 +4,24 @@ import { motion } from "framer-motion";
 const PainPoints = () => {
   const painPoints = [
     {
-      title: "Vous êtes perdu entre tous les avis contradictoires",
-      description: "Entre les gourous du dropshipping qui promettent la lune et ceux qui disent que c'est impossible, difficile de savoir à qui faire confiance."
+      title: "Confusion face aux avis contradictoires du marché",
+      description: "Entre les promesses irréalistes et les opinions négatives, il est difficile d'identifier une stratégie dropshipping fiable."
     }, 
     {
-      title: "Vous avez déjà essayé sans succès",
-      description: "Vous avez peut-être tenté le dropshipping mais sans ventes, avec des problèmes de livraison ou des clients mécontents."
+      title: "Échecs précédents malgré vos efforts",
+      description: "Vous avez peut-être déjà tenté le dropshipping sans résultat, avec des problèmes logistiques ou de service client."
     }, 
     {
-      title: "Vous craignez de perdre votre argent",
-      description: "L'investissement dans la publicité fait peur et vous ne savez pas comment optimiser vos dépenses marketing."
+      title: "Crainte de perdre votre investissement marketing",
+      description: "L'incertitude sur le retour sur investissement publicitaire vous empêche d'avancer sereinement dans votre projet."
     }, 
     {
-      title: "Vous n'avez pas trouvé le bon produit",
-      description: "La recherche de produits gagnants vous semble comme chercher une aiguille dans une botte de foin."
+      title: "Difficulté à identifier des produits gagnants",
+      description: "La recherche de produits à fort potentiel ressemble à une quête impossible sans méthode structurée."
     }, 
     {
-      title: "Vous doutez de la fiabilité des fournisseurs",
-      description: "Les délais de livraison trop longs et la qualité des produits vous inquiètent."
+      title: "Inquiétudes sur la fiabilité des fournisseurs",
+      description: "Les délais de livraison incertains et la qualité variable des produits vous font douter de la viabilité du modèle."
     }
   ];
 
@@ -30,10 +30,10 @@ const PainPoints = () => {
       <div className="container-uniform">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
-            Les <span className="gradient-text-harmonized">obstacles</span> que vous rencontrez
+            5 Obstacles Majeurs au Succès en <span className="gradient-text-harmonized">Dropshipping</span> (et Comment les Surmonter)
           </h2>
           <p className="text-lg text-[#7D95F4] max-w-2xl mx-auto mb-10">
-            Nous comprenons parfaitement les défis auxquels vous êtes confrontés dans votre parcours de dropshipping.
+            Nous avons identifié et résolu les défis qui bloquent 90% des entrepreneurs en e-commerce sans stock.
           </p>
         </div>
 

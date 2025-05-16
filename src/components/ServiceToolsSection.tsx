@@ -6,23 +6,23 @@ const ServiceToolsSection = () => {
   const tools = [
     {
       name: "Minea",
-      description: "Outil d'automatisation pour gérer vos commandes et suivi des colis",
-      benefits: ["Gain de temps", "Automatisation complète", "Notifications clients"]
+      description: "Automatisation complète de la gestion des commandes et du suivi colis",
+      benefits: ["Gain de temps quotidien", "Notifications clients automatisées", "Réduction des litiges clients"]
     }, 
     {
       name: "Dropship",
-      description: "Trouvez des produits gagnants et des fournisseurs fiables",
-      benefits: ["Base de données de produits", "Analyse de la concurrence", "Vérification des fournisseurs"]
+      description: "Système d'identification des produits à fort potentiel commercial",
+      benefits: ["Base de données exclusive", "Analyse concurrentielle avancée", "Vérification fiabilité fournisseurs"]
     }, 
     {
       name: "Copify",
-      description: "Créez des descriptions produits qui convertissent avec l'IA",
-      benefits: ["Fiches produits optimisées", "Gain de temps en rédaction", "Textes orientés conversion"]
+      description: "Générateur IA de fiches produits optimisées pour la conversion",
+      benefits: ["Descriptions persuasives", "Optimisation SEO intégrée", "Personnalisation multilingue"]
     }, 
     {
       name: "Thème Premium",
-      description: "Thème Shopify à plus de 300€ inclus dans la formation",
-      benefits: ["Design professionnel", "Optimisé pour les conversions", "Mises à jour incluses"]
+      description: "Template Shopify professionnel valorisé à plus de 300€",
+      benefits: ["Design optimisé conversion", "Vitesse de chargement optimale", "Mises à jour gratuites"]
     }
   ];
 
@@ -31,10 +31,10 @@ const ServiceToolsSection = () => {
       <div className="container-uniform">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
-            <span className="gradient-text-harmonized">Tous les outils</span> dont vous avez besoin
+            <span className="gradient-text-harmonized">Suite Complète d'Outils Professionnels</span> pour Automatiser Votre Business
           </h2>
           <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto mb-10">
-            Notre formation inclut un accès exclusif aux meilleurs outils du marché pour assurer votre succès.
+            Accédez à notre écosystème d'applications premium pour maximiser votre efficacité opérationnelle et booster vos ventes.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ const ServiceToolsSection = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="font-medium text-xl text-orange-300">Et de nombreux autres outils et ressources inclus !</p>
+          <p className="font-medium text-xl text-orange-300">Et plus de 15 outils et ressources exclusifs inclus dans votre formation !</p>
         </div>
       </div>
     </section>

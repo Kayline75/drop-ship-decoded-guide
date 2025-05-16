@@ -5,29 +5,29 @@ import { Button } from "@/components/ui/button";
 
 const FAQ = () => {
   const faqs = [{
-    question: "Est-ce que le dropshipping fonctionne encore en 2025?",
-    answer: "Absolument! Le modèle a évolué et s'est professionnalisé, ce qui a éliminé les amateurs. C'est maintenant un excellent moment pour démarrer avec les bonnes stratégies et une approche professionnelle que nous enseignons."
+    question: "Le Dropshipping Est-Il Toujours Rentable en 2025?",
+    answer: "Absolument! Le modèle s'est professionnalisé, éliminant les amateurs. C'est le moment idéal pour démarrer avec notre stratégie éprouvée qui s'adapte aux nouvelles réalités du marché et aux exigences des consommateurs modernes."
   }, {
-    question: "Ai-je besoin d'un gros capital pour commencer?",
-    answer: "Non, c'est justement l'avantage du dropshipping. Vous pouvez commencer avec un budget modeste (environ 500€ pour couvrir votre boutique, quelques outils et vos premiers tests publicitaires). Nous vous montrons comment optimiser chaque euro investi."
+    question: "Quel Budget Initial Est Nécessaire Pour Démarrer?",
+    answer: "L'avantage principal du dropshipping reste son faible investissement initial. Avec environ 500€ (couvrant votre boutique, quelques outils essentiels et vos premiers tests publicitaires), vous pouvez lancer une activité viable. Notre formation vous enseigne comment optimiser chaque euro investi."
   }, {
-    question: "Les délais de livraison ne sont-ils pas problématiques?",
-    answer: "C'était un problème dans le passé, mais nous vous montrons comment travailler avec des fournisseurs qui expédient en 7-15 jours maximum, ou même comment utiliser des entrepôts européens pour des livraisons en 3-5 jours. La transparence avec vos clients sur les délais est également enseignée."
+    question: "Comment Résoudre le Problème des Délais de Livraison?",
+    answer: "Nous avons développé un système de partenariats avec des fournisseurs garantissant des expéditions en 7-15 jours maximum, et même des options d'entrepôts européens pour des livraisons en 3-5 jours. Notre module sur la gestion logistique vous montre comment communiquer transparemment avec vos clients."
   }, {
-    question: "N'y a-t-il pas trop de concurrence aujourd'hui?",
-    answer: "Il y a de la concurrence dans tous les business profitables. Notre formation vous montre précisément comment trouver des niches moins saturées et comment vous démarquer même dans des marchés compétitifs grâce à des stratégies de différenciation."
+    question: "La Saturation du Marché Est-Elle un Obstacle Réel?",
+    answer: "Tout marché profitable attire de la concurrence. Notre formation vous révèle des méthodes d'analyse de niches sous-exploitées et des stratégies de différenciation permettant de prospérer même dans des marchés compétitifs grâce à un positionnement unique."
   }, {
-    question: "Combien de temps avant de voir des résultats?",
-    answer: "Cela dépend de votre implication et de votre exécution. Certains élèves réalisent leur première vente dans les 7-14 jours, mais il est plus réaliste de viser 1-2 mois avant d'avoir un flux régulier de ventes. La formation contient un plan d'action sur 60 jours pour maximiser vos chances."
+    question: "Quel Délai Avant de Générer des Revenus Significatifs?",
+    answer: "Les résultats dépendent de votre implication et de l'exécution de la méthode. Certains élèves réalisent leurs premières ventes en 7-14 jours, mais il est réaliste de prévoir 1-2 mois avant d'atteindre un flux régulier de ventes. Notre plan d'action sur 60 jours optimise votre progression."
   }, {
-    question: "Est-ce que ça marche dans tous les pays?",
-    answer: "Oui, et c'est justement un des avantages majeurs! Vous pouvez cibler les pays que vous souhaitez. Nous avons des étudiants qui réussissent en vendant en France, en Europe, aux États-Unis, et même dans des marchés moins évidents comme l'Amérique du Sud ou l'Asie."
+    question: "Peut-On Cibler des Marchés Internationaux Spécifiques?",
+    answer: "C'est précisément un avantage majeur de notre approche! Vous pouvez cibler les marchés les plus rentables sans limitation géographique. Nos étudiants réussissent en vendant en France, Europe, États-Unis, et même sur des marchés émergents comme l'Amérique Latine ou certains pays d'Asie."
   }, {
-    question: "Comment gérer les retours et les remboursements?",
-    answer: "Nous avons un module entier dédié à ce sujet. Vous apprendrez à mettre en place des politiques claires, à gérer les attentes des clients, et à automatiser une grande partie du processus de service client pour minimiser les problèmes."
+    question: "Comment Gérer Efficacement le Service Après-Vente?",
+    answer: "Notre module dédié au service client vous fournit des systèmes d'automatisation, des templates de communication et des procédures claires pour gérer les retours, remboursements et questions. Ces processus optimisés réduisent considérablement votre charge de travail quotidienne."
   }, {
-    question: "Quelle est la garantie que ça marchera pour moi?",
-    answer: "Nous offrons une garantie satisfait ou remboursé de 30 jours, ce qui vous permet de tester la formation sans risque. Cependant, la réussite dépend de votre mise en application des connaissances acquises. Nous fournissons tous les outils et connaissances, mais c'est à vous de les mettre en œuvre."
+    question: "Quelles Garanties de Réussite Offrez-Vous?",
+    answer: "Nous proposons une garantie satisfait ou remboursé de 30 jours, vous permettant d'évaluer la formation sans risque. La réussite dépend ensuite de votre application des méthodes enseignées. Notre taux de satisfaction de 97% démontre l'efficacité de notre système quand il est correctement suivi."
   }];
 
   return (
@@ -35,10 +35,10 @@ const FAQ = () => {
       <div className="container-uniform px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16 space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold py-6 md:py-8">
-            Questions <span className="gradient-text-harmonized">Fréquentes</span>
+            Questions Fréquentes sur le <span className="gradient-text-harmonized">Dropshipping Rentable en 2025</span>
           </h2>
           <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto">
-            Tout ce que vous devez savoir avant de vous lancer dans l'aventure du dropshipping.
+            Réponses expertes aux interrogations les plus courantes avant de lancer votre business e-commerce sans stock.
           </p>
         </div>
 
@@ -64,7 +64,7 @@ const FAQ = () => {
           
           <div className="text-center pt-8">
             <p className="text-white/70 italic mb-4">
-              Vous avez d'autres questions? N'hésitez pas à nous contacter.
+              D'autres questions? Notre équipe d'experts est disponible pour vous accompagner personnellement.
             </p>
           </div>
         </div>

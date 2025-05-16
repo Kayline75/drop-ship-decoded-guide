@@ -32,10 +32,10 @@ const Index = () => {
       <div className="bg-gradient-to-r from-brand-orange to-brand-dark text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 py-6">
-            Prêt à lancer votre business en dropshipping?
+            Lancez Votre Business Dropshipping Rentable Dès Aujourd'hui
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Rejoignez notre formation complète et commencez VOTRE aventure entrepreneuriale dès aujourd'hui.
+            Rejoignez notre formation complète et transformez votre ambition en entreprise e-commerce profitable et automatisée.
           </p>
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
@@ -43,7 +43,7 @@ const Index = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Oui .. Je le veux !
+            Démarrez Votre Formation Maintenant
           </a>
         </div>
       </div>

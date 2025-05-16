@@ -7,14 +7,14 @@ const PropositionValeur = () => {
       <div className="container-uniform">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            <span className="block">Dépassez la barrière des</span>
-            <span className="text-5xl md:text-6xl text-brand-orange">1000€</span>
-            <span className="block">par mois en dropshipping</span>
+            <span className="block">Comment Gagner</span>
+            <span className="text-5xl md:text-6xl text-brand-orange">+1000€</span>
+            <span className="block">Par Mois avec le Dropshipping Éthique</span>
           </h2>
           
           <p className="text-xl mb-10 max-w-2xl mx-auto">
-            Avec ou sans stock, sans investissement massif, et sans expérience préalable en e-commerce. 
-            Notre méthode en 10 modules segmentés transforme votre ambition en business rentable.
+            Créez votre entreprise e-commerce sans stock, sans gros investissement, et sans expérience préalable. 
+            Notre méthode éprouvée en 10 modules transforme votre ambition en business rentable.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
@@ -22,9 +22,9 @@ const PropositionValeur = () => {
               <div className="w-16 h-16 bg-brand-orange rounded-full flex items-center justify-center mb-4">
                 <span className="text-white text-2xl font-bold">1</span>
               </div>
-              <h3 className="text-lg font-bold mb-3 text-white">Stratégie Validée</h3>
+              <h3 className="text-lg font-bold mb-3 text-white">Stratégie Validée par le Marché</h3>
               <p className="text-[#FF9F3F] text-center">
-                Testée et approuvée par plusieurs membres<br />
+                Approche testée et approuvée par plusieurs entrepreneurs à succès<br />
                 [voir témoignages plus bas]
               </p>
             </div>
@@ -33,9 +33,9 @@ const PropositionValeur = () => {
               <div className="w-16 h-16 bg-brand-orange rounded-full flex items-center justify-center mb-4">
                 <span className="text-white text-2xl font-bold">2</span>
               </div>
-              <h3 className="text-lg font-bold mb-3 text-white">Résultats Rapides</h3>
+              <h3 className="text-lg font-bold mb-3 text-white">Premières Ventes en 15 Jours</h3>
               <p className="text-[#FF9F3F] text-center">
-                Première vente possible en moins de 15 jours avec notre méthode.
+                Notre système accélère votre croissance avec des techniques de marketing digital prouvées.
               </p>
             </div>
             
@@ -43,9 +43,9 @@ const PropositionValeur = () => {
               <div className="w-16 h-16 bg-brand-orange rounded-full flex items-center justify-center mb-4">
                 <span className="text-white text-2xl font-bold">3</span>
               </div>
-              <h3 className="text-lg font-bold mb-3 text-white">Support Complet</h3>
+              <h3 className="text-lg font-bold mb-3 text-white">Accompagnement Personnalisé</h3>
               <p className="text-[#FF9F3F] text-center">
-                Communauté d'entraide toujours là pour répondre à toutes vos questions.
+                Communauté d'entrepreneurs et experts toujours disponibles pour résoudre vos défis quotidiens.
               </p>
             </div>
           </div>
@@ -56,7 +56,7 @@ const PropositionValeur = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Je veux démarrer maintenant
+            Commencer Votre Business E-commerce Aujourd'hui
             <ArrowRight className="ml-2 h-5 w-5" />
           </a>
         </div>
