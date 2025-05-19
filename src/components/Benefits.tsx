@@ -1,6 +1,4 @@
-
 import { Check } from "lucide-react";
-
 const Benefits = () => {
   const benefits = [{
     title: "Méthode d'apprentissage étape par étape",
@@ -21,9 +19,7 @@ const Benefits = () => {
     title: "Système de revenu e-commerce automatisé",
     description: "Développez une source de revenus complémentaire ou principale avec des processus d'automatisation avancés"
   }];
-  
-  return (
-    <section id="benefices" className="section-uniform bg-gradient-to-b from-[#121212] to-[#331200]">
+  return <section id="benefices" className="section-uniform bg-gradient-to-b from-[#121212] to-[#331200]">
       <div className="container-uniform">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
@@ -35,11 +31,7 @@ const Benefits = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {benefits.map((benefit, index) => (
-            <div 
-              key={index} 
-              className="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:shadow-lg hover:border-white/20 hover:bg-white/8 transition duration-300 transform hover:translate-y-[-5px] h-full flex flex-col items-center"
-            >
+          {benefits.map((benefit, index) => <div key={index} className="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:shadow-lg hover:border-white/20 hover:bg-white/8 transition duration-300 transform hover:translate-y-[-5px] h-full flex flex-col items-center">
               <div className="flex items-center justify-center mb-4">
                 <span className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-[#FF7E33] to-[#FF5733] flex items-center justify-center shadow-lg">
                   <Check className="w-6 h-6 text-white" />
@@ -49,25 +41,15 @@ const Benefits = () => {
                 <h3 className="font-bold text-white mb-3 text-xl">{benefit.title}</h3>
                 <p className="text-[#FF9F3F]">{benefit.description}</p>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
         
         {/* Additional CTA */}
         <div className="mt-16 text-center">
-          <a 
-            href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] text-white px-10 py-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ACCÉDER À LA FORMATION COMPLÈTE →
-          </a>
-          <p className="mt-4 text-[#FF9F3F] font-medium">Sans engagement - Commencez dès aujourd'hui pour seulement 97€/mois</p>
+          
+          <p className="mt-4 font-medium text-xl text-amber-300">Sans engagement - Commencez dès aujourd'hui pour seulement 97€/mois</p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Benefits;
