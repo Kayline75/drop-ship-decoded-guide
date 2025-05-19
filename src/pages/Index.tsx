@@ -1,10 +1,7 @@
 
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
-import ContentSection from "@/components/ContentSection";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import PropositionValeur from "@/components/PropositionValeur";
 import ServiceToolsSection from "@/components/ServiceToolsSection";
 import PainPoints from "@/components/PainPoints";
@@ -39,12 +36,13 @@ const Index = () => {
           </p>
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-white text-brand-dark hover:bg-gray-100 px-8 py-6"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-white text-brand-dark hover:bg-gray-100 px-10 py-6 shadow-lg"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Démarrez Votre Formation Maintenant
+            DÉMARRER VOTRE FORMATION MAINTENANT →
           </a>
+          <p className="mt-4 text-white/80">Sans engagement - Accès immédiat à tous les modules et outils</p>
         </div>
       </div>
 
