@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const SocialProof = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,22 +15,19 @@ const SocialProof = () => {
   }, []);
   
   const testimonials = [{
-    name: "Thomas D.",
+    name: "Anonyme",
     position: "Débutant en e-commerce",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&fit=crop&w=80&h=80",
-    content: "J'étais sceptique au début, mais après avoir suivi la formation, j'ai réalisé ma première vente en 12 jours. Au bout de 3 mois, je générais plus de 2000€/mois.",
+    content: "Après 4 mois à essayer le dropshipping j'ai enfin eu ma première ventes! Merci à la communauté et l'aide que vous apportez! Prochain versement : 82,50 $, Ventes totales 87,52 $, Sessions 468",
     rating: 5
   }, {
-    name: "Claire M.",
-    position: "Ancienne salariée",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&fit=crop&w=80&h=80",
-    content: "La méthodologie est claire et précise. J'ai pu lancer ma boutique tout en gardant mon emploi. Aujourd'hui, je suis à mon compte et je gagne 3 fois mon ancien salaire.",
+    name: "Anonyme",
+    position: "Nouveau sur le e-commerce",
+    content: "J'ai fais mes premières ventes et je voulais remercier Theo et Guillaume pour leur implication, pour ceux qui débute et parte de zéro comme moi dans le e-commerce comme quoi c'est possible quand on est accompagner par les bonnes personnes. Merci pour tout, vous êtes top ✨ ✨ ✨ ✨",
     rating: 5
   }, {
-    name: "Karim B.",
-    position: "Étudiant entrepreneur",
-    image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?crop=entropy&fit=crop&w=80&h=80",
-    content: "Le module sur la recherche de produits m'a permis de trouver une niche rentable dès le premier mois. Les outils fournis valent à eux seuls le prix de la formation.",
+    name: "Anonyme",
+    position: "Membre de la formation",
+    content: "J'comprend plus moi! ... c'est donc ça le e-com? En 3J je me suis fait casiment mon salaire sur une semaine... Meilleur choix de ma vie! meilleur formation, meilleur coach je veut rien savoir je clot tout les débat!! MERCI... merci.. on garde le cap les amis!! objectif Dubai 🚀 🚀 🚀",
     rating: 5
   }];
   
@@ -61,7 +59,7 @@ const SocialProof = () => {
             Ils Ont <span className="gradient-text-harmonized">Transformé</span> Leur Vie Grâce au Dropshipping
           </h2>
           <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto mb-10">
-            Découvrez comment nos élèves ont développé des business e-commerce rentables en suivant notre méthode étape par étape.
+            Découvrez les résultats concrets obtenus par nos élèves qui ont suivi notre méthode étape par étape.
           </p>
         </div>
         
@@ -72,11 +70,11 @@ const SocialProof = () => {
               <CardContent className="p-6 flex flex-col h-full">
                 <div className="flex items-center mb-4">
                   <div className="mr-4">
-                    <img 
-                      src={testimonial.image} 
-                      alt={testimonial.name}
-                      className="rounded-full w-14 h-14 object-cover border-2 border-brand-orange"
-                    />
+                    <Avatar className="h-14 w-14 border-2 border-brand-orange">
+                      <AvatarFallback className="bg-gradient-to-r from-brand-orange to-brand-dark text-white">
+                        {testimonial.name.charAt(0)}
+                      </AvatarFallback>
+                    </Avatar>
                   </div>
                   <div>
                     <h3 className="font-bold text-white">{testimonial.name}</h3>
@@ -112,16 +110,28 @@ const SocialProof = () => {
           </div>
         </div>
         
+        {/* Ajout d'une bannière de succès plus visible */}
+        <div className="bg-gradient-to-r from-brand-orange/20 to-brand-dark/20 p-6 rounded-lg mb-10 border border-white/10 backdrop-blur-sm">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-white mb-3">Des Résultats Concrets et Vérifiables</h3>
+            <p className="text-[#7BE0FF] max-w-3xl mx-auto">
+              Ces témoignages sont issus de vrais membres de notre communauté qui ont appliqué notre méthode. 
+              Certains ont généré leurs premiers revenus en quelques jours seulement, d'autres ont atteint un salaire complet en moins d'un mois.
+            </p>
+          </div>
+        </div>
+        
         {/* Call to Action */}
         <div className="text-center mt-16">
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-gradient-to-r from-brand-orange to-brand-dark text-white px-8 py-6 hover:shadow-lg transition-all"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-brand-orange to-brand-dark text-white px-8 py-6 hover:shadow-lg transition-all"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Rejoindre Une Communauté de Succès
+            REJOINDRE NOS ÉLÈVES QUI RÉUSSISSENT
           </a>
+          <p className="mt-4 text-[#7BE0FF]">Accès immédiat à la communauté et à tous les modules de formation</p>
         </div>
       </div>
     </section>

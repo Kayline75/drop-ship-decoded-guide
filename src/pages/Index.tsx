@@ -29,10 +29,10 @@ const Index = () => {
       <div className="bg-gradient-to-r from-brand-orange to-brand-dark text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 py-6">
-            Lancez Votre Business Dropshipping Rentable Dès Aujourd'hui
+            Rejoignez Nos Élèves Qui Génèrent Des Résultats Concrets
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Rejoignez notre formation complète et transformez votre ambition en entreprise e-commerce profitable et automatisée.
+            Transformez vos ambitions en entreprise e-commerce rentable dès aujourd'hui - comme l'ont fait des centaines d'autres avant vous.
           </p>
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
@@ -42,7 +42,7 @@ const Index = () => {
           >
             DÉMARRER VOTRE FORMATION MAINTENANT →
           </a>
-          <p className="mt-4 text-white/80">Sans engagement - Accès immédiat à tous les modules et outils</p>
+          <p className="mt-4 text-white/80">Objectif: Votre première vente en moins de 30 jours</p>
         </div>
       </div>
 
