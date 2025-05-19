@@ -1,18 +1,19 @@
 
-import { Check, ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { Check } from "lucide-react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger
-} from "@/components/ui/tabs";
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 
 const TransparentGuide = () => {
-  const [activeTab, setActiveTab] = useState("selection");
+  const [activeTab, setActiveTab] = useState(0);
   const isMobile = useMediaQuery("(max-width: 768px)");
   
   // Tab content data
@@ -109,89 +110,124 @@ const TransparentGuide = () => {
           </p>
         </div>
 
-        <div className="mb-12">
-          <Tabs 
-            defaultValue="selection" 
-            value={activeTab}
-            onValueChange={setActiveTab}
+        {/* Carousel View */}
+        <div className="mb-12 relative">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true
+            }}
             className="w-full"
+            onSelect={(index) => setActiveTab(index)}
           >
-            {/* Custom styled tabs list */}
-            <div className={`w-full ${isMobile ? 'bg-[#331200]' : 'bg-[#331200]/80'} rounded-lg p-2 mb-6`}>
-              <TabsList className={`w-full grid ${isMobile ? 'grid-cols-2 gap-2' : 'grid-cols-4'} bg-transparent`}>
-                {tabsData.map((tab) => (
-                  <TabsTrigger
+            <div className="hidden md:flex justify-center gap-2 mb-6">
+              {tabsData.map((tab, index) => (
+                <button
+                  key={tab.id}
+                  onClick={() => document.getElementById(`slide-${index}`)?.scrollIntoView({ behavior: 'smooth', inline: 'center' })}
+                  className={`
+                    px-5 py-3 rounded-md text-base font-medium transition-all duration-300
+                    ${activeTab === index 
+                      ? 'bg-[#FF7E33] text-white' 
+                      : 'bg-[#22110A] text-[#FF9F3F]/70 hover:bg-[#22110A]/70'
+                    }
+                  `}
+                >
+                  {tab.title}
+                </button>
+              ))}
+            </div>
+
+            <div className={`w-full ${isMobile ? 'bg-[#331200]' : 'bg-[#331200]/80'} rounded-lg p-2 mb-6 md:hidden overflow-x-auto`}>
+              <div className="flex gap-2 w-max">
+                {tabsData.map((tab, index) => (
+                  <button
                     key={tab.id}
-                    value={tab.id}
+                    onClick={() => document.getElementById(`slide-${index}`)?.scrollIntoView({ behavior: 'smooth', inline: 'center' })}
                     className={`
-                      ${activeTab === tab.id 
+                      px-4 py-3 rounded-md text-base font-medium whitespace-nowrap transition-all duration-300
+                      ${activeTab === index 
                         ? 'bg-[#FF7E33] text-white' 
                         : 'bg-[#22110A] text-[#FF9F3F]/70 hover:bg-[#22110A]/70'
                       }
-                      rounded-md px-4 py-3 text-base transition-all duration-300 font-medium
-                      ${isMobile ? 'my-1' : ''}
                     `}
                   >
                     {tab.title}
-                  </TabsTrigger>
+                  </button>
                 ))}
-              </TabsList>
+              </div>
             </div>
 
-            {/* Tab contents with animations */}
-            {tabsData.map((tab) => (
-              <TabsContent 
-                key={tab.id}
-                value={tab.id}
-                className="mt-0 outline-none"
-              >
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="w-full"
-                >
-                  <Card className="border-none bg-transparent shadow-none">
-                    <CardContent className="p-0">
-                      <div className="p-6 bg-[#22110A] rounded-lg shadow-md">
-                        <h3 className="text-2xl font-bold mb-6 text-[#FF7E33] text-center">
-                          {tab.description}
-                        </h3>
-                        
-                        <div className="space-y-6">
-                          {tab.content.map((item, i) => (
-                            <div key={i} className="flex flex-col md:flex-row items-start md:items-center gap-3">
-                              <div className="min-w-6 h-6 rounded-full bg-[#FF7E33] flex items-center justify-center flex-shrink-0">
-                                <Check className="h-4 w-4 text-white" />
+            <CarouselContent>
+              {tabsData.map((tab, index) => (
+                <CarouselItem key={tab.id} id={`slide-${index}`} className="pt-0">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-full"
+                  >
+                    <Card className="border-none bg-transparent shadow-none">
+                      <CardContent className="p-0">
+                        <div className="p-6 bg-[#22110A] rounded-lg shadow-md">
+                          <h3 className="text-2xl font-bold mb-6 text-[#FF7E33] text-center">
+                            {tab.description}
+                          </h3>
+                          
+                          <div className="space-y-6">
+                            {tab.content.map((item, i) => (
+                              <div key={i} className="flex flex-col md:flex-row items-start md:items-center gap-3">
+                                <div className="min-w-6 h-6 rounded-full bg-[#FF7E33] flex items-center justify-center flex-shrink-0">
+                                  <Check className="h-4 w-4 text-white" />
+                                </div>
+                                <div>
+                                  <h4 className="text-lg font-semibold text-white">{item.title}</h4>
+                                  <p className="text-[#FF9F3F] mt-1">{item.description}</p>
+                                </div>
                               </div>
-                              <div>
-                                <h4 className="text-lg font-semibold text-white">{item.title}</h4>
-                                <p className="text-[#FF9F3F] mt-1">{item.description}</p>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                        
-                        {/* Call to action */}
-                        {activeTab === "logistique" && (
-                          <div className="mt-8 flex justify-center">
-                            <a 
-                              href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
-                              className="inline-flex items-center justify-center gap-2 rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] text-white px-6 py-4 hover:opacity-90 transition-all shadow-[0_0_20px_rgba(255,87,51,0.4)]"
-                            >
-                              <span className="hidden md:inline">ACCÉDER À LA FORMATION →</span>
-                              <span className="md:hidden">COMMENCER →</span>
-                            </a>
+                            ))}
                           </div>
-                        )}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </TabsContent>
-            ))}
-          </Tabs>
+                          
+                          {/* Call to action */}
+                          {index === 3 && (
+                            <div className="mt-8 flex justify-center">
+                              <a 
+                                href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
+                                className="inline-flex items-center justify-center gap-2 rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] text-white px-6 py-4 hover:opacity-90 transition-all shadow-[0_0_20px_rgba(255,87,51,0.4)]"
+                              >
+                                <span className="hidden md:inline">ACCÉDER À LA FORMATION →</span>
+                                <span className="md:hidden">COMMENCER →</span>
+                              </a>
+                            </div>
+                          )}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+
+            <div className="flex justify-center gap-2 mt-6">
+              <CarouselPrevious className="relative -left-0 top-0 translate-y-0 bg-[#22110A] border-[#FF7E33]/30 hover:bg-[#22110A]/80 hover:border-[#FF7E33] h-10 w-10" />
+              
+              <div className="flex items-center gap-1 px-2">
+                {tabsData.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => document.getElementById(`slide-${index}`)?.scrollIntoView({ behavior: 'smooth', inline: 'center' })}
+                    className={`w-3 h-3 rounded-full transition-all ${
+                      activeTab === index ? "bg-[#FF7E33]" : "bg-[#FF9F3F]/30"
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+              
+              <CarouselNext className="relative -right-0 top-0 translate-y-0 bg-[#22110A] border-[#FF7E33]/30 hover:bg-[#22110A]/80 hover:border-[#FF7E33] h-10 w-10" />
+            </div>
+          </Carousel>
         </div>
       </div>
     </section>
