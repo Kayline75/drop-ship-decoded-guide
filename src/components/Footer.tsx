@@ -46,19 +46,28 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6 bg-gradient-to-r from-[#FF7E33] to-[#FF5733] bg-clip-text text-transparent inline-block">Liens rapides</h3>
             <ul className="space-y-3">
               <li>
-                <span className="text-white hover:text-[#FF7E33] transition-colors block cursor-default">
+                <a 
+                  href="#tarifs" 
+                  className="text-white hover:text-[#FF7E33] transition-colors block"
+                >
                   LE PRIX
-                </span>
+                </a>
               </li>
               <li>
-                <span className="text-white hover:text-[#FF7E33] transition-colors block cursor-default">
+                <a 
+                  href="#guide-expert" 
+                  className="text-white hover:text-[#FF7E33] transition-colors block"
+                >
                   LE GUIDE
-                </span>
+                </a>
               </li>
               <li>
-                <span className="text-white hover:text-[#FF7E33] transition-colors block cursor-default">
+                <a 
+                  href="#faq" 
+                  className="text-white hover:text-[#FF7E33] transition-colors block"
+                >
                   FAQ
-                </span>
+                </a>
               </li>
             </ul>
           </div>
