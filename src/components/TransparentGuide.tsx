@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+
 const TransparentGuide = () => {
   const [activeTab, setActiveTab] = useState(0);
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -70,9 +71,7 @@ const TransparentGuide = () => {
       <div className="container-uniform py-0">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
-            Guide Expert du Dropshipping Rentable 2025 : <span className="bg-gradient-to-r from-[#FF7E33] to-[#FF5733] bg-clip-text text-transparent">
-              Évitez les Arnaques et Maximisez vos Profits
-            </span>
+            Le Dropshipping rentable 2025 / Eviter les Arnaques et Maximisez vos profits
           </h2>
           <p className="text-lg text-[#FF9F3F] max-w-2xl mx-auto mb-6">
             Les stratégies éprouvées pour transformer votre passion e-commerce en business florissant sans tomber dans les pièges courants.
@@ -84,7 +83,7 @@ const TransparentGuide = () => {
           <Carousel opts={{
           align: "start",
           loop: true
-        }} className="w-full" onSelect={index => setActiveTab(index)}>
+        }} className="w-full" onSelect={(index) => setActiveTab(index)}>
             <div className="hidden md:flex justify-center gap-2 mb-6">
               {tabsData.map((tab, index) => <button key={tab.id} onClick={() => document.getElementById(`slide-${index}`)?.scrollIntoView({
               behavior: 'smooth',
@@ -175,4 +174,5 @@ const TransparentGuide = () => {
       </div>
     </section>;
 };
+
 export default TransparentGuide;
