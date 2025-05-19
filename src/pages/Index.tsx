@@ -66,11 +66,12 @@ const Index = () => {
           </p>
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:from-[#FF9F3F] hover:to-[#FF7E33] text-white px-10 py-6 shadow-[0_0_30px_rgba(255,126,51,0.3)] transition-all duration-300 border border-white/20"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:from-[#FF9F3F] hover:to-[#FF7E33] text-white px-6 sm:px-10 py-5 sm:py-6 shadow-[0_0_30px_rgba(255,126,51,0.3)] transition-all duration-300 border border-white/20"
             target="_blank"
             rel="noopener noreferrer"
           >
-            DÉMARRER VOTRE FORMATION MAINTENANT →
+            <span className="hidden sm:inline">DÉMARRER VOTRE FORMATION MAINTENANT →</span>
+            <span className="sm:hidden">DÉMARRER MAINTENANT →</span>
           </a>
           <p className="mt-4 text-white/80">Objectif: Votre première vente en moins de 30 jours</p>
         </div>

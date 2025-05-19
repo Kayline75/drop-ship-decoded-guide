@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Package } from "lucide-react";
 import { AnimatedBadge, GlowButton } from "../CardStyles";
@@ -12,15 +13,15 @@ export const HeroContent = ({
   return <div className={`container mx-auto px-4 py-16 relative z-10 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
       <div className="max-w-4xl mx-auto text-center">
         {/* Badge animé */}
-        <AnimatedBadge className="mb-6">
-          <div className="flex items-center gap-2 relative">
+        <div className="mb-6">
+          <div className="flex items-center gap-2 relative justify-center">
             <Package className="h-4 w-4 text-[#FF7E33] animate-twinkle" />
             <span className="text-sm font-medium text-white animate-gradient-text">
               Formation Expert Dropshipping 2025
             </span>
             <Package className="h-4 w-4 text-[#FF7E33] animate-twinkle-delayed" />
           </div>
-        </AnimatedBadge>
+        </div>
 
         {/* Titre principal avec gradient animé - optimisé pour le SEO */}
         <h1 className="text-4xl md:text-6xl font-bold mb-6 relative">
@@ -40,11 +41,12 @@ Maîtrisez le Dropshipping Rentable en 2025</span>
           <span className="underline decoration-[#FF7E33] decoration-2 underline-offset-2">Notre méthode prouvée et structurée</span> transformera votre ambition en business e-commerce profitable avec ou sans stock et à faible investissement.
         </p>
 
-        {/* Boutons interactifs avec effets au survol */}
+        {/* Boutons interactifs avec effets au survol - optimisés pour mobile */}
         <div className="flex flex-col sm:flex-row gap-5 justify-center fade-in-up-delay">
           <GlowButton>
-            <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium text-md px-8 py-6 bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 transition-all relative z-10 text-white">
-              <span className="relative z-10 text-lg font-bold">COMMENCER MAINTENANT →</span>
+            <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium text-md px-6 sm:px-8 py-5 sm:py-6 bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 transition-all relative z-10 text-white">
+              <span className="relative z-10 text-lg font-bold hidden sm:inline">COMMENCER MAINTENANT →</span>
+              <span className="relative z-10 text-lg font-bold sm:hidden">COMMENCER →</span>
             </a>
           </GlowButton>
         </div>

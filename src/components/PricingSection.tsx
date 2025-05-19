@@ -10,6 +10,7 @@ const PricingSection = () => {
     features: ["Formation complète avec mises à jour mensuelles. On t'apprend tout de A à Z !", "Suivi quotidien 7j/7 par notre équipe.", "Études de cas détaillées et audit de tes boutiques et campagnes.", "Accès aux outils premium : Minea, et bien d'autres (+3000 € de valeur).", "Promotion spéciale sur la création de ta propre boutique par nos experts.", "Thème sur mesure offert à l'inscription.", "Sans engagement !"],
     recommended: true,
     buttonText: "Obtenir la formation complète",
+    mobileButtonText: "Obtenir la formation",
     buttonLink: "https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
   }, {
     name: "Concurrent",
@@ -20,6 +21,7 @@ const PricingSection = () => {
     features: ["Contenu rarement mis à jour", "Support limité ou inexistant", "Pas d'accès aux outils premium", "Stratégies génériques", "Prix excessif pour la valeur", "Aucune personnalisation", "Aucun accompagnement"],
     recommended: false,
     buttonText: "", // Supprimé le texte du bouton
+    mobileButtonText: "",
     buttonLink: ""  // Supprimé le lien du bouton
   }];
   return <section id="tarifs" className="section-uniform bg-[#0A0A0A]">
@@ -60,7 +62,8 @@ const PricingSection = () => {
                 
                 {plan.buttonText && (
                   <a href={plan.buttonLink} className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium w-full py-6 mt-auto ${plan.recommended ? 'bg-gradient-to-r from-[#FF7E33] to-[#FF5733] text-white' : 'bg-white text-[#121212] border border-[#FF7E33] hover:bg-gray-50'}`} target="_blank" rel="noopener noreferrer">
-                    {plan.buttonText}
+                    <span className="hidden sm:inline">{plan.buttonText}</span>
+                    <span className="sm:hidden">{plan.mobileButtonText || plan.buttonText}</span>
                   </a>
                 )}
               </div>

@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
@@ -94,10 +95,11 @@ const SocialProof = () => {
           </div>
         </div>
         
-        {/* Call to Action */}
+        {/* Call to Action - optimized for mobile */}
         <div className="text-center mt-16">
-          <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:from-[#FF9F3F] hover:to-[#FF7E33] text-white shadow-lg shadow-[#FF5733]/30 transition-all duration-300 py-[14px] px-[22px]">
-            REJOINDRE NOS ÉLÈVES QUI RÉUSSISSENT
+          <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:from-[#FF9F3F] hover:to-[#FF7E33] text-white shadow-lg shadow-[#FF5733]/30 transition-all duration-300 py-[14px] px-[20px] sm:px-[22px]">
+            <span className="hidden sm:inline">REJOINDRE NOS ÉLÈVES QUI RÉUSSISSENT</span>
+            <span className="sm:hidden">REJOINDRE LA FORMATION</span>
           </a>
           <p className="mt-4 text-[#FF9F3F]">Accès immédiat à la communauté et à tous les modules de formation</p>
         </div>
