@@ -19,8 +19,8 @@ const PricingSection = () => {
     description: "Ce que les autres proposent pour le même prix",
     features: ["Contenu rarement mis à jour", "Support limité ou inexistant", "Pas d'accès aux outils premium", "Stratégies génériques", "Prix excessif pour la valeur", "Aucune personnalisation", "Aucun accompagnement"],
     recommended: false,
-    buttonText: "Ne pas choisir",
-    buttonLink: "https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
+    buttonText: "", // Supprimé le texte du bouton
+    buttonLink: ""  // Supprimé le lien du bouton
   }];
   return <section id="tarifs" className="section-uniform bg-[#0A0A0A]">
       <div className="container-uniform">
@@ -58,9 +58,11 @@ const PricingSection = () => {
                     </li>)}
                 </ul>
                 
-                <a href={plan.buttonLink} className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium w-full py-6 mt-auto ${plan.recommended ? 'bg-gradient-to-r from-[#FF7E33] to-[#FF5733] text-white' : 'bg-white text-[#121212] border border-[#FF7E33] hover:bg-gray-50'}`} target="_blank" rel="noopener noreferrer">
-                  {plan.buttonText}
-                </a>
+                {plan.buttonText && (
+                  <a href={plan.buttonLink} className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium w-full py-6 mt-auto ${plan.recommended ? 'bg-gradient-to-r from-[#FF7E33] to-[#FF5733] text-white' : 'bg-white text-[#121212] border border-[#FF7E33] hover:bg-gray-50'}`} target="_blank" rel="noopener noreferrer">
+                    {plan.buttonText}
+                  </a>
+                )}
               </div>
             </div>)}
         </div>

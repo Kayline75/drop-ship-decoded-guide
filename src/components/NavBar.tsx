@@ -82,36 +82,36 @@ const NavBar = () => {
         </button>
       </div>
 
-      {/* Menu mobile */}
+      {/* Menu mobile optimisé */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-black/80 backdrop-blur-lg py-5 px-4 border-b border-[#FF7E33]/20">
-          <nav className="flex flex-col space-y-4">
+          <nav className="flex flex-col space-y-6">
             <a 
               href="#tarifs" 
-              className="text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
+              className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               LE PRIX
             </a>
             <a 
               href="#guide-expert" 
-              className="text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
+              className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Le Guide ultime
             </a>
             <a 
               href="#faq" 
-              className="text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
+              className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               FAQ
             </a>
           </nav>
-          <div className="mt-5">
+          <div className="mt-6">
             <a 
               href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-              className="inline-block w-full text-center py-2 px-4 rounded-md text-white bg-gradient-to-r from-[#FF7E33] to-[#FF5733] shadow-[0_0_15px_rgba(255,126,51,0.3)]"
+              className="inline-block w-full text-center py-3 px-4 rounded-md text-white bg-gradient-to-r from-[#FF7E33] to-[#FF5733] shadow-[0_0_15px_rgba(255,126,51,0.3)]"
               target="_blank"
               rel="noopener noreferrer"
             >
