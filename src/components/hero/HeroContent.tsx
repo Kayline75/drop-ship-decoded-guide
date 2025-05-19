@@ -1,19 +1,15 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Package } from "lucide-react";
 import { AnimatedBadge, GlowButton } from "../CardStyles";
-
 interface HeroContentProps {
   isVisible: boolean;
   scrollToNext: () => void;
 }
-
 export const HeroContent = ({
   isVisible,
   scrollToNext
 }: HeroContentProps) => {
-  return (
-    <div className={`container mx-auto px-4 py-16 relative z-10 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+  return <div className={`container mx-auto px-4 py-16 relative z-10 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
       <div className="max-w-4xl mx-auto text-center">
         {/* Badge animé */}
         <AnimatedBadge className="mb-6">
@@ -29,8 +25,7 @@ export const HeroContent = ({
         {/* Titre principal avec gradient animé - optimisé pour le SEO */}
         <h1 className="text-4xl md:text-6xl font-bold mb-6 relative">
           <span className="hero-text bg-clip-text text-transparent bg-gradient-to-r from-white via-orange-200 to-white bg-size-200 animate-gradient-x">
-            Maîtrisez le Dropshipping Rentable en 2025
-          </span>
+Maîtrisez le Dropshipping Rentable en 2025</span>
           <br className="hidden md:block" />
           <span className="hero-text-delay bg-clip-text text-transparent bg-gradient-to-r from-white via-orange-200 to-white bg-size-200 animate-gradient-x">
             et Générez <span className="text-[#FF7E33]">1000€+</span> par mois !
@@ -48,8 +43,7 @@ export const HeroContent = ({
         {/* Boutons interactifs avec effets au survol */}
         <div className="flex flex-col sm:flex-row gap-5 justify-center fade-in-up-delay">
           <GlowButton>
-            <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
-               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium text-md px-8 py-6 bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 transition-all relative z-10 text-white">
+            <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium text-md px-8 py-6 bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 transition-all relative z-10 text-white">
               <span className="relative z-10 text-lg font-bold">COMMENCER MAINTENANT →</span>
             </a>
           </GlowButton>
@@ -79,6 +73,5 @@ export const HeroContent = ({
           </span>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };

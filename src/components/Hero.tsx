@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Package, Plane } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -6,7 +5,6 @@ import { AnimatedBadge, GlowButton } from "./CardStyles";
 import { FloatingIcons } from "./hero/FloatingIcons";
 import { HeroContent } from "./hero/HeroContent";
 import { GlowEffect } from "./hero/GlowEffect";
-
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
@@ -40,7 +38,6 @@ const Hero = () => {
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const scrollToNext = () => {
     const coursSection = document.getElementById("cours");
     if (coursSection) {
@@ -49,13 +46,7 @@ const Hero = () => {
       });
     }
   };
-
-  return (
-    <section
-      ref={bannerRef}
-      onMouseMove={handleMouseMove}
-      className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
-    >
+  return <section ref={bannerRef} onMouseMove={handleMouseMove} className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Fond de dégradé spectaculaire avec inspiration du design référence */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-[#331200] to-[#FF7E33]/20 z-0"></div>
       
@@ -72,9 +63,7 @@ const Hero = () => {
       <HeroContent isVisible={isVisible} scrollToNext={scrollToNext} />
 
       {/* Transition décorative vers la section suivante */}
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-background to-transparent z-10"></div>
-    </section>
-  );
+      
+    </section>;
 };
-
 export default Hero;
