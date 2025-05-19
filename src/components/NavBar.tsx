@@ -23,7 +23,7 @@ const NavBar = () => {
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "card-backdrop shadow-lg py-3"
+          ? "bg-black/60 backdrop-blur-lg border-b border-[#FF7E33]/20 shadow-lg py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -34,7 +34,7 @@ const NavBar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="bg-gradient-to-r from-[#F97316] to-[#33C3F0] w-8 h-8 rounded-md"></div>
+          <div className="bg-gradient-to-r from-[#FF7E33] to-[#FF5733] w-8 h-8 rounded-md"></div>
           <span className="text-xl font-bold text-white">Whatsdropshipping</span>
         </a>
         
@@ -42,26 +42,26 @@ const NavBar = () => {
           <nav className="flex items-center space-x-8">
             <a 
               href="#tarifs" 
-              className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
+              className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
             >
               LE PRIX
             </a>
             <a 
               href="#guide-expert" 
-              className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
+              className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
             >
               Le Guide ultime
             </a>
             <a 
               href="#faq" 
-              className="nav-link text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
+              className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
             >
               FAQ
             </a>
           </nav>
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-gradient-to-r from-[#F97316] to-[#FF8D6B] hover:opacity-90 transition-all text-white px-4 py-2"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 transition-all text-white px-4 py-2 shadow-[0_0_15px_rgba(255,126,51,0.5)]"
             style={{ zIndex: 100 }}
             target="_blank"
             rel="noopener noreferrer"
@@ -82,27 +82,27 @@ const NavBar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Menu mobile */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 card-backdrop py-5 px-4">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-black/80 backdrop-blur-lg py-5 px-4 border-b border-[#FF7E33]/20">
           <nav className="flex flex-col space-y-4">
             <a 
               href="#tarifs" 
-              className="text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
+              className="text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               LE PRIX
             </a>
             <a 
               href="#guide-expert" 
-              className="text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
+              className="text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Le Guide ultime
             </a>
             <a 
               href="#faq" 
-              className="text-sm font-medium text-white hover:text-[#33C3F0] transition-colors"
+              className="text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               FAQ
@@ -111,7 +111,7 @@ const NavBar = () => {
           <div className="mt-5">
             <a 
               href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-              className="inline-block w-full text-center py-2 px-4 rounded-md text-white bg-gradient-to-r from-[#F97316] to-[#FF8D6B]"
+              className="inline-block w-full text-center py-2 px-4 rounded-md text-white bg-gradient-to-r from-[#FF7E33] to-[#FF5733] shadow-[0_0_15px_rgba(255,126,51,0.3)]"
               target="_blank"
               rel="noopener noreferrer"
             >

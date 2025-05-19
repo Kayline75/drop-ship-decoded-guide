@@ -16,7 +16,7 @@ const Hero = () => {
   const bannerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  // Handle mouse movement for interactive effects
+  // Gérer le mouvement de la souris pour les effets interactifs
   const handleMouseMove = (e: React.MouseEvent | MouseEvent) => {
     if (bannerRef.current) {
       const rect = bannerRef.current.getBoundingClientRect();
@@ -27,7 +27,7 @@ const Hero = () => {
     }
   };
 
-  // Handle scroll for parallax effects
+  // Gérer le défilement pour les effets parallaxes
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -36,7 +36,7 @@ const Hero = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Animation on mount
+  // Animation au montage
   useEffect(() => {
     setIsVisible(true);
   }, []);
@@ -56,22 +56,22 @@ const Hero = () => {
       onMouseMove={handleMouseMove}
       className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
     >
-      {/* Warm gradient background with soft transition */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#FEF7CD] via-[#FDE1D3] to-[#FEC6A1] z-0"></div>
+      {/* Fond de dégradé spectaculaire avec inspiration du design référence */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-[#331200] to-[#FF7E33]/20 z-0"></div>
       
-      {/* Subtle pattern overlay */}
+      {/* Superposition de motif subtil */}
       <div className="absolute inset-0 opacity-10 pattern-grid z-0"></div>
 
-      {/* Interactive glow effect that follows mouse */}
+      {/* Effet de lumière interactive qui suit la souris */}
       <GlowEffect mousePosition={mousePosition} containerRef={bannerRef} />
 
-      {/* Floating package and airplane icons */}
+      {/* Icônes de package et d'avion flottantes */}
       <FloatingIcons mousePosition={mousePosition} />
 
-      {/* Main hero content */}
+      {/* Contenu principal du hero */}
       <HeroContent isVisible={isVisible} scrollToNext={scrollToNext} />
 
-      {/* Decorative transition to the next section */}
+      {/* Transition décorative vers la section suivante */}
       <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-background to-transparent z-10"></div>
     </section>
   );

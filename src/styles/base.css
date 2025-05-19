@@ -7,49 +7,49 @@
 
 @layer base {
   :root {
-    --background: 260 70% 10%; /* Deep purple background */
-    --foreground: 210 40% 98%;
+    --background: 20 70% 8%; /* Fond noir orangé profond */
+    --foreground: 0 0% 100%; /* Texte blanc */
 
-    --card: 260 70% 13%; /* Adjusted card background */
-    --card-foreground: 210 40% 98%;
+    --card: 20 70% 10%; /* Carte légèrement plus claire */
+    --card-foreground: 0 0% 100%;
 
-    --popover: 260 70% 13%; /* Adjusted popover background */
-    --popover-foreground: 210 40% 98%;
+    --popover: 20 70% 12%; /* Popover similaire aux cartes */
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 326 100% 60%; /* Vibrant pink */
-    --primary-foreground: 210 40% 98%;
+    --primary: 20 100% 60%; /* Orange vif comme couleur principale */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 196 80% 70%; /* Light blue/cyan */
-    --secondary-foreground: 260 70% 10%; /* Changed to match background */
+    --secondary: 200 80% 70%; /* Bleu clair comme accent secondaire */
+    --secondary-foreground: 20 70% 10%;
 
-    --muted: 260 70% 20%; /* Adjusted for visibility on darker background */
-    --muted-foreground: 210 40% 98%; /* Changed to white for better contrast */
+    --muted: 20 50% 20%; /* Variante plus douce pour le texte secondaire */
+    --muted-foreground: 0 0% 90%;
 
-    --accent: 196 80% 70%; /* Light blue/cyan */
-    --accent-foreground: 260 70% 10%; /* Changed to match background */
+    --accent: 200 80% 70%; /* Bleu clair comme accent */
+    --accent-foreground: 20 70% 10%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 92%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 260 70% 20%; /* Adjusted border color */
-    --input: 260 70% 20%; /* Adjusted input color */
-    --ring: 326 100% 60%; /* Matching primary */
+    --border: 20 50% 15%; /* Bordures subtilement visibles */
+    --input: 20 50% 15%;
+    --ring: 20 100% 60%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 260 70% 8%; /* Darker for contrast with main background */
-    --sidebar-foreground: 210 40% 92%;
-    --sidebar-primary: 326 100% 60%; /* Changed to match primary */
-    --sidebar-primary-foreground: 210 40% 92%;
-    --sidebar-accent: 196 80% 70%; /* Light blue/cyan */
-    --sidebar-accent-foreground: 260 70% 8%; /* Matched to sidebar background */
-    --sidebar-border: 260 70% 20%; /* Adjusted for visibility */
-    --sidebar-ring: 326 100% 60%; /* Changed to match primary */
+    --sidebar-background: 20 70% 5%; /* Sidebar encore plus sombre */
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 20 100% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 200 80% 70%;
+    --sidebar-accent-foreground: 20 70% 5%;
+    --sidebar-border: 20 50% 15%;
+    --sidebar-ring: 20 100% 60%;
     
-    /* New color scheme */
-    --text-orange: 326 100% 60%; /* Changed to pink */
-    --text-white: 0 0% 100%; /* Pure white */
-    --text-sky-blue: 196 80% 70%; /* Light blue/cyan */
+    /* Nouvelles couleurs vibrantes */
+    --text-orange: 20 100% 60%; /* Orange vif */
+    --text-white: 0 0% 100%; /* Blanc pur */
+    --text-sky-blue: 200 80% 70%; /* Bleu clair */
   }
 }
 
@@ -61,10 +61,11 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Poppins', sans-serif;
+    background: radial-gradient(ellipse at top, hsl(20, 70%, 15%), hsl(20, 70%, 5%));
   }
 
-  /* Ensure no white backgrounds appear in any elements */
+  /* Assurer un arrière-plan cohérent */
   html, body, #root, .glass-card, .glass-card-premium {
-    background-color: hsl(var(--background));
+    background-color: transparent;
   }
 }

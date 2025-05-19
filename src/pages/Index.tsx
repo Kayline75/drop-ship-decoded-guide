@@ -26,8 +26,15 @@ const Index = () => {
       <PricingSection />
       <FAQ />
 
-      <div className="bg-gradient-to-r from-pink-600 to-purple-700 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
+      <div className="bg-gradient-to-r from-[#FF7E33] to-[#FF5733] text-white py-16 relative overflow-hidden shadow-[0_0_50px_rgba(255,126,51,0.4)]">
+        {/* Formes géométriques abstraites pour effet WOW */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+          <div className="absolute -top-1/2 -left-1/4 w-1/2 h-full bg-white/5 rounded-full transform rotate-45"></div>
+          <div className="absolute top-1/4 right-1/4 w-1/2 h-1/2 bg-black/10 rounded-full blur-2xl transform -rotate-12"></div>
+          <div className="absolute bottom-0 right-0 w-1/4 h-1/4 bg-white/5 rounded-full transform -translate-x-1/2 translate-y-1/2"></div>
+        </div>
+
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 py-6">
             Rejoignez Nos Élèves Qui Génèrent Des Résultats Concrets
           </h2>
@@ -36,7 +43,7 @@ const Index = () => {
           </p>
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-white text-purple-700 hover:bg-gray-100 px-10 py-6 shadow-lg"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-black text-white hover:bg-black/90 px-10 py-6 shadow-[0_0_30px_rgba(0,0,0,0.3)] transition-all duration-300 border border-white/20"
             target="_blank"
             rel="noopener noreferrer"
           >
