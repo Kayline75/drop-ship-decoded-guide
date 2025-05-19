@@ -1,3 +1,4 @@
+
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 interface GlassCardProps {
@@ -38,5 +39,7 @@ export const AnimatedBadge = ({
   children: ReactNode;
   className?: string;
 }) => {
-  return;
+  return <div className={cn("inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-[#331200] to-[#121212] border border-[#FF7E33]/30 shadow-lg shadow-[#FF5733]/20 animate-pulse-slow", className)}>
+    {children}
+  </div>;
 };
