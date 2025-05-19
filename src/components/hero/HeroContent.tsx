@@ -2,10 +2,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Package } from "lucide-react";
 import { AnimatedBadge, GlowButton } from "../CardStyles";
+
 interface HeroContentProps {
   isVisible: boolean;
   scrollToNext: () => void;
 }
+
 export const HeroContent = ({
   isVisible,
   scrollToNext
@@ -41,23 +43,22 @@ Maîtrisez le Dropshipping Rentable en 2025</span>
           <span className="underline decoration-[#FF7E33] decoration-2 underline-offset-2">Notre méthode prouvée et structurée</span> transformera votre ambition en business e-commerce profitable avec ou sans stock et à faible investissement.
         </p>
 
-        {/* Boutons interactifs avec effets au survol - optimisés pour mobile */}
+        {/* Bouton amélioré et optimisé pour mobile */}
         <div className="flex flex-col sm:flex-row gap-5 justify-center fade-in-up-delay">
           <GlowButton>
-            <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium text-md px-6 sm:px-8 py-5 sm:py-6 bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 transition-all relative z-10 text-white">
-              <span className="relative z-10 text-lg font-bold hidden sm:inline">COMMENCER MAINTENANT →</span>
+            <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 transition-all relative z-10 text-white px-8 py-4 shadow-[0_0_20px_rgba(255,87,51,0.4)]"
+            >
+              <span className="relative z-10 text-lg font-bold hidden sm:inline">ACCÉDER À LA FORMATION →</span>
               <span className="relative z-10 text-lg font-bold sm:hidden">COMMENCER →</span>
             </a>
           </GlowButton>
         </div>
         
-        {/* Points clés des avantages */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+        {/* Points clés des avantages - Removed the 500 entrepreneurs section */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-3 border border-[#FF7E33]/20">
             <p className="text-sm font-medium text-white">Formation complète à partir de <span className="font-bold text-[#FF7E33]">97€/mois</span></p>
-          </div>
-          <div className="bg-black/30 backdrop-blur-sm rounded-lg p-3 border border-[#FF7E33]/20">
-            <p className="text-sm font-medium text-white">+ de <span className="font-bold text-[#FF7E33]">500 entrepreneurs</span> formés</p>
           </div>
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-3 border border-[#FF7E33]/20">
             <p className="text-sm font-medium text-white">Support quotidien <span className="font-bold text-[#FF7E33]">7j/7</span></p>

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
@@ -101,11 +100,12 @@ const FAQ = () => {
             
             <a 
               href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 text-white px-8 py-5 shadow-[0_0_25px_rgba(255,126,51,0.4)] transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 text-white px-6 py-4 shadow-[0_0_25px_rgba(255,126,51,0.4)] transition-all duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
-              DÉMARREZ VOTRE AVENTURE MAINTENANT →
+              <span className="hidden sm:inline">DÉMARREZ VOTRE AVENTURE MAINTENANT →</span>
+              <span className="sm:hidden">DÉMARREZ MAINTENANT →</span>
             </a>
             <p className="mt-4 text-orange-200">98% de nos étudiants réalisent leur première vente en moins de 30 jours</p>
           </div>
