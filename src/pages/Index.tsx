@@ -26,7 +26,7 @@ const Index = () => {
       <PricingSection />
       <FAQ />
 
-      <div className="bg-gradient-to-r from-brand-orange to-brand-dark text-white py-16">
+      <div className="bg-gradient-to-r from-pink-600 to-purple-700 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 py-6">
             Rejoignez Nos Élèves Qui Génèrent Des Résultats Concrets
@@ -36,7 +36,7 @@ const Index = () => {
           </p>
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-white text-brand-dark hover:bg-gray-100 px-10 py-6 shadow-lg"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-white text-purple-700 hover:bg-gray-100 px-10 py-6 shadow-lg"
             target="_blank"
             rel="noopener noreferrer"
           >

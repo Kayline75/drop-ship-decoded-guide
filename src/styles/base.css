@@ -7,49 +7,49 @@
 
 @layer base {
   :root {
-    --background: 223 64% 12%; /* Darkened to bleu marine sombre */
-    --foreground: 210 40% 92%;
+    --background: 260 70% 10%; /* Deep purple background */
+    --foreground: 210 40% 98%;
 
-    --card: 223 64% 15%; /* Adjusted to maintain contrast with darker background */
-    --card-foreground: 210 40% 92%;
+    --card: 260 70% 13%; /* Adjusted card background */
+    --card-foreground: 210 40% 98%;
 
-    --popover: 223 64% 15%; /* Adjusted to maintain contrast with darker background */
-    --popover-foreground: 210 40% 92%;
+    --popover: 260 70% 13%; /* Adjusted popover background */
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 25 95% 53%; /* Changed to orange */
+    --primary: 326 100% 60%; /* Vibrant pink */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 196 80% 70%; /* Light blue */
-    --secondary-foreground: 223 64% 12%; /* Changed to match background */
+    --secondary: 196 80% 70%; /* Light blue/cyan */
+    --secondary-foreground: 260 70% 10%; /* Changed to match background */
 
-    --muted: 223 64% 20%; /* Adjusted for visibility on darker background */
+    --muted: 260 70% 20%; /* Adjusted for visibility on darker background */
     --muted-foreground: 210 40% 98%; /* Changed to white for better contrast */
 
-    --accent: 196 80% 70%; /* Light blue */
-    --accent-foreground: 223 64% 12%; /* Changed to match background */
+    --accent: 196 80% 70%; /* Light blue/cyan */
+    --accent-foreground: 260 70% 10%; /* Changed to match background */
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 92%;
 
-    --border: 223 64% 20%; /* Adjusted for visibility on darker background */
-    --input: 223 64% 20%; /* Adjusted for visibility on darker background */
-    --ring: 25 95% 53%; /* Changed to orange */
+    --border: 260 70% 20%; /* Adjusted border color */
+    --input: 260 70% 20%; /* Adjusted input color */
+    --ring: 326 100% 60%; /* Matching primary */
 
     --radius: 0.75rem;
 
-    --sidebar-background: 223 64% 10%; /* Darkened for contrast with main background */
+    --sidebar-background: 260 70% 8%; /* Darker for contrast with main background */
     --sidebar-foreground: 210 40% 92%;
-    --sidebar-primary: 25 95% 53%; /* Changed to orange */
+    --sidebar-primary: 326 100% 60%; /* Changed to match primary */
     --sidebar-primary-foreground: 210 40% 92%;
-    --sidebar-accent: 196 80% 70%; /* Light blue */
-    --sidebar-accent-foreground: 223 64% 10%; /* Matched to sidebar background */
-    --sidebar-border: 223 64% 20%; /* Adjusted for visibility */
-    --sidebar-ring: 25 95% 53%; /* Changed to orange */
+    --sidebar-accent: 196 80% 70%; /* Light blue/cyan */
+    --sidebar-accent-foreground: 260 70% 8%; /* Matched to sidebar background */
+    --sidebar-border: 260 70% 20%; /* Adjusted for visibility */
+    --sidebar-ring: 326 100% 60%; /* Changed to match primary */
     
     /* New color scheme */
-    --text-orange: 25 95% 53%; /* Orange */
+    --text-orange: 326 100% 60%; /* Changed to pink */
     --text-white: 0 0% 100%; /* Pure white */
-    --text-sky-blue: 196 80% 70%; /* Sky blue */
+    --text-sky-blue: 196 80% 70%; /* Light blue/cyan */
   }
 }
 
