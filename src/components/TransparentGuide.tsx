@@ -1,3 +1,4 @@
+
 import { Check } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -104,7 +105,7 @@ const TransparentGuide = () => {
             loop: true
           }} 
           className="w-full" 
-          onSelect={handleSlideChange}>
+          onSelect={(index) => handleSlideChange(index)}>
             <div className="hidden md:flex justify-center gap-2 mb-6">
               {tabsData.map((tab, index) => (
                 <button 
