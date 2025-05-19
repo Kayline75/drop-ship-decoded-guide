@@ -1,5 +1,5 @@
 
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import React from "react";
 
 const Footer = () => {
   return (
@@ -9,37 +9,12 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <div className="flex items-center gap-3 mb-6 justify-center md:justify-start">
               <div className="bg-gradient-to-r from-[#FF7E33] to-[#FF5733] w-10 h-10 rounded-md shadow-[0_0_15px_rgba(255,126,51,0.5)]"></div>
-              <span className="text-xl font-bold text-white">Whatsdropshipping</span>
+              <span className="text-xl font-bold text-white">Kayline</span>
             </div>
             <p className="text-orange-100 mb-6">
               Votre partenaire pour réussir dans le monde du dropshipping avec des ressources éducatives complètes et professionnelles.
             </p>
-            <div className="flex space-x-5 justify-center md:justify-start">
-              <a 
-                href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
-                className="text-white hover:text-[#FF7E33] transition-colors p-2 bg-black/30 rounded-full border border-[#FF7E33]/30 hover:border-[#FF7E33]/50" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
-                className="text-white hover:text-[#FF7E33] transition-colors p-2 bg-black/30 rounded-full border border-[#FF7E33]/30 hover:border-[#FF7E33]/50" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
-                className="text-white hover:text-[#FF7E33] transition-colors p-2 bg-black/30 rounded-full border border-[#FF7E33]/30 hover:border-[#FF7E33]/50" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-            </div>
+            {/* Social media icons removed */}
           </div>
           
           <div className="text-center">
@@ -91,7 +66,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-[#FF7E33]/20 mt-12 pt-8 text-center text-orange-100">
-          <p>&copy; {new Date().getFullYear()} Whatsdropshipping. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} Kayline. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
