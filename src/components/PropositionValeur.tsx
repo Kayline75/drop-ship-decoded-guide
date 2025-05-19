@@ -96,12 +96,13 @@ const PropositionValeur = () => {
         <div className="text-center mt-10">
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 transition-all relative z-10 text-white px-8 py-4 shadow-[0_0_20px_rgba(255,87,51,0.4)]"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 transition-all relative z-10 text-white px-6 py-3 sm:px-8 sm:py-4 w-full sm:w-auto max-w-[320px] mx-auto shadow-[0_0_20px_rgba(255,87,51,0.4)]"
           >
-            <span className="hidden sm:inline">ACCÉDER À LA FORMATION COMPLÈTE</span>
+            <span className="hidden sm:inline">ACCÉDER À LA FORMATION</span>
             <span className="sm:hidden">COMMENCER</span>
             <ArrowRight className="h-5 w-5" />
           </a>
+          <p className="mt-4 text-[#FF9F3F] text-sm">Sans engagement - 97€/mois</p>
         </div>
       </div>
     </section>
