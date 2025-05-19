@@ -95,12 +95,7 @@ const TransparentGuide = () => {
           </div>
         </div>
 
-        <div className="text-center">
-          <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-gradient-to-r from-[#FF7E33] to-[#FF5733] text-white px-8 py-6 hover:shadow-lg hover:shadow-[#FF5733]/30 transition-all" target="_blank" rel="noopener noreferrer">
-            Télécharger le Guide Expert Dropshipping 2025 Gratuit
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </a>
-        </div>
+        
       </div>
     </section>;
 };

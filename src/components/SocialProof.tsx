@@ -45,7 +45,7 @@ const SocialProof = () => {
     name: "Wix",
     logo: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?crop=entropy&fit=crop&w=120&h=60"
   }];
-  return <section id="temoignages" className="section-uniform bg-gradient-to-b from-[#331200] to-[#121212] py-16">
+  return <section id="temoignages" className="section-uniform bg-gradient-to-b from-[#331200] to-[#121212] py-[34px]">
       <div className="container-uniform">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
@@ -96,7 +96,7 @@ const SocialProof = () => {
         
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:from-[#FF9F3F] hover:to-[#FF7E33] text-white px-8 py-6 shadow-lg shadow-[#FF5733]/30 transition-all duration-300" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:from-[#FF9F3F] hover:to-[#FF7E33] text-white shadow-lg shadow-[#FF5733]/30 transition-all duration-300 py-[14px] px-[22px]">
             REJOINDRE NOS ÉLÈVES QUI RÉUSSISSENT
           </a>
           <p className="mt-4 text-[#FF9F3F]">Accès immédiat à la communauté et à tous les modules de formation</p>

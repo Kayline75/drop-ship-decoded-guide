@@ -1,4 +1,3 @@
-
 import { Check } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 const ServiceToolsSection = () => {
@@ -19,15 +18,13 @@ const ServiceToolsSection = () => {
     description: "Template Shopify professionnel valorisé à plus de 300€",
     benefits: ["Design optimisé conversion", "Vitesse de chargement optimale", "Mises à jour gratuites"]
   }];
-  return <section id="outils" className="section-uniform bg-[#121212]">
+  return <section id="outils" className="section-uniform bg-[#121212] py-0">
       <div className="container-uniform">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
-            <span className="bg-gradient-to-r from-[#FF7E33] to-[#FF5733] bg-clip-text text-transparent">Suite Complète d'Outils Professionnels</span> pour Automatiser Votre Business
+            <span className="bg-gradient-to-r from-[#FF7E33] to-[#FF5733] bg-clip-text text-transparent">Outils Professionnels</span> pour Automatiser Votre Business
           </h2>
-          <p className="text-lg text-[#FF9F3F] max-w-2xl mx-auto mb-10">
-            Accédez à notre écosystème d'applications premium pour maximiser votre efficacité opérationnelle et booster vos ventes.
-          </p>
+          
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -50,7 +47,11 @@ const ServiceToolsSection = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="font-medium text-xl text-[#FF7E33]">Et ressources exclusifs inclus dans votre formation dont un théme à + de 300 euros ! un fournisseur et bien d autres choses qui vont arriver !</p>
+          <p className="font-medium text-xl text-[#FF7E33]">Et ressources exclusifs inclus dans votre formation dont un théme à + de 300 euros ! un fournisseur et bien d autres choses qui vont arriver !
+
+
+
+        </p>
         </div>
       </div>
     </section>;
