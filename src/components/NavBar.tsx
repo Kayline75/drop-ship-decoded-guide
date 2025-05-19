@@ -35,7 +35,10 @@ const NavBar = () => {
           rel="noopener noreferrer"
         >
           <div className="bg-gradient-to-r from-[#FF7E33] to-[#FF5733] w-8 h-8 rounded-md"></div>
-          <span className="text-xl font-bold text-white">Whatsdropshipping</span>
+          <div className="flex flex-col">
+            <span className="text-xl font-bold text-white">Whatsdropshipping</span>
+            <span className="text-[#FF7E33] text-xs -mt-1">by KlickandSell</span>
+          </div>
         </a>
         
         <div className="hidden md:flex items-center space-x-8">
