@@ -1,9 +1,6 @@
-
 import { ArrowRight, Check } from "lucide-react";
-
 const PropositionValeur = () => {
-  return (
-    <section className="section-uniform bg-gradient-to-r from-brand-orange/10 to-brand-dark/10">
+  return <section className="section-uniform bg-gradient-to-r from-brand-orange/10 to-brand-dark/10">
       <div className="container-uniform">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -43,26 +40,17 @@ const PropositionValeur = () => {
               <div className="w-16 h-16 bg-brand-orange rounded-full flex items-center justify-center mb-4">
                 <span className="text-white text-2xl font-bold">3</span>
               </div>
-              <h3 className="text-lg font-bold mb-3 text-white">Accompagnement Personnalisé</h3>
+              <h3 className="text-lg font-bold mb-3 text-white">Accompagnement en 
+petit comité !</h3>
               <p className="text-[#FF9F3F] text-center">
                 Communauté d'entrepreneurs et experts toujours disponibles pour résoudre vos défis quotidiens.
               </p>
             </div>
           </div>
           
-          <a 
-            href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-gradient-to-r from-brand-orange to-brand-dark text-white px-8 py-6 shadow-lg hover:shadow-xl transition-all"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Commencer Votre Business E-commerce Aujourd'hui
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </a>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default PropositionValeur;
