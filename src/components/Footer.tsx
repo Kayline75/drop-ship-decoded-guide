@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <div className="flex items-center gap-3 mb-6 justify-center md:justify-start">
               <div className="bg-gradient-to-r from-[#FF7E33] to-[#FF5733] w-10 h-10 rounded-md shadow-[0_0_15px_rgba(255,126,51,0.5)]"></div>
-              <span className="text-xl font-bold text-white">Kayline</span>
+              <span className="text-xl font-bold text-white">Whatsdropshipping</span>
             </div>
             <p className="text-orange-100 mb-6">
               Votre partenaire pour réussir dans le monde du dropshipping avec des ressources éducatives complètes et professionnelles.
@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-[#FF7E33]/20 mt-12 pt-8 text-center text-orange-100">
-          <p>&copy; {new Date().getFullYear()} Kayline. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} Whatsdropshipping. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

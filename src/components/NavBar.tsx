@@ -36,8 +36,8 @@ const NavBar = () => {
         >
           <div className="bg-gradient-to-r from-[#FF7E33] to-[#FF5733] w-8 h-8 rounded-md"></div>
           <div className="flex flex-col">
-            <span className="text-xl font-bold text-white">Kayline</span>
-            <span className="text-[#FF7E33] text-xs -mt-1">by KlickandSell</span>
+            <span className="text-xl font-bold text-white">Whatsdropshipping</span>
+            <span className="text-[#FF7E33] text-xs -mt-1">Kayline | by KlickandSell Academy</span>
           </div>
         </a>
         
