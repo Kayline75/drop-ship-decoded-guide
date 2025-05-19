@@ -46,44 +46,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6 bg-gradient-to-r from-[#FF7E33] to-[#FF5733] bg-clip-text text-transparent inline-block">Liens rapides</h3>
             <ul className="space-y-3">
               <li>
-                <a 
-                  href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
-                  className="text-white hover:text-[#FF7E33] transition-colors block" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  Accueil
-                </a>
+                <span className="text-white hover:text-[#FF7E33] transition-colors block cursor-default">
+                  LE PRIX
+                </span>
               </li>
               <li>
-                <a 
-                  href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
-                  className="text-white hover:text-[#FF7E33] transition-colors block" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  Les bases
-                </a>
+                <span className="text-white hover:text-[#FF7E33] transition-colors block cursor-default">
+                  LE GUIDE
+                </span>
               </li>
               <li>
-                <a 
-                  href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
-                  className="text-white hover:text-[#FF7E33] transition-colors block" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  Les 10 parties
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
-                  className="text-white hover:text-[#FF7E33] transition-colors block" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  Avantages
-                </a>
+                <span className="text-white hover:text-[#FF7E33] transition-colors block cursor-default">
+                  FAQ
+                </span>
               </li>
             </ul>
           </div>
@@ -91,7 +66,6 @@ const Footer = () => {
           <div className="text-center md:text-right">
             <h3 className="text-lg font-semibold mb-6 bg-gradient-to-r from-[#FF7E33] to-[#FF5733] bg-clip-text text-transparent inline-block">Contact</h3>
             <ul className="space-y-3">
-              <li className="text-orange-100">contact@whatsdropshipping.com</li>
               <li className="text-orange-100">Paris</li>
               <li>
                 <a 
