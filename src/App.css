@@ -1,10 +1,11 @@
 
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
-  background-color: hsl(var(--background));
+  background-color: transparent;
+  max-width: 100%;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .logo {
@@ -14,10 +15,10 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #FF7E33aa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #FF5733aa);
 }
 
 @keyframes logo-spin {
@@ -37,9 +38,81 @@
 
 .card {
   padding: 2em;
-  background-color: hsl(var(--background));
+  background-color: transparent;
 }
 
 .read-the-docs {
-  color: #888;
+  color: #FF9F3F;
+}
+
+/* Section utility classes */
+.section-uniform {
+  padding: 6rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.container-uniform {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+@keyframes gradient-x {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 15s ease infinite;
+}
+
+.bg-size-200 {
+  background-size: 200% 200%;
+}
+
+/* Pattern grid */
+.pattern-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Animated gradients */
+.animated-gradient {
+  background: linear-gradient(-45deg, #FF7E33, #FF5733, #331200, #121212);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Specialized section background colors */
+.bg-orange-gradient {
+  background: linear-gradient(135deg, rgba(51, 18, 0, 1) 0%, rgba(18, 18, 18, 1) 100%);
+}
+
+.bg-dark-gradient {
+  background: linear-gradient(135deg, rgba(18, 18, 18, 1) 0%, rgba(51, 18, 0, 1) 100%);
 }

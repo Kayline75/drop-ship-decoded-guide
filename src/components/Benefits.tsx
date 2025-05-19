@@ -23,13 +23,13 @@ const Benefits = () => {
   }];
   
   return (
-    <section id="benefices" className="section-uniform bg-slate-950">
+    <section id="benefices" className="section-uniform bg-gradient-to-b from-[#121212] to-[#331200]">
       <div className="container-uniform">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
-            6 Avantages Exclusifs de Notre <span className="gradient-text-harmonized">Méthode Dropshipping 2025</span>
+            6 Avantages Exclusifs de Notre <span className="bg-gradient-to-r from-[#FF7E33] to-[#FF5733] bg-clip-text text-transparent">Méthode Dropshipping 2025</span>
           </h2>
-          <p className="text-lg text-[#7BE0FF] max-w-2xl mx-auto mb-10">
+          <p className="text-lg text-[#FF9F3F] max-w-2xl mx-auto mb-10">
             Découvrez pourquoi notre approche transforme des débutants en entrepreneurs e-commerce prospères.
           </p>
         </div>
@@ -41,13 +41,13 @@ const Benefits = () => {
               className="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:shadow-lg hover:border-white/20 hover:bg-white/8 transition duration-300 transform hover:translate-y-[-5px] h-full flex flex-col items-center"
             >
               <div className="flex items-center justify-center mb-4">
-                <span className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-brand-orange to-brand-dark flex items-center justify-center shadow-lg">
+                <span className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-[#FF7E33] to-[#FF5733] flex items-center justify-center shadow-lg">
                   <Check className="w-6 h-6 text-white" />
                 </span>
               </div>
               <div className="text-center flex-grow flex flex-col justify-center">
                 <h3 className="font-bold text-white mb-3 text-xl">{benefit.title}</h3>
-                <p className="text-[#7BE0FF]">{benefit.description}</p>
+                <p className="text-[#FF9F3F]">{benefit.description}</p>
               </div>
             </div>
           ))}
@@ -57,13 +57,13 @@ const Benefits = () => {
         <div className="mt-16 text-center">
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-brand-orange to-brand-dark text-white px-10 py-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] text-white px-10 py-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
             target="_blank"
             rel="noopener noreferrer"
           >
             ACCÉDER À LA FORMATION COMPLÈTE →
           </a>
-          <p className="mt-4 text-[#7BE0FF] font-medium">Sans engagement - Commencez dès aujourd'hui pour seulement 97€/mois</p>
+          <p className="mt-4 text-[#FF9F3F] font-medium">Sans engagement - Commencez dès aujourd'hui pour seulement 97€/mois</p>
         </div>
       </div>
     </section>

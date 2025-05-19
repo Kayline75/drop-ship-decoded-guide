@@ -13,18 +13,41 @@ import TransparentGuide from "@/components/TransparentGuide";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-hidden">
       <NavBar />
       <Hero />
       
-      <PropositionValeur />
-      <PainPoints />
-      <Benefits />
-      <TransparentGuide />
-      <ServiceToolsSection />
-      <SocialProof />
-      <PricingSection />
-      <FAQ />
+      <div className="section-transition section-dark">
+        <PropositionValeur />
+      </div>
+      
+      <div className="section-transition section-orange">
+        <PainPoints />
+      </div>
+      
+      <div className="section-transition section-dark">
+        <Benefits />
+      </div>
+      
+      <div className="section-transition section-orange">
+        <TransparentGuide />
+      </div>
+      
+      <div className="section-transition section-dark">
+        <ServiceToolsSection />
+      </div>
+      
+      <div className="section-transition section-orange">
+        <SocialProof />
+      </div>
+      
+      <div className="section-transition section-dark">
+        <PricingSection />
+      </div>
+      
+      <div className="section-transition section-orange">
+        <FAQ />
+      </div>
 
       <div className="bg-gradient-to-r from-[#FF7E33] to-[#FF5733] text-white py-16 relative overflow-hidden shadow-[0_0_50px_rgba(255,126,51,0.4)]">
         {/* Formes géométriques abstraites pour effet WOW */}

@@ -69,3 +69,50 @@
     background-color: transparent;
   }
 }
+
+/* Utility classes for section transitions */
+.section-transition {
+  position: relative;
+}
+
+.section-transition::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(to top, var(--next-section-color), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-transition::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(to bottom, var(--prev-section-color), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Section color variables */
+.section-dark {
+  --prev-section-color: rgba(18, 18, 18, 1);
+  --next-section-color: rgba(51, 18, 0, 1);
+  background: linear-gradient(to bottom, rgba(18, 18, 18, 1), rgba(51, 18, 0, 1));
+}
+
+.section-orange {
+  --prev-section-color: rgba(51, 18, 0, 1);
+  --next-section-color: rgba(18, 18, 18, 1);
+  background: linear-gradient(to bottom, rgba(51, 18, 0, 1), rgba(18, 18, 18, 1));
+}
+
+/* Gradient text */
+.gradient-text-harmonized {
+  @apply bg-gradient-to-r from-[#FF7E33] to-[#FF5733] bg-clip-text text-transparent;
+}

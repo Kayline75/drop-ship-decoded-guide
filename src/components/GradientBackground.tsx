@@ -14,7 +14,7 @@ const GradientBackground = ({ children, scrollY = 0, className = "" }: GradientB
   const tertiaryTransform = `translateY(${scrollY * 0.03}px)`;
   
   return (
-    <div className={`relative overflow-hidden bg-[#121212] ${className}`}>
+    <div className={`relative overflow-hidden bg-gradient-to-b from-[#331200] to-[#121212] ${className}`}>
       {/* Dynamic background for depth without creating visible separations */}
       <div 
         className="absolute inset-0"
