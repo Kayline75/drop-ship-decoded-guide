@@ -47,9 +47,9 @@ const PricingSection = () => {
                   {plan.strikethrough ? <span className="text-5xl line-through font-thin text-red-500">{plan.price}€</span> : <span className="text-5xl font-bold text-[#FF7E33]">{plan.price}€</span>}
                   <span className="text-white"> / {plan.priceUnit}</span>
                 </div>
-                <p className="text-[#FF9F3F] mb-6 py-[20px] text-center">{plan.description}</p>
+                <p className="text-[#FF9F3F] mb-6 py-[10px] text-center">{plan.description}</p>
                 
-                <ul className="space-y-3 mb-8 flex-grow">
+                <ul className={`space-y-3 ${plan.recommended ? 'mb-8' : ''} flex-grow`}>
                   {plan.features.map((feature, i) => <li key={i} className="flex items-start gap-2">
                       {plan.recommended ? <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#FF7E33] flex items-center justify-center">
                             <Check className="w-3 h-3 text-white" />

@@ -50,7 +50,7 @@ const NavBar = () => {
               href="#guide-expert" 
               className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
             >
-              Le Guide ultime
+              LE GUIDE
             </a>
             <a 
               href="#faq" 
@@ -98,7 +98,7 @@ const NavBar = () => {
               className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Le Guide ultime
+              LE GUIDE
             </a>
             <a 
               href="#faq" 

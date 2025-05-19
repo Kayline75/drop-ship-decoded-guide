@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { 
@@ -34,7 +33,7 @@ const PainPoints = () => {
       <div className="container-uniform">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px] text-center">
-            5 Obstacles Majeurs au Succès en <span className="gradient-text-harmonized">Dropshipping</span> (et Comment les Surmonter)
+            5 Obstacles Majeurs au Succès en <span className="gradient-text-harmonized">Dropshipping</span> [Comment les surmonter ?]
           </h2>
           <p className="text-lg text-[#FF9F3F] max-w-2xl mx-auto mb-10">
             Nous avons identifié et résolu les défis qui bloquent 90% des entrepreneurs en e-commerce avec ou sans stock.
