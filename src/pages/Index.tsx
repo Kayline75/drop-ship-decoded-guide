@@ -1,3 +1,4 @@
+
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
@@ -9,6 +10,8 @@ import SocialProof from "@/components/SocialProof";
 import PricingSection from "@/components/PricingSection";
 import FAQ from "@/components/FAQ";
 import TransparentGuide from "@/components/TransparentGuide";
+import { BanknoteIcon, CoinsIcon, Wallet } from "lucide-react";
+
 const Index = () => {
   return <div className="min-h-screen bg-background overflow-hidden">
       <NavBar />
@@ -47,11 +50,27 @@ const Index = () => {
       </div>
 
       <div className="bg-gradient-to-r from-[#FF7E33] to-[#FF5733] text-white py-16 relative overflow-hidden shadow-[0_0_50px_rgba(255,126,51,0.4)]">
-        {/* Formes géométriques abstraites pour effet WOW */}
+        {/* Billets flottants pour effet WOW */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-          
-          <div className="absolute top-1/4 right-1/4 w-1/2 h-1/2 bg-black/10 rounded-full blur-2xl transform -rotate-12"></div>
-          
+          {/* Plusieurs billets flottants avec animation */}
+          <div className="absolute top-1/4 right-1/3 transform rotate-12 opacity-20">
+            <BanknoteIcon size={80} className="text-white floating-element" />
+          </div>
+          <div className="absolute bottom-1/3 left-1/4 transform -rotate-6 opacity-15">
+            <BanknoteIcon size={60} className="text-white floating-element" style={{animationDelay: '1.5s'}} />
+          </div>
+          <div className="absolute top-1/2 right-1/5 transform rotate-24 opacity-20">
+            <CoinsIcon size={70} className="text-white floating-element" style={{animationDelay: '0.8s'}} />
+          </div>
+          <div className="absolute bottom-1/4 right-1/3 transform -rotate-15 opacity-25">
+            <BanknoteIcon size={90} className="text-white floating-element" style={{animationDelay: '2s'}} />
+          </div>
+          <div className="absolute top-2/3 left-1/3 transform rotate-5 opacity-15">
+            <Wallet size={65} className="text-white floating-element" style={{animationDelay: '1.2s'}} />
+          </div>
+          <div className="absolute top-1/3 left-1/5 transform -rotate-12 opacity-20">
+            <CoinsIcon size={55} className="text-white floating-element" style={{animationDelay: '0.5s'}} />
+          </div>
         </div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
