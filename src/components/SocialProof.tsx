@@ -52,13 +52,13 @@ const SocialProof = () => {
   }];
   
   return (
-    <section id="temoignages" className="section-uniform bg-gradient-to-b from-indigo-900 to-purple-950 py-16">
+    <section id="temoignages" className="section-uniform bg-gradient-to-b from-[#331200] to-[#121212] py-16">
       <div className="container-uniform">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
-            Ils Ont <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">Transformé</span> Leur Vie Grâce au Dropshipping
+            Ils Ont <span className="bg-gradient-to-r from-[#FF7E33] via-[#FF5733] to-[#FF3333] bg-clip-text text-transparent">Transformé</span> Leur Vie Grâce au Dropshipping
           </h2>
-          <p className="text-lg text-cyan-300 max-w-2xl mx-auto mb-10">
+          <p className="text-lg text-[#FF9F3F] max-w-2xl mx-auto mb-10">
             Découvrez les résultats concrets obtenus par nos élèves qui ont suivi notre méthode étape par étape.
           </p>
         </div>
@@ -66,19 +66,19 @@ const SocialProof = () => {
         {/* Testimonials Section */}
         <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16 transition-all duration-700 ${isVisible ? "opacity-100" : "opacity-0 translate-y-10"}`}>
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-gradient-to-br from-purple-900/40 to-indigo-900/40 backdrop-blur-sm border border-white/10 hover:shadow-xl hover:shadow-pink-500/10 transition-all duration-300 h-full">
+            <Card key={index} className="bg-gradient-to-br from-[#331200]/40 to-[#121212]/40 backdrop-blur-sm border border-white/10 hover:shadow-xl hover:shadow-[#FF5733]/20 transition-all duration-300 h-full">
               <CardContent className="p-6 flex flex-col h-full">
                 <div className="flex items-center mb-4">
                   <div className="mr-4">
-                    <Avatar className="h-14 w-14 border-2 border-pink-500">
-                      <AvatarFallback className="bg-gradient-to-r from-pink-500 to-purple-600 text-white">
+                    <Avatar className="h-14 w-14 border-2 border-[#FF5733]">
+                      <AvatarFallback className="bg-gradient-to-r from-[#FF7E33] to-[#FF5733] text-white">
                         {testimonial.name.charAt(0)}
                       </AvatarFallback>
                     </Avatar>
                   </div>
                   <div>
                     <h3 className="font-bold text-white">{testimonial.name}</h3>
-                    <p className="text-sm text-cyan-300">{testimonial.position}</p>
+                    <p className="text-sm text-[#FF9F3F]">{testimonial.position}</p>
                     <div className="flex mt-1">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
@@ -96,10 +96,10 @@ const SocialProof = () => {
         
         {/* Trusted By Logos */}
         <div className="mb-10">
-          <p className="text-center text-lg font-medium text-cyan-300 mb-8">Partenaires de confiance</p>
+          <p className="text-center text-lg font-medium text-[#FF9F3F] mb-8">Partenaires de confiance</p>
           <div className={`flex flex-wrap justify-center items-center gap-8 transition-all duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}>
             {clients.map((client, index) => (
-              <div key={index} className="bg-white/5 p-4 rounded-lg hover:bg-white/10 hover:shadow-md hover:shadow-pink-500/20 transition duration-300">
+              <div key={index} className="bg-white/5 p-4 rounded-lg hover:bg-white/10 hover:shadow-md hover:shadow-[#FF5733]/20 transition duration-300">
                 <img 
                   src={client.logo} 
                   alt={`${client.name} logo`}
@@ -111,10 +111,10 @@ const SocialProof = () => {
         </div>
         
         {/* Ajout d'une bannière de succès plus visible */}
-        <div className="bg-gradient-to-r from-pink-500/20 to-purple-600/20 p-8 rounded-lg mb-10 border border-white/10 backdrop-blur-sm">
+        <div className="bg-gradient-to-r from-[#FF7E33]/20 to-[#FF5733]/20 p-8 rounded-lg mb-10 border border-white/10 backdrop-blur-sm">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-3">Des Résultats Concrets et Vérifiables</h3>
-            <p className="text-cyan-300 max-w-3xl mx-auto">
+            <p className="text-[#FF9F3F] max-w-3xl mx-auto">
               Ces témoignages sont issus de vrais membres de notre communauté qui ont appliqué notre méthode. 
               Certains ont généré leurs premiers revenus en quelques jours seulement, d'autres ont atteint un salaire complet en moins d'un mois.
             </p>
@@ -125,13 +125,13 @@ const SocialProof = () => {
         <div className="text-center mt-16">
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-8 py-6 shadow-lg shadow-purple-700/30 transition-all duration-300"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:from-[#FF9F3F] hover:to-[#FF7E33] text-white px-8 py-6 shadow-lg shadow-[#FF5733]/30 transition-all duration-300"
             target="_blank"
             rel="noopener noreferrer"
           >
             REJOINDRE NOS ÉLÈVES QUI RÉUSSISSENT
           </a>
-          <p className="mt-4 text-cyan-300">Accès immédiat à la communauté et à tous les modules de formation</p>
+          <p className="mt-4 text-[#FF9F3F]">Accès immédiat à la communauté et à tous les modules de formation</p>
         </div>
       </div>
     </section>
