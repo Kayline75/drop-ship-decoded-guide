@@ -70,46 +70,52 @@
   }
 }
 
-/* Utility classes for section transitions */
+/* Enhanced utility classes for smoother section transitions */
 .section-transition {
   position: relative;
+  overflow: visible;
 }
 
+/* Improved before/after elements for smoother gradients between sections */
 .section-transition::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   right: 0;
-  height: 150px;
+  height: 180px;
   background: linear-gradient(to top, var(--next-section-color), transparent);
   pointer-events: none;
   z-index: 1;
+  opacity: 0.9;
 }
 
 .section-transition::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 0;
   right: 0;
-  height: 150px;
+  height: 180px;
   background: linear-gradient(to bottom, var(--prev-section-color), transparent);
   pointer-events: none;
   z-index: 1;
+  opacity: 0.9;
 }
 
-/* Section color variables */
+/* Improved section color variables with more gradual transitions */
 .section-dark {
   --prev-section-color: rgba(18, 18, 18, 1);
   --next-section-color: rgba(51, 18, 0, 1);
-  background: linear-gradient(to bottom, rgba(18, 18, 18, 1), rgba(51, 18, 0, 1));
+  background: linear-gradient(180deg, rgba(18, 18, 18, 1) 10%, rgba(33, 18, 9, 1) 90%);
+  position: relative;
 }
 
 .section-orange {
   --prev-section-color: rgba(51, 18, 0, 1);
   --next-section-color: rgba(18, 18, 18, 1);
-  background: linear-gradient(to bottom, rgba(51, 18, 0, 1), rgba(18, 18, 18, 1));
+  background: linear-gradient(180deg, rgba(51, 18, 0, 1) 10%, rgba(33, 18, 9, 1) 90%);
+  position: relative;
 }
 
 /* Gradient text */
