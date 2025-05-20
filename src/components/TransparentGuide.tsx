@@ -71,9 +71,8 @@ const TransparentGuide = () => {
     }
   ];
 
-  // Handle slide change without causing page scroll
+  // Fixed the type issue here by changing the parameter type
   const handleSlideChange = (index: number) => {
-    // Prevent default behavior that might cause scrolling
     setActiveTab(index);
   };
 
@@ -85,6 +84,18 @@ const TransparentGuide = () => {
       inline: 'center',
       block: 'nearest' // Prevents vertical scrolling
     });
+    // Directly set active tab to avoid delay
+    setActiveTab(index);
+  };
+
+  // Optimize the external link handling
+  const handleExternalLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    // Pre-load link in background before click happens
+    const href = (event.currentTarget as HTMLAnchorElement).href;
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = href;
+    document.head.appendChild(link);
   };
 
   return <section id="guide-expert" className="section-uniform bg-[#121212] py-[10px]">
@@ -105,7 +116,7 @@ const TransparentGuide = () => {
             loop: true
           }} 
           className="w-full" 
-          onSelect={(index) => handleSlideChange(index)}>
+          onSelect={handleSlideChange}>
             <div className="hidden md:flex justify-center gap-2 mb-6">
               {tabsData.map((tab, index) => (
                 <button 
@@ -180,12 +191,15 @@ const TransparentGuide = () => {
                             ))}
                           </div>
                           
-                          {/* Call to action */}
+                          {/* Call to action with optimized link handling */}
                           {index === 3 && (
                             <div className="mt-8 flex justify-center">
                               <a 
                                 href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
                                 className="inline-flex items-center justify-center gap-2 rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] text-white px-6 py-4 hover:opacity-90 transition-all shadow-[0_0_20px_rgba(255,87,51,0.4)]"
+                                target="_blank"
+                                rel="preconnect"
+                                onClick={handleExternalLink}
                               >
                                 <span className="hidden md:inline">ACCÉDER À LA FORMATION →</span>
                                 <span className="md:hidden">COMMENCER →</span>
@@ -207,14 +221,7 @@ const TransparentGuide = () => {
                 {tabsData.map((_, index) => (
                   <button 
                     key={index} 
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document.getElementById(`slide-${index}`)?.scrollIntoView({
-                        behavior: 'smooth',
-                        inline: 'center',
-                        block: 'nearest'
-                      });
-                    }} 
+                    onClick={(e) => handleTabClick(index, e)}
                     className={`w-3 h-3 rounded-full transition-all ${activeTab === index ? "bg-[#FF7E33]" : "bg-[#FF9F3F]/30"}`} 
                     aria-label={`Go to slide ${index + 1}`} 
                   />

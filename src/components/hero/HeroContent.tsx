@@ -12,6 +12,16 @@ export const HeroContent = ({
   isVisible,
   scrollToNext
 }: HeroContentProps) => {
+  // Optimize external link handling
+  const handleExternalLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    // Pre-load link in background
+    const href = (event.currentTarget as HTMLAnchorElement).href;
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = href;
+    document.head.appendChild(link);
+  };
+
   return <div className={`container mx-auto px-4 py-16 relative z-10 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
       <div className="max-w-4xl mx-auto text-center">
         {/* Badge animé */}
@@ -48,6 +58,9 @@ Maîtrisez le Dropshipping Rentable en 2025</span>
           <GlowButton>
             <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 transition-all relative z-10 text-white px-8 py-4 shadow-[0_0_20px_rgba(255,87,51,0.4)]"
+              target="_blank"
+              rel="preconnect"
+              onClick={handleExternalLink}
             >
               <span className="relative z-10 text-lg font-bold hidden sm:inline">ACCÉDER À LA FORMATION →</span>
               <span className="relative z-10 text-lg font-bold sm:hidden">COMMENCER →</span>

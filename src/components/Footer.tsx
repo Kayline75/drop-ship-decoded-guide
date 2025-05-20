@@ -2,6 +2,16 @@
 import React from "react";
 
 const Footer = () => {
+  // Optimize external link handling
+  const handleExternalLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    // Pre-load link in background
+    const href = (event.currentTarget as HTMLAnchorElement).href;
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = href;
+    document.head.appendChild(link);
+  };
+
   return (
     <footer className="bg-black/80 backdrop-blur-lg border-t border-[#FF7E33]/20">
       <div className="container mx-auto px-4 py-16 bg-gradient-to-b from-black/90 to-[#331200]/90 rounded-lg mt-4 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
@@ -24,6 +34,14 @@ const Footer = () => {
                 <a 
                   href="#tarifs" 
                   className="text-white hover:text-[#FF7E33] transition-colors block"
+                  onClick={(e) => {
+                    // Scroll to specific section smoothly
+                    e.preventDefault();
+                    document.querySelector('#tarifs')?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                  }}
                 >
                   LE PRIX
                 </a>
@@ -32,6 +50,14 @@ const Footer = () => {
                 <a 
                   href="#guide-expert" 
                   className="text-white hover:text-[#FF7E33] transition-colors block"
+                  onClick={(e) => {
+                    // Scroll to specific section smoothly
+                    e.preventDefault();
+                    document.querySelector('#guide-expert')?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                  }}
                 >
                   LE GUIDE
                 </a>
@@ -40,6 +66,14 @@ const Footer = () => {
                 <a 
                   href="#faq" 
                   className="text-white hover:text-[#FF7E33] transition-colors block"
+                  onClick={(e) => {
+                    // Scroll to specific section smoothly
+                    e.preventDefault();
+                    document.querySelector('#faq')?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                  }}
                 >
                   FAQ
                 </a>
@@ -56,7 +90,8 @@ const Footer = () => {
                   href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
                   className="text-white hover:text-[#FF7E33] transition-colors" 
                   target="_blank" 
-                  rel="noopener noreferrer"
+                  rel="preconnect" 
+                  onClick={handleExternalLink}
                 >
                   Rejoindre la communauté Skool
                 </a>

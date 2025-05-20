@@ -3,6 +3,16 @@ import { Check, ArrowRight } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const PropositionValeur = () => {
+  // Optimize external link handling
+  const handleExternalLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    // Pre-load link in background
+    const href = (event.currentTarget as HTMLAnchorElement).href;
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = href;
+    document.head.appendChild(link);
+  };
+
   const steps = [
     {
       id: "selection",
@@ -97,6 +107,9 @@ const PropositionValeur = () => {
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
             className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 transition-all relative z-10 text-white px-6 py-3 sm:px-8 sm:py-4 w-full sm:w-auto max-w-[320px] mx-auto shadow-[0_0_20px_rgba(255,87,51,0.4)]"
+            target="_blank"
+            rel="preconnect"
+            onClick={handleExternalLink}
           >
             <span className="hidden sm:inline">ACCÉDER À LA FORMATION</span>
             <span className="sm:hidden">COMMENCER</span>

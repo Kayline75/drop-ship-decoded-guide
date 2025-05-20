@@ -19,6 +19,16 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Optimize external link handling
+  const handleExternalLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    // Pre-load link in background
+    const href = (event.currentTarget as HTMLAnchorElement).href;
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = href;
+    document.head.appendChild(link);
+  };
+
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -32,7 +42,8 @@ const NavBar = () => {
           href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
           className="flex items-center gap-2"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="preconnect"
+          onClick={handleExternalLink}
         >
           <div className="bg-gradient-to-r from-[#FF7E33] to-[#FF5733] w-8 h-8 rounded-md"></div>
           <div className="flex flex-col">
@@ -67,7 +78,8 @@ const NavBar = () => {
             className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 transition-all text-white px-4 py-2 shadow-[0_0_15px_rgba(255,126,51,0.5)]"
             style={{ zIndex: 100 }}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="preconnect"
+            onClick={handleExternalLink}
           >
             Démarrer maintenant
           </a>
@@ -116,7 +128,11 @@ const NavBar = () => {
               href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
               className="inline-block w-full text-center py-3 px-4 rounded-md text-white bg-gradient-to-r from-[#FF7E33] to-[#FF5733] shadow-[0_0_15px_rgba(255,126,51,0.3)]"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="preconnect"
+              onClick={(e) => {
+                handleExternalLink(e);
+                setIsMobileMenuOpen(false);
+              }}
             >
               Démarrer maintenant
             </a>
