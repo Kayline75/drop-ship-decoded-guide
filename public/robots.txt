@@ -1,3 +1,10 @@
+
+# Default global settings - allow indexing and following links
+User-agent: *
+Allow: /
+Disallow: /seo-settings
+
+# Special rules for specific bots
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +17,8 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
+# Set site crawl-rate (optional)
+# Crawl-delay: 10
+
+# Sitemap location (add when available)
+# Sitemap: https://yourwebsite.com/sitemap.xml
