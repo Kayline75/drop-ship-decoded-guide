@@ -1,239 +1,79 @@
-
-import { Check } from "lucide-react";
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { useMediaQuery } from "@/hooks/use-media-query";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
+import React from "react";
+import { Rocket } from "lucide-react";
 
 const TransparentGuide = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  return (
+    <section id="guide-expert" className="bg-transparent text-white py-20 relative overflow-hidden">
+      {/* Background circles */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-[#FF5733]/10 filter blur-xl opacity-50"></div>
+        <div className="absolute bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2 w-48 h-48 rounded-full bg-[#FF7E33]/10 filter blur-xl opacity-50"></div>
+      </div>
 
-  // Tab content data
-  const tabsData = [
-    {
-      id: "selection",
-      title: "Sélection Produit",
-      description: "Les Fondamentaux du Dropshipping Profitable",
-      content: [{
-        title: "Modèle e-commerce sans stock optimisé",
-        description: "Le dropshipping évolué permet de vendre des produits sans les stocker. Votre fournisseur expédie directement au client, vous offrant liberté géographique et investissement minimal."
-      }, {
-        title: "Avantages stratégiques pour entrepreneurs",
-        description: "Ce modèle business offre flexibilité financière, évolutivité rapide et liberté totale de localisation - idéal pour les entrepreneurs cherchant l'indépendance."
-      }, {
-        title: "Erreurs critiques à éviter absolument",
-        description: "La majorité des échecs résultent de fournisseurs non fiables, délais logistiques mal gérés ou produits inadaptés au marché cible. Notre méthode élimine ces risques."
-      }]
-    }, {
-      id: "creation",
-      title: "Création Boutique",
-      description: "Pourquoi les Formations Coûteuses Échouent Systématiquement",
-      content: [{
-        title: "Témoignages d'entrepreneurs désillusionnés",
-        description: "Les formations premium à prix excessif laissent souvent les apprenants sans accompagnement face aux défis réels du marché digital concurrentiel."
-      }, {
-        title: "Déconstruction des promesses marketing trompeuses",
-        description: "Nous démystifions les promesses de gains rapides et révélons la réalité: le dropshipping exige stratégie, persévérance et méthodologie rigoureuse pour réussir."
-      }, {
-        title: "Ressources fiables et accessibles garanties",
-        description: "Notre approche combine ebooks stratégiques gratuits et formation structurée pour vous offrir un parcours d'apprentissage complet sans marketing manipulateur."
-      }]
-    }, {
-      id: "marketing",
-      title: "Marketing Efficace",
-      description: "Ressources Exclusives pour Réussir en 2025",
-      content: [{
-        title: "Guides stratégiques dropshipping optimisés",
-        description: "Notre collection de guides pratiques vous accompagne pas à pas avec des études de cas réelles, des exemples concrets et des stratégies immédiatement applicables."
-      }, {
-        title: "Communauté d'entrepreneurs Skool intégrée",
-        description: "Rejoignez notre plateforme collaborative où des centaines d'entrepreneurs partagent leurs expériences, stratégies et solutions aux défis quotidiens du e-commerce."
-      }, {
-        title: "Système d'apprentissage autonome optimisé",
-        description: "Notre méthodologie flexible vous permet d'avancer à votre rythme avec des supports variés (vidéos, PDF, études de cas) adaptés à votre style d'apprentissage personnel."
-      }]
-    }, {
-      id: "logistique",
-      title: "Logistique Simple",
-      description: "Automatisation et Gestion des Livraisons",
-      content: [{
-        title: "Automatisation des commandes",
-        description: "Simplifiez votre flux de travail en automatisant le processus de commande du début à la fin, réduisant ainsi les erreurs manuelles et libérant votre temps."
-      }, {
-        title: "Suivi optimisé des livraisons",
-        description: "Accédez à des outils de suivi avancés permettant à vos clients de suivre leurs colis en temps réel, améliorant ainsi leur expérience d'achat."
-      }, {
-        title: "Gestion professionnelle du SAV",
-        description: "Mettez en place un système de service après-vente efficace qui fidélise vos acheteurs et transforme les problèmes potentiels en opportunités de satisfaction client."
-      }]
-    }
-  ];
-
-  // Fixed the type issue here by changing the parameter type
-  const handleSlideChange = (index: number) => {
-    setActiveTab(index);
-  };
-
-  // Prevent scrolling when clicking on tab buttons
-  const handleTabClick = (index: number, event: React.MouseEvent) => {
-    event.preventDefault();
-    document.getElementById(`slide-${index}`)?.scrollIntoView({
-      behavior: 'smooth',
-      inline: 'center',
-      block: 'nearest' // Prevents vertical scrolling
-    });
-    // Directly set active tab to avoid delay
-    setActiveTab(index);
-  };
-
-  // Optimize the external link handling
-  const handleExternalLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    // Pre-load link in background before click happens
-    const href = (event.currentTarget as HTMLAnchorElement).href;
-    const link = document.createElement('link');
-    link.rel = 'prefetch';
-    link.href = href;
-    document.head.appendChild(link);
-  };
-
-  return <section id="guide-expert" className="section-uniform bg-[#121212] py-[10px]">
-      <div className="container-uniform py-0">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
-            Le Dropshipping rentable 2025 / Eviter les Arnaques et Maximisez vos profits
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#FF7E33] to-[#FF5733] inline">
+            Notre Guide Expert Transparent
           </h2>
-          <p className="text-lg text-[#FF9F3F] max-w-2xl mx-auto mb-6">
-            Les stratégies éprouvées pour transformer votre passion e-commerce en business florissant sans tomber dans les pièges courants.
+          <p className="text-orange-100 text-lg md:text-xl max-w-3xl mx-auto">
+            Découvrez les coulisses de notre formation dropshipping : stratégies éprouvées, outils indispensables et un accompagnement personnalisé pour garantir votre succès.
           </p>
         </div>
 
-        {/* Carousel View */}
-        <div className="mb-12 relative">
-          <Carousel opts={{
-            align: "start",
-            loop: true
-          }} 
-          className="w-full" 
-          onSelect={handleSlideChange}>
-            <div className="hidden md:flex justify-center gap-2 mb-6">
-              {tabsData.map((tab, index) => (
-                <button 
-                  key={tab.id} 
-                  onClick={(e) => handleTabClick(index, e)} 
-                  className={`
-                    px-5 py-3 rounded-md text-base font-medium transition-all duration-300
-                    ${activeTab === index ? 'bg-[#FF7E33] text-white' : 'bg-[#22110A] text-[#FF9F3F]/70 hover:bg-[#22110A]/70'}
-                  `}
-                >
-                  {tab.title}
-                </button>
-              ))}
+        {/* Key Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Strategy & Tools */}
+          <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-[#FF7E33]/20 shadow-lg transition-transform hover:scale-105">
+            <div className="flex items-center mb-4">
+              <Rocket className="text-[#FF7E33] mr-2 w-6 h-6" />
+              <h3 className="text-xl font-semibold">Stratégie et Outils</h3>
             </div>
+            <p className="text-orange-100">
+              Accédez à des stratégies de vente éprouvées et maîtrisez les outils indispensables pour automatiser et optimiser votre boutique en ligne.
+            </p>
+          </div>
 
-            <div className={`w-full ${isMobile ? 'bg-[#331200]' : 'bg-[#331200]/80'} rounded-lg p-2 mb-6 md:hidden overflow-x-auto`}>
-              <div className="flex gap-2 w-max">
-                {tabsData.map((tab, index) => (
-                  <button 
-                    key={tab.id} 
-                    onClick={(e) => handleTabClick(index, e)} 
-                    className={`
-                      px-4 py-3 rounded-md text-base font-medium whitespace-nowrap transition-all duration-300
-                      ${activeTab === index ? 'bg-[#FF7E33] text-white' : 'bg-[#22110A] text-[#FF9F3F]/70 hover:bg-[#22110A]/70'}
-                    `}
-                  >
-                    {tab.title}
-                  </button>
-                ))}
-              </div>
+          {/* Community & Support */}
+          <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-[#FF7E33]/20 shadow-lg transition-transform hover:scale-105">
+            <div className="flex items-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="text-[#FF7E33] mr-2 w-6 h-6">
+                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386a9 9 0 0115.912 2.659l-.607 2.708a.75.75 0 00.656.857l1.574-.293a.75.75 0 00.972-.755l-.197-1.185a.75.75 0 00-.931-.494l-1.263.234a9 9 0 01-10.728-6.719A.75.75 0 002.25 2.25z" />
+                <path d="M19.933 5.418a.75.75 0 01-.208 1.485 6 6 0 00-6.126 6.363l.523 2.334a.75.75 0 01-.644.901l-1.561-.29a.75.75 0 01-.97.757l.21 1.261a.75.75 0 01-.92.525l1.271-.236a6 6 0 008.048-8.329.75.75 0 011.485.208z" />
+              </svg>
+              <h3 className="text-xl font-semibold">Communauté et Support</h3>
             </div>
+            <p className="text-orange-100">
+              Rejoignez une communauté active et bénéficiez d'un support quotidien pour répondre à toutes vos questions et surmonter les défis.
+            </p>
+          </div>
 
-            <CarouselContent>
-              {tabsData.map((tab, index) => (
-                <CarouselItem key={tab.id} id={`slide-${index}`} className="pt-0">
-                  <motion.div 
-                    initial={{
-                      opacity: 0,
-                      y: 20
-                    }} 
-                    animate={{
-                      opacity: 1,
-                      y: 0
-                    }} 
-                    exit={{
-                      opacity: 0,
-                      y: -20
-                    }} 
-                    transition={{
-                      duration: 0.3
-                    }} 
-                    className="w-full"
-                  >
-                    <Card className="border-none bg-transparent shadow-none">
-                      <CardContent className="p-0">
-                        <div className="p-6 bg-[#22110A] rounded-lg shadow-md">
-                          <h3 className="text-2xl font-bold mb-6 text-[#FF7E33] text-center">
-                            {tab.description}
-                          </h3>
-                          
-                          <div className="space-y-6">
-                            {tab.content.map((item, i) => (
-                              <div key={i} className="flex flex-col md:flex-row items-start md:items-center gap-3">
-                                <div className="min-w-6 h-6 rounded-full bg-[#FF7E33] flex items-center justify-center flex-shrink-0">
-                                  <Check className="h-4 w-4 text-white" />
-                                </div>
-                                <div>
-                                  <h4 className="text-lg font-semibold text-white">{item.title}</h4>
-                                  <p className="text-[#FF9F3F] mt-1">{item.description}</p>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                          
-                          {/* Call to action with optimized link handling */}
-                          {index === 3 && (
-                            <div className="mt-8 flex justify-center">
-                              <a 
-                                href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
-                                className="inline-flex items-center justify-center gap-2 rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] text-white px-6 py-4 hover:opacity-90 transition-all shadow-[0_0_20px_rgba(255,87,51,0.4)]"
-                                target="_blank"
-                                rel="preconnect"
-                                onClick={handleExternalLink}
-                              >
-                                <span className="hidden md:inline">ACCÉDER À LA FORMATION →</span>
-                                <span className="md:hidden">COMMENCER →</span>
-                              </a>
-                            </div>
-                          )}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-
-            <div className="flex justify-center gap-2 mt-6">
-              <CarouselPrevious className="relative -left-0 top-0 translate-y-0 bg-[#22110A] border-[#FF7E33]/30 hover:bg-[#22110A]/80 hover:border-[#FF7E33] h-10 w-10" />
-              
-              <div className="flex items-center gap-1 px-2">
-                {tabsData.map((_, index) => (
-                  <button 
-                    key={index} 
-                    onClick={(e) => handleTabClick(index, e)}
-                    className={`w-3 h-3 rounded-full transition-all ${activeTab === index ? "bg-[#FF7E33]" : "bg-[#FF9F3F]/30"}`} 
-                    aria-label={`Go to slide ${index + 1}`} 
-                  />
-                ))}
-              </div>
-              
-              <CarouselNext className="relative -right-0 top-0 translate-y-0 bg-[#22110A] border-[#FF7E33]/30 hover:bg-[#22110A]/80 hover:border-[#FF7E33] h-10 w-10" />
+          {/* Personalized Coaching */}
+          <div className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-[#FF7E33]/20 shadow-lg transition-transform hover:scale-105">
+            <div className="flex items-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="text-[#FF7E33] mr-2 w-6 h-6">
+                <path d="M11.47 3.84a.75.75 0 011.06 0l3 3a.75.75 0 01-1.06 1.06l-1.72-1.72V7.5a4.5 4.5 0 01-9 0v-1.32l-1.72 1.72a.75.75 0 01-1.06-1.06l3-3zM6 12a3 3 0 116 0 3 3 0 01-6 0zm12 1.5a3 3 0 100-6 3 3 0 000 6zM5.257 17.16a.75.75 0 01.943.83l-1.606 4.819a.75.75 0 01-1.342-.67l1.606-4.818a.75.75 0 011.001-.351zm13.558 0a.75.75 0 011.001.35l1.606 4.818a.75.75 0 01-1.342.67l-1.606-4.819a.75.75 0 01.943-.83z" />
+              </svg>
+              <h3 className="text-xl font-semibold">Coaching Personnalisé</h3>
             </div>
-          </Carousel>
+            <p className="text-orange-100">
+              Bénéficiez de sessions de coaching individuelles pour affiner votre stratégie et accélérer votre progression vers le succès.
+            </p>
+          </div>
+        </div>
+
+        {/* Testimonial Section */}
+        <div className="mt-16 text-center">
+          <h3 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#FF7E33] to-[#FF5733] inline">
+            Témoignages de Nos Étudiants
+          </h3>
+          <p className="text-orange-100 text-lg max-w-2xl mx-auto">
+            Découvrez comment notre formation a transformé la vie de nos étudiants, leur permettant de lancer des business dropshipping rentables et durables.
+          </p>
+          {/* Add actual testimonials here */}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default TransparentGuide;
