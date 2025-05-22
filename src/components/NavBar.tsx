@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { Menu, X, FileText } from "lucide-react";
+import { Menu, X, BookOpen, ListTodo, Speedometer } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const NavBar = () => {
@@ -108,30 +108,32 @@ const NavBar = () => {
               </Link>
             )}
             
-            <Link 
-              to="/dropshipping-guide" 
-              className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center gap-1"
-            >
-              <FileText className="w-4 h-4" />
-              ARTICLE
-            </Link>
-            
             {isHomePage ? (
               <a 
                 href="#faq" 
-                className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
+                className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center gap-1"
                 onClick={(e) => handleScrollToSection(e, "faq")}
               >
-                FAQ
+                <ListTodo className="w-4 h-4" />
+                ARTICLES
               </a>
             ) : (
               <Link 
                 to="/#faq" 
-                className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
+                className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center gap-1"
               >
-                FAQ
+                <ListTodo className="w-4 h-4" />
+                ARTICLES
               </Link>
             )}
+            
+            <Link 
+              to="/dropshipping-guide" 
+              className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center gap-1"
+            >
+              <BookOpen className="w-4 h-4" />
+              FAQ
+            </Link>
           </nav>
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
@@ -203,35 +205,37 @@ const NavBar = () => {
               </Link>
             )}
             
-            <Link 
-              to="/dropshipping-guide" 
-              className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center gap-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <FileText className="w-4 h-4" />
-              ARTICLE
-            </Link>
-            
             {isHomePage ? (
               <a 
                 href="#faq" 
-                className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"
+                className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center gap-2"
                 onClick={(e) => {
                   handleScrollToSection(e, "faq");
                   setIsMobileMenuOpen(false);
                 }}
               >
-                FAQ
+                <ListTodo className="w-4 h-4" />
+                ARTICLES
               </a>
             ) : (
               <Link 
                 to="/#faq" 
-                className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"
+                className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center gap-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                FAQ
+                <ListTodo className="w-4 h-4" />
+                ARTICLES
               </Link>
             )}
+            
+            <Link 
+              to="/dropshipping-guide" 
+              className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center gap-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <BookOpen className="w-4 h-4" />
+              FAQ
+            </Link>
           </nav>
           <div className="mt-6">
             <a 
