@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
@@ -9,29 +8,18 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { toast } from "sonner";
 import SEOHead from '@/components/SEOHead';
-
 const DropshippingGuide = () => {
   useEffect(() => {
     // Scrolls to top when page loads
     window.scrollTo(0, 0);
   }, []);
-
   const handleCTAClick = () => {
     toast.success("Redirection vers la formation en cours", {
-      description: "Vous allez être redirigé vers notre formation complète en dropshipping",
+      description: "Vous allez être redirigé vers notre formation complète en dropshipping"
     });
   };
-  
-  return (
-    <>
-      <SEOHead 
-        title="Qu'est-ce que le dropshipping et comment démarrer sans argent ? (Guide 2025)"
-        description="Guide complet 2025 pour comprendre et démarrer un business en dropshipping sans investissement initial. Découvrez les étapes, outils et méthodes."
-        keywords="dropshipping, e-commerce, gagner argent en ligne, shopify, business en ligne, formation dropshipping, 2025, sans investissement"
-        ogTitle="Guide Dropshipping 2025 - Démarrer sans argent | Whatsdropshipping"
-        ogDescription="Apprenez à créer un business e-commerce rentable sans stock ni investissement initial. Guide étape par étape pour réussir en dropshipping en 2025."
-        ogImage="https://lovable.dev/opengraph-image-p98pqg.png"
-      />
+  return <>
+      <SEOHead title="Qu'est-ce que le dropshipping et comment démarrer sans argent ? (Guide 2025)" description="Guide complet 2025 pour comprendre et démarrer un business en dropshipping sans investissement initial. Découvrez les étapes, outils et méthodes." keywords="dropshipping, e-commerce, gagner argent en ligne, shopify, business en ligne, formation dropshipping, 2025, sans investissement" ogTitle="Guide Dropshipping 2025 - Démarrer sans argent | Whatsdropshipping" ogDescription="Apprenez à créer un business e-commerce rentable sans stock ni investissement initial. Guide étape par étape pour réussir en dropshipping en 2025." ogImage="https://lovable.dev/opengraph-image-p98pqg.png" />
       
       <div className="min-h-screen bg-background overflow-hidden">
         <NavBar />
@@ -64,14 +52,7 @@ const DropshippingGuide = () => {
                 Qu'est-ce que le dropshipping ? Définition simple et méthode 2025
               </h1>
               <div className="relative rounded-lg overflow-hidden mb-8">
-                <img 
-                  src="https://images.unsplash.com/photo-1586880244406-556ebe35f282?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
-                  alt="Illustration du dropshipping - ordinateur portable montrant une boutique en ligne" 
-                  className="w-full h-auto rounded-lg"
-                  loading="eager"
-                  width="1200"
-                  height="600"
-                />
+                <img src="https://images.unsplash.com/photo-1586880244406-556ebe35f282?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Illustration du dropshipping - ordinateur portable montrant une boutique en ligne" className="w-full h-auto rounded-lg" loading="eager" width="1200" height="600" />
                 <div className="absolute bottom-4 right-4 bg-black/70 px-3 py-1 rounded text-xs text-white">
                   Photo: Unsplash
                 </div>
@@ -163,13 +144,7 @@ const DropshippingGuide = () => {
               <div className="my-10 p-6 bg-gradient-to-r from-[#FF7E33]/20 to-[#FF5733]/20 rounded-lg border border-[#FF7E33]/30">
                 <h3 className="text-2xl font-bold mb-3">Prêt à découvrir comment générer tes premiers revenus en dropshipping ?</h3>
                 <p className="mb-5">Notre formation complète t'accompagne de A à Z, même si tu pars de zéro et sans budget.</p>
-                <a 
-                  href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-                  onClick={handleCTAClick}
-                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:from-[#FF9F3F] hover:to-[#FF7E33] text-white px-6 py-3 shadow-[0_0_20px_rgba(255,126,51,0.3)] transition-all duration-300 border border-white/20"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" onClick={handleCTAClick} className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:from-[#FF9F3F] hover:to-[#FF7E33] text-white px-6 py-3 shadow-[0_0_20px_rgba(255,126,51,0.3)] transition-all duration-300 border border-white/20" target="_blank" rel="noopener noreferrer">
                   DÉMARRER MA FORMATION MAINTENANT →
                 </a>
               </div>
@@ -353,13 +328,7 @@ const DropshippingGuide = () => {
                     </p>
                   </div>
                   <div className="md:w-1/4 flex justify-center">
-                    <a 
-                      href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-                      onClick={handleCTAClick}
-                      className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-base font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:from-[#FF9F3F] hover:to-[#FF7E33] text-white px-4 py-3 shadow-[0_0_20px_rgba(255,126,51,0.3)] transition-all duration-300 border border-white/20"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" onClick={handleCTAClick} className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-base font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:from-[#FF9F3F] hover:to-[#FF7E33] text-white px-4 py-3 shadow-[0_0_20px_rgba(255,126,51,0.3)] transition-all duration-300 border border-white/20" target="_blank" rel="noopener noreferrer">
                       ACCÉDER À LA MÉTHODE
                     </a>
                   </div>
@@ -386,7 +355,7 @@ const DropshippingGuide = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold">Recherche de produits</h4>
-                      <p className="text-sm text-gray-300">Notre méthode pour trouver des produits à fort potentiel en utilisant les tendances TikTok et les outils spécialisés.</p>
+                      <p className="text-sm text-gray-300">Notre méthode pour trouver des produits à fort potentiel en utilisant les tendances TikTok et les outils spécialisés ou nos outils gratuit a ta disposition comme Minea etc</p>
                     </div>
                   </div>
                   
@@ -406,7 +375,7 @@ const DropshippingGuide = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold">Sourcing de produits</h4>
-                      <p className="text-sm text-gray-300">Comment trouver les meilleurs fournisseurs avec des délais de livraison courts.</p>
+                      <p className="text-sm text-gray-300">Comment trouver les meilleurs fournisseurs avec des délais de livraison courts</p>
                     </div>
                   </div>
                   
@@ -481,13 +450,7 @@ const DropshippingGuide = () => {
                 Rejoins notre formation complète et bénéficie d'un accompagnement personnalisé 
                 pour créer ta source de revenus en ligne, même en partant de zéro.
               </p>
-              <a 
-                href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
-                onClick={handleCTAClick}
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-xl font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:from-[#FF9F3F] hover:to-[#FF7E33] text-white px-8 py-4 shadow-[0_0_30px_rgba(255,126,51,0.4)] transition-all duration-300 border border-white/20"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" onClick={handleCTAClick} className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-xl font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:from-[#FF9F3F] hover:to-[#FF7E33] text-white px-8 py-4 shadow-[0_0_30px_rgba(255,126,51,0.4)] transition-all duration-300 border border-white/20" target="_blank" rel="noopener noreferrer">
                 DÉMARRER MA FORMATION MAINTENANT →
               </a>
               <p className="mt-4 text-white/80">Objectif: Ta première vente en moins de 30 jours</p>
@@ -518,15 +481,11 @@ const DropshippingGuide = () => {
                 <div className="bg-[#1A1F2C]/70 rounded-lg p-5">
                   <div className="flex items-start">
                     <div className="w-10 h-10 rounded-full overflow-hidden mr-4 flex-shrink-0">
-                      <img 
-                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=100&h=100&q=60" 
-                        alt="Sophie Moreau" 
-                        className="w-full h-full object-cover"
-                      />
+                      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=100&h=100&q=60" alt="Sophie Moreau" className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <div className="flex items-center mb-1">
-                        <h4 className="font-bold mr-2">Sophie Moreau</h4>
+                        <h4 className="font-bold mr-2">Sophie </h4>
                         <span className="text-gray-400 text-xs">Il y a 2 jours</span>
                       </div>
                       <p className="text-sm">
@@ -549,15 +508,11 @@ const DropshippingGuide = () => {
                 <div className="bg-[#1A1F2C]/70 rounded-lg p-5">
                   <div className="flex items-start">
                     <div className="w-10 h-10 rounded-full overflow-hidden mr-4 flex-shrink-0">
-                      <img 
-                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=100&h=100&q=60" 
-                        alt="Thomas Leroy" 
-                        className="w-full h-full object-cover"
-                      />
+                      <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=100&h=100&q=60" alt="Thomas Leroy" className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <div className="flex items-center mb-1">
-                        <h4 className="font-bold mr-2">Thomas Leroy</h4>
+                        <h4 className="font-bold mr-2">julien </h4>
                         <span className="text-gray-400 text-xs">Il y a 5 jours</span>
                       </div>
                       <p className="text-sm">
@@ -580,11 +535,7 @@ const DropshippingGuide = () => {
               
               <div className="bg-[#1A1F2C]/70 rounded-lg p-5 border border-[#FF7E33]/20">
                 <h4 className="font-bold mb-4">Laisser un commentaire</h4>
-                <textarea 
-                  className="w-full p-3 rounded-md bg-[#232738] border border-[#FF7E33]/20 text-white mb-4" 
-                  rows={4} 
-                  placeholder="Partagez votre expérience ou posez une question..."
-                ></textarea>
+                <textarea className="w-full p-3 rounded-md bg-[#232738] border border-[#FF7E33]/20 text-white mb-4" rows={4} placeholder="Partagez votre expérience ou posez une question..."></textarea>
                 <button className="px-4 py-2 bg-[#FF7E33] text-white rounded-md hover:bg-[#FF5733] transition-colors">
                   Publier le commentaire
                 </button>
@@ -595,8 +546,6 @@ const DropshippingGuide = () => {
         
         <Footer />
       </div>
-    </>
-  );
+    </>;
 };
-
 export default DropshippingGuide;
