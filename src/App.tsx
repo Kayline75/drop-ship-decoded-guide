@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import { Loader2 } from "lucide-react";
+import PopupChat from "./components/PopupChat";
 
 // Lazy load components for better performance
 const Index = lazy(() => import("./pages/Index"));
@@ -50,6 +51,8 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
+          {/* Ajout du popup chat global */}
+          <PopupChat />
         </BrowserRouter>
       </div>
     </TooltipProvider>
