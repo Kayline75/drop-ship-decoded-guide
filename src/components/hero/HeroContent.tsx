@@ -1,13 +1,10 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Package } from "lucide-react";
 import { AnimatedBadge, GlowButton } from "../CardStyles";
-
 interface HeroContentProps {
   isVisible: boolean;
   scrollToNext: () => void;
 }
-
 export const HeroContent = ({
   isVisible,
   scrollToNext
@@ -21,7 +18,6 @@ export const HeroContent = ({
     link.href = href;
     document.head.appendChild(link);
   };
-
   return <div className={`container mx-auto px-4 py-16 relative z-10 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
       <div className="max-w-4xl mx-auto text-center">
         {/* Badge animé */}
@@ -37,8 +33,8 @@ export const HeroContent = ({
 
         {/* Titre principal avec gradient animé - optimisé pour le SEO */}
         <h1 className="text-4xl md:text-6xl font-bold mb-6 relative">
-          <span className="hero-text bg-clip-text text-transparent bg-gradient-to-r from-white via-orange-200 to-white bg-size-200 animate-gradient-x">
-C'est quoi le Dropshipping ? Découvrez</span>
+          <span className="hero-text bg-clip-text text-transparent bg-gradient-to-r from-white via-orange-200 to-white bg-size-200 animate-gradient-x">C'est quoi le Dropshipping ?
+        </span>
           <br className="hidden md:block" />
           <span className="hero-text-delay bg-clip-text text-transparent bg-gradient-to-r from-white via-orange-200 to-white bg-size-200 animate-gradient-x">
             est-ce que le dropshipping est <span className="text-[#FF7E33]">mort</span> en 2025 ?
@@ -56,12 +52,7 @@ C'est quoi le Dropshipping ? Découvrez</span>
         {/* Bouton amélioré et optimisé pour mobile */}
         <div className="flex flex-col sm:flex-row gap-5 justify-center fade-in-up-delay">
           <GlowButton>
-            <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" 
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 transition-all relative z-10 text-white px-8 py-4 shadow-[0_0_20px_rgba(255,87,51,0.4)]"
-              target="_blank"
-              rel="preconnect"
-              onClick={handleExternalLink}
-            >
+            <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 transition-all relative z-10 text-white px-8 py-4 shadow-[0_0_20px_rgba(255,87,51,0.4)]" target="_blank" rel="preconnect" onClick={handleExternalLink}>
               <span className="relative z-10 text-lg font-bold hidden sm:inline">ACCÉDER À LA FORMATION →</span>
               <span className="relative z-10 text-lg font-bold sm:hidden">COMMENCER →</span>
             </a>
