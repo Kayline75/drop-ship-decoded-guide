@@ -1,9 +1,7 @@
 import React from "react";
 import { Rocket } from "lucide-react";
-
 const TransparentGuide = () => {
-  return (
-    <section id="guide-expert" className="bg-transparent text-white py-20 relative overflow-hidden">
+  return <section id="guide-expert" className="bg-transparent text-white py-20 relative overflow-hidden">
       {/* Background circles */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-[#FF5733]/10 filter blur-xl opacity-50"></div>
@@ -63,17 +61,11 @@ const TransparentGuide = () => {
 
         {/* Testimonial Section */}
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#FF7E33] to-[#FF5733] inline">
-            Témoignages de Nos Étudiants
-          </h3>
-          <p className="text-orange-100 text-lg max-w-2xl mx-auto">
-            Découvrez comment notre formation a transformé la vie de nos étudiants, leur permettant de lancer des business dropshipping rentables et durables.
-          </p>
+          
+          
           {/* Add actual testimonials here */}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TransparentGuide;
