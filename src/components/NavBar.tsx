@@ -1,6 +1,5 @@
-
 import { useEffect, useState } from "react";
-import { Menu, X, BookOpen, ListTodo, Speedometer } from "lucide-react";
+import { Menu, X, BookOpen, ListTodo, Loader2 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const NavBar = () => {

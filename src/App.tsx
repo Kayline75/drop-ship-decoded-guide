@@ -6,7 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import { Speedometer } from "lucide-react";
+import { Loader2 } from "lucide-react";
 
 // Lazy load components for better performance
 const Index = lazy(() => import("./pages/Index"));
@@ -17,7 +17,7 @@ const DropshippingGuide = lazy(() => import("./pages/DropshippingGuide"));
 const LoadingScreen = () => (
   <div className="flex items-center justify-center h-screen bg-[#1A1F2C] text-white">
     <div className="flex flex-col items-center">
-      <Speedometer className="h-12 w-12 animate-spin text-[#FF7E33]" />
+      <Loader2 className="h-12 w-12 animate-spin text-[#FF7E33]" />
       <p className="mt-4 text-xl">Chargement en cours...</p>
     </div>
   </div>
