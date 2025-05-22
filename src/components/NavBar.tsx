@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { Menu, X, BookOpen, ListTodo, Loader2 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
@@ -107,6 +108,14 @@ const NavBar = () => {
               </Link>
             )}
             
+            <Link 
+              to="/dropshipping-guide" 
+              className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center gap-1"
+            >
+              <BookOpen className="w-4 h-4" />
+              ARTICLES
+            </Link>
+            
             {isHomePage ? (
               <a 
                 href="#faq" 
@@ -114,7 +123,7 @@ const NavBar = () => {
                 onClick={(e) => handleScrollToSection(e, "faq")}
               >
                 <ListTodo className="w-4 h-4" />
-                ARTICLES
+                FAQ
               </a>
             ) : (
               <Link 
@@ -122,17 +131,9 @@ const NavBar = () => {
                 className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center gap-1"
               >
                 <ListTodo className="w-4 h-4" />
-                ARTICLES
+                FAQ
               </Link>
             )}
-            
-            <Link 
-              to="/dropshipping-guide" 
-              className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center gap-1"
-            >
-              <BookOpen className="w-4 h-4" />
-              FAQ
-            </Link>
           </nav>
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
@@ -158,7 +159,7 @@ const NavBar = () => {
         </button>
       </div>
 
-      {/* Menu mobile optimisé */}
+      {/* Menu mobile */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-black/80 backdrop-blur-lg py-5 px-4 border-b border-[#FF7E33]/20">
           <nav className="flex flex-col space-y-6">
@@ -204,6 +205,15 @@ const NavBar = () => {
               </Link>
             )}
             
+            <Link 
+              to="/dropshipping-guide" 
+              className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center gap-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <BookOpen className="w-4 h-4" />
+              ARTICLES
+            </Link>
+            
             {isHomePage ? (
               <a 
                 href="#faq" 
@@ -214,7 +224,7 @@ const NavBar = () => {
                 }}
               >
                 <ListTodo className="w-4 h-4" />
-                ARTICLES
+                FAQ
               </a>
             ) : (
               <Link 
@@ -223,18 +233,9 @@ const NavBar = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <ListTodo className="w-4 h-4" />
-                ARTICLES
+                FAQ
               </Link>
             )}
-            
-            <Link 
-              to="/dropshipping-guide" 
-              className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center gap-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <BookOpen className="w-4 h-4" />
-              FAQ
-            </Link>
           </nav>
           <div className="mt-6">
             <a 
