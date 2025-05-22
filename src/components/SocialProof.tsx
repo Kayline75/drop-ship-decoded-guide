@@ -61,7 +61,7 @@ const SocialProof = () => {
         </div>
         
         {/* Testimonials Carousel Section */}
-        <div className={`max-w-4xl mx-auto mb-16 transition-all duration-700 ${isVisible ? "opacity-100" : "opacity-0 translate-y-10"}`}>
+        <div className={`max-w-5xl mx-auto mb-16 transition-all duration-700 ${isVisible ? "opacity-100" : "opacity-0 translate-y-10"}`}>
           <Carousel 
             opts={{
               align: "center",
@@ -71,18 +71,19 @@ const SocialProof = () => {
           >
             <CarouselContent>
               {testimonialImages.map((image, index) => (
-                <CarouselItem key={index} className="md:basis-1/1 lg:basis-4/5">
-                  <div className="p-1">
-                    <GlassCard className="bg-gradient-to-br from-[#331200]/40 to-[#121212]/40 backdrop-blur-sm border border-white/10 hover:shadow-xl hover:shadow-[#FF5733]/20 transition-all duration-300 overflow-hidden rounded-lg">
-                      <div className="aspect-[16/9] relative overflow-hidden rounded-t-lg">
+                <CarouselItem key={index} className="md:basis-3/4 lg:basis-3/4">
+                  <div className="p-2">
+                    <GlassCard className="bg-gradient-to-br from-[#331200]/40 to-[#121212]/40 backdrop-blur-sm border border-white/10 hover:shadow-xl hover:shadow-[#FF5733]/20 transition-all duration-300 overflow-hidden rounded-lg p-2">
+                      <div className="relative overflow-hidden rounded-lg">
                         <img
                           src={image}
-                          alt={`Témoignage utilisateur ${index + 1}`}
-                          className="w-full h-full object-cover object-center hover:scale-105 transition-all duration-500"
+                          alt={`Témoignage client ${index + 1}`}
+                          className="w-full h-auto object-contain"
+                          style={{ maxHeight: "600px" }}
                         />
                       </div>
                       <div className="p-4">
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 justify-center">
                           <div className="flex">
                             {[...Array(5)].map((_, i) => (
                               <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
