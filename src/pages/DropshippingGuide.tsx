@@ -265,7 +265,7 @@ const DropshippingGuide = () => {
                       <li>Support client 24/7</li>
                       <li>Nombreuses applications disponibles</li>
                     </ul>
-                    <p>Prix: à partir de 29$/mois (essai gratuit de 14 jours)</p>
+                    <p>Prix: 1$/mois pendant 3 mois, puis à partir de 29$/mois</p>
                   </TabsContent>
                   <TabsContent value="woocommerce" className="p-4 bg-[#1A1F2C]/50 border border-[#FF7E33]/20 rounded-md mt-2">
                     <h4 className="font-medium mb-2">Avantages de WooCommerce:</h4>
@@ -284,7 +284,7 @@ const DropshippingGuide = () => {
                 <div className="absolute w-4 h-4 bg-[#FF7E33] rounded-full -left-[9px] top-0"></div>
                 <h3 id="etape3" className="text-2xl font-bold mb-4 text-white scroll-mt-20">Étape 3 – Connecter un fournisseur fiable</h3>
                 <p className="mb-4">
-                  Utilise des plateformes comme CJ Dropshipping, Wiio ou des agents privés via WhatsApp ou 1688. 
+                  Utilise des plateformes comme CJ Dropshipping ou des agents privés via WhatsApp ou 1688. 
                   Vérifie bien les délais de livraison (objectif : moins de 10 jours en Europe).
                 </p>
                 
@@ -301,11 +301,6 @@ const DropshippingGuide = () => {
                       <TableCell>CJ Dropshipping</TableCell>
                       <TableCell>Entrepôts internationaux, QC, services photo</TableCell>
                       <TableCell>7-15 jours</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>Wiio</TableCell>
-                      <TableCell>Service premium, livraison rapide</TableCell>
-                      <TableCell>5-10 jours</TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>Agent privé (1688)</TableCell>
@@ -463,22 +458,6 @@ const DropshippingGuide = () => {
                 </div>
                 
                 <div className="bg-[#1A1F2C]/70 border border-[#FF7E33]/20 rounded-lg p-6 hover:border-[#FF7E33]/40 transition-all">
-                  <h3 className="text-xl font-semibold mb-2">Quel budget minimum pour se lancer ?</h3>
-                  <p>
-                    Pour démarrer, tu auras besoin de <strong>50€ à 150€</strong> qui couvriront :
-                  </p>
-                  <ul className="list-disc pl-5 mt-2">
-                    <li>Nom de domaine (~12€/an)</li>
-                    <li>Abonnement Shopify (~29$/mois avec 14 jours gratuits)</li>
-                    <li>Quelques applications essentielles (~10-20€/mois)</li>
-                  </ul>
-                  <p className="mt-2">
-                    Pour le marketing, tu peux commencer avec du contenu organique (0€) ou un petit budget publicitaire 
-                    (à partir de 5€/jour pour tester).
-                  </p>
-                </div>
-                
-                <div className="bg-[#1A1F2C]/70 border border-[#FF7E33]/20 rounded-lg p-6 hover:border-[#FF7E33]/40 transition-all">
                   <h3 className="text-xl font-semibold mb-2">Puis-je réussir sans publicité payante ?</h3>
                   <p>
                     <strong>Oui, c'est tout à fait possible</strong> grâce à des stratégies de marketing organique :
@@ -531,71 +510,6 @@ const DropshippingGuide = () => {
               </p>
             </section>
             
-            {/* Author Box */}
-            <div className="my-10 p-6 bg-[#1A1F2C] rounded-lg border border-[#FF7E33]/20">
-              <div className="flex flex-col sm:flex-row items-center sm:items-start">
-                <div className="w-24 h-24 rounded-full overflow-hidden mb-4 sm:mb-0 sm:mr-6 flex-shrink-0">
-                  <img 
-                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHNob3QlMjBtYWxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=120&h=120&q=80" 
-                    alt="Kayline - Expert en Dropshipping" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Kayline</h3>
-                  <p className="text-[#FF7E33] font-medium mb-2">Expert en E-commerce & Dropshipping</p>
-                  <p className="text-gray-300 text-sm mb-4">
-                    Entrepreneur passionné par le e-commerce depuis 2018, j'ai aidé plus de 300 entrepreneurs à lancer leur business en ligne.
-                    Je partage ici les méthodes qui fonctionnent réellement en 2025.
-                  </p>
-                  <div className="flex space-x-3">
-                    <a href="#" className="text-[#FF7E33] hover:text-white transition-colors">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                    </a>
-                    <a href="#" className="text-[#FF7E33] hover:text-white transition-colors">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-                    </a>
-                    <a href="#" className="text-[#FF7E33] hover:text-white transition-colors">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Related Articles */}
-            <div className="my-12">
-              <h3 className="text-2xl font-bold mb-6 text-[#FF7E33]">Articles liés</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <a href="#" className="bg-[#1A1F2C] rounded-lg overflow-hidden border border-[#FF7E33]/20 hover:border-[#FF7E33]/40 transition-transform hover:-translate-y-1 group">
-                  <div className="h-48 overflow-hidden">
-                    <img 
-                      src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGVjb21tZXJjZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" 
-                      alt="Les 10 meilleurs outils pour le dropshipping en 2025" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h4 className="text-lg font-bold mb-2 text-white group-hover:text-[#FF7E33] transition-colors">Les 10 meilleurs outils pour le dropshipping en 2025</h4>
-                    <p className="text-gray-300 text-sm">Découvre les outils indispensables pour automatiser et optimiser ton business dropshipping cette année.</p>
-                  </div>
-                </a>
-                <a href="#" className="bg-[#1A1F2C] rounded-lg overflow-hidden border border-[#FF7E33]/20 hover:border-[#FF7E33]/40 transition-transform hover:-translate-y-1 group">
-                  <div className="h-48 overflow-hidden">
-                    <img 
-                      src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNob3BwaW5nJTIwb25saW5lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" 
-                      alt="Comment trouver des produits tendance avant tout le monde" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h4 className="text-lg font-bold mb-2 text-white group-hover:text-[#FF7E33] transition-colors">Comment trouver des produits tendance avant tout le monde</h4>
-                    <p className="text-gray-300 text-sm">Les techniques secrètes pour dénicher les produits à fort potentiel avant qu'ils ne deviennent viraux.</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-
             {/* Comments Section */}
             <section className="my-12 border-t border-[#FF7E33]/20 pt-8">
               <h3 className="text-2xl font-bold mb-6">Commentaires (12)</h3>
