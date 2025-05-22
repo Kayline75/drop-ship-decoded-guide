@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import DropshippingGuide from "./pages/DropshippingGuide";
+import NavBar from "./components/NavBar";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ const App = () => <QueryClientProvider client={queryClient}>
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <NavBar />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/dropshipping-guide" element={<DropshippingGuide />} />

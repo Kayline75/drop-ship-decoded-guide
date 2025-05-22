@@ -1,5 +1,4 @@
 
-import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import PropositionValeur from "@/components/PropositionValeur";
@@ -14,7 +13,6 @@ import TransparentGuide from "@/components/TransparentGuide";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-hidden">
-      <NavBar />
       <Hero />
       
       <div className="section-transition section-dark">

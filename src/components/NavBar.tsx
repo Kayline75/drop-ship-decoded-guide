@@ -1,11 +1,13 @@
 
 import { useEffect, useState } from "react";
 import { Menu, X, FileText } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +30,23 @@ const NavBar = () => {
     link.rel = 'prefetch';
     link.href = href;
     document.head.appendChild(link);
+  };
+
+  // Handle scroll to section on home page
+  const handleScrollToSection = (event: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    event.preventDefault();
+    
+    if (location.pathname !== "/") {
+      // If not on home page, navigate to home first then scroll
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
+    
+    // If on home page, scroll to section
+    document.querySelector(`#${sectionId}`)?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
   };
 
   return (
@@ -55,18 +74,40 @@ const NavBar = () => {
         
         <div className="hidden md:flex items-center space-x-8">
           <nav className="flex items-center space-x-8">
-            <a 
-              href="#tarifs" 
-              className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
-            >
-              LE PRIX
-            </a>
-            <a 
-              href="#guide-expert" 
-              className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
-            >
-              LE GUIDE
-            </a>
+            {isHomePage ? (
+              <a 
+                href="#tarifs" 
+                className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
+                onClick={(e) => handleScrollToSection(e, "tarifs")}
+              >
+                LE PRIX
+              </a>
+            ) : (
+              <Link 
+                to="/#tarifs" 
+                className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
+              >
+                LE PRIX
+              </Link>
+            )}
+            
+            {isHomePage ? (
+              <a 
+                href="#guide-expert" 
+                className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
+                onClick={(e) => handleScrollToSection(e, "guide-expert")}
+              >
+                LE GUIDE
+              </a>
+            ) : (
+              <Link 
+                to="/#guide-expert" 
+                className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
+              >
+                LE GUIDE
+              </Link>
+            )}
+            
             <Link 
               to="/dropshipping-guide" 
               className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center gap-1"
@@ -74,12 +115,23 @@ const NavBar = () => {
               <FileText className="w-4 h-4" />
               ARTICLE
             </Link>
-            <a 
-              href="#faq" 
-              className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
-            >
-              FAQ
-            </a>
+            
+            {isHomePage ? (
+              <a 
+                href="#faq" 
+                className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
+                onClick={(e) => handleScrollToSection(e, "faq")}
+              >
+                FAQ
+              </a>
+            ) : (
+              <Link 
+                to="/#faq" 
+                className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
+              >
+                FAQ
+              </Link>
+            )}
           </nav>
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
@@ -109,20 +161,48 @@ const NavBar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-black/80 backdrop-blur-lg py-5 px-4 border-b border-[#FF7E33]/20">
           <nav className="flex flex-col space-y-6">
-            <a 
-              href="#tarifs" 
-              className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              LE PRIX
-            </a>
-            <a 
-              href="#guide-expert" 
-              className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              LE GUIDE
-            </a>
+            {isHomePage ? (
+              <a 
+                href="#tarifs" 
+                className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"
+                onClick={(e) => {
+                  handleScrollToSection(e, "tarifs");
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                LE PRIX
+              </a>
+            ) : (
+              <Link 
+                to="/#tarifs" 
+                className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                LE PRIX
+              </Link>
+            )}
+            
+            {isHomePage ? (
+              <a 
+                href="#guide-expert" 
+                className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"
+                onClick={(e) => {
+                  handleScrollToSection(e, "guide-expert");
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                LE GUIDE
+              </a>
+            ) : (
+              <Link 
+                to="/#guide-expert" 
+                className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                LE GUIDE
+              </Link>
+            )}
+            
             <Link 
               to="/dropshipping-guide" 
               className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center gap-2"
@@ -131,13 +211,27 @@ const NavBar = () => {
               <FileText className="w-4 h-4" />
               ARTICLE
             </Link>
-            <a 
-              href="#faq" 
-              className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              FAQ
-            </a>
+            
+            {isHomePage ? (
+              <a 
+                href="#faq" 
+                className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"
+                onClick={(e) => {
+                  handleScrollToSection(e, "faq");
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                FAQ
+              </a>
+            ) : (
+              <Link 
+                to="/#faq" 
+                className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                FAQ
+              </Link>
+            )}
           </nav>
           <div className="mt-6">
             <a 
