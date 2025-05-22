@@ -38,10 +38,10 @@ export const HeroContent = ({
         {/* Titre principal avec gradient animé - optimisé pour le SEO */}
         <h1 className="text-4xl md:text-6xl font-bold mb-6 relative">
           <span className="hero-text bg-clip-text text-transparent bg-gradient-to-r from-white via-orange-200 to-white bg-size-200 animate-gradient-x">
-Maîtrisez le Dropshipping Rentable en 2025</span>
+C'est quoi le Dropshipping ? Découvrez</span>
           <br className="hidden md:block" />
           <span className="hero-text-delay bg-clip-text text-transparent bg-gradient-to-r from-white via-orange-200 to-white bg-size-200 animate-gradient-x">
-            et Générez <span className="text-[#FF7E33]">1000€+</span> par mois !
+            est-ce que le dropshipping est <span className="text-[#FF7E33]">mort</span> en 2025 ?
           </span>
 
           {/* Icônes de packages flottantes près du titre */}
@@ -50,7 +50,7 @@ Maîtrisez le Dropshipping Rentable en 2025</span>
         </h1>
 
         <p className="text-lg md:text-xl text-orange-100 mb-10 max-w-2xl mx-auto fade-in-up font-medium">
-          <span className="underline decoration-[#FF7E33] decoration-2 underline-offset-2">Notre méthode prouvée et structurée</span> transformera votre ambition en business e-commerce profitable avec ou sans stock et à faible investissement.
+          <span className="underline decoration-[#FF7E33] decoration-2 underline-offset-2">Non, le dropshipping n'est pas mort !</span> Notre méthode prouvée transformera votre ambition en business e-commerce profitable avec ou sans stock et à faible investissement.
         </p>
 
         {/* Bouton amélioré et optimisé pour mobile */}
@@ -68,7 +68,7 @@ Maîtrisez le Dropshipping Rentable en 2025</span>
           </GlowButton>
         </div>
         
-        {/* Points clés des avantages - Removed the 500 entrepreneurs section */}
+        {/* Points clés des avantages */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
           <div className="bg-black/30 backdrop-blur-sm rounded-lg p-3 border border-[#FF7E33]/20">
             <p className="text-sm font-medium text-white">Formation complète à partir de <span className="font-bold text-[#FF7E33]">97€/mois</span></p>
@@ -85,7 +85,7 @@ Maîtrisez le Dropshipping Rentable en 2025</span>
             <ArrowDown size={24} className="relative animate-bounce-subtle" />
           </button>
           <span className="text-sm text-orange-200 mt-2">
-            Explorer
+            Découvrir c'est quoi le dropshipping
           </span>
         </div>
       </div>

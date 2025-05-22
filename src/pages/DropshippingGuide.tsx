@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
@@ -25,11 +24,11 @@ const DropshippingGuide = () => {
   return (
     <>
       <SEOHead 
-        title="Qu'est-ce que le dropshipping et comment démarrer sans argent ? (Guide 2025)"
-        description="Guide complet 2025 pour comprendre et démarrer un business en dropshipping sans investissement initial. Découvrez les étapes, outils et méthodes."
-        keywords="dropshipping, e-commerce, gagner argent en ligne, shopify, business en ligne, formation dropshipping, 2025, sans investissement"
-        ogTitle="Guide Dropshipping 2025 - Démarrer sans argent | Whatsdropshipping"
-        ogDescription="Apprenez à créer un business e-commerce rentable sans stock ni investissement initial. Guide étape par étape pour réussir en dropshipping en 2025."
+        title="C'est quoi le dropshipping et est-ce mort en 2025 ? Guide complet"
+        description="C'est quoi le dropshipping exactement ? Est-ce que le dropshipping est mort en 2025 ? Guide complet pour comprendre et démarrer un business sans investissement initial."
+        keywords="c'est quoi le dropshipping, dropshipping définition, est-ce que le dropshipping est mort, dropshipping 2025, e-commerce sans stock, business en ligne, formation dropshipping"
+        ogTitle="C'est quoi le dropshipping et est-ce toujours rentable en 2025 ?"
+        ogDescription="Découvrez exactement c'est quoi le dropshipping et si le dropshipping est mort en 2025. Guide complet et méthode pour réussir sans investissement."
         ogImage="https://lovable.dev/opengraph-image-p98pqg.png"
       />
       
@@ -45,7 +44,7 @@ const DropshippingGuide = () => {
                 <li className="mx-2 text-gray-400">/</li>
                 <li><Link to="/blog" className="text-gray-400 hover:text-[#FF7E33]">Blog</Link></li>
                 <li className="mx-2 text-gray-400">/</li>
-                <li className="text-[#FF7E33]">Qu'est-ce que le dropshipping</li>
+                <li className="text-[#FF7E33]">C'est quoi le dropshipping</li>
               </ol>
             </nav>
             
@@ -61,7 +60,7 @@ const DropshippingGuide = () => {
             {/* Main Heading with featured image */}
             <div className="mb-10">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#FF7E33]">
-                Qu'est-ce que le dropshipping ? Définition simple et méthode 2025
+                C'est quoi le dropshipping exactement ? Est-ce que le dropshipping est mort en 2025 ?
               </h1>
               <div className="relative rounded-lg overflow-hidden mb-8">
                 <img 
@@ -80,10 +79,11 @@ const DropshippingGuide = () => {
             
             {/* Introduction */}
             <div className="mb-8 text-lg leading-relaxed">
+              <h2 className="text-2xl font-bold mb-4 text-[#FF7E33]">C'est quoi le dropshipping exactement ?</h2>
               <p>
-                Le <strong>dropshipping</strong> est un modèle de commerce en ligne qui te permet de vendre des produits <mark className="bg-[#FF7E33]/20 px-1">sans stock, sans local, sans investir une fortune</mark>. 
-                Tu crées une boutique e-commerce, tu choisis des produits auprès de fournisseurs, et lorsqu'un client commande, c'est le fournisseur qui livre à sa place. 
-                Résultat : tu gagnes la différence entre ton prix de vente et le prix fournisseur.
+                Le <strong>dropshipping</strong> est un modèle de commerce en ligne qui vous permet de vendre des produits <mark className="bg-[#FF7E33]/20 px-1">sans stock, sans local, sans investir une fortune</mark>. 
+                Vous créez une boutique e-commerce, vous choisissez des produits auprès de fournisseurs, et lorsqu'un client commande, c'est le fournisseur qui livre directement à sa place. 
+                Résultat : vous gagnez la différence entre votre prix de vente et le prix fournisseur.
               </p>
               
               <div className="my-8 p-4 bg-gradient-to-r from-[#1A1F2C] to-[#282c39] border-l-4 border-[#FF7E33] rounded-r-lg">
@@ -92,6 +92,17 @@ const DropshippingGuide = () => {
                   à tous pour créer une source de revenus en ligne avec un investissement minimal."
                 </p>
               </div>
+              
+              <h2 id="dropshipping-mort" className="text-2xl font-bold mt-8 mb-4 text-[#FF7E33]">Est-ce que le dropshipping est mort en 2025 ?</h2>
+              <p>
+                <strong>Non, le dropshipping n'est pas mort en 2025</strong>. Bien au contraire, il a évolué et s'est adapté aux nouvelles réalités du marché. 
+                Ce qui est mort, ce sont les anciennes méthodes peu fiables : produits de mauvaise qualité, délais de livraison excessifs et marketing trompeur.
+              </p>
+              
+              <p className="mt-4">
+                En 2025, le dropshipping réussi repose sur <mark className="bg-[#FF7E33]/20 px-1">une sélection rigoureuse des produits, des délais de livraison optimisés, et un marketing de qualité</mark>. 
+                Les entrepreneurs qui suivent une méthode structurée continuent de générer des revenus substantiels avec ce modèle.
+              </p>
             </div>
             
             {/* Table of Contents */}
@@ -106,6 +117,11 @@ const DropshippingGuide = () => {
                 <li>
                   <a href="#etapes" className="hover:text-[#FF7E33] flex">
                     <span className="mr-2">➡️</span> Comment fonctionne le dropshipping ? (Étapes)
+                  </a>
+                </li>
+                <li>
+                  <a href="#dropshipping-mort" className="hover:text-[#FF7E33] flex">
+                    <span className="mr-2">➡️</span> Est-ce que le dropshipping est mort en 2025 ?
                   </a>
                 </li>
                 <li>
@@ -131,7 +147,7 @@ const DropshippingGuide = () => {
                     <span className="text-[#FF7E33] mr-2">🏪</span>
                     Aucun stock à gérer
                   </h3>
-                  <p>Fini les inquiétudes liées au stockage et à la gestion d'inventaire. Ton fournisseur s'occupe de tout!</p>
+                  <p>Fini les inquiétudes liées au stockage et à la gestion d'inventaire. Votre fournisseur s'occupe de tout!</p>
                 </div>
                 
                 <div className="bg-gradient-to-br from-[#1A1F2C] to-[#282c39] p-6 rounded-lg border border-[#FF7E33]/10 hover:border-[#FF7E33]/30 transition-all">
@@ -139,7 +155,7 @@ const DropshippingGuide = () => {
                     <span className="text-[#FF7E33] mr-2">💰</span>
                     Peu ou pas de capital pour commencer
                   </h3>
-                  <p>Avec 50€ à 150€, tu peux démarrer une boutique complète et commencer à générer des revenus.</p>
+                  <p>Avec 50€ à 150€, vous pouvez démarrer une boutique complète et commencer à générer des revenus.</p>
                 </div>
                 
                 <div className="bg-gradient-to-br from-[#1A1F2C] to-[#282c39] p-6 rounded-lg border border-[#FF7E33]/10 hover:border-[#FF7E33]/30 transition-all">
@@ -147,7 +163,7 @@ const DropshippingGuide = () => {
                     <span className="text-[#FF7E33] mr-2">🌴</span>
                     Liberté géographique totale
                   </h3>
-                  <p>Travaille depuis n'importe où dans le monde avec une simple connexion internet.</p>
+                  <p>Travaillez depuis n'importe où dans le monde avec une simple connexion internet.</p>
                 </div>
                 
                 <div className="bg-gradient-to-br from-[#1A1F2C] to-[#282c39] p-6 rounded-lg border border-[#FF7E33]/10 hover:border-[#FF7E33]/30 transition-all">
@@ -155,14 +171,14 @@ const DropshippingGuide = () => {
                     <span className="text-[#FF7E33] mr-2">🚀</span>
                     Démarrage ultra rapide
                   </h3>
-                  <p>Grâce à des plateformes comme Shopify ou WooCommerce, tu peux être opérationnel en quelques heures.</p>
+                  <p>Grâce à des plateformes comme Shopify ou WooCommerce, vous pouvez être opérationnel en quelques heures.</p>
                 </div>
               </div>
               
               {/* First CTA */}
               <div className="my-10 p-6 bg-gradient-to-r from-[#FF7E33]/20 to-[#FF5733]/20 rounded-lg border border-[#FF7E33]/30">
-                <h3 className="text-2xl font-bold mb-3">Prêt à découvrir comment générer tes premiers revenus en dropshipping ?</h3>
-                <p className="mb-5">Notre formation complète t'accompagne de A à Z, même si tu pars de zéro et sans budget.</p>
+                <h3 className="text-2xl font-bold mb-3">Prêt à découvrir comment générer vos premiers revenus en dropshipping ?</h3>
+                <p className="mb-5">Notre formation complète vous accompagne de A à Z, même si vous partez de zéro et sans budget.</p>
                 <a 
                   href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
                   onClick={handleCTAClick}
@@ -458,6 +474,33 @@ const DropshippingGuide = () => {
                 </div>
                 
                 <div className="bg-[#1A1F2C]/70 border border-[#FF7E33]/20 rounded-lg p-6 hover:border-[#FF7E33]/40 transition-all">
+                  <h3 className="text-xl font-semibold mb-2">Est-ce que le dropshipping est mort en 2025 ?</h3>
+                  <p>
+                    <strong>Non, le dropshipping n'est absolument pas mort</strong>, mais il a évolué. Les méthodes de 2020-2021 ne fonctionnent plus de la même façon. En 2025, le dropshipping réussi repose sur :
+                  </p>
+                  <ul className="list-disc pl-5 mt-2">
+                    <li>Des produits de qualité avec un réel problème à résoudre</li>
+                    <li>Des délais de livraison rapides (moins de 15 jours)</li>
+                    <li>Un service client irréprochable</li>
+                    <li>Une présence marketing omnicanale (TikTok, Instagram, Google)</li>
+                    <li>Une stratégie de marque cohérente</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-[#1A1F2C]/70 border border-[#FF7E33]/20 rounded-lg p-6 hover:border-[#FF7E33]/40 transition-all">
+                  <h3 className="text-xl font-semibold mb-2">C'est quoi les meilleures plateformes pour faire du dropshipping ?</h3>
+                  <p>
+                    <strong>Les plateformes les plus efficaces pour le dropshipping en 2025 sont :</strong>
+                  </p>
+                  <ul className="list-disc pl-5 mt-2">
+                    <li><strong>Shopify</strong> - La plus populaire et complète, parfaite pour débutants</li>
+                    <li><strong>WooCommerce</strong> - Idéale si vous maîtrisez WordPress, plus économique</li>
+                    <li><strong>TikTok Shop</strong> - Permet de vendre directement via TikTok (nouveauté 2023-2025)</li>
+                    <li><strong>Wix eCommerce</strong> - Simple d'utilisation avec de bons templates</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-[#1A1F2C]/70 border border-[#FF7E33]/20 rounded-lg p-6 hover:border-[#FF7E33]/40 transition-all">
                   <h3 className="text-xl font-semibold mb-2">Puis-je réussir sans publicité payante ?</h3>
                   <p>
                     <strong>Oui, c'est tout à fait possible</strong> grâce à des stratégies de marketing organique :
@@ -475,11 +518,11 @@ const DropshippingGuide = () => {
             {/* Final CTA */}
             <div className="my-16 p-8 bg-gradient-to-r from-[#FF7E33]/30 to-[#FF5733]/30 rounded-lg border border-[#FF7E33]/30 shadow-lg text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Prêt à lancer ton business dropshipping dès aujourd'hui ?
+                Le dropshipping n'est pas mort ! Lancez votre business dès aujourd'hui
               </h2>
               <p className="text-lg mb-8 max-w-2xl mx-auto">
-                Rejoins notre formation complète et bénéficie d'un accompagnement personnalisé 
-                pour créer ta source de revenus en ligne, même en partant de zéro.
+                Rejoignez notre formation complète et bénéficiez d'un accompagnement personnalisé 
+                pour créer votre source de revenus en ligne, même en partant de zéro.
               </p>
               <a 
                 href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
@@ -490,23 +533,23 @@ const DropshippingGuide = () => {
               >
                 DÉMARRER MA FORMATION MAINTENANT →
               </a>
-              <p className="mt-4 text-white/80">Objectif: Ta première vente en moins de 30 jours</p>
+              <p className="mt-4 text-white/80">Objectif: Votre première vente en moins de 30 jours</p>
             </div>
             
             {/* Conclusion */}
             <section>
-              <h2 className="text-3xl font-bold mb-6 text-[#FF7E33]">Conclusion – Lance ton business dropshipping dès aujourd'hui</h2>
+              <h2 className="text-3xl font-bold mb-6 text-[#FF7E33]">Conclusion – Non, le dropshipping n'est pas mort en 2025</h2>
               <p className="mb-4">
-                Le dropshipping n'est pas une arnaque, mais il faut éviter les fausses promesses. C'est un vrai business 
+                Le dropshipping n'est pas une arnaque ni un business mort en 2025, mais il faut éviter les fausses promesses. C'est un vrai business 
                 qui demande de l'apprentissage et de la persévérance. Avec une méthode honnête et claire, des outils adaptés 
-                et un accompagnement de qualité, tu peux réellement générer des revenus importants.
+                et un accompagnement de qualité, vous pouvez réellement générer des revenus importants.
               </p>
               <p className="mb-4">
-                Ne te laisse pas décourager par ceux qui ont échoué sans méthode. Rejoins ceux qui réussissent grâce 
+                Ne vous laissez pas décourager par ceux qui ont échoué sans méthode et qui disent que "le dropshipping est mort". Rejoignez ceux qui réussissent grâce 
                 à une approche structurée et des conseils d'experts qui ont fait leurs preuves.
               </p>
               <p>
-                Ta réussite est à portée de main, et elle commence par une décision : celle de te former correctement.
+                Votre réussite est à portée de main, et elle commence par une décision : celle de vous former correctement pour comprendre exactement c'est quoi le dropshipping rentable.
               </p>
             </section>
             

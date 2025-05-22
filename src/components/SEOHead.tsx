@@ -10,6 +10,7 @@ type SEOHeadProps = {
   ogImage?: string;
   noindex?: boolean;
   nofollow?: boolean;
+  structuredData?: Record<string, any>;
 };
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -21,6 +22,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogImage,
   noindex = false,
   nofollow = false,
+  structuredData,
 }) => {
   useEffect(() => {
     // Update document title
@@ -56,10 +58,29 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     if (ogDescription || description) updateMetaTag("og:description", ogDescription || description, "property");
     if (ogImage) updateMetaTag("og:image", ogImage, "property");
     
+    // Add structured data for SEO if provided
+    if (structuredData) {
+      let scriptTag = document.querySelector('script[type="application/ld+json"]');
+      
+      if (!scriptTag) {
+        scriptTag = document.createElement("script");
+        scriptTag.setAttribute("type", "application/ld+json");
+        document.head.appendChild(scriptTag);
+      }
+      
+      scriptTag.textContent = JSON.stringify(structuredData);
+    }
+    
     return () => {
-      // No cleanup needed as meta tags stay in the document
+      // Clean up structured data if needed
+      if (structuredData) {
+        const scriptTag = document.querySelector('script[type="application/ld+json"]');
+        if (scriptTag) {
+          scriptTag.remove();
+        }
+      }
     };
-  }, [title, description, keywords, ogTitle, ogDescription, ogImage, noindex, nofollow]);
+  }, [title, description, keywords, ogTitle, ogDescription, ogImage, noindex, nofollow, structuredData]);
 
   // This component doesn't render anything visible
   return null;
