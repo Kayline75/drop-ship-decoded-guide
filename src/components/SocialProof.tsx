@@ -1,31 +1,33 @@
+
 import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext
+} from "@/components/ui/carousel";
+import { GlassCard } from "./CardStyles";
+
 const SocialProof = () => {
   const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 500);
     return () => clearTimeout(timer);
   }, []);
-  const testimonials = [{
-    name: "Anonyme",
-    position: "Débutant en e-commerce",
-    content: "Après 4 mois à essayer le dropshipping j'ai enfin eu ma première ventes! Merci à la communauté et l'aide que vous apportez! Prochain versement : 82,50 $, Ventes totales 87,52 $, Sessions 468",
-    rating: 5
-  }, {
-    name: "Anonyme",
-    position: "Nouveau sur le e-commerce",
-    content: "J'ai fais mes premières ventes et je voulais remercier Theo et Guillaume pour leur implication, pour ceux qui débute et parte de zéro comme moi dans le e-commerce comme quoi c'est possible quand on est accompagner par les bonnes personnes. Merci pour tout, vous êtes top ✨ ✨ ✨ ✨",
-    rating: 5
-  }, {
-    name: "Anonyme",
-    position: "Membre de la formation",
-    content: "J'comprend plus moi! ... c'est donc ça le e-com? En 3J je me suis fait casiment mon salaire sur une semaine... Meilleur choix de ma vie! meilleur formation, meilleur coach je veut rien savoir je clot tout les débat!! MERCI... merci.. on garde le cap les amis!! objectif Dubai 🚀 🚀 🚀",
-    rating: 5
-  }];
+
+  const testimonialImages = [
+    "/lovable-uploads/35862d3c-aa6b-46ac-9b29-da7a8d228926.png",
+    "/lovable-uploads/50188027-d3ff-41d5-9be3-1f46a75b86ba.png", 
+    "/lovable-uploads/ae9bf4ab-0c81-4039-ad26-91a75c8b2adf.png"
+  ];
+
   const clients = [{
     name: "Amazon",
     logo: "https://images.unsplash.com/photo-1602345344684-37e44faf9444?crop=entropy&fit=crop&w=120&h=60"
@@ -45,7 +47,9 @@ const SocialProof = () => {
     name: "Wix",
     logo: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?crop=entropy&fit=crop&w=120&h=60"
   }];
-  return <section id="temoignages" className="section-uniform bg-gradient-to-b from-[#331200] to-[#121212] py-[34px]">
+  
+  return (
+    <section id="temoignages" className="section-uniform bg-gradient-to-b from-[#331200] to-[#121212] py-[34px]">
       <div className="container-uniform">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 py-[30px]">
@@ -56,40 +60,52 @@ const SocialProof = () => {
           </p>
         </div>
         
-        {/* Testimonials Section */}
-        <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16 transition-all duration-700 ${isVisible ? "opacity-100" : "opacity-0 translate-y-10"}`}>
-          {testimonials.map((testimonial, index) => <Card key={index} className="bg-gradient-to-br from-[#331200]/40 to-[#121212]/40 backdrop-blur-sm border border-white/10 hover:shadow-xl hover:shadow-[#FF5733]/20 transition-all duration-300 h-full">
-              <CardContent className="p-6 flex flex-col h-full">
-                <div className="flex items-center mb-4">
-                  <div className="mr-4">
-                    <Avatar className="h-14 w-14 border-2 border-[#FF5733]">
-                      <AvatarFallback className="bg-gradient-to-r from-[#FF7E33] to-[#FF5733] text-white">
-                        {testimonial.name.charAt(0)}
-                      </AvatarFallback>
-                    </Avatar>
+        {/* Testimonials Carousel Section */}
+        <div className={`max-w-4xl mx-auto mb-16 transition-all duration-700 ${isVisible ? "opacity-100" : "opacity-0 translate-y-10"}`}>
+          <Carousel 
+            opts={{
+              align: "center",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {testimonialImages.map((image, index) => (
+                <CarouselItem key={index} className="md:basis-1/1 lg:basis-4/5">
+                  <div className="p-1">
+                    <GlassCard className="bg-gradient-to-br from-[#331200]/40 to-[#121212]/40 backdrop-blur-sm border border-white/10 hover:shadow-xl hover:shadow-[#FF5733]/20 transition-all duration-300 overflow-hidden rounded-lg">
+                      <div className="aspect-[16/9] relative overflow-hidden rounded-t-lg">
+                        <img
+                          src={image}
+                          alt={`Témoignage utilisateur ${index + 1}`}
+                          className="w-full h-full object-cover object-center hover:scale-105 transition-all duration-500"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <div className="flex items-center gap-2">
+                          <div className="flex">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                            ))}
+                          </div>
+                          <p className="text-sm text-[#FF9F3F]">Résultats vérifiés</p>
+                        </div>
+                      </div>
+                    </GlassCard>
                   </div>
-                  <div>
-                    <h3 className="font-bold text-white">{testimonial.name}</h3>
-                    <p className="text-sm text-[#FF9F3F]">{testimonial.position}</p>
-                    <div className="flex mt-1">
-                      {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />)}
-                    </div>
-                  </div>
-                </div>
-                <blockquote className="italic text-white flex-grow">
-                  "{testimonial.content}"
-                </blockquote>
-              </CardContent>
-            </Card>)}
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex items-center justify-center gap-4 mt-8">
+              <CarouselPrevious className="static transform-none mx-2 bg-gradient-to-r from-[#FF7E33]/20 to-[#FF5733]/20 border-[#FF7E33]/30 hover:bg-gradient-to-r hover:from-[#FF7E33]/30 hover:to-[#FF5733]/30" />
+              <CarouselNext className="static transform-none mx-2 bg-gradient-to-r from-[#FF7E33]/20 to-[#FF5733]/20 border-[#FF7E33]/30 hover:bg-gradient-to-r hover:from-[#FF7E33]/30 hover:to-[#FF5733]/30" />
+            </div>
+          </Carousel>
         </div>
-        
-        {/* Trusted By Logos */}
-        
         
         {/* Ajout d'une bannière de succès plus visible */}
         <div className="bg-gradient-to-r from-[#FF7E33]/20 to-[#FF5733]/20 p-8 rounded-lg mb-10 border border-white/10 backdrop-blur-sm">
           <div className="text-center">
-            
             <p className="text-[#FF9F3F] max-w-3xl mx-auto">Ces témoignages sont issus de vrais membres de notre communauté qui ont appliqué notre méthode. Certains ont généré leurs premiers revenus en quelques jours seulement, d'autres ont atteint un salaire complet en moins d'un mois.</p>
           </div>
         </div>
@@ -103,6 +119,8 @@ const SocialProof = () => {
           <p className="mt-4 text-[#FF9F3F]">Accès immédiat à la communauté et à tous les modules de formation</p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default SocialProof;
