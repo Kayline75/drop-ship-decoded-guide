@@ -1,4 +1,5 @@
 
+/* Animations de texte gradient - adaptées pour mobile */
 .animate-gradient-text {
   background-image: linear-gradient(
     135deg,
@@ -9,10 +10,22 @@
     hsl(var(--text-sky-blue)) 100%
   );
   background-size: 200% 100%;
-  animation: gradient-text 8s linear infinite;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Animations différentes selon le dispositif */
+@media (min-width: 768px) {
+  .animate-gradient-text {
+    animation: gradient-text 8s linear infinite;
+  }
+}
+
+@media (max-width: 767px) {
+  .animate-gradient-text {
+    animation: gradient-text 15s linear infinite;
+  }
 }
 
 @keyframes gradient-text {
@@ -35,22 +48,37 @@
 
 /* Other utility styles */
 .section-padding {
-  @apply px-4 md:px-8 py-16 md:py-24;
+  @apply px-4 md:px-8 py-12 md:py-24;
 }
 
-.card-hover {
-  @apply transition-all duration-300 hover:shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:-translate-y-2;
+/* Effets hover uniquement sur desktop */
+@media (min-width: 768px) {
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:-translate-y-2;
+  }
 }
 
 .content-container {
   @apply max-w-3xl mx-auto;
 }
 
+/* Pattern grid - amélioré pour mobile */
 .pattern-grid {
   background-color: rgba(0, 0, 0, 0.15);
   background-image: linear-gradient(rgba(51, 195, 240, 0.05) 1px, transparent 1px), 
                     linear-gradient(90deg, rgba(51, 195, 240, 0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
+}
+
+@media (min-width: 768px) {
+  .pattern-grid {
+    background-size: 20px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pattern-grid {
+    background-size: 15px 15px;
+  }
 }
 
 /* Amélioration des liens */
@@ -80,13 +108,13 @@ a.inline-flex, a.inline-block {
 }
 
 .card-uniform {
-  @apply rounded-lg overflow-hidden shadow-md p-6 h-full flex flex-col justify-between;
+  @apply rounded-lg overflow-hidden shadow-md p-4 md:p-6 h-full flex flex-col justify-between;
   margin: 0 auto;
   max-width: 95%;
 }
 
 .section-uniform {
-  @apply py-16 md:py-20;
+  @apply py-12 md:py-20;
   margin: 0;
   width: 100%;
 }
@@ -123,15 +151,18 @@ input, select, textarea {
   @apply bg-white/5 backdrop-blur-sm border border-white/10;
 }
 
-/* Glass card styling */
+/* Glass card styling - optimisé pour mobile */
 .glass-card {
-  @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6;
+  @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 md:p-6;
   transition: all 0.3s ease;
 }
 
-.glass-card:hover {
-  @apply shadow-lg border-white/20;
-  transform: translateY(-2px);
+/* Effets différents pour mobile et desktop */
+@media (min-width: 768px) {
+  .glass-card:hover {
+    @apply shadow-lg border-white/20;
+    transform: translateY(-2px);
+  }
 }
 
 /* Enhanced text readability */
@@ -142,7 +173,7 @@ input, select, textarea {
 
 /* Consistent padding for sections */
 .section-padding-y {
-  @apply py-16 md:py-24;
+  @apply py-12 md:py-24;
 }
 
 .section-padding-x {
@@ -151,33 +182,40 @@ input, select, textarea {
 
 /* Consistent margins for headings */
 h2.section-heading {
-  @apply text-3xl md:text-4xl font-bold mb-6 py-6;
+  @apply text-2xl md:text-4xl font-bold mb-4 md:mb-6 py-4 md:py-6;
 }
 
 /* Consistent styling for cards */
 .harmonized-card {
-  @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 transition-all duration-300;
+  @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 md:p-6 transition-all duration-300;
 }
 
-.harmonized-card:hover {
-  @apply shadow-lg border-white/20;
-  transform: translateY(-2px);
+/* Effets différents pour mobile et desktop */
+@media (min-width: 768px) {
+  .harmonized-card:hover {
+    @apply shadow-lg border-white/20;
+    transform: translateY(-2px);
+  }
 }
 
-/* Enhanced button styling */
+/* Enhanced button styling - optimisé pour mobile */
 .btn-primary {
-  @apply bg-gradient-to-r from-brand-orange to-brand-dark text-white px-6 py-3 rounded-md font-medium shadow-md transition-all duration-300;
+  @apply bg-gradient-to-r from-brand-orange to-brand-dark text-white px-4 md:px-6 py-2 md:py-3 rounded-md font-medium shadow-md transition-all duration-300;
 }
 
-.btn-primary:hover {
-  @apply shadow-lg;
-  transform: translateY(-1px);
+@media (min-width: 768px) {
+  .btn-primary:hover {
+    @apply shadow-lg;
+    transform: translateY(-1px);
+  }
 }
 
 .btn-secondary {
-  @apply bg-white/10 backdrop-blur-sm border border-white/20 text-white px-6 py-3 rounded-md font-medium transition-all duration-300;
+  @apply bg-white/10 backdrop-blur-sm border border-white/20 text-white px-4 md:px-6 py-2 md:py-3 rounded-md font-medium transition-all duration-300;
 }
 
-.btn-secondary:hover {
-  @apply bg-white/20 border-white/30;
+@media (min-width: 768px) {
+  .btn-secondary:hover {
+    @apply bg-white/20 border-white/30;
+  }
 }

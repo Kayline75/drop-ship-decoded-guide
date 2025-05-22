@@ -21,9 +21,18 @@
   transition: transform 0.3s ease;
 }
 
-.glass-card:hover {
-  @apply bg-white/10 border-white/15;
-  transform: translateY(-5px);
+/* Désactiver les transformations sur mobile pour économiser des ressources */
+@media (min-width: 768px) {
+  .glass-card:hover {
+    @apply bg-white/10 border-white/15;
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 767px) {
+  .glass-card:hover {
+    @apply bg-white/10 border-white/15;
+  }
 }
 
 .glass-card-premium {
@@ -32,9 +41,18 @@
   transition: transform 0.3s ease;
 }
 
-.glass-card-premium:hover {
-  @apply bg-white/15 border-white/30;
-  transform: translateY(-5px);
+/* Désactiver les transformations sur mobile pour économiser des ressources */
+@media (min-width: 768px) {
+  .glass-card-premium:hover {
+    @apply bg-white/15 border-white/30;
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 767px) {
+  .glass-card-premium:hover {
+    @apply bg-white/15 border-white/30;
+  }
 }
 
 /* Card backdrop */
@@ -44,23 +62,38 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Animated border effect - optimisé */
+/* Animated border effect - optimisé et adapté pour mobile */
 .animated-border-card {
   position: relative;
   isolation: isolate;
   border-radius: var(--radius);
 }
 
-.animated-border-card::after {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  background: linear-gradient(45deg, #FF7E33, #FF5733, #FFFFFF);
-  background-size: 200% 200%;
-  animation: gradient-border 8s ease infinite;
-  border-radius: calc(var(--radius) + 1px);
-  z-index: -1;
-  will-change: background-position;
+/* N'afficher l'animation de bordure que sur desktop */
+@media (min-width: 768px) {
+  .animated-border-card::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(45deg, #FF7E33, #FF5733, #FFFFFF);
+    background-size: 200% 200%;
+    animation: gradient-border 8s ease infinite;
+    border-radius: calc(var(--radius) + 1px);
+    z-index: -1;
+    will-change: background-position;
+  }
+}
+
+/* Version mobile simplifiée pour économiser les ressources */
+@media (max-width: 767px) {
+  .animated-border-card::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(45deg, #FF7E33, #FF5733);
+    border-radius: calc(var(--radius) + 1px);
+    z-index: -1;
+  }
 }
 
 @keyframes gradient-border {
@@ -69,50 +102,62 @@
   100% { background-position: 0% 50%; }
 }
 
-/* Button glow effect - simplifié */
+/* Button glow effect - simplifié et adapté pour mobile */
 .button-glow {
   position: relative;
   overflow: hidden;
 }
 
-.button-glow:hover {
-  box-shadow: 0 0 15px rgba(255, 126, 51, 0.6);
+/* Version desktop complète */
+@media (min-width: 768px) {
+  .button-glow:hover {
+    box-shadow: 0 0 15px rgba(255, 126, 51, 0.6);
+  }
+
+  .button-glow::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 126, 51, 0.3) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .button-glow:hover::after {
+    opacity: 0.6;
+  }
 }
 
-.button-glow::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 126, 51, 0.3) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
+/* Version mobile simplifiée */
+@media (max-width: 767px) {
+  .button-glow:active {
+    box-shadow: 0 0 10px rgba(255, 126, 51, 0.4);
+  }
 }
 
-.button-glow:hover::after {
-  opacity: 0.6;
-}
-
-/* Navigation styles */
+/* Navigation styles - adaptés pour mobile */
 .nav-link {
   position: relative;
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background: linear-gradient(to right, #FF7E33, #FF5733);
-  transition: width 0.3s ease;
-}
+@media (min-width: 768px) {
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(to right, #FF7E33, #FF5733);
+    transition: width 0.3s ease;
+  }
 
-.nav-link:hover::after {
-  width: 100%;
+  .nav-link:hover::after {
+    width: 100%;
+  }
 }
 
 /* Enhanced card styles */
@@ -120,9 +165,11 @@
   @apply bg-white/5 border border-white/10 rounded-lg p-6 transition-all duration-300 flex flex-col items-center justify-center h-full;
 }
 
-.feature-card:hover {
-  @apply bg-white/10 border-white/20;
-  transform: translateY(-3px);
+@media (min-width: 768px) {
+  .feature-card:hover {
+    @apply bg-white/10 border-white/20;
+    transform: translateY(-3px);
+  }
 }
 
 /* Improved heading styles */
@@ -150,7 +197,7 @@
   overflow: hidden;
 }
 
-/* WhatsApp button styles - optimisés */
+/* WhatsApp button styles - optimisés pour mobile */
 .whatsapp-container {
   position: fixed;
   bottom: 20px;
@@ -159,6 +206,12 @@
   flex-direction: column;
   align-items: center;
   z-index: 999;
+}
+
+/* Ajustements spécifiques pour mobile */
+.whatsapp-mobile {
+  bottom: 10px;
+  right: 10px;
 }
 
 .whatsapp-label {
@@ -195,9 +248,28 @@
   will-change: transform;
 }
 
-.whatsapp-float:hover {
-  background-color: #20b954;
-  transform: scale(1.1);
+/* Ajuster la taille pour mobile */
+@media (max-width: 767px) {
+  .whatsapp-float {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Desktop hover */
+@media (min-width: 768px) {
+  .whatsapp-float:hover {
+    background-color: #20b954;
+    transform: scale(1.1);
+  }
+}
+
+/* Mobile active state */
+@media (max-width: 767px) {
+  .whatsapp-float:active {
+    background-color: #20b954;
+    transform: scale(1.05);
+  }
 }
 
 /* Simplified section transitions */

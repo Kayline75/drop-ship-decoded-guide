@@ -12,29 +12,48 @@
   --twinkle-scale-min: 0.8;
   --twinkle-scale-max: 1.1;
   --twinkle-duration: 2s;
+  
+  /* Variables adaptées pour mobile */
+  --mobile-gradient-text-speed: 12s;
+  --mobile-float-amplitude: 5px;
+  --mobile-float-duration: 8s;
+  --mobile-pulse-duration: 4s;
 }
 
-/* Mouse follower effect - Optimized for GPU acceleration */
-.mouse-follower {
-  position: fixed;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(249, 115, 22, 0.2) 0%, rgba(51, 195, 240, 0.1) 70%, transparent 100%); /* Changed to orange and sky blue */
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: screen;
-  /* Use transform instead of top/left for better performance */
-  transform: translate(calc(var(--mouse-x, 0px) - 50%), calc(var(--mouse-y, 0px) - 50%));
-  will-change: transform; /* Hint to the browser to optimize for animation */
+/* Mouse follower effect - Only on desktop */
+@media (min-width: 768px) {
+  .mouse-follower {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.2) 0%, rgba(51, 195, 240, 0.1) 70%, transparent 100%);
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: screen;
+    transform: translate(calc(var(--mouse-x, 0px) - 50%), calc(var(--mouse-y, 0px) - 50%));
+    will-change: transform;
+  }
 }
 
-/* Text gradient animations - using CSS variables */
+/* Text gradient animations - optimisé pour mobile */
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--gradient-primary)] to-[var(--gradient-secondary)];
   background-size: 300% 100%;
-  animation: gradient-animation var(--gradient-text-speed) ease infinite;
-  will-change: background-position; /* Optimize animation */
+}
+
+/* Différentes animations selon le dispositif */
+@media (min-width: 768px) {
+  .gradient-text {
+    animation: gradient-animation var(--gradient-text-speed) ease infinite;
+    will-change: background-position;
+  }
+}
+
+@media (max-width: 767px) {
+  .gradient-text {
+    animation: gradient-animation var(--mobile-gradient-text-speed) ease infinite;
+  }
 }
 
 @keyframes gradient-animation {
@@ -59,28 +78,43 @@
   }
 }
 
-.animate-gradient-x {
-  animation: gradient-x 15s linear infinite;
-  will-change: background-position;
+/* Desktop animations */
+@media (min-width: 768px) {
+  .animate-gradient-x {
+    animation: gradient-x 15s linear infinite;
+    will-change: background-position;
+  }
+
+  .hero-text {
+    opacity: 0;
+    animation: fade-in-up 1s ease forwards 0.3s;
+    will-change: opacity, transform;
+  }
+
+  .hero-text-delay {
+    opacity: 0;
+    animation: fade-in-up 1s ease forwards 0.6s;
+    will-change: opacity, transform;
+  }
+}
+
+/* Mobile animations - simplifiées */
+@media (max-width: 767px) {
+  .animate-gradient-x {
+    animation: gradient-x 20s linear infinite;
+  }
+
+  .hero-text,
+  .hero-text-delay {
+    opacity: 1; /* Pas d'animation de fondu pour accélérer le rendu initial */
+  }
 }
 
 .bg-size-200 {
   background-size: 200% 100%;
 }
 
-.hero-text {
-  opacity: 0;
-  animation: fade-in-up 1s ease forwards 0.3s;
-  will-change: opacity, transform; /* Optimize animation */
-}
-
-.hero-text-delay {
-  opacity: 0;
-  animation: fade-in-up 1s ease forwards 0.6s;
-  will-change: opacity, transform; /* Optimize animation */
-}
-
-/* Animated border effect */
+/* Animated border effect - only on desktop */
 @keyframes gradient-border {
   0% {
     background-position: 0% 50%;
@@ -93,34 +127,45 @@
   }
 }
 
-/* Fade in animations */
-@keyframes fade-in-up {
-  from {
+/* Fade in animations - versions desktop uniquement */
+@media (min-width: 768px) {
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in-up {
     opacity: 0;
-    transform: translateY(20px);
+    animation: fade-in-up 1s ease forwards 0.9s;
+    will-change: opacity, transform;
   }
-  to {
+
+  .fade-in-up-delay {
+    opacity: 0;
+    animation: fade-in-up 1s ease forwards 1.2s;
+    will-change: opacity, transform;
+  }
+
+  .fade-in-up-delay-2 {
+    opacity: 0;
+    animation: fade-in-up 1s ease forwards 1.5s;
+    will-change: opacity, transform;
+  }
+}
+
+/* Versions mobile - pas d'animations pour améliorer la performance */
+@media (max-width: 767px) {
+  .fade-in-up,
+  .fade-in-up-delay,
+  .fade-in-up-delay-2 {
     opacity: 1;
-    transform: translateY(0);
   }
-}
-
-.fade-in-up {
-  opacity: 0;
-  animation: fade-in-up 1s ease forwards 0.9s;
-  will-change: opacity, transform; /* Optimize animation */
-}
-
-.fade-in-up-delay {
-  opacity: 0;
-  animation: fade-in-up 1s ease forwards 1.2s;
-  will-change: opacity, transform; /* Optimize animation */
-}
-
-.fade-in-up-delay-2 {
-  opacity: 0;
-  animation: fade-in-up 1s ease forwards 1.5s;
-  will-change: opacity, transform; /* Optimize animation */
 }
 
 /* Custom float animation - using CSS variables */
@@ -133,9 +178,19 @@
   }
 }
 
-.animate-float-custom {
-  animation: float-custom var(--float-duration) ease-in-out infinite;
-  will-change: transform; /* Optimize animation */
+/* Desktop version */
+@media (min-width: 768px) {
+  .animate-float-custom {
+    animation: float-custom var(--float-duration) ease-in-out infinite;
+    will-change: transform;
+  }
+}
+
+/* Mobile version - reduced or disabled */
+@media (max-width: 767px) {
+  .animate-float-custom {
+    animation: float-custom var(--mobile-float-duration) ease-in-out infinite;
+  }
 }
 
 /* Additional animations - using CSS variables */
@@ -148,9 +203,19 @@
   }
 }
 
-.animate-pulse-slow {
-  animation: pulse-slow var(--pulse-duration) ease-in-out infinite;
-  will-change: opacity; /* Optimize animation */
+/* Desktop version */
+@media (min-width: 768px) {
+  .animate-pulse-slow {
+    animation: pulse-slow var(--pulse-duration) ease-in-out infinite;
+    will-change: opacity;
+  }
+}
+
+/* Mobile version - slower or disabled */
+@media (max-width: 767px) {
+  .animate-pulse-slow {
+    animation: pulse-slow var(--mobile-pulse-duration) ease-in-out infinite;
+  }
 }
 
 @keyframes twinkle {
@@ -164,14 +229,25 @@
   }
 }
 
-.animate-twinkle {
-  animation: twinkle var(--twinkle-duration) ease-in-out infinite;
-  will-change: opacity, transform; /* Optimize animation */
+/* Desktop version */
+@media (min-width: 768px) {
+  .animate-twinkle {
+    animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+    will-change: opacity, transform;
+  }
+
+  .animate-twinkle-delayed {
+    animation: twinkle var(--twinkle-duration) ease-in-out 1s infinite;
+    will-change: opacity, transform;
+  }
 }
 
-.animate-twinkle-delayed {
-  animation: twinkle var(--twinkle-duration) ease-in-out 1s infinite;
-  will-change: opacity, transform; /* Optimize animation */
+/* Mobile version - disabled */
+@media (max-width: 767px) {
+  .animate-twinkle,
+  .animate-twinkle-delayed {
+    animation: none;
+  }
 }
 
 @keyframes bounce-subtle {
@@ -183,9 +259,19 @@
   }
 }
 
-.animate-bounce-subtle {
-  animation: bounce-subtle 2s ease-in-out infinite;
-  will-change: transform; /* Optimize animation */
+/* Desktop version */
+@media (min-width: 768px) {
+  .animate-bounce-subtle {
+    animation: bounce-subtle 2s ease-in-out infinite;
+    will-change: transform;
+  }
+}
+
+/* Mobile version - disabled */
+@media (max-width: 767px) {
+  .animate-bounce-subtle {
+    animation: none;
+  }
 }
 
 @keyframes gradient-text {
@@ -194,7 +280,7 @@
   }
 }
 
-/* Enhanced floating animation for elements */
+/* Enhanced floating animation for elements - desktop only */
 @keyframes float {
   0%, 100% { 
     transform: translateY(0) rotate(0); 
@@ -210,22 +296,35 @@
   }
 }
 
-.floating-element {
-  position: absolute;
-  z-index: 5;
-  opacity: 0.7;
-  transition: all 0.3s ease;
-  animation: float 8s ease-in-out infinite;
-  will-change: transform, opacity;
-  cursor: pointer;
+/* Desktop version */
+@media (min-width: 768px) {
+  .floating-element {
+    position: absolute;
+    z-index: 5;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    animation: float 8s ease-in-out infinite;
+    will-change: transform, opacity;
+    cursor: pointer;
+  }
+
+  .floating-element:hover {
+    opacity: 1;
+    animation-play-state: paused;
+  }
 }
 
-.floating-element:hover {
-  opacity: 1;
-  animation-play-state: paused;
+/* Mobile version - simplifiée */
+@media (max-width: 767px) {
+  .floating-element {
+    position: absolute;
+    z-index: 5;
+    opacity: 0.5;
+    /* Animation désactivée sur mobile */
+  }
 }
 
-/* Specific animation for airplane */
+/* Specific animation for airplane - desktop only */
 @keyframes fly {
   0% {
     transform: translateY(0) translateX(0);
@@ -244,9 +343,19 @@
   }
 }
 
-.airplane-icon {
-  animation: fly 15s ease-in-out infinite;
-  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.4));
+/* Desktop version */
+@media (min-width: 768px) {
+  .airplane-icon {
+    animation: fly 15s ease-in-out infinite;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.4));
+  }
+}
+
+/* Mobile version - désactivée */
+@media (max-width: 767px) {
+  .airplane-icon {
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.3));
+  }
 }
 
 /* For left-facing planes */

@@ -21,10 +21,33 @@
     <meta name="keywords" content="c'est quoi le dropshipping, dropshipping mort 2025, formation dropshipping, dropshipping rentable, méthode dropshipping, est-ce que le dropshipping est mort, démarrer dropshipping, commerce en ligne, e-commerce sans stock" />
     <link rel="canonical" href="https://whatsdropshipping.com/" />
     
-    <!-- Préchargement des ressources critiques pour le rendu -->
-    <link rel="preload" href="/src/styles/base.css" as="style" />
+    <!-- Styles critiques inlinés pour éviter le blocage du rendu -->
+    <style>
+      /* Styles critiques pour le premier rendu */
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #121212;
+        color: white;
+      }
+      .hero-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      /* Ajouter d'autres styles critiques si nécessaire */
+    </style>
+    
+    <!-- Préchargement des polices critiques -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+    
+    <!-- Préchargement des ressources critiques pour le rendu -->
+    <link rel="preload" href="/src/styles/base.css" as="style" />
     
     <!-- Cache Control pour ressources statiques -->
     <meta http-equiv="Cache-Control" content="max-age=31536000" />
@@ -34,6 +57,6 @@
     <div id="root"></div>
     <!-- Script for "Edit with Lovable" functionality -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx" defer></script>
   </body>
 </html>
