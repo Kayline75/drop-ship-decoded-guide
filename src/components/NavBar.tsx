@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { Menu, X, Settings } from "lucide-react";
+import { Menu, X, Settings, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -67,6 +67,13 @@ const NavBar = () => {
             >
               LE GUIDE
             </a>
+            <Link 
+              to="/dropshipping-guide" 
+              className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center gap-1"
+            >
+              <FileText className="w-4 h-4" />
+              ARTICLE
+            </Link>
             <a 
               href="#faq" 
               className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
@@ -123,6 +130,14 @@ const NavBar = () => {
             >
               LE GUIDE
             </a>
+            <Link 
+              to="/dropshipping-guide" 
+              className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center gap-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <FileText className="w-4 h-4" />
+              ARTICLE
+            </Link>
             <a 
               href="#faq" 
               className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"

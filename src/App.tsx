@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import SEOSettings from "./pages/SEOSettings";
 import MouseFollower from "./components/MouseFollower";
+import DropshippingGuide from "./pages/DropshippingGuide";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => <QueryClientProvider client={queryClient}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/seo-settings" element={<SEOSettings />} />
+            <Route path="/dropshipping-guide" element={<DropshippingGuide />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
