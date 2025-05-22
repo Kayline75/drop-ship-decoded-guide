@@ -1,5 +1,5 @@
 
-/* Hero section styles */
+/* Hero section styles - optimisés */
 .hero-section {
   background-color: transparent;
   position: relative;
@@ -14,37 +14,37 @@
   z-index: 0;
 }
 
-/* Glass card effects */
+/* Glass card effects - simplifiés */
 .glass-card {
   @apply backdrop-blur-lg bg-white/5 border border-white/10 rounded-lg shadow-md;
   position: relative;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .glass-card:hover {
-  @apply bg-white/10 border-white/15 shadow-lg;
+  @apply bg-white/10 border-white/15;
   transform: translateY(-5px);
 }
 
 .glass-card-premium {
   @apply backdrop-blur-lg bg-white/10 border border-white/20 rounded-lg shadow-lg;
   position: relative;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .glass-card-premium:hover {
-  @apply bg-white/15 border-white/30 shadow-xl;
+  @apply bg-white/15 border-white/30;
   transform: translateY(-5px);
 }
 
-/* Card backdrop - ensure consistent dark background */
+/* Card backdrop */
 .card-backdrop {
   background-color: transparent;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Animated border effect */
+/* Animated border effect - optimisé */
 .animated-border-card {
   position: relative;
   isolation: isolate;
@@ -56,10 +56,11 @@
   position: absolute;
   inset: -1px;
   background: linear-gradient(45deg, #FF7E33, #FF5733, #FFFFFF);
-  background-size: 400% 400%;
+  background-size: 200% 200%;
   animation: gradient-border 8s ease infinite;
   border-radius: calc(var(--radius) + 1px);
   z-index: -1;
+  will-change: background-position;
 }
 
 @keyframes gradient-border {
@@ -68,7 +69,7 @@
   100% { background-position: 0% 50%; }
 }
 
-/* Button glow effect */
+/* Button glow effect - simplifié */
 .button-glow {
   position: relative;
   overflow: hidden;
@@ -87,13 +88,11 @@
   height: 200%;
   background: radial-gradient(circle, rgba(255, 126, 51, 0.3) 0%, transparent 70%);
   opacity: 0;
-  transform: scale(0.5);
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 
 .button-glow:hover::after {
   opacity: 0.6;
-  transform: scale(1);
 }
 
 /* Navigation styles */
@@ -116,43 +115,13 @@
   width: 100%;
 }
 
-/* Revenue numbers floating animation */
-.floating-revenue {
-  position: absolute;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.8);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 5;
-  opacity: 0.7;
-  transition: all 0.3s ease;
-}
-
-.floating-revenue:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-/* Package icon animation */
-.package-icon {
-  position: absolute;
-  z-index: 5;
-  opacity: 0.5;
-  transition: all 0.3s ease;
-  transform-origin: center;
-}
-
-.package-icon:hover {
-  opacity: 0.8;
-  transform: scale(1.2) rotate(5deg);
-}
-
 /* Enhanced card styles */
 .feature-card {
-  @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 transition-all duration-300 flex flex-col items-center justify-center h-full;
+  @apply bg-white/5 border border-white/10 rounded-lg p-6 transition-all duration-300 flex flex-col items-center justify-center h-full;
 }
 
 .feature-card:hover {
-  @apply bg-white/10 border-white/20 shadow-lg;
+  @apply bg-white/10 border-white/20;
   transform: translateY(-3px);
 }
 
@@ -181,84 +150,7 @@
   overflow: hidden;
 }
 
-.btn-gradient::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-  transition: left 0.7s ease;
-}
-
-.btn-gradient:hover::before {
-  left: 100%;
-}
-
-/* Accordion custom styling */
-.custom-accordion-item {
-  @apply border-white/10 mb-2;
-  transition: all 0.3s ease;
-}
-
-.custom-accordion-item:hover {
-  @apply bg-white/5;
-}
-
-.custom-accordion-trigger {
-  @apply py-4 px-5 w-full text-left font-medium flex justify-between items-center text-white;
-}
-
-.custom-accordion-content {
-  @apply px-5 pb-4 pt-0 text-[#FF9F3F] text-center;
-}
-
-/* Enhanced image hover effects */
-.hover-scale-image {
-  @apply transition-transform duration-300;
-  transform-origin: center;
-}
-
-.hover-scale-image:hover {
-  transform: scale(1.05);
-}
-
-/* Section transitions */
-.section-transition {
-  position: relative;
-  z-index: 1;
-  overflow: visible;
-}
-
-.section-transition::after {
-  content: '';
-  position: absolute;
-  bottom: -100px;
-  left: 0;
-  right: 0;
-  height: 100px;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.section-dark::after {
-  background: linear-gradient(to bottom, rgba(18, 18, 18, 0), rgba(51, 18, 0, 1));
-}
-
-.section-orange::after {
-  background: linear-gradient(to bottom, rgba(51, 18, 0, 0), rgba(18, 18, 18, 1));
-}
-
-.section-dark {
-  background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0.9) 100%);
-}
-
-.section-orange {
-  background: linear-gradient(180deg, rgba(51, 18, 0, 1) 0%, rgba(51, 18, 0, 0.9) 100%);
-}
-
-/* WhatsApp button styles */
+/* WhatsApp button styles - optimisés */
 .whatsapp-container {
   position: fixed;
   bottom: 20px;
@@ -280,7 +172,7 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   opacity: 0;
   transform: translateY(10px);
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .whatsapp-container:hover .whatsapp-label {
@@ -299,10 +191,26 @@
   justify-content: center;
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  will-change: transform;
 }
 
 .whatsapp-float:hover {
   background-color: #20b954;
   transform: scale(1.1);
+}
+
+/* Simplified section transitions */
+.section-transition {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+.section-dark {
+  background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0.9) 100%);
+}
+
+.section-orange {
+  background: linear-gradient(180deg, rgba(51, 18, 0, 1) 0%, rgba(51, 18, 0, 0.9) 100%);
 }

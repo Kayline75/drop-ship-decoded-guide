@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Package } from "lucide-react";
 import { AnimatedBadge, GlowButton } from "../CardStyles";
@@ -11,38 +12,38 @@ export const HeroContent = ({
 }: HeroContentProps) => {
   // Optimize external link handling
   const handleExternalLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    // Pre-load link in background
+    // Open link in new tab without prefetching to reduce initial load
+    event.preventDefault();
     const href = (event.currentTarget as HTMLAnchorElement).href;
-    const link = document.createElement('link');
-    link.rel = 'prefetch';
-    link.href = href;
-    document.head.appendChild(link);
+    setTimeout(() => {
+      window.open(href, "_blank", "noopener,noreferrer");
+    }, 50);
   };
-  return <div className={`container mx-auto px-4 py-16 relative z-10 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+  
+  return <div className={`container mx-auto px-4 py-16 relative z-10 transition-all ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
       <div className="max-w-4xl mx-auto text-center">
-        {/* Badge animé */}
+        {/* Badge animé - animation simplifiée */}
         <div className="mb-6">
           <div className="flex items-center gap-2 relative justify-center">
-            <Package className="h-4 w-4 text-[#FF7E33] animate-twinkle" />
-            <span className="text-sm font-medium text-white animate-gradient-text">
+            <Package className="h-4 w-4 text-[#FF7E33]" />
+            <span className="text-sm font-medium text-white">
               Formation Expert Dropshipping 2025
             </span>
-            <Package className="h-4 w-4 text-[#FF7E33] animate-twinkle-delayed" />
+            <Package className="h-4 w-4 text-[#FF7E33]" />
           </div>
         </div>
 
-        {/* Titre principal avec gradient animé - optimisé pour le SEO */}
+        {/* Titre optimisé avec moins d'animations */}
         <h1 className="text-4xl md:text-6xl font-bold mb-6 relative">
-          <span className="hero-text bg-clip-text text-transparent bg-gradient-to-r from-white via-orange-200 to-white bg-size-200 animate-gradient-x">C'est quoi le Dropshipping ?
+          <span className="hero-text bg-clip-text text-transparent bg-gradient-to-r from-white via-orange-200 to-white">C'est quoi le Dropshipping ?
         </span>
           <br className="hidden md:block" />
-          <span className="hero-text-delay bg-clip-text text-transparent bg-gradient-to-r from-white via-orange-200 to-white bg-size-200 animate-gradient-x">
+          <span className="hero-text-delay bg-clip-text text-transparent bg-gradient-to-r from-white via-orange-200 to-white">
             est-ce que le dropshipping est <span className="text-[#FF7E33]">mort</span> en 2025 ?
           </span>
 
-          {/* Icônes de packages flottantes près du titre */}
-          <Package className="absolute -right-4 -top-4 h-6 w-6 text-[#FF7E33] animate-float opacity-75" />
-          <Package className="absolute -left-8 bottom-0 h-4 w-4 text-[#FF7E33]/70 animate-float-delayed opacity-75" />
+          {/* Réduit les icônes flottantes */}
+          <Package className="absolute -right-4 -top-4 h-6 w-6 text-[#FF7E33] opacity-75" />
         </h1>
 
         <p className="text-lg md:text-xl text-orange-100 mb-10 max-w-2xl mx-auto fade-in-up font-medium">
@@ -52,28 +53,27 @@ export const HeroContent = ({
         {/* Bouton amélioré et optimisé pour mobile */}
         <div className="flex flex-col sm:flex-row gap-5 justify-center fade-in-up-delay">
           <GlowButton>
-            <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 transition-all relative z-10 text-white px-8 py-4 shadow-[0_0_20px_rgba(255,87,51,0.4)]" target="_blank" rel="preconnect" onClick={handleExternalLink}>
+            <a href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold bg-gradient-to-r from-[#FF7E33] to-[#FF5733] hover:opacity-90 transition-all relative z-10 text-white px-8 py-4 shadow-[0_0_20px_rgba(255,87,51,0.4)]" target="_blank" rel="noopener noreferrer" onClick={handleExternalLink}>
               <span className="relative z-10 text-lg font-bold hidden sm:inline">ACCÉDER À LA FORMATION →</span>
               <span className="relative z-10 text-lg font-bold sm:hidden">COMMENCER →</span>
             </a>
           </GlowButton>
         </div>
         
-        {/* Points clés des avantages */}
+        {/* Points clés des avantages - optimisés */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-          <div className="bg-black/30 backdrop-blur-sm rounded-lg p-3 border border-[#FF7E33]/20">
+          <div className="bg-black/30 rounded-lg p-3 border border-[#FF7E33]/20">
             <p className="text-sm font-medium text-white">Formation complète à partir de <span className="font-bold text-[#FF7E33]">97€/mois</span></p>
           </div>
-          <div className="bg-black/30 backdrop-blur-sm rounded-lg p-3 border border-[#FF7E33]/20">
+          <div className="bg-black/30 rounded-lg p-3 border border-[#FF7E33]/20">
             <p className="text-sm font-medium text-white">Support quotidien <span className="font-bold text-[#FF7E33]">7j/7</span></p>
           </div>
         </div>
 
-        {/* Indicateur de défilement animé */}
-        <div className="mt-20 md:mt-28 flex flex-col items-center fade-in-up-delay-2">
+        {/* Indicateur de défilement simplifié */}
+        <div className="mt-20 md:mt-28 flex flex-col items-center">
           <button onClick={scrollToNext} aria-label="Scroll down" className="text-[#FF7E33] hover:text-[#FF7E33]/80 transition-colors relative p-4 group">
-            <div className="absolute inset-0 rounded-full bg-[#FF7E33]/10 scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-            <ArrowDown size={24} className="relative animate-bounce-subtle" />
+            <ArrowDown size={24} className="relative" />
           </button>
           <span className="text-sm text-orange-200 mt-2">
             Découvrir c'est quoi le dropshipping
