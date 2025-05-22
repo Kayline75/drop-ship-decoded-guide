@@ -6,21 +6,19 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import SEOSettings from "./pages/SEOSettings";
-import MouseFollower from "./components/MouseFollower";
+import DropshippingGuide from "./pages/DropshippingGuide";
 
 const queryClient = new QueryClient();
 
 const App = () => <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <div className="min-h-screen bg-[#1A1F2C]">
-        <MouseFollower />
         <Toaster />
         <Sonner />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/seo-settings" element={<SEOSettings />} />
+            <Route path="/dropshipping-guide" element={<DropshippingGuide />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

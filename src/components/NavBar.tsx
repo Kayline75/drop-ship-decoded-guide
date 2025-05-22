@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { Menu, X, Settings } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -67,19 +67,19 @@ const NavBar = () => {
             >
               LE GUIDE
             </a>
+            <Link 
+              to="/dropshipping-guide" 
+              className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center gap-1"
+            >
+              <FileText className="w-4 h-4" />
+              ARTICLE
+            </Link>
             <a 
               href="#faq" 
               className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors"
             >
               FAQ
             </a>
-            <Link 
-              to="/seo-settings" 
-              className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center gap-1"
-            >
-              <Settings className="w-4 h-4" />
-              SEO
-            </Link>
           </nav>
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
@@ -123,6 +123,14 @@ const NavBar = () => {
             >
               LE GUIDE
             </a>
+            <Link 
+              to="/dropshipping-guide" 
+              className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center gap-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <FileText className="w-4 h-4" />
+              ARTICLE
+            </Link>
             <a 
               href="#faq" 
               className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center"
@@ -130,14 +138,6 @@ const NavBar = () => {
             >
               FAQ
             </a>
-            <Link 
-              to="/seo-settings" 
-              className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center gap-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <Settings className="w-4 h-4" />
-              Paramètres SEO
-            </Link>
           </nav>
           <div className="mt-6">
             <a 
