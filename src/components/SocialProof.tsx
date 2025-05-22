@@ -1,8 +1,7 @@
 
 import { useEffect, useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Star } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { 
   Carousel,
   CarouselContent,
@@ -16,10 +15,25 @@ const SocialProof = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 500);
-    return () => clearTimeout(timer);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    
+    const element = document.getElementById('testimonials-section');
+    if (element) {
+      observer.observe(element);
+    }
+    
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
   }, []);
 
   const testimonialImages = [
@@ -27,26 +41,6 @@ const SocialProof = () => {
     "/lovable-uploads/50188027-d3ff-41d5-9be3-1f46a75b86ba.png", 
     "/lovable-uploads/ae9bf4ab-0c81-4039-ad26-91a75c8b2adf.png"
   ];
-
-  const clients = [{
-    name: "Amazon",
-    logo: "https://images.unsplash.com/photo-1602345344684-37e44faf9444?crop=entropy&fit=crop&w=120&h=60"
-  }, {
-    name: "Shopify",
-    logo: "https://images.unsplash.com/photo-1576742243310-ffa9342412e4?crop=entropy&fit=crop&w=120&h=60"
-  }, {
-    name: "Aliexpress",
-    logo: "https://images.unsplash.com/photo-1554098415-788601d8f6de?crop=entropy&fit=crop&w=120&h=60"
-  }, {
-    name: "Stripe",
-    logo: "https://images.unsplash.com/photo-1622473590773-f588134b6ce7?crop=entropy&fit=crop&w=120&h=60"
-  }, {
-    name: "PayPal",
-    logo: "https://images.unsplash.com/photo-1593522868367-80b2fcfafa28?crop=entropy&fit=crop&w=120&h=60"
-  }, {
-    name: "Wix",
-    logo: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?crop=entropy&fit=crop&w=120&h=60"
-  }];
   
   return (
     <section id="temoignages" className="section-uniform bg-gradient-to-b from-[#331200] to-[#121212] py-[34px]">
@@ -61,7 +55,7 @@ const SocialProof = () => {
         </div>
         
         {/* Testimonials Carousel Section */}
-        <div className={`max-w-5xl mx-auto mb-16 transition-all duration-700 ${isVisible ? "opacity-100" : "opacity-0 translate-y-10"}`}>
+        <div id="testimonials-section" className={`max-w-5xl mx-auto mb-16 transition-all duration-700 ${isVisible ? "opacity-100" : "opacity-0 translate-y-10"}`}>
           <Carousel 
             opts={{
               align: "center",
@@ -80,6 +74,7 @@ const SocialProof = () => {
                           alt={`Témoignage client ${index + 1}`}
                           className="w-full h-auto object-contain"
                           style={{ maxHeight: "600px" }}
+                          loading="lazy"
                         />
                       </div>
                       <div className="p-4">
