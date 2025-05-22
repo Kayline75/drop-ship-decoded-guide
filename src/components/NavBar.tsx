@@ -49,6 +49,10 @@ const NavBar = () => {
     });
   };
 
+  // Style pour les boutons avec fond sombre
+  const darkButtonStyle = "nav-link text-sm font-medium bg-black/60 backdrop-blur-sm border border-[#FF7E33]/20 rounded-md px-3 py-2 text-white hover:text-[#FF7E33] transition-colors flex items-center gap-1";
+  const mobileDarkButtonStyle = "text-base font-medium bg-black/60 backdrop-blur-sm border border-[#FF7E33]/20 rounded-md px-3 py-2 text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center gap-2";
+
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -108,18 +112,10 @@ const NavBar = () => {
               </Link>
             )}
             
-            <Link 
-              to="/dropshipping-guide" 
-              className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center gap-1"
-            >
-              <BookOpen className="w-4 h-4" />
-              ARTICLES
-            </Link>
-            
             {isHomePage ? (
               <a 
                 href="#faq" 
-                className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center gap-1"
+                className={darkButtonStyle}
                 onClick={(e) => handleScrollToSection(e, "faq")}
               >
                 <ListTodo className="w-4 h-4" />
@@ -128,12 +124,20 @@ const NavBar = () => {
             ) : (
               <Link 
                 to="/#faq" 
-                className="nav-link text-sm font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center gap-1"
+                className={darkButtonStyle}
               >
                 <ListTodo className="w-4 h-4" />
                 FAQ
               </Link>
             )}
+            
+            <Link 
+              to="/dropshipping-guide" 
+              className={darkButtonStyle}
+            >
+              <BookOpen className="w-4 h-4" />
+              ARTICLES
+            </Link>
           </nav>
           <a 
             href="https://www.skool.com/klicksell-academie-5416/about?ref=78558161b3d140c79291ccbc46e5275c"
@@ -205,19 +209,10 @@ const NavBar = () => {
               </Link>
             )}
             
-            <Link 
-              to="/dropshipping-guide" 
-              className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center gap-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <BookOpen className="w-4 h-4" />
-              ARTICLES
-            </Link>
-            
             {isHomePage ? (
               <a 
                 href="#faq" 
-                className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center gap-2"
+                className={mobileDarkButtonStyle}
                 onClick={(e) => {
                   handleScrollToSection(e, "faq");
                   setIsMobileMenuOpen(false);
@@ -229,13 +224,22 @@ const NavBar = () => {
             ) : (
               <Link 
                 to="/#faq" 
-                className="text-base font-medium text-white hover:text-[#FF7E33] transition-colors flex items-center justify-center gap-2"
+                className={mobileDarkButtonStyle}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <ListTodo className="w-4 h-4" />
                 FAQ
               </Link>
             )}
+            
+            <Link 
+              to="/dropshipping-guide" 
+              className={mobileDarkButtonStyle}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <BookOpen className="w-4 h-4" />
+              ARTICLES
+            </Link>
           </nav>
           <div className="mt-6">
             <a 
