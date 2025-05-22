@@ -1,5 +1,5 @@
 
-import { WhatsappIcon } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 
 const PopupChat = () => {
   return (
@@ -19,7 +19,7 @@ const PopupChat = () => {
       }}
     >
       <div className="flex items-center gap-2">
-        <WhatsappIcon size={20} />
+        <MessageCircle size={20} />
         <span>Contacte-nous</span>
       </div>
     </a>
